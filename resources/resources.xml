@@ -1,0 +1,152 @@
+<resources>
+    <strings>
+        <string id="AppName">Moxy Step Test</string>
+        <string id="AppVersion">0.0.1</string>
+        <string id="AppSensor">1st</string>
+        
+        <string id="MO2Label">MO2</string>
+        <string id="HRMLabel">HR</string>
+        <string id="SPDLabel">S&amp;C</string>
+        <string id="PWRLabel">PWR</string>
+        <string id="thb_label">THb</string>
+    	<string id="thb_units">THb</string>
+    	<string id="smo2_label">SmO2</string>
+    	<string id="smo2_units">%</string>
+    </strings>
+
+    <strings>
+    	<string id="SensorIdentityTitle">Sensor Id</string>
+        <string id="FECIdentityTitle">FEC Id</string>
+    	<string id="DeviceMfg">Device Manufacturer</string>
+    	<string id="SensorLocationTitle">Sensor Location</string>
+
+        <string id="left_leg">L. Leg</string>
+        <string id="left_calf">L. Calf</string>
+        <string id="left_shin">L. Shin</string>
+        <string id="left_hamstring">L. Ham</string>
+        <string id="left_quad">L. Quad</string>
+        <string id="left_glute">L. Glute</string>
+        <string id="right_leg">R. Leg</string>
+        <string id="right_calf">R. Calf</string>
+        <string id="right_shin">R. Shin</string>
+        <string id="right_hamstring">R. Ham</string>
+        <string id="right_quad">R. Quad</string>
+        <string id="right_glute">R. Glute</string>
+        <string id="torso_back">Torso/Back</string>
+        <string id="left_lower_back">L. Lwr. Back</string>
+        <string id="left_upper_back">L. Upr. Back</string>
+        <string id="right_lower_back">R. Lwr. Back</string>
+        <string id="right_upper_back">R. Upr. Back</string>
+        <string id="torso_front">Torso/Front</string>
+        <string id="left_abdomen">L. Abdomen</string>
+        <string id="left_chest">L. Chest</string>
+        <string id="right_abdomen">R. Abdomen</string>
+        <string id="right_chest">R. Chest</string>
+        <string id="left_arm">L. Arm</string>
+        <string id="left_shoulder">L. Shoulder</string>
+        <string id="left_bicep">L. Bicep</string>
+        <string id="left_tricep">L. Tricep</string>
+        <string id="left_brachioradialis">L. Ant. Forearm</string>
+        <string id="left_forearm_extensors">L. Pos. Forearm</string>
+        <string id="right_arm">R. Arm</string>
+        <string id="right_shoulder">R. Shoulder</string>
+        <string id="right_bicep">R. Bicep</string>
+        <string id="right_tricep">R. Tricep</string>
+        <string id="right_brachioradialis">R. Ant. Forearm</string>
+        <string id="right_forearm_extensors">R. Pos. Forearm</string>
+        <string id="neck">Neck</string>
+        <string id="throat">Throat</string>
+        <string id="none">Location Not Set</string>
+        
+        <string id="range0">1 Minute</string>
+        <string id="range1">3 Minutes</string>
+        <string id="range2">5 Minutes</string>
+        
+    </strings>
+    
+    <properties>
+        <property id="SensorId" type="number">0</property>
+        <property id="FECId" type="number">0</property>
+        <property id="DeviceMfg" type="number">0</property>
+        <property id="SensorLx" type="number">255</property>
+    </properties>
+    
+    <settings>
+        <setting propertyKey="@Properties.SensorId" title="@Strings.SensorIdentityTitle">
+            <settingConfig type="numeric" required="true" min="0" max="99999" />
+        </setting>
+
+        <setting propertyKey="@Properties.FECId" title="@Strings.FECIdentityTitle">
+            <settingConfig type="numeric" required="true" min="0" max="99999" />
+        </setting>
+
+        <setting propertyKey="@Properties.SensorLx" title="@Strings.SensorLocationTitle">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.left_leg</listEntry>
+                <listEntry value="1">@Strings.left_calf</listEntry>
+                <listEntry value="2">@Strings.left_shin</listEntry>
+                <listEntry value="3">@Strings.left_hamstring</listEntry>
+                <listEntry value="4">@Strings.left_quad</listEntry>
+                <listEntry value="5">@Strings.left_glute</listEntry>
+                <listEntry value="6">@Strings.right_leg</listEntry>
+                <listEntry value="7">@Strings.right_calf</listEntry>
+                <listEntry value="8">@Strings.right_shin</listEntry>
+                <listEntry value="9">@Strings.right_hamstring</listEntry>
+                <listEntry value="10">@Strings.right_quad</listEntry>
+                <listEntry value="11">@Strings.right_glute</listEntry>
+                <listEntry value="12">@Strings.torso_back</listEntry>
+                <listEntry value="13">@Strings.left_lower_back</listEntry>
+                <listEntry value="14">@Strings.left_upper_back</listEntry>
+                <listEntry value="15">@Strings.right_lower_back</listEntry>
+                <listEntry value="16">@Strings.right_upper_back</listEntry>
+                <listEntry value="17">@Strings.torso_front</listEntry>
+                <listEntry value="18">@Strings.left_abdomen</listEntry>
+                <listEntry value="19">@Strings.left_chest</listEntry>
+                <listEntry value="20">@Strings.right_abdomen</listEntry>
+                <listEntry value="21">@Strings.right_chest</listEntry>
+                <listEntry value="22">@Strings.left_arm</listEntry>
+                <listEntry value="23">@Strings.left_shoulder</listEntry>
+                <listEntry value="24">@Strings.left_bicep</listEntry>
+                <listEntry value="25">@Strings.left_tricep</listEntry>
+                <listEntry value="26">@Strings.left_brachioradialis</listEntry>
+                <listEntry value="27">@Strings.left_forearm_extensors</listEntry>
+                <listEntry value="28">@Strings.right_arm</listEntry>
+                <listEntry value="29">@Strings.right_shoulder</listEntry>
+                <listEntry value="30">@Strings.right_bicep</listEntry>
+                <listEntry value="31">@Strings.right_tricep</listEntry>
+                <listEntry value="32">@Strings.right_brachioradialis</listEntry>
+                <listEntry value="33">@Strings.right_forearm_extensors</listEntry>
+                <listEntry value="34">@Strings.neck</listEntry>
+                <listEntry value="35">@Strings.throat</listEntry>
+                <listEntry value="255">@Strings.none</listEntry>
+            </settingConfig>
+        </setting>
+    </settings>
+
+    <fitContributions>
+        <fitField id="0"
+        displayInChart="true"
+        sortOrder = "0"
+        precision="1"
+        chartTitle="@Strings.smo2_label"
+        dataLabel="@Strings.smo2_label"
+        unitLabel="@Strings.smo2_units"
+        fillColor="#00BB00" />
+
+        <fitField id="1"
+        displayInChart="true"
+        sortOrder="1"
+        precision="2"
+        chartTitle="@Strings.thb_label"
+        dataLabel="@Strings.thb_label"
+        unitLabel="@Strings.thb_units"
+        fillColor="#C8501E" />
+        
+        <fitField id="2"
+        displayInActivitySummary="true"
+        sortOrder="2"
+        dataLabel="@Strings.AppName"
+        unitLabel="@Strings.AppVersion" />     
+    </fitContributions>
+    
+</resources>

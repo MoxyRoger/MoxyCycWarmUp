@@ -1,0 +1,825 @@
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 1; ]
+import Toybox.Activity;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 2; ]
+import Toybox.ActivityRecording;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 3; ]
+import Toybox.Application;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 4; ]
+import Toybox.FitContributor;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 5; ]
+import Toybox.Lang;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 6; ]
+import Toybox.Position;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 7; ]
+import Toybox.Sensor;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 8; ]
+import Toybox.System;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 9; ]
+import Toybox.Timer;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 10; ]
+import Toybox.WatchUi;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 13; @position = 6; ]
+const G_Start_Button;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 14; @position = 6; ]
+const G_Lap_Button;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 17; @position = 6; ]
+const G_Palette_Sz;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 22; @position = 6; ]
+const SIMULATE_DATA = false;
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 25; ]
+function format_elapsed_time(seconds) {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 26 4 ]
+    [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_stop" ]
+    %hh.1 = local;
+    %tmp.2 = lgetv %seconds;
+    %tmp.3 = 3600;
+    %tmp.4 = div %tmp.2 %tmp.3;
+    lputv %hh.1 %tmp.4;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 27 4 ]
+    [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_stop" ]
+    %mm.2 = local;
+    %tmp.6 = lgetv %seconds;
+    %tmp.7 = 60;
+    %tmp.8 = div %tmp.6 %tmp.7;
+    %tmp.9 = 60;
+    %tmp.10 = mod %tmp.8 %tmp.9;
+    lputv %mm.2 %tmp.10;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 28 4 ]
+    [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_stop" ]
+    %ss.3 = local;
+    %tmp.12 = lgetv %seconds;
+    %tmp.13 = 60;
+    %tmp.14 = mod %tmp.12 %tmp.13;
+    lputv %ss.3 %tmp.14;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 30 4 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_4_if_stmt:
+    %tmp.16 = lgetv %hh.1;
+    %tmp.17 = 0;
+    %tmp.18 = ne %tmp.16 %tmp.17;
+    bf %tmp.18 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_4_if_false;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_4_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_17_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 31 8 ]
+    %tmp.19 = getm $.Toybox.Lang;
+    %tmp.20 = getv function %tmp.19 :format;
+    %tmp.21 = "$1$:$2$:$3$";
+    %tmp.22 = newa 3;
+    %tmp.24 = lgetv %hh.1;
+    %tmp.25 = dup %tmp.22;
+    %tmp.26 = aputv %tmp.25 0 %tmp.24;
+    %tmp.27 = lgetv %mm.2;
+    %tmp.28 = getv function %tmp.27 :format;
+    %tmp.29 = "%02d";
+    %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+    %tmp.31 = dup %tmp.26;
+    %tmp.32 = aputv %tmp.31 1 %tmp.30;
+    %tmp.33 = lgetv %ss.3;
+    %tmp.34 = getv function %tmp.33 :format;
+    %tmp.35 = "%02d";
+    %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
+    %tmp.37 = dup %tmp.32;
+    %tmp.38 = aputv %tmp.37 2 %tmp.36;
+    %tmp.39 = invoke %tmp.19 %tmp.20(%tmp.21, %tmp.38);
+    ret %tmp.39;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_17_stop:
+    goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_4_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_4_if_false:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_37_9_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 38 8 ]
+    %tmp.40 = getm $.Toybox.Lang;
+    %tmp.41 = getv function %tmp.40 :format;
+    %tmp.42 = "$1$:$2$";
+    %tmp.43 = newa 2;
+    %tmp.45 = lgetv %mm.2;
+    %tmp.46 = dup %tmp.43;
+    %tmp.47 = aputv %tmp.46 0 %tmp.45;
+    %tmp.48 = lgetv %ss.3;
+    %tmp.49 = getv function %tmp.48 :format;
+    %tmp.50 = "%02d";
+    %tmp.51 = invoke %tmp.48 %tmp.49(%tmp.50);
+    %tmp.52 = dup %tmp.47;
+    %tmp.53 = aputv %tmp.52 1 %tmp.51;
+    %tmp.54 = invoke %tmp.40 %tmp.41(%tmp.42, %tmp.53);
+    ret %tmp.54;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_37_9_stop:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_30_4_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_25_38_stop:
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 45; ]
+enum {
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 46; @position = 4; ]
+    GRAPH_RANGE_ONE_MINUTE,
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 47; @position = 4; ]
+    GRAPH_RANGE_THREE_MINUTES,
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 48; @position = 4; ]
+    GRAPH_RANGE_FIVE_MINUTES
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 51; ]
+enum {
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 52; @position = 4; ]
+    VIBRATE_PERIOD = 1000,
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 53; @position = 4; ]
+    VIBRATE_DUTY_CYCLE = 50
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 56; ]
+class MCycApp extends Application.AppBase{
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 56; ]
+    <init> {
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 56; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 57; @position = 15; ]
+    protected
+    var mTimer;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 58; @position = 15; ]
+    protected
+    var mSensor;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 59; @position = 15; ]
+    protected
+    var mViewAlert;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 60; @position = 15; ]
+    protected
+    var mDelegate;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 61; @position = 15; ]
+    protected
+    var mActivity;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 62; @position = 15; ]
+    protected
+    var mFitContrib;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 63; @position = 8; ]
+    var lapStartDist = 0;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 64; @position = 8; ]
+    var lapStartTime = 0;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 65; @position = 8; ]
+    var lapPrevDist;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 66; @position = 8; ]
+    var lapPrevTime;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 67; @position = 8; ]
+    var btnAlert;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 69; ]
+    function initialize() as Void {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_69_26_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 70 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 72 8 ]
+        %tmp.6 = getm $.Toybox.Timer;
+        %tmp.7 = getv function ? %tmp.6 :Timer;
+        %tmp.4 = newc %tmp.7 ();
+        putv self :mTimer %tmp.4;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 73 8 ]
+        %tmp.11 = getv ? :MO2Sensor;
+        %tmp.8 = newc %tmp.11 ();
+        putv self :mSensor %tmp.8;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 74 8 ]
+        %tmp.13 = getv ? :BTN_NONE;
+        putv self :btnAlert %tmp.13;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_69_26_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 79; ]
+    function onStart(state as Dictionary or Null) as Void {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_79_51_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 80 8 ]
+        %tmp.4 = getv ? :ViewAlert;
+        %tmp.6 = getv ? :mSensor;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        putv self :mViewAlert %tmp.1;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 82 8 ]
+        %tmp.7 = getm $.Toybox.Sensor;
+        %tmp.8 = getv function %tmp.7 :setEnabledSensors;
+        %tmp.9 = newa 4;
+        %tmp.10 = getm $.Toybox.Sensor;
+        %tmp.11 = getv %tmp.10 :SENSOR_HEARTRATE;
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 0 %tmp.11;
+        %tmp.14 = getm $.Toybox.Sensor;
+        %tmp.15 = getv %tmp.14 :SENSOR_BIKECADENCE;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 1 %tmp.15;
+        %tmp.18 = getm $.Toybox.Sensor;
+        %tmp.19 = getv %tmp.18 :SENSOR_BIKESPEED;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 2 %tmp.19;
+        %tmp.22 = getm $.Toybox.Sensor;
+        %tmp.23 = getv %tmp.22 :SENSOR_BIKEPOWER;
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 3 %tmp.23;
+        invoke %tmp.7 %tmp.8(%tmp.25);
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 87 8 ]
+        %tmp.26 = getm $.Toybox.Position;
+        %tmp.27 = getv function %tmp.26 :enableLocationEvents;
+        %tmp.28 = getm $.Toybox.Position;
+        %tmp.29 = getv %tmp.28 :LOCATION_CONTINUOUS;
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :method;
+        %tmp.33 = const :onPositionCallback;
+        %tmp.34 = invoke %tmp.30 %tmp.31(%tmp.33);
+        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.34);
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 89 2 ]
+        %tmp.35 = self;
+        %tmp.36 = getv function %tmp.35 :createActivity;
+        invoke %tmp.35 %tmp.36();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 90 8 ]
+        %tmp.38 = getv ? :mTimer;
+        %tmp.39 = getv function %tmp.38 :start;
+        %tmp.40 = lgetv %self;
+        %tmp.41 = getv function %tmp.40 :method;
+        %tmp.43 = const :onTimerCallback;
+        %tmp.44 = invoke %tmp.40 %tmp.41(%tmp.43);
+        %tmp.45 = 1000;
+        %tmp.46 = true;
+        invoke %tmp.38 %tmp.39(%tmp.44, %tmp.45, %tmp.46);
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_79_51_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 93; ]
+    function onStop(state) {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_93_27_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 94 8 ]
+        %tmp.2 = getv ? :mTimer;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 97 8 ]
+        %tmp.4 = getm $.Toybox.Position;
+        %tmp.5 = getv function %tmp.4 :enableLocationEvents;
+        %tmp.6 = getm $.Toybox.Position;
+        %tmp.7 = getv %tmp.6 :LOCATION_DISABLE;
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :method;
+        %tmp.11 = const :onPositionCallback;
+        %tmp.12 = invoke %tmp.8 %tmp.9(%tmp.11);
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.12);
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 100 8 ]
+        %tmp.13 = getm $.Toybox.Sensor;
+        %tmp.14 = getv function %tmp.13 :setEnabledSensors;
+        %tmp.15 = newa 0;
+        invoke %tmp.13 %tmp.14(%tmp.15);
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 103 8 ]
+        %tmp.17 = getv ? :mSensor;
+        %tmp.18 = getv function %tmp.17 :releaseSensor;
+        invoke %tmp.17 %tmp.18();
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_93_27_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 106; ]
+    function getInitialView() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_106_30_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 107 8 ]
+        [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_106_30_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_106_30_stop" ]
+        %view.1 = local;
+        %tmp.4 = getv ? :MCycView0;
+        %tmp.6 = getv ? :mSensor;
+        %tmp.8 = getv ? :mViewAlert;
+        %tmp.1 = newc %tmp.4 (%tmp.6, %tmp.8);
+        lputv %view.1 %tmp.1;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 108 8 ]
+        %tmp.12 = getv ? :MCycDelegate;
+        %tmp.13 = 0;
+        %tmp.15 = lgetv %view.1;
+        %tmp.17 = getv ? :mSensor;
+        %tmp.19 = getv ? :mViewAlert;
+        %tmp.9 = newc %tmp.12 (%tmp.13, %tmp.15, %tmp.17, %tmp.19);
+        putv self :mDelegate %tmp.9;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 109 8 ]
+        %tmp.20 = newa 2;
+        %tmp.22 = lgetv %view.1;
+        %tmp.23 = dup %tmp.20;
+        %tmp.24 = aputv %tmp.23 0 %tmp.22;
+        %tmp.26 = getv ? :mDelegate;
+        %tmp.27 = dup %tmp.24;
+        %tmp.28 = aputv %tmp.27 1 %tmp.26;
+        ret %tmp.28;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_106_30_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 112; ]
+    public
+    function onPositionCallback(info as Position.Info) as Void {
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 116; ]
+    function onTimerCallback() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_116_31_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 117 2 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_2_if_stmt:
+        %tmp.2 = getv ? :mFitContrib;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_2_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_2_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_27_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 118 3 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_3_if_stmt:
+        %tmp.6 = getv ? :mActivity;
+        %tmp.7 = null;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        bf %tmp.8 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_3_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_3_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_26_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 119 4 ]
+        %tmp.10 = getv ? :mFitContrib;
+        %tmp.11 = as %tmp.10 { (!Null) };
+        %tmp.12 = getv function %tmp.11 :compute;
+        %tmp.14 = getv ? :mSensor;
+        invoke %tmp.11 %tmp.12(%tmp.14);
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_26_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_3_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_118_3_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_27_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_2_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_117_2_if_end:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 122 8 ]
+        %tmp.15 = getm $.Toybox.WatchUi;
+        %tmp.16 = getv function %tmp.15 :requestUpdate;
+        invoke %tmp.15 %tmp.16();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 124 8 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_124_8_if_stmt:
+        %tmp.18 = getv ? :SIMULATE_DATA;
+        %tmp.19 = true;
+        %tmp.20 = eq %tmp.18 %tmp.19;
+        bf %tmp.20 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_124_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_124_8_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_125_8_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 126 12 ]
+        %tmp.22 = getv ? :mSensor;
+        %tmp.23 = getv function %tmp.22 :updateData;
+        invoke %tmp.22 %tmp.23();
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_125_8_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_124_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_124_8_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_116_31_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 131; ]
+    function createActivity() as Void {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_131_38_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 132 8 ]
+        %tmp.1 = getm $.Toybox.ActivityRecording;
+        %tmp.2 = getv function %tmp.1 :createSession;
+        %tmp.3 = newd 3;
+        %tmp.5 = const :sport;
+        %tmp.6 = getm $.Toybox.Activity;
+        %tmp.7 = getv %tmp.6 :SPORT_CYCLING;
+        %tmp.8 = dup %tmp.3;
+        %tmp.9 = aputv %tmp.8 %tmp.5 %tmp.7;
+        %tmp.11 = const :subSport;
+        %tmp.12 = getm $.Toybox.Activity;
+        %tmp.13 = getv %tmp.12 :SUB_SPORT_INDOOR_CYCLING;
+        %tmp.14 = dup %tmp.9;
+        %tmp.15 = aputv %tmp.14 %tmp.11 %tmp.13;
+        %tmp.17 = const :name;
+        %tmp.18 = "cycling";
+        %tmp.19 = dup %tmp.15;
+        %tmp.20 = aputv %tmp.19 %tmp.17 %tmp.18;
+        %tmp.21 = invoke %tmp.1 %tmp.2(%tmp.20);
+        putv self :mActivity %tmp.21;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_131_38_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 139; ]
+    function startActivity() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_139_29_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 140 8 ]
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = getv function %tmp.2 :start;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 141 8 ]
+        %tmp.5 = getv ? :BTN_START;
+        putv self :btnAlert %tmp.5;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_139_29_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 145; ]
+    function stopActivity() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_145_28_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 146 8 ]
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 147 8 ]
+        %tmp.5 = getv ? :BTN_STOP;
+        putv self :btnAlert %tmp.5;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_145_28_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 151; ]
+    function saveActivity() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_151_28_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 152 8 ]
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = getv function %tmp.2 :save;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 153 8 ]
+        %tmp.4 = null;
+        putv self :mActivity %tmp.4;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_151_28_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 156; ]
+    function discardActivity() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_156_31_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 157 8 ]
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = getv function %tmp.2 :discard;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 158 8 ]
+        %tmp.4 = null;
+        putv self :mActivity %tmp.4;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_156_31_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 161; ]
+    function isNullActivity() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_161_30_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 162 8 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_8_if_stmt:
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_8_if_false;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_8_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_31_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 163 12 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_31_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_8_if_false:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_165_13_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 166 12 ]
+        %tmp.6 = false;
+        ret %tmp.6;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_165_13_stop:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_162_8_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_161_30_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 170; ]
+    function isRecordingActivity() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_170_35_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 171 8 ]
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = getv function %tmp.2 :isRecording;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_170_35_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 174; ]
+    function startFitContrib() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_174_28_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 175 2 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_2_if_stmt:
+        %tmp.2 = getv ? :mFitContrib;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_2_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_2_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_27_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 176 3 ]
+        %tmp.8 = getv ? :MO2FitContributor;
+        %tmp.10 = getv ? :mActivity;
+        %tmp.5 = newc %tmp.8 (%tmp.10);
+        putv self :mFitContrib %tmp.5;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_27_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_2_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_175_2_if_end:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 178 8 ]
+        %tmp.11 = self;
+        %tmp.12 = getv function %tmp.11 :setDeviceInfo;
+        invoke %tmp.11 %tmp.12();
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_174_28_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 181; ]
+    function setDeviceInfo() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_181_29_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 182 2 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_2_if_stmt:
+        %tmp.2 = getv ? :mFitContrib;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_2_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_2_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_27_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 183 3 ]
+        %tmp.6 = getv ? :mFitContrib;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = getv function %tmp.7 :setDeviceInfo;
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :getProperty;
+        %tmp.11 = "SensorLx";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :getProperty;
+        %tmp.15 = "SensorId";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = self;
+        %tmp.18 = getv function %tmp.17 :getProperty;
+        %tmp.19 = "DeviceMfg";
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        invoke %tmp.7 %tmp.8(%tmp.12, %tmp.16, %tmp.20);
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_27_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_2_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_182_2_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_181_29_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 188; ]
+    function autoLap() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_188_23_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 189 8 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_8_if_stmt:
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :getProperty;
+        %tmp.3 = "AutoLapEn";
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        %tmp.5 = true;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_8_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_46_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 190 12 ]
+        [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_46_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_46_stop" ]
+        %info.1 = local;
+        %tmp.7 = getm $.Toybox.Activity;
+        %tmp.8 = getv function %tmp.7 :getActivityInfo;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %info.1 %tmp.9;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 191 12 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_12_if_stmt:
+        %tmp.10 = lgetv %info.1;
+        %tmp.11 = getv %tmp.10 :elapsedDistance;
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_12_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_46_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 192 16 ]
+        [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_46_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_46_stop" ]
+        %distConv.2 = local;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 193 16 ]
+        [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_46_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_46_stop" ]
+        %lapDist.3 = local;
+        %tmp.14 = self;
+        %tmp.15 = getv function %tmp.14 :getProperty;
+        %tmp.16 = "AutoLapSp";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        %tmp.18 = getv function %tmp.17 :toFloat;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 100.0;
+        %tmp.21 = div %tmp.19 %tmp.20;
+        lputv %lapDist.3 %tmp.21;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 194 16 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_16_if_stmt:
+        %tmp.22 = getm $.Toybox.System;
+        %tmp.23 = getv function %tmp.22 :getDeviceSettings;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = getv %tmp.24 :distanceUnits;
+        %tmp.26 = getm $.Toybox.System;
+        %tmp.27 = getv %tmp.26 :UNIT_STATUTE;
+        %tmp.28 = eq %tmp.25 %tmp.27;
+        bf %tmp.28 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_16_if_false;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_16_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_85_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 195 20 ]
+        %tmp.29 = 0.000621371;
+        lputv %distConv.2 %tmp.29;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_85_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_16_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_16_if_false:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_197_21_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 198 20 ]
+        %tmp.30 = 0.001;
+        lputv %distConv.2 %tmp.30;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_197_21_stop:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_194_16_if_end:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 200 16 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_16_if_stmt:
+        %tmp.31 = lgetv %info.1;
+        %tmp.32 = getv %tmp.31 :elapsedDistance;
+        %tmp.34 = getv ? :lapStartDist;
+        %tmp.35 = sub %tmp.32 %tmp.34;
+        %tmp.37 = lgetv %distConv.2;
+        %tmp.38 = mul %tmp.35 %tmp.37;
+        %tmp.40 = lgetv %lapDist.3;
+        %tmp.41 = gt %tmp.38 %tmp.40;
+        bf %tmp.41 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_16_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_16_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_80_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 201 20 ]
+        %tmp.43 = getv ? :mActivity;
+        %tmp.44 = getv function %tmp.43 :addLap;
+        invoke %tmp.43 %tmp.44();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 202 20 ]
+        %tmp.45 = self;
+        %tmp.46 = getv function %tmp.45 :setLapStart;
+        %tmp.48 = getv ? :lapStartDist;
+        %tmp.50 = lgetv %lapDist.3;
+        %tmp.52 = lgetv %distConv.2;
+        %tmp.53 = div %tmp.50 %tmp.52;
+        %tmp.54 = add %tmp.48 %tmp.53;
+        invoke %tmp.45 %tmp.46(%tmp.54);
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_80_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_16_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_200_16_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_46_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_191_12_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_46_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_189_8_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_188_23_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 208; ]
+    function manualLap() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_208_25_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 209 8 ]
+        %tmp.2 = getv ? :mActivity;
+        %tmp.3 = getv function %tmp.2 :addLap;
+        invoke %tmp.2 %tmp.3();
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 210 8 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :setLapStart;
+        %tmp.6 = null;
+        invoke %tmp.4 %tmp.5(%tmp.6);
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_208_25_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 213; ]
+    function setLapStart(newStartDist) {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_213_39_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 214 8 ]
+        [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_213_39_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_213_39_stop" ]
+        %distConv.1 = local;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 215 8 ]
+        %tmp.2 = getv ? :lapStartDist;
+        putv self :lapPrevDist %tmp.2;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 216 8 ]
+        %tmp.4 = getv ? :lapStartTime;
+        putv self :lapPrevTime %tmp.4;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 217 8 ]
+        [ "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_213_39_start" "C_CIQSandbox_Trainalyzed_source_MCycApp_mc_213_39_stop" ]
+        %info.2 = local;
+        %tmp.5 = getm $.Toybox.Activity;
+        %tmp.6 = getv function %tmp.5 :getActivityInfo;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %info.2 %tmp.7;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 218 8 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_8_if_stmt:
+        %tmp.9 = lgetv %newStartDist;
+        %tmp.10 = null;
+        %tmp.11 = eq %tmp.9 %tmp.10;
+        bf %tmp.11 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_8_if_false;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_8_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_34_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 219 12 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_12_if_stmt:
+        %tmp.12 = lgetv %info.2;
+        %tmp.13 = getv %tmp.12 :elapsedDistance;
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_12_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_46_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 220 16 ]
+        %tmp.16 = lgetv %info.2;
+        %tmp.17 = getv %tmp.16 :elapsedDistance;
+        putv self :lapStartDist %tmp.17;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_46_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_219_12_if_end:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 222 12 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_12_if_stmt:
+        %tmp.18 = lgetv %info.2;
+        %tmp.19 = getv %tmp.18 :timerTime;
+        %tmp.20 = null;
+        %tmp.21 = ne %tmp.19 %tmp.20;
+        bf %tmp.21 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_12_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_40_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 223 16 ]
+        %tmp.22 = lgetv %info.2;
+        %tmp.23 = getv %tmp.22 :timerTime;
+        putv self :lapStartTime %tmp.23;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_40_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_222_12_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_34_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_8_if_false:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_226_13_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 227 12 ]
+        %tmp.25 = lgetv %newStartDist;
+        %tmp.26 = as %tmp.25 { (!Null) };
+        putv self :lapStartDist %tmp.26;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 228 12 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_12_if_stmt:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_16_begin:
+        %tmp.27 = lgetv %info.2;
+        %tmp.28 = getv %tmp.27 :currentSpeed;
+        %tmp.29 = null;
+        %tmp.30 = ne %tmp.28 %tmp.29;
+        %tmp.31 = dup %tmp.30;
+        bf %tmp.31 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_45_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_45_true:
+        %tmp.32 = lgetv %info.2;
+        %tmp.33 = getv %tmp.32 :currentSpeed;
+        %tmp.34 = 1;
+        %tmp.35 = gt %tmp.33 %tmp.34;
+        %tmp.36 = and %tmp.30 %tmp.35;
+        push %tmp.36;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_45_end:
+        %tmp.37 = phi [%tmp.31 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_16_begin] [%tmp.36 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_45_true] [%tmp.37 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_45_end];
+        bf %tmp.37 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_12_if_false;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_12_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_68_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 229 16 ]
+        %tmp.38 = lgetv %info.2;
+        %tmp.39 = getv %tmp.38 :timerTime;
+        %tmp.40 = 1000;
+        %tmp.41 = lgetv %info.2;
+        %tmp.42 = getv %tmp.41 :elapsedDistance;
+        %tmp.44 = getv ? :lapStartDist;
+        %tmp.45 = sub %tmp.42 %tmp.44;
+        %tmp.46 = mul %tmp.40 %tmp.45;
+        %tmp.47 = lgetv %info.2;
+        %tmp.48 = getv %tmp.47 :currentSpeed;
+        %tmp.49 = div %tmp.46 %tmp.48;
+        %tmp.50 = sub %tmp.39 %tmp.49;
+        putv self :lapStartTime %tmp.50;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_68_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_12_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_12_if_false:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_231_17_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 232 16 ]
+        %tmp.51 = lgetv %info.2;
+        %tmp.52 = getv %tmp.51 :timerTime;
+        putv self :lapStartTime %tmp.52;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_231_17_stop:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_228_12_if_end:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_226_13_stop:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_218_8_if_end:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 235 8 ]
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_8_if_stmt:
+        %tmp.53 = getm $.Toybox.System;
+        %tmp.54 = getv function %tmp.53 :getDeviceSettings;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        %tmp.56 = getv %tmp.55 :distanceUnits;
+        %tmp.57 = getm $.Toybox.System;
+        %tmp.58 = getv %tmp.57 :UNIT_STATUTE;
+        %tmp.59 = eq %tmp.56 %tmp.58;
+        bf %tmp.59 @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_8_if_false;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_8_if_true:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_77_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 236 12 ]
+        %tmp.60 = 0.000621371;
+        lputv %distConv.1 %tmp.60;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_77_stop:
+        goto @C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_8_if_end;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_8_if_false:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_238_13_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 239 12 ]
+        %tmp.61 = 0.001;
+        lputv %distConv.1 %tmp.61;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_238_13_stop:
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_235_8_if_end:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 241 8 ]
+        %tmp.63 = getv ? :BTN_LAP;
+        putv self :btnAlert %tmp.63;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 242 8 ]
+        %tmp.64 = true;
+        ret %tmp.64;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_213_39_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 246; ]
+    function clearBtnAlert() {
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_246_29_start:
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 247 8 ]
+        %tmp.2 = getv ? :BTN_NONE;
+        putv self :btnAlert %tmp.2;
+C_CIQSandbox_Trainalyzed_source_MCycApp_mc_246_29_stop:
+    }
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc"; @line = 1; ]
+<init> {
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 13 6 ]
+    %tmp.3 = getm $.Toybox.WatchUi;
+    %tmp.4 = getv function %tmp.3 :loadResource;
+    %tmp.6 = getv ? :Rez;
+    %tmp.7 = getv %tmp.6 :Strings;
+    %tmp.8 = getv %tmp.7 :StartActivityButton;
+    %tmp.9 = invoke %tmp.3 %tmp.4(%tmp.8);
+    %tmp.10 = getv function %tmp.9 :toNumber;
+    %tmp.11 = invoke %tmp.9 %tmp.10();
+    putv self :G_Start_Button %tmp.11;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 14 6 ]
+    %tmp.12 = getm $.Toybox.WatchUi;
+    %tmp.13 = getv function %tmp.12 :loadResource;
+    %tmp.15 = getv ? :Rez;
+    %tmp.16 = getv %tmp.15 :Strings;
+    %tmp.17 = getv %tmp.16 :LapButton;
+    %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+    %tmp.19 = getv function %tmp.18 :toNumber;
+    %tmp.20 = invoke %tmp.18 %tmp.19();
+    putv self :G_Lap_Button %tmp.20;
+[ "C:\CIQSandbox\Trainalyzed\source\MCycApp.mc" 17 6 ]
+    %tmp.21 = getm $.Toybox.WatchUi;
+    %tmp.22 = getv function %tmp.21 :loadResource;
+    %tmp.24 = getv ? :Rez;
+    %tmp.25 = getv %tmp.24 :Strings;
+    %tmp.26 = getv %tmp.25 :PaletteSize;
+    %tmp.27 = invoke %tmp.21 %tmp.22(%tmp.26);
+    %tmp.28 = getv function %tmp.27 :toNumber;
+    %tmp.29 = invoke %tmp.27 %tmp.28();
+    putv self :G_Palette_Sz %tmp.29;
+}

@@ -1,0 +1,10 @@
+<resources>
+    <bitmaps>
+        <bitmap id="AppIcon" filename="../resources/images/icon62-62.png" >
+            <palette>
+                <color>FFFFFF</color>
+                <color>000000</color>
+            </palette>
+        </bitmap>
+    </bitmaps>
+</resources>

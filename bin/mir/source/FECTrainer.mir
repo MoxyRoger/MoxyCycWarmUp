@@ -1,0 +1,892 @@
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 1; ]
+import Toybox.Ant;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 3; ]
+import Toybox.System;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 4; ]
+import Toybox.Time;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 6; ]
+class FECTrainer extends Ant.GenericChannel{
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 6; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 14 8 ]
+        %tmp.2 = getv ? :SEND_INIT;
+        putv self :ackSequence %tmp.2;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 8; @position = 8; ]
+    var is_first_msg = true;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 9; @position = 8; ]
+    var deviceNumber = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 10; @position = 8; ]
+    var deviceMfg = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 12; @position = 8; ]
+    var instPower = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 13; @position = 8; ]
+    var instSpeed = 0.0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 14; @position = 8; ]
+    var ackSequence;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 16; ]
+    function initialize() as Void {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_16_26_40_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 17 8 ]
+        %tmp.2 = getv ? :Application;
+        %tmp.3 = getv %tmp.2 :Storage;
+        %tmp.4 = getv function %tmp.3 :getValue;
+        %tmp.5 = "FECId";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        putv self :deviceNumber %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 18 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_8_20_8_if_stmt:
+        %tmp.8 = getv ? :deviceNumber;
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_8_20_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_8_20_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_33_20_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 19 12 ]
+        %tmp.11 = 0;
+        putv self :deviceNumber %tmp.11;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_33_20_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_8_20_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_18_8_20_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 21 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_16_26_40_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_16_26_40_4_stop" ]
+        %channelAssignment.1 = local;
+        %tmp.14 = getm $.Toybox.Ant;
+        %tmp.15 = getv function ? %tmp.14 :ChannelAssignment;
+        %tmp.16 = getm $.Toybox.Ant;
+        %tmp.17 = getv %tmp.16 :CHANNEL_TYPE_RX_NOT_TX;
+        %tmp.18 = getm $.Toybox.Ant;
+        %tmp.19 = getv %tmp.18 :NETWORK_PLUS;
+        %tmp.12 = newc %tmp.15 (%tmp.17, %tmp.19);
+        lputv %channelAssignment.1 %tmp.12;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 25 8 ]
+        %tmp.21 = getv ? :GenericChannel;
+        %tmp.22 = getv function %tmp.21 :initialize;
+        %tmp.23 = self;
+        %tmp.24 = getv function %tmp.23 :method;
+        %tmp.26 = const :onMessage;
+        %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
+        %tmp.29 = lgetv %channelAssignment.1;
+        invoke %tmp.21 %tmp.22(%tmp.27, %tmp.29);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 27 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_16_26_40_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_16_26_40_4_stop" ]
+        %deviceConfig.2 = local;
+        %tmp.32 = getm $.Toybox.Ant;
+        %tmp.33 = getv function ? %tmp.32 :DeviceConfig;
+        %tmp.34 = newd 8;
+        %tmp.36 = const :deviceNumber;
+        %tmp.38 = getv ? :deviceNumber;
+        %tmp.39 = dup %tmp.34;
+        %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+        %tmp.42 = const :deviceType;
+        %tmp.43 = 17;
+        %tmp.44 = dup %tmp.40;
+        %tmp.45 = aputv %tmp.44 %tmp.42 %tmp.43;
+        %tmp.47 = const :transmissionType;
+        %tmp.48 = 0;
+        %tmp.49 = dup %tmp.45;
+        %tmp.50 = aputv %tmp.49 %tmp.47 %tmp.48;
+        %tmp.52 = const :messagePeriod;
+        %tmp.53 = 8192;
+        %tmp.54 = dup %tmp.50;
+        %tmp.55 = aputv %tmp.54 %tmp.52 %tmp.53;
+        %tmp.57 = const :radioFrequency;
+        %tmp.58 = 57;
+        %tmp.59 = dup %tmp.55;
+        %tmp.60 = aputv %tmp.59 %tmp.57 %tmp.58;
+        %tmp.62 = const :searchTimeoutLowPriority;
+        %tmp.63 = 10;
+        %tmp.64 = dup %tmp.60;
+        %tmp.65 = aputv %tmp.64 %tmp.62 %tmp.63;
+        %tmp.67 = const :searchTimeoutHighPriority;
+        %tmp.68 = 0;
+        %tmp.69 = dup %tmp.65;
+        %tmp.70 = aputv %tmp.69 %tmp.67 %tmp.68;
+        %tmp.72 = const :searchThreshold;
+        %tmp.73 = 0;
+        %tmp.74 = dup %tmp.70;
+        %tmp.75 = aputv %tmp.74 %tmp.72 %tmp.73;
+        %tmp.30 = newc %tmp.33 (%tmp.75);
+        lputv %deviceConfig.2 %tmp.30;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 38 8 ]
+        %tmp.77 = getv ? :GenericChannel;
+        %tmp.78 = getv function %tmp.77 :setDeviceConfig;
+        %tmp.80 = lgetv %deviceConfig.2;
+        invoke %tmp.77 %tmp.78(%tmp.80);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 39 8 ]
+        %tmp.82 = getv ? :GenericChannel;
+        %tmp.83 = getv function %tmp.82 :open;
+        invoke %tmp.82 %tmp.83();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_16_26_40_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 42; ]
+    function reset() {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_42_21_45_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 43 8 ]
+        %tmp.1 = true;
+        putv self :is_first_msg %tmp.1;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 44 8 ]
+        %tmp.2 = 0;
+        putv self :instPower %tmp.2;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_42_21_45_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 47; ]
+    function goToSearch() {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_47_26_71_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 48 8 ]
+        %tmp.2 = getv ? :GenericChannel;
+        %tmp.3 = getv function %tmp.2 :close;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 49 8 ]
+        %tmp.5 = getv ? :GenericChannel;
+        %tmp.6 = getv function %tmp.5 :release;
+        invoke %tmp.5 %tmp.6();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 50 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_47_26_71_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_47_26_71_4_stop" ]
+        %channelAssignment.1 = local;
+        %tmp.9 = getm $.Toybox.Ant;
+        %tmp.10 = getv function ? %tmp.9 :ChannelAssignment;
+        %tmp.11 = getm $.Toybox.Ant;
+        %tmp.12 = getv %tmp.11 :CHANNEL_TYPE_RX_NOT_TX;
+        %tmp.13 = getm $.Toybox.Ant;
+        %tmp.14 = getv %tmp.13 :NETWORK_PLUS;
+        %tmp.7 = newc %tmp.10 (%tmp.12, %tmp.14);
+        lputv %channelAssignment.1 %tmp.7;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 54 8 ]
+        %tmp.16 = getv ? :GenericChannel;
+        %tmp.17 = getv function %tmp.16 :initialize;
+        %tmp.18 = self;
+        %tmp.19 = getv function %tmp.18 :method;
+        %tmp.21 = const :onMessage;
+        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
+        %tmp.24 = lgetv %channelAssignment.1;
+        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.24);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 56 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_47_26_71_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_47_26_71_4_stop" ]
+        %deviceConfig.2 = local;
+        %tmp.27 = getm $.Toybox.Ant;
+        %tmp.28 = getv function ? %tmp.27 :DeviceConfig;
+        %tmp.29 = newd 8;
+        %tmp.31 = const :deviceNumber;
+        %tmp.32 = 0;
+        %tmp.33 = dup %tmp.29;
+        %tmp.34 = aputv %tmp.33 %tmp.31 %tmp.32;
+        %tmp.36 = const :deviceType;
+        %tmp.37 = 17;
+        %tmp.38 = dup %tmp.34;
+        %tmp.39 = aputv %tmp.38 %tmp.36 %tmp.37;
+        %tmp.41 = const :transmissionType;
+        %tmp.42 = 0;
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
+        %tmp.46 = const :messagePeriod;
+        %tmp.47 = 8192;
+        %tmp.48 = dup %tmp.44;
+        %tmp.49 = aputv %tmp.48 %tmp.46 %tmp.47;
+        %tmp.51 = const :radioFrequency;
+        %tmp.52 = 57;
+        %tmp.53 = dup %tmp.49;
+        %tmp.54 = aputv %tmp.53 %tmp.51 %tmp.52;
+        %tmp.56 = const :searchTimeoutLowPriority;
+        %tmp.57 = 10;
+        %tmp.58 = dup %tmp.54;
+        %tmp.59 = aputv %tmp.58 %tmp.56 %tmp.57;
+        %tmp.61 = const :searchTimeoutHighPriority;
+        %tmp.62 = 0;
+        %tmp.63 = dup %tmp.59;
+        %tmp.64 = aputv %tmp.63 %tmp.61 %tmp.62;
+        %tmp.66 = const :searchThreshold;
+        %tmp.67 = 0;
+        %tmp.68 = dup %tmp.64;
+        %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
+        %tmp.25 = newc %tmp.28 (%tmp.69);
+        lputv %deviceConfig.2 %tmp.25;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 67 8 ]
+        %tmp.71 = getv ? :GenericChannel;
+        %tmp.72 = getv function %tmp.71 :setDeviceConfig;
+        %tmp.74 = lgetv %deviceConfig.2;
+        invoke %tmp.71 %tmp.72(%tmp.74);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 68 8 ]
+        %tmp.76 = getv ? :GenericChannel;
+        %tmp.77 = getv function %tmp.76 :open;
+        invoke %tmp.76 %tmp.77();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 69 8 ]
+        %tmp.78 = true;
+        putv self :is_first_msg %tmp.78;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 70 8 ]
+        %tmp.79 = 0;
+        putv self :deviceNumber %tmp.79;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_47_26_71_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 73; ]
+    function onMessage(msg as Message) as Void {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_73_47_203_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 74 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_73_47_203_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_73_47_203_4_stop" ]
+        %payload.1 = local;
+        %tmp.1 = lgetv %msg;
+        %tmp.2 = getv function %tmp.1 :getPayload;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %payload.1 %tmp.3;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 75 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_8_202_8_if_stmt:
+        %tmp.4 = getm $.Toybox.Ant;
+        %tmp.5 = getv %tmp.4 :MSG_ID_CHANNEL_RESPONSE_EVENT;
+        %tmp.6 = lgetv %msg;
+        %tmp.7 = getv %tmp.6 :messageId;
+        %tmp.8 = eq %tmp.5 %tmp.7;
+        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_8_202_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_8_202_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_64_107_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 76 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_12_106_12_if_stmt:
+        %tmp.9 = getm $.Toybox.Ant;
+        %tmp.10 = getv %tmp.9 :MSG_ID_RF_EVENT;
+        %tmp.12 = lgetv %payload.1;
+        %tmp.13 = 0;
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        %tmp.15 = eq %tmp.10 %tmp.14;
+        bf %tmp.15 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_12_106_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_12_106_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_51_102_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 77 16 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_51_102_12_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_51_102_12_stop" ]
+        %event.2 = local;
+        %tmp.17 = lgetv %payload.1;
+        %tmp.18 = 1;
+        %tmp.19 = agetv %tmp.17 %tmp.18;
+        %tmp.20 = 0xFF;
+        %tmp.21 = bitand %tmp.19 %tmp.20;
+        lputv %event.2 %tmp.21;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 78 4 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_4_101_14_if_stmt:
+        %tmp.22 = getm $.Toybox.Ant;
+        %tmp.23 = getv %tmp.22 :MSG_CODE_EVENT_CHANNEL_CLOSED;
+        %tmp.25 = lgetv %event.2;
+        %tmp.26 = eq %tmp.23 %tmp.25;
+        bf %tmp.26 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_4_101_14_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_4_101_14_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_52_82_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 79 20 ]
+        %tmp.28 = getv ? :GenericChannel;
+        %tmp.29 = getv function %tmp.28 :open;
+        invoke %tmp.28 %tmp.29();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 80 20 ]
+        %tmp.31 = getv ? :GenericChannel;
+        %tmp.32 = getv function %tmp.31 :getDeviceConfig;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        %tmp.34 = getv %tmp.33 :deviceNumber;
+        putv self :deviceNumber %tmp.34;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 81 20 ]
+        %tmp.35 = self;
+        %tmp.36 = getv function %tmp.35 :reset;
+        invoke %tmp.35 %tmp.36();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_52_82_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_4_101_14_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_4_101_14_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 83 21 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_21_101_14_if_stmt:
+        %tmp.37 = getm $.Toybox.Ant;
+        %tmp.38 = getv %tmp.37 :MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH;
+        %tmp.40 = lgetv %event.2;
+        %tmp.41 = eq %tmp.38 %tmp.40;
+        bf %tmp.41 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_21_101_14_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_21_101_14_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_75_85_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 84 20 ]
+        %tmp.42 = self;
+        %tmp.43 = getv function %tmp.42 :reset;
+        invoke %tmp.42 %tmp.43();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_75_85_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_21_101_14_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_21_101_14_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 86 21 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_21_101_14_if_stmt:
+        %tmp.44 = getm $.Toybox.Ant;
+        %tmp.45 = getv %tmp.44 :MSG_CODE_EVENT_TRANSFER_TX_COMPLETED;
+        %tmp.47 = lgetv %event.2;
+        %tmp.48 = eq %tmp.45 %tmp.47;
+        bf %tmp.48 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_21_101_14_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_21_101_14_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_75_101_14_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 87 18 ]
+        %tmp.50 = getv ? :ackSequence;
+        push %tmp.50;
+        switch %tmp.50 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtBegin:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 88 20 ]
+        %tmp.51 = dup %tmp.50;
+        %tmp.53 = getv ? :SEND_USER;
+        %tmp.54 = getv function %tmp.51 :equals;
+        %tmp.55 = invoke %tmp.51 %tmp.54 (%tmp.53);
+        bt %tmp.55 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_88_20_90_29_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 91 20 ]
+        %tmp.56 = dup %tmp.50;
+        %tmp.58 = getv ? :SEND_TARGPWR;
+        %tmp.59 = getv function %tmp.56 :equals;
+        %tmp.60 = invoke %tmp.56 %tmp.59 (%tmp.58);
+        bt %tmp.60 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_91_20_93_29_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 94 20 ]
+        %tmp.61 = dup %tmp.50;
+        %tmp.63 = getv ? :SEND_WINDRESIST;
+        %tmp.64 = getv function %tmp.61 :equals;
+        %tmp.65 = invoke %tmp.61 %tmp.64 (%tmp.63);
+        bt %tmp.65 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_94_20_96_29_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 97 20 ]
+        %tmp.66 = dup %tmp.50;
+        %tmp.68 = getv ? :SEND_TRACKRESIST;
+        %tmp.69 = getv function %tmp.66 :equals;
+        %tmp.70 = invoke %tmp.66 %tmp.69 (%tmp.68);
+        bt %tmp.70 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_97_20_99_29_switchCase;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtDefault:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_defaultCodeBegin;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_88_20_90_29_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 89 24 ]
+        %tmp.72 = getv ? :CONF_USER;
+        putv self :ackSequence %tmp.72;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 90 24 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_91_20_93_29_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 92 24 ]
+        %tmp.74 = getv ? :CONF_TARGPWR;
+        putv self :ackSequence %tmp.74;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 93 24 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_94_20_96_29_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 95 24 ]
+        %tmp.76 = getv ? :CONF_WINDRESIST;
+        putv self :ackSequence %tmp.76;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 96 24 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_97_20_99_29_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 98 24 ]
+        %tmp.78 = getv ? :CONF_TRACKRESIST;
+        putv self :ackSequence %tmp.78;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 99 24 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_defaultCodeBegin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_87_18_100_18_switchStmtEnd:
+        pop;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_75_101_14_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_21_101_14_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_86_21_101_14_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_83_21_101_14_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_78_4_101_14_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_51_102_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_12_106_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_12_106_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 103 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_17_106_12_if_stmt:
+        %tmp.79 = getm $.Toybox.Ant;
+        %tmp.80 = getv %tmp.79 :MSG_ID_CLOSE_CHANNEL;
+        %tmp.82 = lgetv %payload.1;
+        %tmp.83 = 0;
+        %tmp.84 = agetv %tmp.82 %tmp.83;
+        %tmp.85 = eq %tmp.80 %tmp.84;
+        bf %tmp.85 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_17_106_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_17_106_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_61_106_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 104 16 ]
+        %tmp.87 = getv ? :GenericChannel;
+        %tmp.88 = getv function %tmp.87 :close;
+        invoke %tmp.87 %tmp.88();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 105 16 ]
+        %tmp.90 = getv ? :GenericChannel;
+        %tmp.91 = getv function %tmp.90 :open;
+        invoke %tmp.90 %tmp.91();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_61_106_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_17_106_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_103_17_106_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_76_12_106_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_64_107_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_8_202_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_8_202_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 108 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_13_202_8_if_stmt:
+        %tmp.92 = getm $.Toybox.Ant;
+        %tmp.93 = getv %tmp.92 :MSG_ID_BROADCAST_DATA;
+        %tmp.94 = lgetv %msg;
+        %tmp.95 = getv %tmp.94 :messageId;
+        %tmp.96 = eq %tmp.93 %tmp.95;
+        bf %tmp.96 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_13_202_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_13_202_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 109 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_stop" ]
+        %dataType.3 = local;
+        %tmp.98 = lgetv %payload.1;
+        %tmp.99 = 0;
+        %tmp.100 = agetv %tmp.98 %tmp.99;
+        %tmp.101 = 0xFF;
+        %tmp.102 = bitand %tmp.100 %tmp.101;
+        lputv %dataType.3 %tmp.102;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 110 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_stop" ]
+        %ackload.4 = local;
+        %tmp.104 = 8;
+        %tmp.103 = newa %tmp.104;
+        lputv %ackload.4 %tmp.103;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 111 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_stop" ]
+        %message.5 = local;
+        %tmp.107 = getm $.Toybox.Ant;
+        %tmp.108 = getv function ? %tmp.107 :Message;
+        %tmp.105 = newc %tmp.108 ();
+        lputv %message.5 %tmp.105;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 112 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_112_12_118_12_if_stmt:
+        %tmp.110 = getv ? :is_first_msg;
+        bf %tmp.110 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_112_12_118_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_112_12_118_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_113_12_118_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 114 16 ]
+        %tmp.112 = getv ? :GenericChannel;
+        %tmp.113 = getv function %tmp.112 :getDeviceConfig;
+        %tmp.114 = invoke %tmp.112 %tmp.113();
+        %tmp.115 = getv %tmp.114 :deviceNumber;
+        putv self :deviceNumber %tmp.115;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 115 16 ]
+        %tmp.116 = false;
+        putv self :is_first_msg %tmp.116;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 116 16 ]
+        %tmp.118 = getv ? :Application;
+        %tmp.119 = getv %tmp.118 :Storage;
+        %tmp.120 = getv function %tmp.119 :setValue;
+        %tmp.121 = "FECId";
+        %tmp.123 = getv ? :deviceNumber;
+        invoke %tmp.119 %tmp.120(%tmp.121, %tmp.123);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 117 16 ]
+        %tmp.125 = getv ? :SEND_TARGPWR;
+        putv self :ackSequence %tmp.125;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_113_12_118_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_112_12_118_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_112_12_118_12_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 120 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_120_12_123_12_if_stmt:
+        %tmp.127 = getv ? :deviceNumber;
+        %tmp.128 = 0;
+        %tmp.129 = eq %tmp.127 %tmp.128;
+        bf %tmp.129 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_120_12_123_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_120_12_123_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_121_12_123_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 122 16 ]
+        %tmp.131 = getv ? :GenericChannel;
+        %tmp.132 = getv function %tmp.131 :getDeviceConfig;
+        %tmp.133 = invoke %tmp.131 %tmp.132();
+        %tmp.134 = getv %tmp.133 :deviceNumber;
+        putv self :deviceNumber %tmp.134;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_121_12_123_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_120_12_123_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_120_12_123_12_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 125 12 ]
+        %tmp.136 = lgetv %dataType.3;
+        push %tmp.136;
+        switch %tmp.136 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtBegin:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 126 16 ]
+        %tmp.137 = dup %tmp.136;
+        %tmp.138 = 0x10;
+        %tmp.139 = getv function %tmp.137 :equals;
+        %tmp.140 = invoke %tmp.137 %tmp.139 (%tmp.138);
+        bt %tmp.140 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_126_16_128_25_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 129 16 ]
+        %tmp.141 = dup %tmp.136;
+        %tmp.142 = 0x19;
+        %tmp.143 = getv function %tmp.141 :equals;
+        %tmp.144 = invoke %tmp.141 %tmp.143 (%tmp.142);
+        bt %tmp.144 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_129_16_131_25_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 132 16 ]
+        %tmp.145 = dup %tmp.136;
+        %tmp.146 = 0x50;
+        %tmp.147 = getv function %tmp.145 :equals;
+        %tmp.148 = invoke %tmp.145 %tmp.147 (%tmp.146);
+        bt %tmp.148 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_132_16_136_25_switchCase;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtDefault:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_defaultCodeBegin;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_126_16_128_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 127 20 ]
+        %tmp.150 = lgetv %payload.1;
+        %tmp.151 = 4;
+        %tmp.152 = agetv %tmp.150 %tmp.151;
+        %tmp.154 = lgetv %payload.1;
+        %tmp.155 = 5;
+        %tmp.156 = agetv %tmp.154 %tmp.155;
+        %tmp.157 = 256;
+        %tmp.158 = mul %tmp.156 %tmp.157;
+        %tmp.159 = add %tmp.152 %tmp.158;
+        %tmp.160 = 3.6;
+        %tmp.161 = mul %tmp.159 %tmp.160;
+        %tmp.162 = 1000;
+        %tmp.163 = div %tmp.161 %tmp.162;
+        putv self :instSpeed %tmp.163;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 128 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_129_16_131_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 130 20 ]
+        %tmp.165 = lgetv %payload.1;
+        %tmp.166 = 5;
+        %tmp.167 = agetv %tmp.165 %tmp.166;
+        %tmp.169 = lgetv %payload.1;
+        %tmp.170 = 6;
+        %tmp.171 = agetv %tmp.169 %tmp.170;
+        %tmp.172 = 0x0F;
+        %tmp.173 = bitand %tmp.171 %tmp.172;
+        %tmp.174 = 256;
+        %tmp.175 = mul %tmp.173 %tmp.174;
+        %tmp.176 = add %tmp.167 %tmp.175;
+        putv self :instPower %tmp.176;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 131 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_132_16_136_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 133 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_8_135_20_if_stmt:
+        %tmp.178 = getv ? :deviceMfg;
+        %tmp.180 = lgetv %payload.1;
+        %tmp.181 = 4;
+        %tmp.182 = agetv %tmp.180 %tmp.181;
+        %tmp.183 = ne %tmp.178 %tmp.182;
+        bf %tmp.183 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_8_135_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_8_135_20_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_37_135_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 134 15 ]
+        %tmp.185 = lgetv %payload.1;
+        %tmp.186 = 4;
+        %tmp.187 = agetv %tmp.185 %tmp.186;
+        putv self :deviceMfg %tmp.187;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_37_135_20_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_8_135_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_133_8_135_20_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 136 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_defaultCodeBegin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_125_12_137_12_switchStmtEnd:
+        pop;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 139 12 ]
+        %tmp.189 = getv ? :ackSequence;
+        push %tmp.189;
+        switch %tmp.189 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtBegin:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 140 16 ]
+        %tmp.190 = dup %tmp.189;
+        %tmp.192 = getv ? :SEND_USER;
+        %tmp.193 = getv function %tmp.190 :equals;
+        %tmp.194 = invoke %tmp.190 %tmp.193 (%tmp.192);
+        bt %tmp.194 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_140_16_152_25_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 153 16 ]
+        %tmp.195 = dup %tmp.189;
+        %tmp.197 = getv ? :SEND_TARGPWR;
+        %tmp.198 = getv function %tmp.195 :equals;
+        %tmp.199 = invoke %tmp.195 %tmp.198 (%tmp.197);
+        bt %tmp.199 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_153_16_165_25_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 166 16 ]
+        %tmp.200 = dup %tmp.189;
+        %tmp.202 = getv ? :SEND_WINDRESIST;
+        %tmp.203 = getv function %tmp.200 :equals;
+        %tmp.204 = invoke %tmp.200 %tmp.203 (%tmp.202);
+        bt %tmp.204 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_166_16_182_25_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 183 16 ]
+        %tmp.205 = dup %tmp.189;
+        %tmp.207 = getv ? :SEND_TRACKRESIST;
+        %tmp.208 = getv function %tmp.205 :equals;
+        %tmp.209 = invoke %tmp.205 %tmp.208 (%tmp.207);
+        bt %tmp.209 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_183_16_200_25_switchCase;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtDefault:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_defaultCodeBegin;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_140_16_152_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 142 20 ]
+        %tmp.210 = lgetv %ackload.4;
+        %tmp.211 = 0x37;
+        %tmp.212 = 0;
+        aputv %tmp.210 %tmp.212 %tmp.211;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 143 20 ]
+        %tmp.213 = lgetv %ackload.4;
+        %tmp.214 = 0x00;
+        %tmp.215 = 1;
+        aputv %tmp.213 %tmp.215 %tmp.214;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 144 20 ]
+        %tmp.216 = lgetv %ackload.4;
+        %tmp.217 = 0x00;
+        %tmp.218 = 2;
+        aputv %tmp.216 %tmp.218 %tmp.217;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 145 20 ]
+        %tmp.219 = lgetv %ackload.4;
+        %tmp.220 = 0xFF;
+        %tmp.221 = 3;
+        aputv %tmp.219 %tmp.221 %tmp.220;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 146 20 ]
+        %tmp.222 = lgetv %ackload.4;
+        %tmp.223 = 0x80;
+        %tmp.224 = 4;
+        aputv %tmp.222 %tmp.224 %tmp.223;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 147 20 ]
+        %tmp.225 = lgetv %ackload.4;
+        %tmp.226 = 0x0C;
+        %tmp.227 = 5;
+        aputv %tmp.225 %tmp.227 %tmp.226;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 148 20 ]
+        %tmp.228 = lgetv %ackload.4;
+        %tmp.229 = 0x46;
+        %tmp.230 = 6;
+        aputv %tmp.228 %tmp.230 %tmp.229;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 149 20 ]
+        %tmp.231 = lgetv %ackload.4;
+        %tmp.232 = 0x00;
+        %tmp.233 = 7;
+        aputv %tmp.231 %tmp.233 %tmp.232;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 150 20 ]
+        %tmp.234 = lgetv %message.5;
+        %tmp.235 = getv function %tmp.234 :setPayload;
+        %tmp.237 = lgetv %ackload.4;
+        invoke %tmp.234 %tmp.235(%tmp.237);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 151 20 ]
+        %tmp.239 = getv ? :GenericChannel;
+        %tmp.240 = getv function %tmp.239 :sendAcknowledge;
+        %tmp.242 = lgetv %message.5;
+        invoke %tmp.239 %tmp.240(%tmp.242);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 152 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_153_16_165_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 154 20 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtBegin" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd" ]
+        %targPower.6 = local;
+        %tmp.244 = getv ? :Application;
+        %tmp.245 = getv function %tmp.244 :getApp;
+        %tmp.246 = invoke %tmp.244 %tmp.245();
+        %tmp.247 = getv %tmp.246 :targetPower;
+        %tmp.248 = getv function %tmp.247 :toLong;
+        %tmp.249 = invoke %tmp.247 %tmp.248();
+        lputv %targPower.6 %tmp.249;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 155 20 ]
+        %tmp.250 = lgetv %ackload.4;
+        %tmp.251 = 0x31;
+        %tmp.252 = 0;
+        aputv %tmp.250 %tmp.252 %tmp.251;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 156 20 ]
+        %tmp.253 = lgetv %ackload.4;
+        %tmp.254 = 0xFF;
+        %tmp.255 = 1;
+        aputv %tmp.253 %tmp.255 %tmp.254;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 157 20 ]
+        %tmp.256 = lgetv %ackload.4;
+        %tmp.257 = 0xFF;
+        %tmp.258 = 2;
+        aputv %tmp.256 %tmp.258 %tmp.257;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 158 20 ]
+        %tmp.259 = lgetv %ackload.4;
+        %tmp.260 = 0xFF;
+        %tmp.261 = 3;
+        aputv %tmp.259 %tmp.261 %tmp.260;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 159 20 ]
+        %tmp.262 = lgetv %ackload.4;
+        %tmp.263 = 0xFF;
+        %tmp.264 = 4;
+        aputv %tmp.262 %tmp.264 %tmp.263;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 160 20 ]
+        %tmp.265 = lgetv %ackload.4;
+        %tmp.266 = 0xFF;
+        %tmp.267 = 5;
+        aputv %tmp.265 %tmp.267 %tmp.266;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 161 20 ]
+        %tmp.268 = lgetv %ackload.4;
+        %tmp.270 = lgetv %targPower.6;
+        %tmp.271 = 4;
+        %tmp.272 = mul %tmp.270 %tmp.271;
+        %tmp.273 = 256;
+        %tmp.274 = mod %tmp.272 %tmp.273;
+        %tmp.275 = 6;
+        aputv %tmp.268 %tmp.275 %tmp.274;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 162 20 ]
+        %tmp.276 = lgetv %ackload.4;
+        %tmp.278 = lgetv %targPower.6;
+        %tmp.279 = 4;
+        %tmp.280 = mul %tmp.278 %tmp.279;
+        %tmp.281 = 256;
+        %tmp.282 = div %tmp.280 %tmp.281;
+        %tmp.283 = 7;
+        aputv %tmp.276 %tmp.283 %tmp.282;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 163 20 ]
+        %tmp.284 = lgetv %message.5;
+        %tmp.285 = getv function %tmp.284 :setPayload;
+        %tmp.287 = lgetv %ackload.4;
+        invoke %tmp.284 %tmp.285(%tmp.287);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 164 20 ]
+        %tmp.289 = getv ? :GenericChannel;
+        %tmp.290 = getv function %tmp.289 :sendAcknowledge;
+        %tmp.292 = lgetv %message.5;
+        invoke %tmp.289 %tmp.290(%tmp.292);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 165 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_166_16_182_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 167 20 ]
+        %tmp.293 = lgetv %ackload.4;
+        %tmp.294 = 0x32;
+        %tmp.295 = 0;
+        aputv %tmp.293 %tmp.295 %tmp.294;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 168 20 ]
+        %tmp.296 = lgetv %ackload.4;
+        %tmp.297 = 0xFF;
+        %tmp.298 = 1;
+        aputv %tmp.296 %tmp.298 %tmp.297;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 169 20 ]
+        %tmp.299 = lgetv %ackload.4;
+        %tmp.300 = 0xFF;
+        %tmp.301 = 2;
+        aputv %tmp.299 %tmp.301 %tmp.300;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 170 20 ]
+        %tmp.302 = lgetv %ackload.4;
+        %tmp.303 = 0xFF;
+        %tmp.304 = 3;
+        aputv %tmp.302 %tmp.304 %tmp.303;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 171 20 ]
+        %tmp.305 = lgetv %ackload.4;
+        %tmp.306 = 0xFF;
+        %tmp.307 = 4;
+        aputv %tmp.305 %tmp.307 %tmp.306;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 172 20 ]
+        %tmp.308 = lgetv %ackload.4;
+        %tmp.309 = 0x33;
+        %tmp.310 = 5;
+        aputv %tmp.308 %tmp.310 %tmp.309;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 173 20 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_20_178_20_if_stmt:
+        %tmp.312 = getv ? :Application;
+        %tmp.313 = getv function %tmp.312 :getApp;
+        %tmp.314 = invoke %tmp.312 %tmp.313();
+        %tmp.315 = getv %tmp.314 :targetPower;
+        %tmp.316 = 1;
+        %tmp.317 = eq %tmp.315 %tmp.316;
+        bf %tmp.317 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_20_178_20_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_20_178_20_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_61_175_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 174 24 ]
+        %tmp.318 = lgetv %ackload.4;
+        %tmp.319 = 0x70;
+        %tmp.320 = 6;
+        aputv %tmp.318 %tmp.320 %tmp.319;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_61_175_20_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_20_178_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_20_178_20_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_176_24_178_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 177 24 ]
+        %tmp.321 = lgetv %ackload.4;
+        %tmp.322 = 0x7F;
+        %tmp.323 = 6;
+        aputv %tmp.321 %tmp.323 %tmp.322;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_176_24_178_20_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_173_20_178_20_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 179 20 ]
+        %tmp.324 = lgetv %ackload.4;
+        %tmp.325 = 0x64;
+        %tmp.326 = 7;
+        aputv %tmp.324 %tmp.326 %tmp.325;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 180 20 ]
+        %tmp.327 = lgetv %message.5;
+        %tmp.328 = getv function %tmp.327 :setPayload;
+        %tmp.330 = lgetv %ackload.4;
+        invoke %tmp.327 %tmp.328(%tmp.330);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 181 20 ]
+        %tmp.332 = getv ? :GenericChannel;
+        %tmp.333 = getv function %tmp.332 :sendAcknowledge;
+        %tmp.335 = lgetv %message.5;
+        invoke %tmp.332 %tmp.333(%tmp.335);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 182 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_183_16_200_25_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 184 20 ]
+        %tmp.336 = lgetv %ackload.4;
+        %tmp.337 = 0x33;
+        %tmp.338 = 0;
+        aputv %tmp.336 %tmp.338 %tmp.337;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 185 20 ]
+        %tmp.339 = lgetv %ackload.4;
+        %tmp.340 = 0xFF;
+        %tmp.341 = 1;
+        aputv %tmp.339 %tmp.341 %tmp.340;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 186 20 ]
+        %tmp.342 = lgetv %ackload.4;
+        %tmp.343 = 0xFF;
+        %tmp.344 = 2;
+        aputv %tmp.342 %tmp.344 %tmp.343;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 187 20 ]
+        %tmp.345 = lgetv %ackload.4;
+        %tmp.346 = 0xFF;
+        %tmp.347 = 3;
+        aputv %tmp.345 %tmp.347 %tmp.346;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 188 20 ]
+        %tmp.348 = lgetv %ackload.4;
+        %tmp.349 = 0xFF;
+        %tmp.350 = 4;
+        aputv %tmp.348 %tmp.350 %tmp.349;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 189 20 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_20_196_20_if_stmt:
+        %tmp.352 = getv ? :Application;
+        %tmp.353 = getv function %tmp.352 :getApp;
+        %tmp.354 = invoke %tmp.352 %tmp.353();
+        %tmp.355 = getv %tmp.354 :targetPower;
+        %tmp.356 = 1;
+        %tmp.357 = eq %tmp.355 %tmp.356;
+        bf %tmp.357 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_20_196_20_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_20_196_20_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_61_192_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 190 24 ]
+        %tmp.358 = lgetv %ackload.4;
+        %tmp.359 = 0x66;
+        %tmp.360 = 5;
+        aputv %tmp.358 %tmp.360 %tmp.359;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 191 24 ]
+        %tmp.361 = lgetv %ackload.4;
+        %tmp.362 = 0x4E;
+        %tmp.363 = 6;
+        aputv %tmp.361 %tmp.363 %tmp.362;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_61_192_20_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_20_196_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_20_196_20_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_193_24_196_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 194 24 ]
+        %tmp.364 = lgetv %ackload.4;
+        %tmp.365 = 0x1A;
+        %tmp.366 = 5;
+        aputv %tmp.364 %tmp.366 %tmp.365;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 195 24 ]
+        %tmp.367 = lgetv %ackload.4;
+        %tmp.368 = 0x4F;
+        %tmp.369 = 6;
+        aputv %tmp.367 %tmp.369 %tmp.368;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_193_24_196_20_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_189_20_196_20_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 197 20 ]
+        %tmp.370 = lgetv %ackload.4;
+        %tmp.371 = 0x50;
+        %tmp.372 = 7;
+        aputv %tmp.370 %tmp.372 %tmp.371;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 198 20 ]
+        %tmp.373 = lgetv %message.5;
+        %tmp.374 = getv function %tmp.373 :setPayload;
+        %tmp.376 = lgetv %ackload.4;
+        invoke %tmp.373 %tmp.374(%tmp.376);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 199 20 ]
+        %tmp.378 = getv ? :GenericChannel;
+        %tmp.379 = getv function %tmp.378 :sendAcknowledge;
+        %tmp.381 = lgetv %message.5;
+        invoke %tmp.378 %tmp.379(%tmp.381);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 200 20 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_defaultCodeBegin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_139_12_201_12_switchStmtEnd:
+        pop;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_61_202_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_13_202_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_108_13_202_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_75_8_202_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_73_47_203_4_stop:
+    }
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 1; ]
+<init> {
+}

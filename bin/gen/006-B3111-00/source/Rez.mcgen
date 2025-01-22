@@ -1,0 +1,84 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var AppIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var PaletteSize as Symbol;
+        (:initialized) var thb_units as Symbol;
+        (:initialized) var torso_front as Symbol;
+        (:initialized) var range0 as Symbol;
+        (:initialized) var left_hamstring as Symbol;
+        (:initialized) var range1 as Symbol;
+        (:initialized) var range2 as Symbol;
+        (:initialized) var right_lower_back as Symbol;
+        (:initialized) var right_abdomen as Symbol;
+        (:initialized) var left_brachioradialis as Symbol;
+        (:initialized) var left_forearm_extensors as Symbol;
+        (:initialized) var none as Symbol;
+        (:initialized) var left_chest as Symbol;
+        (:initialized) var right_chest as Symbol;
+        (:initialized) var right_leg as Symbol;
+        (:initialized) var right_brachioradialis as Symbol;
+        (:initialized) var AppSensor as Symbol;
+        (:initialized) var left_abdomen as Symbol;
+        (:initialized) var left_lower_back as Symbol;
+        (:initialized) var left_shin as Symbol;
+        (:initialized) var left_leg as Symbol;
+        (:initialized) var left_quad as Symbol;
+        (:initialized) var FECIdentityTitle as Symbol;
+        (:initialized) var LapButton as Symbol;
+        (:initialized) var right_hamstring as Symbol;
+        (:initialized) var right_shoulder as Symbol;
+        (:initialized) var right_shin as Symbol;
+        (:initialized) var thb_label as Symbol;
+        (:initialized) var right_bicep as Symbol;
+        (:initialized) var SensorIdentityTitle as Symbol;
+        (:initialized) var left_shoulder as Symbol;
+        (:initialized) var right_quad as Symbol;
+        (:initialized) var smo2_label as Symbol;
+        (:initialized) var right_arm as Symbol;
+        (:initialized) var throat as Symbol;
+        (:initialized) var SensorLocationTitle as Symbol;
+        (:initialized) var torso_back as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var AppVersion as Symbol;
+        (:initialized) var left_arm as Symbol;
+        (:initialized) var smo2_units as Symbol;
+        (:initialized) var left_bicep as Symbol;
+        (:initialized) var right_calf as Symbol;
+        (:initialized) var left_calf as Symbol;
+        (:initialized) var left_tricep as Symbol;
+        (:initialized) var right_tricep as Symbol;
+        (:initialized) var HRMLabel as Symbol;
+        (:initialized) var StartActivityButton as Symbol;
+        (:initialized) var left_glute as Symbol;
+        (:initialized) var DeviceMfg as Symbol;
+        (:initialized) var neck as Symbol;
+        (:initialized) var PWRLabel as Symbol;
+        (:initialized) var MO2Label as Symbol;
+        (:initialized) var left_upper_back as Symbol;
+        (:initialized) var right_upper_back as Symbol;
+        (:initialized) var right_forearm_extensors as Symbol;
+        (:initialized) var SPDLabel as Symbol;
+        (:initialized) var right_glute as Symbol;
+    } // Strings
+} // Rez

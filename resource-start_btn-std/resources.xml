@@ -1,0 +1,6 @@
+<resources>
+	<strings>
+		<string id="StartActivityButton">4</string>
+		<string id="LapButton">5</string>
+	</strings>
+</resources>

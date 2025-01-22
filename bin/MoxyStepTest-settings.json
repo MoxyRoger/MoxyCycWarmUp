@@ -1,0 +1,222 @@
+{
+  "settings" : [ {
+    "key" : "SensorId",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "SensorIdentityTitle",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : true,
+    "configOptions" : null,
+    "configMin" : 0,
+    "configMax" : 99999,
+    "configMaxLength" : null
+  }, {
+    "key" : "FECId",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "FECIdentityTitle",
+    "configPrompt" : null,
+    "configType" : "numeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : true,
+    "configOptions" : null,
+    "configMin" : 0,
+    "configMax" : 99999,
+    "configMaxLength" : null
+  }, {
+    "key" : "SensorLx",
+    "valueType" : "number",
+    "defaultValue" : 255,
+    "configTitle" : "SensorLocationTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "left_leg",
+      "value" : 0
+    }, {
+      "display" : "left_calf",
+      "value" : 1
+    }, {
+      "display" : "left_shin",
+      "value" : 2
+    }, {
+      "display" : "left_hamstring",
+      "value" : 3
+    }, {
+      "display" : "left_quad",
+      "value" : 4
+    }, {
+      "display" : "left_glute",
+      "value" : 5
+    }, {
+      "display" : "right_leg",
+      "value" : 6
+    }, {
+      "display" : "right_calf",
+      "value" : 7
+    }, {
+      "display" : "right_shin",
+      "value" : 8
+    }, {
+      "display" : "right_hamstring",
+      "value" : 9
+    }, {
+      "display" : "right_quad",
+      "value" : 10
+    }, {
+      "display" : "right_glute",
+      "value" : 11
+    }, {
+      "display" : "torso_back",
+      "value" : 12
+    }, {
+      "display" : "left_lower_back",
+      "value" : 13
+    }, {
+      "display" : "left_upper_back",
+      "value" : 14
+    }, {
+      "display" : "right_lower_back",
+      "value" : 15
+    }, {
+      "display" : "right_upper_back",
+      "value" : 16
+    }, {
+      "display" : "torso_front",
+      "value" : 17
+    }, {
+      "display" : "left_abdomen",
+      "value" : 18
+    }, {
+      "display" : "left_chest",
+      "value" : 19
+    }, {
+      "display" : "right_abdomen",
+      "value" : 20
+    }, {
+      "display" : "right_chest",
+      "value" : 21
+    }, {
+      "display" : "left_arm",
+      "value" : 22
+    }, {
+      "display" : "left_shoulder",
+      "value" : 23
+    }, {
+      "display" : "left_bicep",
+      "value" : 24
+    }, {
+      "display" : "left_tricep",
+      "value" : 25
+    }, {
+      "display" : "left_brachioradialis",
+      "value" : 26
+    }, {
+      "display" : "left_forearm_extensors",
+      "value" : 27
+    }, {
+      "display" : "right_arm",
+      "value" : 28
+    }, {
+      "display" : "right_shoulder",
+      "value" : 29
+    }, {
+      "display" : "right_bicep",
+      "value" : 30
+    }, {
+      "display" : "right_tricep",
+      "value" : 31
+    }, {
+      "display" : "right_brachioradialis",
+      "value" : 32
+    }, {
+      "display" : "right_forearm_extensors",
+      "value" : 33
+    }, {
+      "display" : "neck",
+      "value" : 34
+    }, {
+      "display" : "throat",
+      "value" : 35
+    }, {
+      "display" : "none",
+      "value" : 255
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "PaletteSize" : "65536",
+      "thb_units" : "THb",
+      "torso_front" : "Torso/Front",
+      "range0" : "1 Minute",
+      "left_hamstring" : "L. Ham",
+      "range1" : "3 Minutes",
+      "range2" : "5 Minutes",
+      "right_lower_back" : "R. Lwr. Back",
+      "right_abdomen" : "R. Abdomen",
+      "left_brachioradialis" : "L. Ant. Forearm",
+      "left_forearm_extensors" : "L. Pos. Forearm",
+      "none" : "Location Not Set",
+      "left_chest" : "L. Chest",
+      "right_chest" : "R. Chest",
+      "right_leg" : "R. Leg",
+      "right_brachioradialis" : "R. Ant. Forearm",
+      "AppSensor" : "1st",
+      "left_abdomen" : "L. Abdomen",
+      "left_lower_back" : "L. Lwr. Back",
+      "left_shin" : "L. Shin",
+      "left_leg" : "L. Leg",
+      "left_quad" : "L. Quad",
+      "FECIdentityTitle" : "FEC Id",
+      "LapButton" : "5",
+      "right_hamstring" : "R. Ham",
+      "right_shoulder" : "R. Shoulder",
+      "right_shin" : "R. Shin",
+      "thb_label" : "THb",
+      "right_bicep" : "R. Bicep",
+      "SensorIdentityTitle" : "Sensor Id",
+      "left_shoulder" : "L. Shoulder",
+      "right_quad" : "R. Quad",
+      "smo2_label" : "SmO2",
+      "right_arm" : "R. Arm",
+      "throat" : "Throat",
+      "SensorLocationTitle" : "Sensor Location",
+      "torso_back" : "Torso/Back",
+      "AppName" : "Moxy Step Test",
+      "AppVersion" : "0.0.1",
+      "left_arm" : "L. Arm",
+      "smo2_units" : "%",
+      "left_bicep" : "L. Bicep",
+      "right_calf" : "R. Calf",
+      "left_calf" : "L. Calf",
+      "left_tricep" : "L. Tricep",
+      "right_tricep" : "R. Tricep",
+      "HRMLabel" : "HR",
+      "StartActivityButton" : "4",
+      "left_glute" : "L. Glute",
+      "DeviceMfg" : "Device Manufacturer",
+      "neck" : "Neck",
+      "PWRLabel" : "PWR",
+      "MO2Label" : "MO2",
+      "left_upper_back" : "L. Upr. Back",
+      "right_upper_back" : "R. Upr. Back",
+      "right_forearm_extensors" : "R. Pos. Forearm",
+      "SPDLabel" : "S&C",
+      "right_glute" : "R. Glute"
+    }
+  }
+}

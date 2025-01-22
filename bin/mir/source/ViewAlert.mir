@@ -1,0 +1,1726 @@
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 1; ]
+using Toybox.Application as :App;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 2; ]
+using Toybox.Attention as :Attention;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 3; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 4; ]
+using Toybox.System as :Sys;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 5; ]
+using Toybox.Timer as :Timer;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 6; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 8; ]
+enum {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 9; @position = 4; ]
+    BTN_LAP,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 10; @position = 4; ]
+    BTN_START,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 11; @position = 4; ]
+    BTN_STOP,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 12; @position = 4; ]
+    BTN_NONE,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 13; @position = 4; ]
+    STP_WARM,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 14; @position = 4; ]
+    STP_PREP,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 15; @position = 4; ]
+    STP_SPRINT,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 16; @position = 4; ]
+    STP_REST,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 17; @position = 4; ]
+    STP_STEP,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 18; @position = 4; ]
+    STP_COOL
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 21; ]
+class ViewAlert extends Ui.View{
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 21; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 22 15 ]
+        %tmp.2 = getv ? :BTN_NONE;
+        putv self :prevBtnAlert %tmp.2;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 21; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 22; @position = 15; ]
+    protected
+    var prevBtnAlert;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 24; @position = 15; ]
+    protected
+    var timeStartAlert;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 25; @position = 15; ]
+    protected
+    var mSensor;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 26; @position = 15; ]
+    protected
+    var g_ScaleFactorX;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 27; @position = 15; ]
+    protected
+    var g_ScaleFactorY;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 28; @position = 15; ]
+    protected
+    var g_BASE_WIDTH_X = 240.0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 29; @position = 15; ]
+    protected
+    var g_BASE_HEIGHT_Y = 240.0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 31; ]
+    function initialize(sensor) as Void {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_31_32_34_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 32 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 33 8 ]
+        %tmp.5 = lgetv %sensor;
+        putv self :mSensor %tmp.5;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_31_32_34_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 36; ]
+    function checkAlerts(dc) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_36_29_144_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 37 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_36_29_144_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_36_29_144_4_stop" ]
+        %info.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 38 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_36_29_144_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_36_29_144_4_stop" ]
+        %temp_val.2 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 39 8 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getWidth;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %temp_val.2 %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 41 8 ]
+        %tmp.8 = lgetv %temp_val.2;
+        %tmp.10 = getv ? :g_BASE_WIDTH_X;
+        %tmp.11 = div %tmp.8 %tmp.10;
+        putv self :g_ScaleFactorX %tmp.11;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 42 8 ]
+        %tmp.12 = lgetv %dc;
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %temp_val.2 %tmp.14;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 44 8 ]
+        %tmp.16 = lgetv %temp_val.2;
+        %tmp.18 = getv ? :g_BASE_HEIGHT_Y;
+        %tmp.19 = div %tmp.16 %tmp.18;
+        putv self :g_ScaleFactorY %tmp.19;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 48 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_8_142_8_if_stmt:
+        %tmp.20 = getm $.Toybox.Application;
+        %tmp.21 = getv function %tmp.20 :getApp;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = getv %tmp.22 :btnAlert;
+        %tmp.25 = getv ? :BTN_NONE;
+        %tmp.26 = ne %tmp.23 %tmp.25;
+        bf %tmp.26 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_8_142_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_8_142_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_47_142_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 49 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_12_69_12_if_stmt:
+        %tmp.28 = getv ? :prevBtnAlert;
+        %tmp.29 = getm $.Toybox.Application;
+        %tmp.30 = getv function %tmp.29 :getApp;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        %tmp.32 = getv %tmp.31 :btnAlert;
+        %tmp.33 = ne %tmp.28 %tmp.32;
+        bf %tmp.33 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_12_69_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_12_69_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_55_69_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 50 16 ]
+        %tmp.34 = getm $.Toybox.System;
+        %tmp.35 = getv function %tmp.34 :getTimer;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        putv self :timeStartAlert %tmp.36;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 51 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_16_64_16_if_stmt:
+        %tmp.37 = lgetv %info.1;
+        %tmp.38 = getv %tmp.37 :tonesOn;
+        bf %tmp.38 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_16_64_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_16_64_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_34_64_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 52 20 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_20_63_20_if_stmt:
+        %tmp.39 = getm $.Toybox.Application;
+        %tmp.40 = getv function %tmp.39 :getApp;
+        %tmp.41 = invoke %tmp.39 %tmp.40();
+        %tmp.42 = getv %tmp.41 :btnAlert;
+        %tmp.44 = getv ? :BTN_START;
+        %tmp.45 = eq %tmp.42 %tmp.44;
+        bf %tmp.45 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_20_63_20_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_20_63_20_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_60_54_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 53 24 ]
+        %tmp.46 = getm $.Toybox.Attention;
+        %tmp.47 = getv function %tmp.46 :playTone;
+        %tmp.48 = getm $.Toybox.Attention;
+        %tmp.49 = getv %tmp.48 :TONE_START;
+        invoke %tmp.46 %tmp.47(%tmp.49);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_60_54_20_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_20_63_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_20_63_20_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 55 25 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_25_63_20_if_stmt:
+        %tmp.50 = getm $.Toybox.Application;
+        %tmp.51 = getv function %tmp.50 :getApp;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        %tmp.53 = getv %tmp.52 :btnAlert;
+        %tmp.55 = getv ? :BTN_STOP;
+        %tmp.56 = eq %tmp.53 %tmp.55;
+        bf %tmp.56 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_25_63_20_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_25_63_20_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_64_57_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 56 24 ]
+        %tmp.57 = getm $.Toybox.Attention;
+        %tmp.58 = getv function %tmp.57 :playTone;
+        %tmp.59 = getm $.Toybox.Attention;
+        %tmp.60 = getv %tmp.59 :TONE_STOP;
+        invoke %tmp.57 %tmp.58(%tmp.60);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_64_57_20_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_25_63_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_25_63_20_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 58 25 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_25_63_20_if_stmt:
+        %tmp.61 = getm $.Toybox.Application;
+        %tmp.62 = getv function %tmp.61 :getApp;
+        %tmp.63 = invoke %tmp.61 %tmp.62();
+        %tmp.64 = getv %tmp.63 :btnAlert;
+        %tmp.66 = getv ? :BTN_LAP;
+        %tmp.67 = eq %tmp.64 %tmp.66;
+        bf %tmp.67 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_25_63_20_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_25_63_20_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_63_60_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 59 24 ]
+        %tmp.68 = getm $.Toybox.Attention;
+        %tmp.69 = getv function %tmp.68 :playTone;
+        %tmp.70 = getm $.Toybox.Attention;
+        %tmp.71 = getv %tmp.70 :TONE_LAP;
+        invoke %tmp.68 %tmp.69(%tmp.71);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_63_60_20_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_25_63_20_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_25_63_20_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_61_25_63_20_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 62 24 ]
+        %tmp.72 = getm $.Toybox.Attention;
+        %tmp.73 = getv function %tmp.72 :playTone;
+        %tmp.74 = getm $.Toybox.Attention;
+        %tmp.75 = getv %tmp.74 :TONE_LOUD_BEEP;
+        invoke %tmp.72 %tmp.73(%tmp.75);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_61_25_63_20_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_58_25_63_20_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_55_25_63_20_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_52_20_63_20_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_34_64_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_16_64_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_51_16_64_16_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 65 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_16_68_16_if_stmt:
+        %tmp.76 = lgetv %info.1;
+        %tmp.77 = getv %tmp.76 :vibrateOn;
+        bf %tmp.77 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_16_68_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_16_68_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_36_68_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 66 20 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_36_68_16_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_36_68_16_stop" ]
+        %profile.3 = local;
+        %tmp.78 = newa 1;
+        %tmp.81 = getm $.Toybox.Attention;
+        %tmp.82 = getv function ? %tmp.81 :VibeProfile;
+        %tmp.84 = getv ? :VIBRATE_DUTY_CYCLE;
+        %tmp.86 = getv ? :VIBRATE_PERIOD;
+        %tmp.79 = newc %tmp.82 (%tmp.84, %tmp.86);
+        %tmp.87 = dup %tmp.78;
+        %tmp.88 = aputv %tmp.87 0 %tmp.79;
+        lputv %profile.3 %tmp.88;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 67 20 ]
+        %tmp.89 = getm $.Toybox.Attention;
+        %tmp.90 = getv function %tmp.89 :vibrate;
+        %tmp.92 = lgetv %profile.3;
+        invoke %tmp.89 %tmp.90(%tmp.92);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_36_68_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_16_68_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_65_16_68_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_55_69_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_12_69_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_49_12_69_12_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 70 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_12_141_12_if_stmt:
+        %tmp.93 = getm $.Toybox.Application;
+        %tmp.94 = getv function %tmp.93 :getApp;
+        %tmp.95 = invoke %tmp.93 %tmp.94();
+        %tmp.96 = getv %tmp.95 :btnAlert;
+        %tmp.98 = getv ? :BTN_LAP;
+        %tmp.99 = eq %tmp.96 %tmp.98;
+        bf %tmp.99 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_12_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_12_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_50_77_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 71 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_16_76_16_if_stmt:
+        %tmp.100 = getm $.Toybox.System;
+        %tmp.101 = getv function %tmp.100 :getTimer;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.104 = getv ? :timeStartAlert;
+        %tmp.105 = sub %tmp.102 %tmp.104;
+        %tmp.106 = 5000;
+        %tmp.107 = gt %tmp.105 %tmp.106;
+        bf %tmp.107 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_16_76_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_16_76_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_60_73_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 72 20 ]
+        %tmp.108 = getm $.Toybox.Application;
+        %tmp.109 = getv function %tmp.108 :getApp;
+        %tmp.110 = invoke %tmp.108 %tmp.109();
+        %tmp.111 = getv function %tmp.110 :clearBtnAlert;
+        invoke %tmp.110 %tmp.111();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_60_73_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_16_76_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_16_76_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_74_21_76_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 75 20 ]
+        %tmp.112 = self;
+        %tmp.113 = getv function %tmp.112 :drawLapAlert;
+        %tmp.115 = lgetv %dc;
+        invoke %tmp.112 %tmp.113(%tmp.115);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_74_21_76_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_71_16_76_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_50_77_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_12_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_12_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 78 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_17_141_12_if_stmt:
+        %tmp.116 = getm $.Toybox.Application;
+        %tmp.117 = getv function %tmp.116 :getApp;
+        %tmp.118 = invoke %tmp.116 %tmp.117();
+        %tmp.119 = getv %tmp.118 :btnAlert;
+        %tmp.121 = getv ? :BTN_START;
+        %tmp.122 = eq %tmp.119 %tmp.121;
+        bf %tmp.122 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_57_85_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 79 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_16_84_16_if_stmt:
+        %tmp.123 = getm $.Toybox.System;
+        %tmp.124 = getv function %tmp.123 :getTimer;
+        %tmp.125 = invoke %tmp.123 %tmp.124();
+        %tmp.127 = getv ? :timeStartAlert;
+        %tmp.128 = sub %tmp.125 %tmp.127;
+        %tmp.129 = 2000;
+        %tmp.130 = gt %tmp.128 %tmp.129;
+        bf %tmp.130 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_16_84_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_16_84_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_60_81_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 80 20 ]
+        %tmp.131 = getm $.Toybox.Application;
+        %tmp.132 = getv function %tmp.131 :getApp;
+        %tmp.133 = invoke %tmp.131 %tmp.132();
+        %tmp.134 = getv function %tmp.133 :clearBtnAlert;
+        invoke %tmp.133 %tmp.134();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_60_81_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_16_84_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_16_84_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_82_21_84_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 83 20 ]
+        %tmp.135 = self;
+        %tmp.136 = getv function %tmp.135 :drawStartAlert;
+        %tmp.138 = lgetv %dc;
+        invoke %tmp.135 %tmp.136(%tmp.138);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_82_21_84_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_79_16_84_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_57_85_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 86 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_17_141_12_if_stmt:
+        %tmp.139 = getm $.Toybox.Application;
+        %tmp.140 = getv function %tmp.139 :getApp;
+        %tmp.141 = invoke %tmp.139 %tmp.140();
+        %tmp.142 = getv %tmp.141 :btnAlert;
+        %tmp.144 = getv ? :BTN_STOP;
+        %tmp.145 = eq %tmp.142 %tmp.144;
+        bf %tmp.145 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_56_93_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 87 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_16_92_16_if_stmt:
+        %tmp.146 = getm $.Toybox.System;
+        %tmp.147 = getv function %tmp.146 :getTimer;
+        %tmp.148 = invoke %tmp.146 %tmp.147();
+        %tmp.150 = getv ? :timeStartAlert;
+        %tmp.151 = sub %tmp.148 %tmp.150;
+        %tmp.152 = 2000;
+        %tmp.153 = gt %tmp.151 %tmp.152;
+        bf %tmp.153 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_16_92_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_16_92_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_60_89_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 88 20 ]
+        %tmp.154 = getm $.Toybox.Application;
+        %tmp.155 = getv function %tmp.154 :getApp;
+        %tmp.156 = invoke %tmp.154 %tmp.155();
+        %tmp.157 = getv function %tmp.156 :clearBtnAlert;
+        invoke %tmp.156 %tmp.157();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_60_89_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_16_92_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_16_92_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_90_21_92_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 91 20 ]
+        %tmp.158 = self;
+        %tmp.159 = getv function %tmp.158 :drawStopAlert;
+        %tmp.161 = lgetv %dc;
+        invoke %tmp.158 %tmp.159(%tmp.161);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_90_21_92_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_87_16_92_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_56_93_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 94 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_17_141_12_if_stmt:
+        %tmp.162 = getm $.Toybox.Application;
+        %tmp.163 = getv function %tmp.162 :getApp;
+        %tmp.164 = invoke %tmp.162 %tmp.163();
+        %tmp.165 = getv %tmp.164 :btnAlert;
+        %tmp.167 = getv ? :STP_WARM;
+        %tmp.168 = eq %tmp.165 %tmp.167;
+        bf %tmp.168 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_56_101_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 95 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_16_100_16_if_stmt:
+        %tmp.169 = getm $.Toybox.System;
+        %tmp.170 = getv function %tmp.169 :getTimer;
+        %tmp.171 = invoke %tmp.169 %tmp.170();
+        %tmp.173 = getv ? :timeStartAlert;
+        %tmp.174 = sub %tmp.171 %tmp.173;
+        %tmp.175 = 2000;
+        %tmp.176 = gt %tmp.174 %tmp.175;
+        bf %tmp.176 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_16_100_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_16_100_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_60_97_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 96 20 ]
+        %tmp.177 = getm $.Toybox.Application;
+        %tmp.178 = getv function %tmp.177 :getApp;
+        %tmp.179 = invoke %tmp.177 %tmp.178();
+        %tmp.180 = getv function %tmp.179 :clearBtnAlert;
+        invoke %tmp.179 %tmp.180();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_60_97_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_16_100_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_16_100_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_98_21_100_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 99 20 ]
+        %tmp.181 = self;
+        %tmp.182 = getv function %tmp.181 :drawSmo2Alert;
+        %tmp.184 = lgetv %dc;
+        %tmp.185 = "WARMUP";
+        invoke %tmp.181 %tmp.182(%tmp.184, %tmp.185);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_98_21_100_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_95_16_100_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_56_101_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 102 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_17_141_12_if_stmt:
+        %tmp.186 = getm $.Toybox.Application;
+        %tmp.187 = getv function %tmp.186 :getApp;
+        %tmp.188 = invoke %tmp.186 %tmp.187();
+        %tmp.189 = getv %tmp.188 :btnAlert;
+        %tmp.191 = getv ? :STP_PREP;
+        %tmp.192 = eq %tmp.189 %tmp.191;
+        bf %tmp.192 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_56_109_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 103 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_16_108_16_if_stmt:
+        %tmp.193 = getm $.Toybox.System;
+        %tmp.194 = getv function %tmp.193 :getTimer;
+        %tmp.195 = invoke %tmp.193 %tmp.194();
+        %tmp.197 = getv ? :timeStartAlert;
+        %tmp.198 = sub %tmp.195 %tmp.197;
+        %tmp.199 = 2000;
+        %tmp.200 = gt %tmp.198 %tmp.199;
+        bf %tmp.200 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_16_108_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_16_108_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_60_105_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 104 20 ]
+        %tmp.201 = getm $.Toybox.Application;
+        %tmp.202 = getv function %tmp.201 :getApp;
+        %tmp.203 = invoke %tmp.201 %tmp.202();
+        %tmp.204 = getv function %tmp.203 :clearBtnAlert;
+        invoke %tmp.203 %tmp.204();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_60_105_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_16_108_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_16_108_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_106_21_108_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 107 20 ]
+        %tmp.205 = self;
+        %tmp.206 = getv function %tmp.205 :drawSmo2Alert;
+        %tmp.208 = lgetv %dc;
+        %tmp.209 = "STOP!";
+        invoke %tmp.205 %tmp.206(%tmp.208, %tmp.209);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_106_21_108_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_103_16_108_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_56_109_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 110 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_17_141_12_if_stmt:
+        %tmp.210 = getm $.Toybox.Application;
+        %tmp.211 = getv function %tmp.210 :getApp;
+        %tmp.212 = invoke %tmp.210 %tmp.211();
+        %tmp.213 = getv %tmp.212 :btnAlert;
+        %tmp.215 = getv ? :STP_SPRINT;
+        %tmp.216 = eq %tmp.213 %tmp.215;
+        bf %tmp.216 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_58_117_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 111 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_16_116_16_if_stmt:
+        %tmp.217 = getm $.Toybox.System;
+        %tmp.218 = getv function %tmp.217 :getTimer;
+        %tmp.219 = invoke %tmp.217 %tmp.218();
+        %tmp.221 = getv ? :timeStartAlert;
+        %tmp.222 = sub %tmp.219 %tmp.221;
+        %tmp.223 = 2000;
+        %tmp.224 = gt %tmp.222 %tmp.223;
+        bf %tmp.224 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_16_116_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_16_116_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_60_113_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 112 20 ]
+        %tmp.225 = getm $.Toybox.Application;
+        %tmp.226 = getv function %tmp.225 :getApp;
+        %tmp.227 = invoke %tmp.225 %tmp.226();
+        %tmp.228 = getv function %tmp.227 :clearBtnAlert;
+        invoke %tmp.227 %tmp.228();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_60_113_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_16_116_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_16_116_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_114_21_116_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 115 20 ]
+        %tmp.229 = self;
+        %tmp.230 = getv function %tmp.229 :drawSmo2Alert;
+        %tmp.232 = lgetv %dc;
+        %tmp.233 = "SPRINT!";
+        invoke %tmp.229 %tmp.230(%tmp.232, %tmp.233);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_114_21_116_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_111_16_116_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_58_117_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 118 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_17_141_12_if_stmt:
+        %tmp.234 = getm $.Toybox.Application;
+        %tmp.235 = getv function %tmp.234 :getApp;
+        %tmp.236 = invoke %tmp.234 %tmp.235();
+        %tmp.237 = getv %tmp.236 :btnAlert;
+        %tmp.239 = getv ? :STP_REST;
+        %tmp.240 = eq %tmp.237 %tmp.239;
+        bf %tmp.240 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_56_125_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 119 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_16_124_16_if_stmt:
+        %tmp.241 = getm $.Toybox.System;
+        %tmp.242 = getv function %tmp.241 :getTimer;
+        %tmp.243 = invoke %tmp.241 %tmp.242();
+        %tmp.245 = getv ? :timeStartAlert;
+        %tmp.246 = sub %tmp.243 %tmp.245;
+        %tmp.247 = 2000;
+        %tmp.248 = gt %tmp.246 %tmp.247;
+        bf %tmp.248 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_16_124_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_16_124_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_60_121_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 120 20 ]
+        %tmp.249 = getm $.Toybox.Application;
+        %tmp.250 = getv function %tmp.249 :getApp;
+        %tmp.251 = invoke %tmp.249 %tmp.250();
+        %tmp.252 = getv function %tmp.251 :clearBtnAlert;
+        invoke %tmp.251 %tmp.252();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_60_121_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_16_124_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_16_124_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_122_21_124_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 123 20 ]
+        %tmp.253 = self;
+        %tmp.254 = getv function %tmp.253 :drawSmo2Alert;
+        %tmp.256 = lgetv %dc;
+        %tmp.257 = "REST";
+        invoke %tmp.253 %tmp.254(%tmp.256, %tmp.257);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_122_21_124_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_119_16_124_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_56_125_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 126 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_17_141_12_if_stmt:
+        %tmp.258 = getm $.Toybox.Application;
+        %tmp.259 = getv function %tmp.258 :getApp;
+        %tmp.260 = invoke %tmp.258 %tmp.259();
+        %tmp.261 = getv %tmp.260 :btnAlert;
+        %tmp.263 = getv ? :STP_STEP;
+        %tmp.264 = eq %tmp.261 %tmp.263;
+        bf %tmp.264 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_17_141_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_56_133_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 127 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_16_132_16_if_stmt:
+        %tmp.265 = getm $.Toybox.System;
+        %tmp.266 = getv function %tmp.265 :getTimer;
+        %tmp.267 = invoke %tmp.265 %tmp.266();
+        %tmp.269 = getv ? :timeStartAlert;
+        %tmp.270 = sub %tmp.267 %tmp.269;
+        %tmp.271 = 2000;
+        %tmp.272 = gt %tmp.270 %tmp.271;
+        bf %tmp.272 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_16_132_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_16_132_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_60_129_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 128 20 ]
+        %tmp.273 = getm $.Toybox.Application;
+        %tmp.274 = getv function %tmp.273 :getApp;
+        %tmp.275 = invoke %tmp.273 %tmp.274();
+        %tmp.276 = getv function %tmp.275 :clearBtnAlert;
+        invoke %tmp.275 %tmp.276();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_60_129_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_16_132_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_16_132_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_130_21_132_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 131 20 ]
+        %tmp.277 = self;
+        %tmp.278 = getv function %tmp.277 :drawSmo2Alert;
+        %tmp.280 = lgetv %dc;
+        %tmp.281 = "Step ";
+        %tmp.282 = getm $.Toybox.Application;
+        %tmp.283 = getv function %tmp.282 :getApp;
+        %tmp.284 = invoke %tmp.282 %tmp.283();
+        %tmp.285 = getv %tmp.284 :loadStep;
+        %tmp.286 = add %tmp.281 %tmp.285;
+        invoke %tmp.277 %tmp.278(%tmp.280, %tmp.286);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_130_21_132_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_127_16_132_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_56_133_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_17_141_12_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 134 17 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_17_141_12_if_stmt:
+        %tmp.287 = getm $.Toybox.Application;
+        %tmp.288 = getv function %tmp.287 :getApp;
+        %tmp.289 = invoke %tmp.287 %tmp.288();
+        %tmp.290 = getv %tmp.289 :btnAlert;
+        %tmp.292 = getv ? :STP_COOL;
+        %tmp.293 = eq %tmp.290 %tmp.292;
+        bf %tmp.293 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_17_141_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_56_141_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 135 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_16_140_16_if_stmt:
+        %tmp.294 = getm $.Toybox.System;
+        %tmp.295 = getv function %tmp.294 :getTimer;
+        %tmp.296 = invoke %tmp.294 %tmp.295();
+        %tmp.298 = getv ? :timeStartAlert;
+        %tmp.299 = sub %tmp.296 %tmp.298;
+        %tmp.300 = 2000;
+        %tmp.301 = gt %tmp.299 %tmp.300;
+        bf %tmp.301 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_16_140_16_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_16_140_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_60_137_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 136 20 ]
+        %tmp.302 = getm $.Toybox.Application;
+        %tmp.303 = getv function %tmp.302 :getApp;
+        %tmp.304 = invoke %tmp.302 %tmp.303();
+        %tmp.305 = getv function %tmp.304 :clearBtnAlert;
+        invoke %tmp.304 %tmp.305();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_60_137_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_16_140_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_16_140_16_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_138_21_140_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 139 20 ]
+        %tmp.306 = self;
+        %tmp.307 = getv function %tmp.306 :drawSmo2Alert;
+        %tmp.309 = lgetv %dc;
+        %tmp.310 = "COOLDOWN";
+        invoke %tmp.306 %tmp.307(%tmp.309, %tmp.310);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_138_21_140_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_135_16_140_16_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_56_141_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_17_141_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_134_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_126_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_118_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_110_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_102_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_94_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_86_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_78_17_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_70_12_141_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_47_142_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_8_142_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_48_8_142_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 143 8 ]
+        %tmp.311 = getm $.Toybox.Application;
+        %tmp.312 = getv function %tmp.311 :getApp;
+        %tmp.313 = invoke %tmp.311 %tmp.312();
+        %tmp.314 = getv %tmp.313 :btnAlert;
+        putv self :prevBtnAlert %tmp.314;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_36_29_144_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 146; ]
+    function drawLapAlert(dc) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 147 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %font_head.1 = local;
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :FONT_LARGE;
+        lputv %font_head.1 %tmp.2;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 148 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %font_label.2 = local;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :FONT_SMALL;
+        lputv %font_label.2 %tmp.4;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 149 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %font_num.3 = local;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :FONT_NUMBER_MEDIUM;
+        lputv %font_num.3 %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 150 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %fgcolor.4 = local;
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :COLOR_BLACK;
+        lputv %fgcolor.4 %tmp.8;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 151 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %bgcolor.5 = local;
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_WHITE;
+        lputv %bgcolor.5 %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 152 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %distConv.6 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 153 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %text.7 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 154 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %tHeight_num.8 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 155 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %tHeight_label.9 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 156 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %xCen.10 = local;
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :getWidth;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = 2;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        lputv %xCen.10 %tmp.15;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 157 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %yCen.11 = local;
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :getHeight;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = 2;
+        %tmp.20 = div %tmp.18 %tmp.19;
+        lputv %yCen.11 %tmp.20;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 158 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %x.12 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 159 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop" ]
+        %y.13 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 161 2 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_2_165_4_if_stmt:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_6_161_54_begin:
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :getWidth;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = 215;
+        %tmp.25 = lte %tmp.23 %tmp.24;
+        bt %tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_2_165_4_if_true;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_32_161_54_false:
+        %tmp.26 = lgetv %dc;
+        %tmp.27 = getv function %tmp.26 :getHeight;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = 215;
+        %tmp.30 = lte %tmp.28 %tmp.29;
+        push %tmp.30;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_32_161_54_end:
+        %tmp.31 = phi [%tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_6_161_54_begin] [%tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_32_161_54_false] [%tmp.31 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_32_161_54_end];
+        bf %tmp.31 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_2_165_4_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_2_165_4_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_56_165_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 162 12 ]
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :FONT_MEDIUM;
+        lputv %font_head.1 %tmp.33;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 163 12 ]
+        %tmp.34 = getm $.Toybox.Graphics;
+        %tmp.35 = getv %tmp.34 :FONT_SMALL;
+        lputv %font_label.2 %tmp.35;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 164 12 ]
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :FONT_NUMBER_MILD;
+        lputv %font_num.3 %tmp.37;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_56_165_4_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_2_165_4_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_161_2_165_4_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 167 8 ]
+        %tmp.38 = lgetv %dc;
+        %tmp.39 = getv function %tmp.38 :getFontHeight;
+        %tmp.41 = lgetv %font_num.3;
+        %tmp.42 = invoke %tmp.38 %tmp.39(%tmp.41);
+        lputv %tHeight_num.8 %tmp.42;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 168 8 ]
+        %tmp.43 = lgetv %dc;
+        %tmp.44 = getv function %tmp.43 :getFontHeight;
+        %tmp.46 = lgetv %font_label.2;
+        %tmp.47 = invoke %tmp.43 %tmp.44(%tmp.46);
+        lputv %tHeight_label.9 %tmp.47;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 170 8 ]
+        %tmp.48 = lgetv %dc;
+        %tmp.49 = getv function %tmp.48 :setColor;
+        %tmp.51 = lgetv %bgcolor.5;
+        %tmp.53 = lgetv %bgcolor.5;
+        invoke %tmp.48 %tmp.49(%tmp.51, %tmp.53);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 171 8 ]
+        %tmp.54 = lgetv %dc;
+        %tmp.55 = getv function %tmp.54 :clear;
+        invoke %tmp.54 %tmp.55();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 172 8 ]
+        %tmp.56 = lgetv %dc;
+        %tmp.57 = getv function %tmp.56 :setColor;
+        %tmp.59 = lgetv %fgcolor.4;
+        %tmp.60 = getm $.Toybox.Graphics;
+        %tmp.61 = getv %tmp.60 :COLOR_TRANSPARENT;
+        invoke %tmp.56 %tmp.57(%tmp.59, %tmp.61);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 173 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_8_178_8_if_stmt:
+        %tmp.62 = getm $.Toybox.System;
+        %tmp.63 = getv function %tmp.62 :getDeviceSettings;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        %tmp.65 = getv %tmp.64 :distanceUnits;
+        %tmp.66 = getm $.Toybox.System;
+        %tmp.67 = getv %tmp.66 :UNIT_STATUTE;
+        %tmp.68 = eq %tmp.65 %tmp.67;
+        bf %tmp.68 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_8_178_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_8_178_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_71_175_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 174 12 ]
+        %tmp.69 = 0.000621371;
+        lputv %distConv.6 %tmp.69;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_71_175_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_8_178_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_8_178_8_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_176_13_178_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 177 12 ]
+        %tmp.70 = 0.001;
+        lputv %distConv.6 %tmp.70;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_176_13_178_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_173_8_178_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 179 8 ]
+        %tmp.71 = "Lap";
+        lputv %text.7 %tmp.71;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 180 8 ]
+        %tmp.73 = lgetv %xCen.10;
+        lputv %x.12 %tmp.73;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 181 8 ]
+        %tmp.75 = lgetv %yCen.11;
+        %tmp.76 = 70.0;
+        %tmp.78 = getv ? :g_ScaleFactorY;
+        %tmp.79 = mul %tmp.76 %tmp.78;
+        %tmp.80 = getv function %tmp.79 :toNumber;
+        %tmp.81 = invoke %tmp.79 %tmp.80();
+        %tmp.82 = sub %tmp.75 %tmp.81;
+        lputv %y.13 %tmp.82;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 182 8 ]
+        %tmp.83 = lgetv %dc;
+        %tmp.84 = getv function %tmp.83 :drawText;
+        %tmp.86 = lgetv %x.12;
+        %tmp.88 = lgetv %y.13;
+        %tmp.90 = lgetv %font_head.1;
+        %tmp.92 = lgetv %text.7;
+        %tmp.93 = getm $.Toybox.Graphics;
+        %tmp.94 = getv %tmp.93 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.83 %tmp.84(%tmp.86, %tmp.88, %tmp.90, %tmp.92, %tmp.94);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 185 8 ]
+        %tmp.96 = lgetv %xCen.10;
+        %tmp.97 = 25.0;
+        %tmp.99 = getv ? :g_ScaleFactorX;
+        %tmp.100 = mul %tmp.97 %tmp.99;
+        %tmp.101 = getv function %tmp.100 :toNumber;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.103 = sub %tmp.96 %tmp.102;
+        lputv %x.12 %tmp.103;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 186 8 ]
+        %tmp.105 = lgetv %yCen.11;
+        %tmp.106 = 15.0;
+        %tmp.108 = getv ? :g_ScaleFactorY;
+        %tmp.109 = mul %tmp.106 %tmp.108;
+        %tmp.110 = 0.5;
+        %tmp.112 = lgetv %tHeight_label.9;
+        %tmp.113 = mul %tmp.110 %tmp.112;
+        %tmp.114 = add %tmp.109 %tmp.113;
+        %tmp.115 = getv function %tmp.114 :toNumber;
+        %tmp.116 = invoke %tmp.114 %tmp.115();
+        %tmp.117 = sub %tmp.105 %tmp.116;
+        lputv %y.13 %tmp.117;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 187 8 ]
+        %tmp.118 = "Time: ";
+        lputv %text.7 %tmp.118;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 188 8 ]
+        %tmp.119 = lgetv %dc;
+        %tmp.120 = getv function %tmp.119 :drawText;
+        %tmp.122 = lgetv %x.12;
+        %tmp.124 = lgetv %y.13;
+        %tmp.126 = lgetv %font_label.2;
+        %tmp.128 = lgetv %text.7;
+        %tmp.129 = getm $.Toybox.Graphics;
+        %tmp.130 = getv %tmp.129 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.119 %tmp.120(%tmp.122, %tmp.124, %tmp.126, %tmp.128, %tmp.130);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 191 8 ]
+        %tmp.132 = lgetv %xCen.10;
+        %tmp.133 = 25.0;
+        %tmp.135 = getv ? :g_ScaleFactorX;
+        %tmp.136 = mul %tmp.133 %tmp.135;
+        %tmp.137 = getv function %tmp.136 :toNumber;
+        %tmp.138 = invoke %tmp.136 %tmp.137();
+        %tmp.139 = sub %tmp.132 %tmp.138;
+        lputv %x.12 %tmp.139;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 192 8 ]
+        %tmp.141 = lgetv %yCen.11;
+        %tmp.142 = 15.0;
+        %tmp.144 = getv ? :g_ScaleFactorY;
+        %tmp.145 = mul %tmp.142 %tmp.144;
+        %tmp.146 = 0.5;
+        %tmp.148 = lgetv %tHeight_num.8;
+        %tmp.149 = mul %tmp.146 %tmp.148;
+        %tmp.150 = add %tmp.145 %tmp.149;
+        %tmp.151 = getv function %tmp.150 :toNumber;
+        %tmp.152 = invoke %tmp.150 %tmp.151();
+        %tmp.153 = sub %tmp.141 %tmp.152;
+        lputv %y.13 %tmp.153;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 194 8 ]
+        %tmp.154 = self;
+        %tmp.155 = getv function %tmp.154 :format_elapsed_time;
+        %tmp.156 = getm $.Toybox.Application;
+        %tmp.157 = getv function %tmp.156 :getApp;
+        %tmp.158 = invoke %tmp.156 %tmp.157();
+        %tmp.159 = getv %tmp.158 :lapStartTime;
+        %tmp.160 = getm $.Toybox.Application;
+        %tmp.161 = getv function %tmp.160 :getApp;
+        %tmp.162 = invoke %tmp.160 %tmp.161();
+        %tmp.163 = getv %tmp.162 :lapPrevTime;
+        %tmp.164 = sub %tmp.159 %tmp.163;
+        %tmp.165 = 1000;
+        %tmp.166 = div %tmp.164 %tmp.165;
+        %tmp.167 = getv function %tmp.166 :toNumber;
+        %tmp.168 = invoke %tmp.166 %tmp.167();
+        %tmp.169 = invoke %tmp.154 %tmp.155(%tmp.168);
+        lputv %text.7 %tmp.169;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 195 8 ]
+        %tmp.170 = lgetv %dc;
+        %tmp.171 = getv function %tmp.170 :drawText;
+        %tmp.173 = lgetv %x.12;
+        %tmp.175 = lgetv %y.13;
+        %tmp.177 = lgetv %font_num.3;
+        %tmp.179 = lgetv %text.7;
+        %tmp.180 = getm $.Toybox.Graphics;
+        %tmp.181 = getv %tmp.180 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.170 %tmp.171(%tmp.173, %tmp.175, %tmp.177, %tmp.179, %tmp.181);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 198 8 ]
+        %tmp.183 = lgetv %xCen.10;
+        %tmp.184 = 25.0;
+        %tmp.186 = getv ? :g_ScaleFactorX;
+        %tmp.187 = mul %tmp.184 %tmp.186;
+        %tmp.188 = getv function %tmp.187 :toNumber;
+        %tmp.189 = invoke %tmp.187 %tmp.188();
+        %tmp.190 = sub %tmp.183 %tmp.189;
+        lputv %x.12 %tmp.190;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 199 8 ]
+        %tmp.192 = lgetv %yCen.11;
+        %tmp.193 = 30.0;
+        %tmp.195 = getv ? :g_ScaleFactorY;
+        %tmp.196 = mul %tmp.193 %tmp.195;
+        %tmp.197 = 0.5;
+        %tmp.199 = lgetv %tHeight_label.9;
+        %tmp.200 = mul %tmp.197 %tmp.199;
+        %tmp.201 = sub %tmp.196 %tmp.200;
+        %tmp.202 = getv function %tmp.201 :toNumber;
+        %tmp.203 = invoke %tmp.201 %tmp.202();
+        %tmp.204 = add %tmp.192 %tmp.203;
+        lputv %y.13 %tmp.204;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 200 8 ]
+        %tmp.205 = "Dist: ";
+        lputv %text.7 %tmp.205;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 201 8 ]
+        %tmp.206 = lgetv %dc;
+        %tmp.207 = getv function %tmp.206 :drawText;
+        %tmp.209 = lgetv %x.12;
+        %tmp.211 = lgetv %y.13;
+        %tmp.213 = lgetv %font_label.2;
+        %tmp.215 = lgetv %text.7;
+        %tmp.216 = getm $.Toybox.Graphics;
+        %tmp.217 = getv %tmp.216 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.206 %tmp.207(%tmp.209, %tmp.211, %tmp.213, %tmp.215, %tmp.217);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 204 8 ]
+        %tmp.219 = lgetv %xCen.10;
+        %tmp.220 = 25.0;
+        %tmp.222 = getv ? :g_ScaleFactorX;
+        %tmp.223 = mul %tmp.220 %tmp.222;
+        %tmp.224 = getv function %tmp.223 :toNumber;
+        %tmp.225 = invoke %tmp.223 %tmp.224();
+        %tmp.226 = sub %tmp.219 %tmp.225;
+        lputv %x.12 %tmp.226;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 205 8 ]
+        %tmp.228 = lgetv %yCen.11;
+        %tmp.229 = 30.0;
+        %tmp.231 = getv ? :g_ScaleFactorY;
+        %tmp.232 = mul %tmp.229 %tmp.231;
+        %tmp.233 = 0.5;
+        %tmp.235 = lgetv %tHeight_num.8;
+        %tmp.236 = mul %tmp.233 %tmp.235;
+        %tmp.237 = sub %tmp.232 %tmp.236;
+        %tmp.238 = getv function %tmp.237 :toNumber;
+        %tmp.239 = invoke %tmp.237 %tmp.238();
+        %tmp.240 = add %tmp.228 %tmp.239;
+        lputv %y.13 %tmp.240;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 207 8 ]
+        %tmp.241 = getm $.Toybox.Application;
+        %tmp.242 = getv function %tmp.241 :getApp;
+        %tmp.243 = invoke %tmp.241 %tmp.242();
+        %tmp.244 = getv %tmp.243 :lapStartDist;
+        %tmp.245 = getm $.Toybox.Application;
+        %tmp.246 = getv function %tmp.245 :getApp;
+        %tmp.247 = invoke %tmp.245 %tmp.246();
+        %tmp.248 = getv %tmp.247 :lapPrevDist;
+        %tmp.249 = sub %tmp.244 %tmp.248;
+        %tmp.251 = lgetv %distConv.6;
+        %tmp.252 = mul %tmp.249 %tmp.251;
+        %tmp.253 = getv function %tmp.252 :format;
+        %tmp.254 = "%.2f";
+        %tmp.255 = invoke %tmp.252 %tmp.253(%tmp.254);
+        lputv %text.7 %tmp.255;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 208 8 ]
+        %tmp.256 = lgetv %dc;
+        %tmp.257 = getv function %tmp.256 :drawText;
+        %tmp.259 = lgetv %x.12;
+        %tmp.261 = lgetv %y.13;
+        %tmp.263 = lgetv %font_num.3;
+        %tmp.265 = lgetv %text.7;
+        %tmp.266 = getm $.Toybox.Graphics;
+        %tmp.267 = getv %tmp.266 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.256 %tmp.257(%tmp.259, %tmp.261, %tmp.263, %tmp.265, %tmp.267);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_146_30_212_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 214; ]
+    function drawStartAlert(dc) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 216 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %x1.1 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 217 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %y1.2 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 218 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %x2.3 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 219 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %y2.4 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 220 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %x3.5 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 221 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %y3.6 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 222 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %xCen.7 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %xCen.7 %tmp.5;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 223 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop" ]
+        %yCen.8 = local;
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %yCen.8 %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 225 8 ]
+        %tmp.12 = lgetv %xCen.7;
+        %tmp.13 = 30;
+        %tmp.15 = getv ? :g_ScaleFactorX;
+        %tmp.16 = mul %tmp.13 %tmp.15;
+        %tmp.17 = getv function %tmp.16 :toNumber;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = sub %tmp.12 %tmp.18;
+        lputv %x1.1 %tmp.19;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 226 8 ]
+        %tmp.21 = lgetv %yCen.8;
+        %tmp.22 = 45;
+        %tmp.24 = getv ? :g_ScaleFactorY;
+        %tmp.25 = mul %tmp.22 %tmp.24;
+        %tmp.26 = getv function %tmp.25 :toNumber;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = sub %tmp.21 %tmp.27;
+        lputv %y1.2 %tmp.28;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 227 8 ]
+        %tmp.30 = lgetv %xCen.7;
+        %tmp.31 = 30;
+        %tmp.33 = getv ? :g_ScaleFactorX;
+        %tmp.34 = mul %tmp.31 %tmp.33;
+        %tmp.35 = getv function %tmp.34 :toNumber;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        %tmp.37 = sub %tmp.30 %tmp.36;
+        lputv %x2.3 %tmp.37;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 228 8 ]
+        %tmp.39 = lgetv %yCen.8;
+        %tmp.40 = 45;
+        %tmp.42 = getv ? :g_ScaleFactorY;
+        %tmp.43 = mul %tmp.40 %tmp.42;
+        %tmp.44 = getv function %tmp.43 :toNumber;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        %tmp.46 = add %tmp.39 %tmp.45;
+        lputv %y2.4 %tmp.46;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 229 8 ]
+        %tmp.48 = lgetv %xCen.7;
+        %tmp.49 = 40;
+        %tmp.51 = getv ? :g_ScaleFactorX;
+        %tmp.52 = mul %tmp.49 %tmp.51;
+        %tmp.53 = getv function %tmp.52 :toNumber;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        %tmp.55 = add %tmp.48 %tmp.54;
+        lputv %x3.5 %tmp.55;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 230 8 ]
+        %tmp.57 = lgetv %yCen.8;
+        lputv %y3.6 %tmp.57;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 231 8 ]
+        %tmp.58 = lgetv %dc;
+        %tmp.59 = getv function %tmp.58 :setColor;
+        %tmp.60 = getm $.Toybox.Graphics;
+        %tmp.61 = getv %tmp.60 :COLOR_BLACK;
+        %tmp.62 = getm $.Toybox.Graphics;
+        %tmp.63 = getv %tmp.62 :COLOR_BLACK;
+        invoke %tmp.58 %tmp.59(%tmp.61, %tmp.63);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 232 8 ]
+        %tmp.64 = lgetv %dc;
+        %tmp.65 = getv function %tmp.64 :fillPolygon;
+        %tmp.66 = newa 3;
+        %tmp.67 = newa 2;
+        %tmp.69 = lgetv %x1.1;
+        %tmp.70 = dup %tmp.67;
+        %tmp.71 = aputv %tmp.70 0 %tmp.69;
+        %tmp.73 = lgetv %y1.2;
+        %tmp.74 = dup %tmp.71;
+        %tmp.75 = aputv %tmp.74 1 %tmp.73;
+        %tmp.76 = dup %tmp.66;
+        %tmp.77 = aputv %tmp.76 0 %tmp.75;
+        %tmp.78 = newa 2;
+        %tmp.80 = lgetv %x2.3;
+        %tmp.81 = dup %tmp.78;
+        %tmp.82 = aputv %tmp.81 0 %tmp.80;
+        %tmp.84 = lgetv %y2.4;
+        %tmp.85 = dup %tmp.82;
+        %tmp.86 = aputv %tmp.85 1 %tmp.84;
+        %tmp.87 = dup %tmp.77;
+        %tmp.88 = aputv %tmp.87 1 %tmp.86;
+        %tmp.89 = newa 2;
+        %tmp.91 = lgetv %x3.5;
+        %tmp.92 = dup %tmp.89;
+        %tmp.93 = aputv %tmp.92 0 %tmp.91;
+        %tmp.95 = lgetv %y3.6;
+        %tmp.96 = dup %tmp.93;
+        %tmp.97 = aputv %tmp.96 1 %tmp.95;
+        %tmp.98 = dup %tmp.88;
+        %tmp.99 = aputv %tmp.98 2 %tmp.97;
+        invoke %tmp.64 %tmp.65(%tmp.99);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 239 8 ]
+        %tmp.101 = lgetv %xCen.7;
+        %tmp.102 = 27;
+        %tmp.104 = getv ? :g_ScaleFactorX;
+        %tmp.105 = mul %tmp.102 %tmp.104;
+        %tmp.106 = getv function %tmp.105 :toNumber;
+        %tmp.107 = invoke %tmp.105 %tmp.106();
+        %tmp.108 = sub %tmp.101 %tmp.107;
+        lputv %x1.1 %tmp.108;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 240 8 ]
+        %tmp.110 = lgetv %yCen.8;
+        %tmp.111 = 39;
+        %tmp.113 = getv ? :g_ScaleFactorY;
+        %tmp.114 = mul %tmp.111 %tmp.113;
+        %tmp.115 = getv function %tmp.114 :toNumber;
+        %tmp.116 = invoke %tmp.114 %tmp.115();
+        %tmp.117 = sub %tmp.110 %tmp.116;
+        lputv %y1.2 %tmp.117;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 241 8 ]
+        %tmp.119 = lgetv %yCen.8;
+        %tmp.120 = 27;
+        %tmp.122 = getv ? :g_ScaleFactorX;
+        %tmp.123 = mul %tmp.120 %tmp.122;
+        %tmp.124 = getv function %tmp.123 :toNumber;
+        %tmp.125 = invoke %tmp.123 %tmp.124();
+        %tmp.126 = sub %tmp.119 %tmp.125;
+        lputv %x2.3 %tmp.126;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 242 8 ]
+        %tmp.128 = lgetv %yCen.8;
+        %tmp.129 = 39;
+        %tmp.131 = getv ? :g_ScaleFactorY;
+        %tmp.132 = mul %tmp.129 %tmp.131;
+        %tmp.133 = getv function %tmp.132 :toNumber;
+        %tmp.134 = invoke %tmp.132 %tmp.133();
+        %tmp.135 = add %tmp.128 %tmp.134;
+        lputv %y2.4 %tmp.135;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 243 8 ]
+        %tmp.137 = lgetv %xCen.7;
+        %tmp.138 = 34;
+        %tmp.140 = getv ? :g_ScaleFactorX;
+        %tmp.141 = mul %tmp.138 %tmp.140;
+        %tmp.142 = getv function %tmp.141 :toNumber;
+        %tmp.143 = invoke %tmp.141 %tmp.142();
+        %tmp.144 = add %tmp.137 %tmp.143;
+        lputv %x3.5 %tmp.144;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 244 8 ]
+        %tmp.146 = lgetv %yCen.8;
+        lputv %y3.6 %tmp.146;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 245 8 ]
+        %tmp.147 = lgetv %dc;
+        %tmp.148 = getv function %tmp.147 :setColor;
+        %tmp.149 = getm $.Toybox.Graphics;
+        %tmp.150 = getv %tmp.149 :COLOR_DK_GREEN;
+        %tmp.151 = getm $.Toybox.Graphics;
+        %tmp.152 = getv %tmp.151 :COLOR_DK_GREEN;
+        invoke %tmp.147 %tmp.148(%tmp.150, %tmp.152);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 246 8 ]
+        %tmp.153 = lgetv %dc;
+        %tmp.154 = getv function %tmp.153 :fillPolygon;
+        %tmp.155 = newa 3;
+        %tmp.156 = newa 2;
+        %tmp.158 = lgetv %x1.1;
+        %tmp.159 = dup %tmp.156;
+        %tmp.160 = aputv %tmp.159 0 %tmp.158;
+        %tmp.162 = lgetv %y1.2;
+        %tmp.163 = dup %tmp.160;
+        %tmp.164 = aputv %tmp.163 1 %tmp.162;
+        %tmp.165 = dup %tmp.155;
+        %tmp.166 = aputv %tmp.165 0 %tmp.164;
+        %tmp.167 = newa 2;
+        %tmp.169 = lgetv %x2.3;
+        %tmp.170 = dup %tmp.167;
+        %tmp.171 = aputv %tmp.170 0 %tmp.169;
+        %tmp.173 = lgetv %y2.4;
+        %tmp.174 = dup %tmp.171;
+        %tmp.175 = aputv %tmp.174 1 %tmp.173;
+        %tmp.176 = dup %tmp.166;
+        %tmp.177 = aputv %tmp.176 1 %tmp.175;
+        %tmp.178 = newa 2;
+        %tmp.180 = lgetv %x3.5;
+        %tmp.181 = dup %tmp.178;
+        %tmp.182 = aputv %tmp.181 0 %tmp.180;
+        %tmp.184 = lgetv %y3.6;
+        %tmp.185 = dup %tmp.182;
+        %tmp.186 = aputv %tmp.185 1 %tmp.184;
+        %tmp.187 = dup %tmp.177;
+        %tmp.188 = aputv %tmp.187 2 %tmp.186;
+        invoke %tmp.153 %tmp.154(%tmp.188);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_214_32_252_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 254; ]
+    function drawStopAlert(dc) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 255 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %x1.1 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 256 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %y1.2 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 257 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %x2.3 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 258 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %y2.4 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 259 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %x3.5 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 260 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %y3.6 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 261 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %x4.7 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 262 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %y4.8 = local;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 264 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %xCen.9 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %xCen.9 %tmp.5;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 265 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop" ]
+        %yCen.10 = local;
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %yCen.10 %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 267 8 ]
+        %tmp.12 = lgetv %xCen.9;
+        %tmp.13 = 45;
+        %tmp.15 = getv ? :g_ScaleFactorX;
+        %tmp.16 = mul %tmp.13 %tmp.15;
+        %tmp.17 = getv function %tmp.16 :toNumber;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = sub %tmp.12 %tmp.18;
+        lputv %x1.1 %tmp.19;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 268 8 ]
+        %tmp.21 = lgetv %yCen.10;
+        %tmp.22 = 45;
+        %tmp.24 = getv ? :g_ScaleFactorY;
+        %tmp.25 = mul %tmp.22 %tmp.24;
+        %tmp.26 = getv function %tmp.25 :toNumber;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = sub %tmp.21 %tmp.27;
+        lputv %y1.2 %tmp.28;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 269 8 ]
+        %tmp.30 = lgetv %yCen.10;
+        %tmp.31 = 45;
+        %tmp.33 = getv ? :g_ScaleFactorX;
+        %tmp.34 = mul %tmp.31 %tmp.33;
+        %tmp.35 = getv function %tmp.34 :toNumber;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        %tmp.37 = sub %tmp.30 %tmp.36;
+        lputv %x2.3 %tmp.37;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 270 8 ]
+        %tmp.39 = lgetv %yCen.10;
+        %tmp.40 = 45;
+        %tmp.42 = getv ? :g_ScaleFactorY;
+        %tmp.43 = mul %tmp.40 %tmp.42;
+        %tmp.44 = getv function %tmp.43 :toNumber;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        %tmp.46 = add %tmp.39 %tmp.45;
+        lputv %y2.4 %tmp.46;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 271 8 ]
+        %tmp.48 = lgetv %xCen.9;
+        %tmp.49 = 45;
+        %tmp.51 = getv ? :g_ScaleFactorX;
+        %tmp.52 = mul %tmp.49 %tmp.51;
+        %tmp.53 = getv function %tmp.52 :toNumber;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        %tmp.55 = add %tmp.48 %tmp.54;
+        lputv %x3.5 %tmp.55;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 272 8 ]
+        %tmp.57 = lgetv %yCen.10;
+        %tmp.58 = 45;
+        %tmp.60 = getv ? :g_ScaleFactorY;
+        %tmp.61 = mul %tmp.58 %tmp.60;
+        %tmp.62 = getv function %tmp.61 :toNumber;
+        %tmp.63 = invoke %tmp.61 %tmp.62();
+        %tmp.64 = add %tmp.57 %tmp.63;
+        lputv %y3.6 %tmp.64;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 273 8 ]
+        %tmp.66 = lgetv %xCen.9;
+        %tmp.67 = 45;
+        %tmp.69 = getv ? :g_ScaleFactorX;
+        %tmp.70 = mul %tmp.67 %tmp.69;
+        %tmp.71 = getv function %tmp.70 :toNumber;
+        %tmp.72 = invoke %tmp.70 %tmp.71();
+        %tmp.73 = add %tmp.66 %tmp.72;
+        lputv %x4.7 %tmp.73;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 274 8 ]
+        %tmp.75 = lgetv %yCen.10;
+        %tmp.76 = 45;
+        %tmp.78 = getv ? :g_ScaleFactorY;
+        %tmp.79 = mul %tmp.76 %tmp.78;
+        %tmp.80 = getv function %tmp.79 :toNumber;
+        %tmp.81 = invoke %tmp.79 %tmp.80();
+        %tmp.82 = sub %tmp.75 %tmp.81;
+        lputv %y4.8 %tmp.82;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 275 8 ]
+        %tmp.83 = lgetv %dc;
+        %tmp.84 = getv function %tmp.83 :setColor;
+        %tmp.85 = getm $.Toybox.Graphics;
+        %tmp.86 = getv %tmp.85 :COLOR_BLACK;
+        %tmp.87 = getm $.Toybox.Graphics;
+        %tmp.88 = getv %tmp.87 :COLOR_BLACK;
+        invoke %tmp.83 %tmp.84(%tmp.86, %tmp.88);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 276 8 ]
+        %tmp.89 = lgetv %dc;
+        %tmp.90 = getv function %tmp.89 :fillPolygon;
+        %tmp.91 = newa 4;
+        %tmp.92 = newa 2;
+        %tmp.94 = lgetv %x1.1;
+        %tmp.95 = dup %tmp.92;
+        %tmp.96 = aputv %tmp.95 0 %tmp.94;
+        %tmp.98 = lgetv %y1.2;
+        %tmp.99 = dup %tmp.96;
+        %tmp.100 = aputv %tmp.99 1 %tmp.98;
+        %tmp.101 = dup %tmp.91;
+        %tmp.102 = aputv %tmp.101 0 %tmp.100;
+        %tmp.103 = newa 2;
+        %tmp.105 = lgetv %x2.3;
+        %tmp.106 = dup %tmp.103;
+        %tmp.107 = aputv %tmp.106 0 %tmp.105;
+        %tmp.109 = lgetv %y2.4;
+        %tmp.110 = dup %tmp.107;
+        %tmp.111 = aputv %tmp.110 1 %tmp.109;
+        %tmp.112 = dup %tmp.102;
+        %tmp.113 = aputv %tmp.112 1 %tmp.111;
+        %tmp.114 = newa 2;
+        %tmp.116 = lgetv %x3.5;
+        %tmp.117 = dup %tmp.114;
+        %tmp.118 = aputv %tmp.117 0 %tmp.116;
+        %tmp.120 = lgetv %y3.6;
+        %tmp.121 = dup %tmp.118;
+        %tmp.122 = aputv %tmp.121 1 %tmp.120;
+        %tmp.123 = dup %tmp.113;
+        %tmp.124 = aputv %tmp.123 2 %tmp.122;
+        %tmp.125 = newa 2;
+        %tmp.127 = lgetv %x4.7;
+        %tmp.128 = dup %tmp.125;
+        %tmp.129 = aputv %tmp.128 0 %tmp.127;
+        %tmp.131 = lgetv %y4.8;
+        %tmp.132 = dup %tmp.129;
+        %tmp.133 = aputv %tmp.132 1 %tmp.131;
+        %tmp.134 = dup %tmp.124;
+        %tmp.135 = aputv %tmp.134 3 %tmp.133;
+        invoke %tmp.89 %tmp.90(%tmp.135);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 285 8 ]
+        %tmp.137 = lgetv %xCen.9;
+        %tmp.138 = 42;
+        %tmp.140 = getv ? :g_ScaleFactorX;
+        %tmp.141 = mul %tmp.138 %tmp.140;
+        %tmp.142 = getv function %tmp.141 :toNumber;
+        %tmp.143 = invoke %tmp.141 %tmp.142();
+        %tmp.144 = sub %tmp.137 %tmp.143;
+        lputv %x1.1 %tmp.144;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 286 8 ]
+        %tmp.146 = lgetv %yCen.10;
+        %tmp.147 = 42;
+        %tmp.149 = getv ? :g_ScaleFactorY;
+        %tmp.150 = mul %tmp.147 %tmp.149;
+        %tmp.151 = getv function %tmp.150 :toNumber;
+        %tmp.152 = invoke %tmp.150 %tmp.151();
+        %tmp.153 = sub %tmp.146 %tmp.152;
+        lputv %y1.2 %tmp.153;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 287 8 ]
+        %tmp.155 = lgetv %yCen.10;
+        %tmp.156 = 42;
+        %tmp.158 = getv ? :g_ScaleFactorX;
+        %tmp.159 = mul %tmp.156 %tmp.158;
+        %tmp.160 = getv function %tmp.159 :toNumber;
+        %tmp.161 = invoke %tmp.159 %tmp.160();
+        %tmp.162 = sub %tmp.155 %tmp.161;
+        lputv %x2.3 %tmp.162;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 288 8 ]
+        %tmp.164 = lgetv %yCen.10;
+        %tmp.165 = 42;
+        %tmp.167 = getv ? :g_ScaleFactorY;
+        %tmp.168 = mul %tmp.165 %tmp.167;
+        %tmp.169 = getv function %tmp.168 :toNumber;
+        %tmp.170 = invoke %tmp.168 %tmp.169();
+        %tmp.171 = add %tmp.164 %tmp.170;
+        lputv %y2.4 %tmp.171;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 289 8 ]
+        %tmp.173 = lgetv %xCen.9;
+        %tmp.174 = 42;
+        %tmp.176 = getv ? :g_ScaleFactorX;
+        %tmp.177 = mul %tmp.174 %tmp.176;
+        %tmp.178 = getv function %tmp.177 :toNumber;
+        %tmp.179 = invoke %tmp.177 %tmp.178();
+        %tmp.180 = add %tmp.173 %tmp.179;
+        lputv %x3.5 %tmp.180;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 290 8 ]
+        %tmp.182 = lgetv %yCen.10;
+        %tmp.183 = 42;
+        %tmp.185 = getv ? :g_ScaleFactorY;
+        %tmp.186 = mul %tmp.183 %tmp.185;
+        %tmp.187 = getv function %tmp.186 :toNumber;
+        %tmp.188 = invoke %tmp.186 %tmp.187();
+        %tmp.189 = add %tmp.182 %tmp.188;
+        lputv %y3.6 %tmp.189;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 291 8 ]
+        %tmp.191 = lgetv %xCen.9;
+        %tmp.192 = 42;
+        %tmp.194 = getv ? :g_ScaleFactorX;
+        %tmp.195 = mul %tmp.192 %tmp.194;
+        %tmp.196 = getv function %tmp.195 :toNumber;
+        %tmp.197 = invoke %tmp.195 %tmp.196();
+        %tmp.198 = add %tmp.191 %tmp.197;
+        lputv %x4.7 %tmp.198;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 292 8 ]
+        %tmp.200 = lgetv %yCen.10;
+        %tmp.201 = 42;
+        %tmp.203 = getv ? :g_ScaleFactorY;
+        %tmp.204 = mul %tmp.201 %tmp.203;
+        %tmp.205 = sub %tmp.200 %tmp.204;
+        lputv %y4.8 %tmp.205;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 293 8 ]
+        %tmp.206 = lgetv %dc;
+        %tmp.207 = getv function %tmp.206 :setColor;
+        %tmp.208 = getm $.Toybox.Graphics;
+        %tmp.209 = getv %tmp.208 :COLOR_RED;
+        %tmp.210 = getm $.Toybox.Graphics;
+        %tmp.211 = getv %tmp.210 :COLOR_RED;
+        invoke %tmp.206 %tmp.207(%tmp.209, %tmp.211);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 294 8 ]
+        %tmp.212 = lgetv %dc;
+        %tmp.213 = getv function %tmp.212 :fillPolygon;
+        %tmp.214 = newa 4;
+        %tmp.215 = newa 2;
+        %tmp.217 = lgetv %x1.1;
+        %tmp.218 = dup %tmp.215;
+        %tmp.219 = aputv %tmp.218 0 %tmp.217;
+        %tmp.221 = lgetv %y1.2;
+        %tmp.222 = dup %tmp.219;
+        %tmp.223 = aputv %tmp.222 1 %tmp.221;
+        %tmp.224 = dup %tmp.214;
+        %tmp.225 = aputv %tmp.224 0 %tmp.223;
+        %tmp.226 = newa 2;
+        %tmp.228 = lgetv %x2.3;
+        %tmp.229 = dup %tmp.226;
+        %tmp.230 = aputv %tmp.229 0 %tmp.228;
+        %tmp.232 = lgetv %y2.4;
+        %tmp.233 = dup %tmp.230;
+        %tmp.234 = aputv %tmp.233 1 %tmp.232;
+        %tmp.235 = dup %tmp.225;
+        %tmp.236 = aputv %tmp.235 1 %tmp.234;
+        %tmp.237 = newa 2;
+        %tmp.239 = lgetv %x3.5;
+        %tmp.240 = dup %tmp.237;
+        %tmp.241 = aputv %tmp.240 0 %tmp.239;
+        %tmp.243 = lgetv %y3.6;
+        %tmp.244 = dup %tmp.241;
+        %tmp.245 = aputv %tmp.244 1 %tmp.243;
+        %tmp.246 = dup %tmp.236;
+        %tmp.247 = aputv %tmp.246 2 %tmp.245;
+        %tmp.248 = newa 2;
+        %tmp.250 = lgetv %x4.7;
+        %tmp.251 = dup %tmp.248;
+        %tmp.252 = aputv %tmp.251 0 %tmp.250;
+        %tmp.254 = lgetv %y4.8;
+        %tmp.255 = dup %tmp.252;
+        %tmp.256 = aputv %tmp.255 1 %tmp.254;
+        %tmp.257 = dup %tmp.247;
+        %tmp.258 = aputv %tmp.257 3 %tmp.256;
+        invoke %tmp.212 %tmp.213(%tmp.258);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_254_31_302_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 304; ]
+    function drawSmo2Alert(dc, text) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 305 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %font.1 = local;
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :FONT_MEDIUM;
+        lputv %font.1 %tmp.2;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 306 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %fgcolor.2 = local;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        lputv %fgcolor.2 %tmp.4;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 307 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %bgcolor.3 = local;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
+        lputv %bgcolor.3 %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 308 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %tWidth.4 = local;
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :getTextWidthInPixels;
+        %tmp.10 = lgetv %text;
+        %tmp.12 = lgetv %font.1;
+        %tmp.13 = invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+        lputv %tWidth.4 %tmp.13;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 309 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %tHeight.5 = local;
+        %tmp.14 = lgetv %dc;
+        %tmp.15 = getv function %tmp.14 :getFontHeight;
+        %tmp.17 = lgetv %font.1;
+        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
+        lputv %tHeight.5 %tmp.18;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 311 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %bWidth.6 = local;
+        %tmp.20 = lgetv %tWidth.4;
+        %tmp.21 = 14;
+        %tmp.23 = getv ? :g_ScaleFactorX;
+        %tmp.24 = mul %tmp.21 %tmp.23;
+        %tmp.25 = getv function %tmp.24 :toNumber;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = add %tmp.20 %tmp.26;
+        lputv %bWidth.6 %tmp.27;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 312 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %bHeight.7 = local;
+        %tmp.29 = lgetv %tHeight.5;
+        %tmp.30 = 14;
+        %tmp.32 = getv ? :g_ScaleFactorY;
+        %tmp.33 = mul %tmp.30 %tmp.32;
+        %tmp.34 = getv function %tmp.33 :toNumber;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        %tmp.36 = add %tmp.29 %tmp.35;
+        lputv %bHeight.7 %tmp.36;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 314 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %bX.8 = local;
+        %tmp.37 = lgetv %dc;
+        %tmp.38 = getv function %tmp.37 :getWidth;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.41 = lgetv %bWidth.6;
+        %tmp.42 = sub %tmp.39 %tmp.41;
+        %tmp.43 = 2;
+        %tmp.44 = div %tmp.42 %tmp.43;
+        lputv %bX.8 %tmp.44;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 315 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %bY.9 = local;
+        %tmp.45 = lgetv %dc;
+        %tmp.46 = getv function %tmp.45 :getHeight;
+        %tmp.47 = invoke %tmp.45 %tmp.46();
+        %tmp.49 = lgetv %bHeight.7;
+        %tmp.50 = sub %tmp.47 %tmp.49;
+        %tmp.51 = 2;
+        %tmp.52 = div %tmp.50 %tmp.51;
+        lputv %bY.9 %tmp.52;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 317 8 ]
+        %tmp.53 = lgetv %dc;
+        %tmp.54 = getv function %tmp.53 :setColor;
+        %tmp.56 = lgetv %bgcolor.3;
+        %tmp.58 = lgetv %bgcolor.3;
+        invoke %tmp.53 %tmp.54(%tmp.56, %tmp.58);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 318 8 ]
+        %tmp.59 = lgetv %dc;
+        %tmp.60 = getv function %tmp.59 :fillRectangle;
+        %tmp.62 = lgetv %bX.8;
+        %tmp.64 = lgetv %bY.9;
+        %tmp.66 = lgetv %bWidth.6;
+        %tmp.68 = lgetv %bHeight.7;
+        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64, %tmp.66, %tmp.68);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 320 8 ]
+        %tmp.69 = lgetv %dc;
+        %tmp.70 = getv function %tmp.69 :setColor;
+        %tmp.72 = lgetv %fgcolor.2;
+        %tmp.74 = lgetv %fgcolor.2;
+        invoke %tmp.69 %tmp.70(%tmp.72, %tmp.74);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 322 8 ]
+        for @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_test @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_incr @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_init:
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_begin" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_end" ]
+        %i.10 = local;
+        %tmp.75 = 0;
+        lputv %i.10 %tmp.75;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_test:
+        %tmp.77 = lgetv %i.10;
+        %tmp.78 = 3;
+        %tmp.79 = lt %tmp.77 %tmp.78;
+        bf %tmp.79 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_begin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_36_329_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 323 12 ]
+        %tmp.80 = lgetv %bX.8;
+        %tmp.82 = lgetv %i.10;
+        %tmp.83 = add %tmp.80 %tmp.82;
+        lputv %bX.8 %tmp.83;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 324 12 ]
+        %tmp.84 = lgetv %bY.9;
+        %tmp.86 = lgetv %i.10;
+        %tmp.87 = add %tmp.84 %tmp.86;
+        lputv %bY.9 %tmp.87;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 325 12 ]
+        %tmp.88 = lgetv %bWidth.6;
+        %tmp.89 = 2;
+        %tmp.91 = lgetv %i.10;
+        %tmp.92 = mul %tmp.89 %tmp.91;
+        %tmp.93 = sub %tmp.88 %tmp.92;
+        lputv %bWidth.6 %tmp.93;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 326 12 ]
+        %tmp.94 = lgetv %bHeight.7;
+        %tmp.95 = 2;
+        %tmp.97 = lgetv %i.10;
+        %tmp.98 = mul %tmp.95 %tmp.97;
+        %tmp.99 = sub %tmp.94 %tmp.98;
+        lputv %bHeight.7 %tmp.99;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 328 12 ]
+        %tmp.100 = lgetv %dc;
+        %tmp.101 = getv function %tmp.100 :drawRectangle;
+        %tmp.103 = lgetv %bX.8;
+        %tmp.105 = lgetv %bY.9;
+        %tmp.107 = lgetv %bWidth.6;
+        %tmp.109 = lgetv %bHeight.7;
+        invoke %tmp.100 %tmp.101(%tmp.103, %tmp.105, %tmp.107, %tmp.109);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_36_329_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_incr:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 322 ]
+        %tmp.112 = lgetv %i.10;
+        %tmp.113 = add %tmp.112 1;
+        lputv %i.10 %tmp.113;
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_test;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_322_8_329_8_for_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 331 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %tX.11 = local;
+        %tmp.114 = lgetv %dc;
+        %tmp.115 = getv function %tmp.114 :getWidth;
+        %tmp.116 = invoke %tmp.114 %tmp.115();
+        %tmp.117 = 2;
+        %tmp.118 = div %tmp.116 %tmp.117;
+        lputv %tX.11 %tmp.118;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 332 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop" ]
+        %tY.12 = local;
+        %tmp.119 = lgetv %dc;
+        %tmp.120 = getv function %tmp.119 :getHeight;
+        %tmp.121 = invoke %tmp.119 %tmp.120();
+        %tmp.122 = 2;
+        %tmp.123 = div %tmp.121 %tmp.122;
+        %tmp.125 = lgetv %tHeight.5;
+        %tmp.126 = 2;
+        %tmp.127 = div %tmp.125 %tmp.126;
+        %tmp.128 = sub %tmp.123 %tmp.127;
+        lputv %tY.12 %tmp.128;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 334 8 ]
+        %tmp.129 = lgetv %dc;
+        %tmp.130 = getv function %tmp.129 :setColor;
+        %tmp.132 = lgetv %fgcolor.2;
+        %tmp.133 = getm $.Toybox.Graphics;
+        %tmp.134 = getv %tmp.133 :COLOR_TRANSPARENT;
+        invoke %tmp.129 %tmp.130(%tmp.132, %tmp.134);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc" 335 8 ]
+        %tmp.135 = lgetv %dc;
+        %tmp.136 = getv function %tmp.135 :drawText;
+        %tmp.138 = lgetv %tX.11;
+        %tmp.140 = lgetv %tY.12;
+        %tmp.142 = lgetv %font.1;
+        %tmp.144 = lgetv %text;
+        %tmp.145 = getm $.Toybox.Graphics;
+        %tmp.146 = getv %tmp.145 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.135 %tmp.136(%tmp.138, %tmp.140, %tmp.142, %tmp.144, %tmp.146);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_ViewAlert_mc_304_37_336_4_stop:
+    }
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\ViewAlert.mc"; @line = 1; ]
+<init> {
+}

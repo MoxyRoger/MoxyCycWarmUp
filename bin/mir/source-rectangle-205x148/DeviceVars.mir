@@ -1,0 +1,355 @@
+[ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 1; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 3; ]
+module View0DeviceVars {
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 3; ]
+    <init> {
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 17 8 ]
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_RIGHT;
+        putv self :VersionJ %tmp.2;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 18 8 ]
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :FONT_NUMBER_HOT;
+        putv self :TimeFont %tmp.4;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 19 8 ]
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :FONT_SMALL;
+        putv self :LabelFont %tmp.6;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 20 8 ]
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :FONT_SMALL;
+        putv self :VersionFont %tmp.8;
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 5; @position = 5; ]
+    var TimeX = 102;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 6; @position = 8; ]
+    var TimeY = 16;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 7; @position = 8; ]
+    var LineY = 75;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 8; @position = 8; ]
+    var LineH = 5;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 9; @position = 8; ]
+    var LabelY = 84;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 10; @position = 8; ]
+    var IndicatorY = 114;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 11; @position = 8; ]
+    var MO2X = 41;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 12; @position = 8; ]
+    var HRX = 82;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 13; @position = 8; ]
+    var FECX = 123;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 14; @position = 8; ]
+    var PowerX = 164;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 15; @position = 8; ]
+    var VersionX = 203;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 16; @position = 8; ]
+    var VersionY = 130;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 17; @position = 8; ]
+    var VersionJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 18; @position = 8; ]
+    var TimeFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 19; @position = 8; ]
+    var LabelFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 20; @position = 8; ]
+    var VersionFont;
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 23; ]
+module View1DeviceVars {
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 23; ]
+    <init> {
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 49 5 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :FONT_TINY;
+        putv self :LFont %tmp.10;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 50 5 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :FONT_NUMBER_MEDIUM;
+        putv self :VFont %tmp.12;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 51 5 ]
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :TEXT_JUSTIFY_LEFT;
+        putv self :LJust %tmp.14;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 52 5 ]
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :TEXT_JUSTIFY_CENTER;
+        putv self :VJust %tmp.16;
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 25; ]
+    function drawGrid(dc) {
+C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_25_23_start:
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 26 2 ]
+        [ "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_25_23_start" "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_25_23_stop" ]
+        %width.1 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 27 2 ]
+        [ "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_25_23_start" "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_25_23_stop" ]
+        %height.2 = local;
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 28 2 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :setColor;
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_GREEN;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_GREEN;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 29 2 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :fillRectangle;
+        %tmp.15 = 0;
+        %tmp.16 = 72;
+        %tmp.18 = lgetv %width.1;
+        %tmp.19 = 5;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16, %tmp.18, %tmp.19);
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 30 2 ]
+        %tmp.20 = lgetv %dc;
+        %tmp.21 = getv function %tmp.20 :fillRectangle;
+        %tmp.22 = 100;
+        %tmp.23 = 0;
+        %tmp.24 = 5;
+        %tmp.26 = lgetv %height.2;
+        invoke %tmp.20 %tmp.21(%tmp.22, %tmp.23, %tmp.24, %tmp.26);
+C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_25_23_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 33; @position = 5; ]
+    var L1X = 2;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 34; @position = 5; ]
+    var L2X = 107;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 35; @position = 5; ]
+    var L3X = 2;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 36; @position = 5; ]
+    var L4X = 107;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 37; @position = 5; ]
+    var L1Y = 1;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 38; @position = 5; ]
+    var L2Y = 1;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 39; @position = 5; ]
+    var L3Y = 78;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 40; @position = 5; ]
+    var L4Y = 78;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 41; @position = 5; ]
+    var V1X = 51;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 42; @position = 5; ]
+    var V2X = 156;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 43; @position = 5; ]
+    var V3X = 51;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 44; @position = 5; ]
+    var V4X = 156;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 45; @position = 5; ]
+    var V1Y = 27;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 46; @position = 5; ]
+    var V2Y = 27;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 47; @position = 5; ]
+    var V3Y = 104;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 48; @position = 5; ]
+    var V4Y = 104;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 49; @position = 5; ]
+    var LFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 50; @position = 5; ]
+    var VFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 51; @position = 5; ]
+    var LJust;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 52; @position = 5; ]
+    var VJust;
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 56; ]
+module View2DeviceVars {
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 56; ]
+    <init> {
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 82 5 ]
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :FONT_TINY;
+        putv self :LFont %tmp.28;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 83 5 ]
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :FONT_NUMBER_MEDIUM;
+        putv self :VFont %tmp.30;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 84 5 ]
+        %tmp.31 = getm $.Toybox.Graphics;
+        %tmp.32 = getv %tmp.31 :TEXT_JUSTIFY_LEFT;
+        putv self :LJust %tmp.32;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 85 5 ]
+        %tmp.33 = getm $.Toybox.Graphics;
+        %tmp.34 = getv %tmp.33 :TEXT_JUSTIFY_CENTER;
+        putv self :VJust %tmp.34;
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 58; ]
+    function drawGrid(dc) {
+C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_58_23_start:
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 59 2 ]
+        [ "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_58_23_start" "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_58_23_stop" ]
+        %width.1 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 60 2 ]
+        [ "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_58_23_start" "C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_58_23_stop" ]
+        %height.2 = local;
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 61 2 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :setColor;
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_GREEN;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_GREEN;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 62 2 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :fillRectangle;
+        %tmp.15 = 0;
+        %tmp.16 = 72;
+        %tmp.18 = lgetv %width.1;
+        %tmp.19 = 5;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16, %tmp.18, %tmp.19);
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 63 2 ]
+        %tmp.20 = lgetv %dc;
+        %tmp.21 = getv function %tmp.20 :fillRectangle;
+        %tmp.22 = 100;
+        %tmp.23 = 0;
+        %tmp.24 = 5;
+        %tmp.26 = lgetv %height.2;
+        invoke %tmp.20 %tmp.21(%tmp.22, %tmp.23, %tmp.24, %tmp.26);
+C_CIQSandbox_Trainalyzed_source_rectangle_205x148_DeviceVars_mc_58_23_stop:
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 66; @position = 5; ]
+    var L1X = 2;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 67; @position = 5; ]
+    var L2X = 107;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 68; @position = 5; ]
+    var L3X = 2;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 69; @position = 5; ]
+    var L4X = 107;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 70; @position = 5; ]
+    var L1Y = 1;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 71; @position = 5; ]
+    var L2Y = 1;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 72; @position = 5; ]
+    var L3Y = 78;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 73; @position = 5; ]
+    var L4Y = 78;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 74; @position = 5; ]
+    var V1X = 51;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 75; @position = 5; ]
+    var V2X = 156;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 76; @position = 5; ]
+    var V3X = 51;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 77; @position = 5; ]
+    var V4X = 156;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 78; @position = 5; ]
+    var V1Y = 27;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 79; @position = 5; ]
+    var V2Y = 27;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 80; @position = 5; ]
+    var V3Y = 104;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 81; @position = 5; ]
+    var V4Y = 104;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 82; @position = 5; ]
+    var LFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 83; @position = 5; ]
+    var VFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 84; @position = 5; ]
+    var LJust;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 85; @position = 5; ]
+    var VJust;
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 88; ]
+module View3DeviceVars {
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 88; ]
+    <init> {
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 100 5 ]
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :TEXT_JUSTIFY_LEFT;
+        putv self :TMinJ %tmp.28;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 101 5 ]
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :TEXT_JUSTIFY_LEFT;
+        putv self :TMaxJ %tmp.30;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 102 5 ]
+        %tmp.31 = getm $.Toybox.Graphics;
+        %tmp.32 = getv %tmp.31 :TEXT_JUSTIFY_CENTER;
+        putv self :TCurJ %tmp.32;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 109 5 ]
+        %tmp.33 = getm $.Toybox.Graphics;
+        %tmp.34 = getv %tmp.33 :TEXT_JUSTIFY_RIGHT;
+        putv self :SMinJ %tmp.34;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 110 5 ]
+        %tmp.35 = getm $.Toybox.Graphics;
+        %tmp.36 = getv %tmp.35 :TEXT_JUSTIFY_RIGHT;
+        putv self :SMaxJ %tmp.36;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 111 5 ]
+        %tmp.37 = getm $.Toybox.Graphics;
+        %tmp.38 = getv %tmp.37 :TEXT_JUSTIFY_CENTER;
+        putv self :SCurJ %tmp.38;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 112 5 ]
+        %tmp.39 = getm $.Toybox.Graphics;
+        %tmp.40 = getv %tmp.39 :FONT_TINY;
+        putv self :MinMaxFont %tmp.40;
+[ "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc" 113 5 ]
+        %tmp.41 = getm $.Toybox.Graphics;
+        %tmp.42 = getv %tmp.41 :FONT_LARGE;
+        putv self :CurFont %tmp.42;
+    }
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 90; @position = 5; ]
+    var LocX = 0;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 91; @position = 5; ]
+    var LocY = 0;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 92; @position = 5; ]
+    var Width = 205;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 93; @position = 5; ]
+    var Height = 120;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 94; @position = 5; ]
+    var TMinX = 3;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 95; @position = 5; ]
+    var TMaxX = 3;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 96; @position = 5; ]
+    var TCurX = 68;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 97; @position = 5; ]
+    var TMinY = 103;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 98; @position = 5; ]
+    var TMaxY = 1;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 99; @position = 5; ]
+    var TCurY = 121;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 100; @position = 5; ]
+    var TMinJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 101; @position = 5; ]
+    var TMaxJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 102; @position = 5; ]
+    var TCurJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 103; @position = 5; ]
+    var SMinX = 201;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 104; @position = 5; ]
+    var SMaxX = 201;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 105; @position = 5; ]
+    var SCurX = 137;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 106; @position = 5; ]
+    var SMinY = 103;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 107; @position = 5; ]
+    var SMaxY = 1;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 108; @position = 5; ]
+    var SCurY = 121;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 109; @position = 5; ]
+    var SMinJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 110; @position = 5; ]
+    var SMaxJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 111; @position = 5; ]
+    var SCurJ;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 112; @position = 5; ]
+    var MinMaxFont;
+    [ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 113; @position = 5; ]
+    var CurFont;
+}
+[ @file = "C:\CIQSandbox\Trainalyzed\source-rectangle-205x148\DeviceVars.mc"; @line = 1; ]
+<init> {
+}
