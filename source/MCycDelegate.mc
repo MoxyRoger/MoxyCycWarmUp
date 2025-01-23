@@ -9,7 +9,7 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
     hidden var mIndex;
     hidden var mView;
     hidden var mMO2;
-    hidden var mFEC;
+    hidden var mFECListener;
     hidden var mViewAlert;
 
     hidden static var mTimer;
@@ -19,7 +19,7 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
         mIndex = index;
         mView = view;
         mMO2 = mo2;
-        mFEC = fec;
+        mFECListener = fec;
         mViewAlert = alert;
     }
 
@@ -150,15 +150,14 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
         menu.setTitle(ver);
 
         menu.addItem("Pair MO2 Sensor"     , :sensor);
-        menu.addItem("Pair Trainer"        , :trainer);
-        menu.addItem("Enter FTP"           , :ftp);
         menu.addItem("Sensor Location"     , :sensorLx);
+        menu.addItem("Enter FTP"           , :ftp);
         menu.addItem("Set Step Duration"   , :duration);
         menu.addItem("Set Load Step Size"  , :stepsize);
         menu.addItem("Set Initial Load"    , :initload);
 
 
-        WatchUi.pushView(menu, new MCycMenuDelegate(mMO2, mFEC), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.pushView(menu, new MCycMenuDelegate(mMO2), WatchUi.SLIDE_IMMEDIATE);
         return true;
 	}
 
@@ -172,13 +171,13 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
     function switchToView(index, transition) {
         var view;
         if (0 == index) {
-            view = new MCycView0(mMO2, mFEC, mViewAlert);
+            view = new MCycView0(mMO2, mFECListener, mViewAlert);
         }
         else if (1 == index) {
             view = new MCycView1(mMO2, mViewAlert);
         }
         else {
-            view = new MCycView2(mMO2, mFEC, mViewAlert);
+            view = new MCycView2(mMO2, mFECListener, mViewAlert);
         }
 
         mIndex = index;
@@ -189,14 +188,5 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
         mView = view;
 
         return true;
-    }
-
-    function UpdateMO2(mo2) {
-        mMO2 = mo2;
-        // need to update in current view too?
-    }
-
-    function UpdateFEC(fec) {
-        mFEC = fec;
     }
 }

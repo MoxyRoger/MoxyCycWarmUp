@@ -7,7 +7,7 @@ using View2DeviceVars as device;
 
 class MCycView2 extends Ui.View {
     hidden var mSensor;
-    hidden var mFEC;
+    hidden var mFECListener;
     hidden var mViewAlert;
     hidden var mV1;
     hidden var mL2 = "Time"; 
@@ -21,7 +21,7 @@ class MCycView2 extends Ui.View {
     function initialize(sensor, fec, alert) {
         View.initialize();
         mSensor = sensor;
-        mFEC = fec;
+        mFECListener = fec;
         mViewAlert = alert;
     }
 
@@ -53,9 +53,6 @@ class MCycView2 extends Ui.View {
                 mV1 = " ";
                 break;
             case COUNTDOWN:
-                mV1 = "Get Ready";
-                break;
-            case COUNTDOWN2:
                 mV1 = "Get Ready";
                 break;
             case WARM1:

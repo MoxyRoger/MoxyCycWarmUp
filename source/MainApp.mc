@@ -1,5 +1,6 @@
 import Toybox.Activity;
 import Toybox.ActivityRecording;
+import Toybox.AntPlus;
 import Toybox.Application;
 import Toybox.FitContributor;  //maybe don't need
 import Toybox.Lang;
@@ -50,7 +51,6 @@ enum {
 enum{
     STEP_INIT,
     COUNTDOWN,
-    COUNTDOWN2,
     WARM1,
     WARM2,
     WARM3,
@@ -80,6 +80,7 @@ class MoxyStepTest extends Application.AppBase {
     hidden var mTimer;
     hidden var mMO2;
     hidden var mFEC;
+    hidden var mFECListener;
     hidden var mViewAlert;
     hidden var mDelegate;
     hidden var mActivity;
@@ -106,7 +107,8 @@ class MoxyStepTest extends Application.AppBase {
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         mMO2 = new MO2Sensor();
-        mFEC = new FECTrainer();
+        mFECListener = new MyFitnessEquipmentListener();
+        mFEC = new AntPlus.FitnessEquipment(mFECListener);
         mViewAlert = new ViewAlert(mMO2);
 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE,
@@ -131,12 +133,11 @@ class MoxyStepTest extends Application.AppBase {
 
         // close the MO2 sensor
         mMO2.release();
-        mFEC.release();
     }
 
     function getInitialView() {
-        var view = new MCycView0(mMO2, mFEC, mViewAlert);
-        mDelegate = new MCycDelegate(0, view, mMO2, mFEC, mViewAlert);
+        var view = new MCycView0(mMO2, mFECListener, mViewAlert);
+        mDelegate = new MCycDelegate(0, view, mMO2, mFECListener, mViewAlert);
         return [ view, mDelegate ];
     }
 
@@ -193,13 +194,7 @@ class MoxyStepTest extends Application.AppBase {
                 btnAlert = BTN_NONE;
                 stepDuration = 3 * 1000;
                 targetPower = 1;
-                mFEC.ackSequence = SEND_USER;
-                break;
-            case COUNTDOWN2:
-                btnAlert = BTN_NONE;
-                stepDuration = 3 * 1000;
-                targetPower = 1;
-                mFEC.ackSequence = SEND_WINDRESIST;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case WARM1:
                 btnAlert = STP_WARM;
@@ -209,7 +204,7 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.30 * ftp;
-                mFEC.ackSequence = SEND_TARGPWR;;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case WARM2:
                 btnAlert = STP_WARM;
@@ -219,7 +214,7 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.45 * ftp;
-                mFEC.ackSequence = SEND_TARGPWR;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case WARM3:
                 btnAlert = STP_WARM;
@@ -229,13 +224,13 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.60 * ftp;
-                mFEC.ackSequence = SEND_TARGPWR;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case REST1:
                 btnAlert = STP_REST;
                 stepDuration = 60 * 1000;
                 targetPower = 0;
-                mFEC.ackSequence = SEND_TARGPWR;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case STEPTEST:
                 btnAlert = STP_STEP;
@@ -254,13 +249,17 @@ class MoxyStepTest extends Application.AppBase {
                 }
                 targetPower = stepsize * loadStep + initload;
                 loadStep = loadStep + 1;
-                mFEC.ackSequence = SEND_TARGPWR;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case COOLDOWN:
                 btnAlert = STP_COOL;
                 stepDuration = 360*1000;
-                targetPower = 60;
-                mFEC.ackSequence = SEND_TARGPWR;
+                ftp = Storage.getValue("FTP-watts");
+                if (ftp == null) {
+                    ftp = FTP_DEFAULT;
+                }
+                targetPower = 0.40 * ftp;
+                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             default:
         } 

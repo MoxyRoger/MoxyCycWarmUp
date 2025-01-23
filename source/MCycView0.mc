@@ -78,8 +78,8 @@ class MCycView0 extends Ui.View {
             if (info.currentHeartRate != null) {
             	dc.fillCircle(device.HRX, device.IndicatorY, mIndRad-1);
             }
-            if (mFEC.is_first_msg == false) {
-            	dc.fillCircle(device.FECX, device.IndicatorY, mIndRad-1);
+            if (mFEC.fecSpeed != null) {
+                dc.fillCircle(device.FECX, device.IndicatorY, mIndRad-1);
             }
             if (mHasPower and info.currentPower != null) {
             	dc.fillCircle(device.PowerX, device.IndicatorY, mIndRad-1);

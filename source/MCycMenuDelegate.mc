@@ -7,12 +7,10 @@ import Toybox.WatchUi;
 
 class MCycMenuDelegate extends WatchUi.MenuInputDelegate {
     var mMO2;
-    var mFEC;
 
-    function initialize(mo2, fec) {
+    function initialize(mo2) {
         MenuInputDelegate.initialize();
         mMO2 = mo2;
-        mFEC = fec;
     }
 
     function onMenuItem(item) {
@@ -23,10 +21,6 @@ class MCycMenuDelegate extends WatchUi.MenuInputDelegate {
         if (item == :ftp) {
             var view = new AlertPicker(PICKER_TYPE_FTP);
             WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_FTP, view), WatchUi.SLIDE_IMMEDIATE);
-        }
-        if (item == :trainer) {
-            mFEC.goToSearch();
-            WatchUi.pushView(new MCycViewPair(mFEC), new MCycPairDelegate(), WatchUi.SLIDE_IMMEDIATE);
         }
         else if (item == :sensorLx) {
             var view = new AlertPicker(PICKER_TYPE_SENSORLX);
