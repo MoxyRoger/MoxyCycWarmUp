@@ -75,12 +75,13 @@ const FTP_DEFAULT = 150;
 const DURATION_DEFAULT = 60;
 const STEPSIZE_DEFAULT = 20;
 const INITLOAD_DEFAULT = 60;
+var IS_FEC_NATIVE = false;
 
 class MoxyStepTest extends Application.AppBase {
     hidden var mTimer;
     hidden var mMO2;
     hidden var mFEC;
-    hidden var mFECListener;
+    hidden var mFECControl;
     hidden var mViewAlert;
     hidden var mDelegate;
     hidden var mActivity;
@@ -102,13 +103,25 @@ class MoxyStepTest extends Application.AppBase {
         AppBase.initialize();
         mTimer = new Timer.Timer();
         btnAlert = BTN_NONE;
+        if (Toybox.AntPlus has :FitnessEquipment) {
+            IS_FEC_NATIVE = true;
+        }
     }
 
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         mMO2 = new MO2Sensor();
-        mFECListener = new MyFitnessEquipmentListener();
-        mFEC = new AntPlus.FitnessEquipment(mFECListener);
+        if (IS_FEC_NATIVE) {
+            mFEC = new MyFitnessEquipmentListener();
+            mFECControl = new AntPlus.FitnessEquipment(mFEC);
+            System.println("yes it has");
+        }
+        else {
+            mFEC = new FECTrainer();
+            mFECControl = mFEC;
+            System.println("no it has not");
+        }
+        
         mViewAlert = new ViewAlert(mMO2);
 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE,
@@ -136,8 +149,9 @@ class MoxyStepTest extends Application.AppBase {
     }
 
     function getInitialView() {
-        var view = new MCycView0(mMO2, mFECListener, mViewAlert);
-        mDelegate = new MCycDelegate(0, view, mMO2, mFECListener, mViewAlert);
+        var view;
+        view = new MCycView0(mMO2, mFEC, mViewAlert);
+        mDelegate = new MCycDelegate(0, view, mMO2, mFEC, mViewAlert);
         return [ view, mDelegate ];
     }
 
@@ -194,7 +208,7 @@ class MoxyStepTest extends Application.AppBase {
                 btnAlert = BTN_NONE;
                 stepDuration = 3 * 1000;
                 targetPower = 1;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case WARM1:
                 btnAlert = STP_WARM;
@@ -204,7 +218,7 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.30 * ftp;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case WARM2:
                 btnAlert = STP_WARM;
@@ -214,7 +228,7 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.45 * ftp;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case WARM3:
                 btnAlert = STP_WARM;
@@ -224,13 +238,13 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.60 * ftp;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case REST1:
                 btnAlert = STP_REST;
                 stepDuration = 60 * 1000;
                 targetPower = 0;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case STEPTEST:
                 btnAlert = STP_STEP;
@@ -249,7 +263,7 @@ class MoxyStepTest extends Application.AppBase {
                 }
                 targetPower = stepsize * loadStep + initload;
                 loadStep = loadStep + 1;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             case COOLDOWN:
                 btnAlert = STP_COOL;
@@ -259,7 +273,7 @@ class MoxyStepTest extends Application.AppBase {
                     ftp = FTP_DEFAULT;
                 }
                 targetPower = 0.40 * ftp;
-                mFEC.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
                 break;
             default:
         } 

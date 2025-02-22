@@ -1,13 +1,13 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Ant,1,14,17]; ]
 import Toybox.Ant;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 2; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 3; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
 import Toybox.System;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 4; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
 import Toybox.Time;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 6; ]
-class MO2Sensor extends Ant.GenericChannel{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 6; @symbol_classdef = [MO2Sensor,6,6,15]; @symbol_extends<0> = [Ant,6,24,27]; @symbol_extends<1> = [GenericChannel,6,28,42]; ]
+class MO2Sensor extends Ant.GenericChannel {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 6; ]
     <init> {
     }
@@ -15,30 +15,35 @@ class MO2Sensor extends Ant.GenericChannel{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 8; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 8; @position = 8; @symbol_vardef = [_eventCount,8,8,19]; ]
     var _eventCount = null;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 9; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 9; @position = 8; @symbol_vardef = [is_first_msg,9,8,20]; ]
     var is_first_msg = true;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 10; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 10; @position = 8; @symbol_vardef = [deviceNumber,10,8,20]; ]
     var deviceNumber = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 11; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 11; @position = 8; @symbol_vardef = [deviceMfg,11,8,17]; ]
     var deviceMfg = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 13; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 13; @position = 8; @symbol_vardef = [totalHemoConcentration,13,8,30]; ]
     var totalHemoConcentration;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 14; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 14; @position = 8; @symbol_vardef = [currentHemoPercent,14,8,26]; ]
     var currentHemoPercent;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 16; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; ]
     function initialize() as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_16_26_40_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 17 8 ]
+        symbol [ Application %tmp.2 17 23 34 ];
         %tmp.2 = getv ? :Application;
+        symbol [ Storage %tmp.3 17 35 42 ];
         %tmp.3 = getv %tmp.2 :Storage;
+        symbol [ getValue %tmp.4 17 43 51 ];
         %tmp.4 = getv function %tmp.3 :getValue;
         %tmp.5 = "SensorId";
         %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        symbol [ deviceNumber ? 17 8 20 ];
         putv self :deviceNumber %tmp.6;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 18 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_18_8_20_8_if_stmt:
+        symbol [ deviceNumber %tmp.8 18 11 23 ];
         %tmp.8 = getv ? :deviceNumber;
         %tmp.9 = null;
         %tmp.10 = eq %tmp.8 %tmp.9;
@@ -47,6 +52,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_18_8_20
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_18_33_20_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 19 12 ]
         %tmp.11 = 0;
+        symbol [ deviceNumber ? 19 12 24 ];
         putv self :deviceNumber %tmp.11;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_18_33_20_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_18_8_20_8_if_end;
@@ -54,191 +60,251 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_18_8_20
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 21 8 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_16_26_40_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_16_26_40_4_stop" ]
         %channelAssignment.1 = local;
+        symbol [ channelAssignment %channelAssignment.1 21 12 29 ];
+        symbol [ Ant %tmp.14 21 36 39 ];
         %tmp.14 = getm $.Toybox.Ant;
+        symbol [ ChannelAssignment %tmp.15 21 40 57 ];
         %tmp.15 = getv function ? %tmp.14 :ChannelAssignment;
+        symbol [ Ant %tmp.16 22 12 15 ];
         %tmp.16 = getm $.Toybox.Ant;
+        symbol [ CHANNEL_TYPE_RX_NOT_TX %tmp.17 22 16 38 ];
         %tmp.17 = getv %tmp.16 :CHANNEL_TYPE_RX_NOT_TX;
+        symbol [ Ant %tmp.18 23 12 15 ];
         %tmp.18 = getm $.Toybox.Ant;
+        symbol [ NETWORK_PLUS %tmp.19 23 16 28 ];
         %tmp.19 = getv %tmp.18 :NETWORK_PLUS;
         %tmp.12 = newc %tmp.15 (%tmp.17, %tmp.19);
         lputv %channelAssignment.1 %tmp.12;
+        symbol [ channelAssignment %channelAssignment.1 21 12 29 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 25 8 ]
+        symbol [ GenericChannel %tmp.21 25 8 22 ];
         %tmp.21 = getv ? :GenericChannel;
+        symbol [ initialize %tmp.22 25 23 33 ];
         %tmp.22 = getv function %tmp.21 :initialize;
         %tmp.23 = self;
+        symbol [ method %tmp.24 25 34 40 ];
         %tmp.24 = getv function %tmp.23 :method;
         %tmp.26 = const :onMessage;
         %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
-        %tmp.29 = lgetv %channelAssignment.1;
-        invoke %tmp.21 %tmp.22(%tmp.27, %tmp.29);
+        %tmp.28 = lgetv %channelAssignment.1;
+        symbol [ channelAssignment %tmp.28 25 54 71 ];
+        invoke %tmp.21 %tmp.22(%tmp.27, %tmp.28);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 27 8 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_16_26_40_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_16_26_40_4_stop" ]
         %deviceConfig.2 = local;
-        %tmp.32 = getm $.Toybox.Ant;
-        %tmp.33 = getv function ? %tmp.32 :DeviceConfig;
-        %tmp.34 = newd 8;
-        %tmp.36 = const :deviceNumber;
-        %tmp.38 = getv ? :deviceNumber;
-        %tmp.39 = dup %tmp.34;
-        %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
-        %tmp.42 = const :deviceType;
-        %tmp.43 = 31;
-        %tmp.44 = dup %tmp.40;
-        %tmp.45 = aputv %tmp.44 %tmp.42 %tmp.43;
-        %tmp.47 = const :transmissionType;
-        %tmp.48 = 0;
-        %tmp.49 = dup %tmp.45;
-        %tmp.50 = aputv %tmp.49 %tmp.47 %tmp.48;
-        %tmp.52 = const :messagePeriod;
-        %tmp.53 = 8192;
-        %tmp.54 = dup %tmp.50;
-        %tmp.55 = aputv %tmp.54 %tmp.52 %tmp.53;
-        %tmp.57 = const :radioFrequency;
-        %tmp.58 = 57;
-        %tmp.59 = dup %tmp.55;
-        %tmp.60 = aputv %tmp.59 %tmp.57 %tmp.58;
-        %tmp.62 = const :searchTimeoutLowPriority;
-        %tmp.63 = 10;
-        %tmp.64 = dup %tmp.60;
-        %tmp.65 = aputv %tmp.64 %tmp.62 %tmp.63;
-        %tmp.67 = const :searchTimeoutHighPriority;
-        %tmp.68 = 0;
-        %tmp.69 = dup %tmp.65;
-        %tmp.70 = aputv %tmp.69 %tmp.67 %tmp.68;
-        %tmp.72 = const :searchThreshold;
-        %tmp.73 = 0;
-        %tmp.74 = dup %tmp.70;
-        %tmp.75 = aputv %tmp.74 %tmp.72 %tmp.73;
-        %tmp.30 = newc %tmp.33 (%tmp.75);
-        lputv %deviceConfig.2 %tmp.30;
+        symbol [ deviceConfig %deviceConfig.2 27 12 24 ];
+        symbol [ Ant %tmp.31 27 31 34 ];
+        %tmp.31 = getm $.Toybox.Ant;
+        symbol [ DeviceConfig %tmp.32 27 35 47 ];
+        %tmp.32 = getv function ? %tmp.31 :DeviceConfig;
+        %tmp.33 = newd 8;
+        %tmp.35 = const :deviceNumber;
+        symbol [ deviceNumber %tmp.37 28 42 54 ];
+        %tmp.37 = getv ? :deviceNumber;
+        %tmp.38 = dup %tmp.33;
+        %tmp.39 = aputv %tmp.38 %tmp.35 %tmp.37;
+        %tmp.41 = const :deviceType;
+        %tmp.42 = 31;
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
+        %tmp.46 = const :transmissionType;
+        %tmp.47 = 0;
+        %tmp.48 = dup %tmp.44;
+        %tmp.49 = aputv %tmp.48 %tmp.46 %tmp.47;
+        %tmp.51 = const :messagePeriod;
+        %tmp.52 = 8192;
+        %tmp.53 = dup %tmp.49;
+        %tmp.54 = aputv %tmp.53 %tmp.51 %tmp.52;
+        %tmp.56 = const :radioFrequency;
+        %tmp.57 = 57;
+        %tmp.58 = dup %tmp.54;
+        %tmp.59 = aputv %tmp.58 %tmp.56 %tmp.57;
+        %tmp.61 = const :searchTimeoutLowPriority;
+        %tmp.62 = 10;
+        %tmp.63 = dup %tmp.59;
+        %tmp.64 = aputv %tmp.63 %tmp.61 %tmp.62;
+        %tmp.66 = const :searchTimeoutHighPriority;
+        %tmp.67 = 0;
+        %tmp.68 = dup %tmp.64;
+        %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
+        %tmp.71 = const :searchThreshold;
+        %tmp.72 = 0;
+        %tmp.73 = dup %tmp.69;
+        %tmp.74 = aputv %tmp.73 %tmp.71 %tmp.72;
+        %tmp.29 = newc %tmp.32 (%tmp.74);
+        lputv %deviceConfig.2 %tmp.29;
+        symbol [ deviceConfig %deviceConfig.2 27 12 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 38 8 ]
-        %tmp.77 = getv ? :GenericChannel;
-        %tmp.78 = getv function %tmp.77 :setDeviceConfig;
-        %tmp.80 = lgetv %deviceConfig.2;
-        invoke %tmp.77 %tmp.78(%tmp.80);
+        symbol [ GenericChannel %tmp.76 38 8 22 ];
+        %tmp.76 = getv ? :GenericChannel;
+        symbol [ setDeviceConfig %tmp.77 38 23 38 ];
+        %tmp.77 = getv function %tmp.76 :setDeviceConfig;
+        %tmp.78 = lgetv %deviceConfig.2;
+        symbol [ deviceConfig %tmp.78 38 39 51 ];
+        invoke %tmp.76 %tmp.77(%tmp.78);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 39 8 ]
-        %tmp.82 = getv ? :GenericChannel;
-        %tmp.83 = getv function %tmp.82 :open;
-        invoke %tmp.82 %tmp.83();
+        symbol [ GenericChannel %tmp.80 39 8 22 ];
+        %tmp.80 = getv ? :GenericChannel;
+        symbol [ open %tmp.81 39 23 27 ];
+        %tmp.81 = getv function %tmp.80 :open;
+        invoke %tmp.80 %tmp.81();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_16_26_40_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 42; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 42; @symbol_functiondef = [reset,42,13,18]; ]
     function reset() {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_42_21_46_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 43 8 ]
         %tmp.1 = null;
+        symbol [ _eventCount ? 43 8 19 ];
         putv self :_eventCount %tmp.1;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 44 8 ]
         %tmp.2 = null;
+        symbol [ totalHemoConcentration ? 44 8 30 ];
         putv self :totalHemoConcentration %tmp.2;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 45 8 ]
         %tmp.3 = null;
+        symbol [ currentHemoPercent ? 45 8 26 ];
         putv self :currentHemoPercent %tmp.3;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_42_21_46_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 48; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 48; @symbol_functiondef = [goToSearch,48,13,23]; ]
     function goToSearch() {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_48_26_72_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 49 8 ]
+        symbol [ GenericChannel %tmp.2 49 8 22 ];
         %tmp.2 = getv ? :GenericChannel;
+        symbol [ close %tmp.3 49 23 28 ];
         %tmp.3 = getv function %tmp.2 :close;
         invoke %tmp.2 %tmp.3();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 50 8 ]
+        symbol [ GenericChannel %tmp.5 50 8 22 ];
         %tmp.5 = getv ? :GenericChannel;
+        symbol [ release %tmp.6 50 23 30 ];
         %tmp.6 = getv function %tmp.5 :release;
         invoke %tmp.5 %tmp.6();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 51 8 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_48_26_72_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_48_26_72_4_stop" ]
         %channelAssignment.1 = local;
+        symbol [ channelAssignment %channelAssignment.1 51 12 29 ];
+        symbol [ Ant %tmp.9 51 36 39 ];
         %tmp.9 = getm $.Toybox.Ant;
+        symbol [ ChannelAssignment %tmp.10 51 40 57 ];
         %tmp.10 = getv function ? %tmp.9 :ChannelAssignment;
+        symbol [ Ant %tmp.11 52 12 15 ];
         %tmp.11 = getm $.Toybox.Ant;
+        symbol [ CHANNEL_TYPE_RX_NOT_TX %tmp.12 52 16 38 ];
         %tmp.12 = getv %tmp.11 :CHANNEL_TYPE_RX_NOT_TX;
+        symbol [ Ant %tmp.13 53 12 15 ];
         %tmp.13 = getm $.Toybox.Ant;
+        symbol [ NETWORK_PLUS %tmp.14 53 16 28 ];
         %tmp.14 = getv %tmp.13 :NETWORK_PLUS;
         %tmp.7 = newc %tmp.10 (%tmp.12, %tmp.14);
         lputv %channelAssignment.1 %tmp.7;
+        symbol [ channelAssignment %channelAssignment.1 51 12 29 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 55 8 ]
+        symbol [ GenericChannel %tmp.16 55 8 22 ];
         %tmp.16 = getv ? :GenericChannel;
+        symbol [ initialize %tmp.17 55 23 33 ];
         %tmp.17 = getv function %tmp.16 :initialize;
         %tmp.18 = self;
+        symbol [ method %tmp.19 55 34 40 ];
         %tmp.19 = getv function %tmp.18 :method;
         %tmp.21 = const :onMessage;
         %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
-        %tmp.24 = lgetv %channelAssignment.1;
-        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.24);
+        %tmp.23 = lgetv %channelAssignment.1;
+        symbol [ channelAssignment %tmp.23 55 54 71 ];
+        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.23);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 57 8 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_48_26_72_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_48_26_72_4_stop" ]
         %deviceConfig.2 = local;
-        %tmp.27 = getm $.Toybox.Ant;
-        %tmp.28 = getv function ? %tmp.27 :DeviceConfig;
-        %tmp.29 = newd 8;
-        %tmp.31 = const :deviceNumber;
-        %tmp.32 = 0;
-        %tmp.33 = dup %tmp.29;
-        %tmp.34 = aputv %tmp.33 %tmp.31 %tmp.32;
-        %tmp.36 = const :deviceType;
-        %tmp.37 = 31;
-        %tmp.38 = dup %tmp.34;
-        %tmp.39 = aputv %tmp.38 %tmp.36 %tmp.37;
-        %tmp.41 = const :transmissionType;
-        %tmp.42 = 0;
-        %tmp.43 = dup %tmp.39;
-        %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
-        %tmp.46 = const :messagePeriod;
-        %tmp.47 = 8192;
-        %tmp.48 = dup %tmp.44;
-        %tmp.49 = aputv %tmp.48 %tmp.46 %tmp.47;
-        %tmp.51 = const :radioFrequency;
-        %tmp.52 = 57;
-        %tmp.53 = dup %tmp.49;
-        %tmp.54 = aputv %tmp.53 %tmp.51 %tmp.52;
-        %tmp.56 = const :searchTimeoutLowPriority;
-        %tmp.57 = 10;
-        %tmp.58 = dup %tmp.54;
-        %tmp.59 = aputv %tmp.58 %tmp.56 %tmp.57;
-        %tmp.61 = const :searchTimeoutHighPriority;
-        %tmp.62 = 0;
-        %tmp.63 = dup %tmp.59;
-        %tmp.64 = aputv %tmp.63 %tmp.61 %tmp.62;
-        %tmp.66 = const :searchThreshold;
-        %tmp.67 = 0;
-        %tmp.68 = dup %tmp.64;
-        %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
-        %tmp.25 = newc %tmp.28 (%tmp.69);
-        lputv %deviceConfig.2 %tmp.25;
+        symbol [ deviceConfig %deviceConfig.2 57 12 24 ];
+        symbol [ Ant %tmp.26 57 31 34 ];
+        %tmp.26 = getm $.Toybox.Ant;
+        symbol [ DeviceConfig %tmp.27 57 35 47 ];
+        %tmp.27 = getv function ? %tmp.26 :DeviceConfig;
+        %tmp.28 = newd 8;
+        %tmp.30 = const :deviceNumber;
+        %tmp.31 = 0;
+        %tmp.32 = dup %tmp.28;
+        %tmp.33 = aputv %tmp.32 %tmp.30 %tmp.31;
+        %tmp.35 = const :deviceType;
+        %tmp.36 = 31;
+        %tmp.37 = dup %tmp.33;
+        %tmp.38 = aputv %tmp.37 %tmp.35 %tmp.36;
+        %tmp.40 = const :transmissionType;
+        %tmp.41 = 0;
+        %tmp.42 = dup %tmp.38;
+        %tmp.43 = aputv %tmp.42 %tmp.40 %tmp.41;
+        %tmp.45 = const :messagePeriod;
+        %tmp.46 = 8192;
+        %tmp.47 = dup %tmp.43;
+        %tmp.48 = aputv %tmp.47 %tmp.45 %tmp.46;
+        %tmp.50 = const :radioFrequency;
+        %tmp.51 = 57;
+        %tmp.52 = dup %tmp.48;
+        %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+        %tmp.55 = const :searchTimeoutLowPriority;
+        %tmp.56 = 10;
+        %tmp.57 = dup %tmp.53;
+        %tmp.58 = aputv %tmp.57 %tmp.55 %tmp.56;
+        %tmp.60 = const :searchTimeoutHighPriority;
+        %tmp.61 = 0;
+        %tmp.62 = dup %tmp.58;
+        %tmp.63 = aputv %tmp.62 %tmp.60 %tmp.61;
+        %tmp.65 = const :searchThreshold;
+        %tmp.66 = 0;
+        %tmp.67 = dup %tmp.63;
+        %tmp.68 = aputv %tmp.67 %tmp.65 %tmp.66;
+        %tmp.24 = newc %tmp.27 (%tmp.68);
+        lputv %deviceConfig.2 %tmp.24;
+        symbol [ deviceConfig %deviceConfig.2 57 12 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 68 8 ]
-        %tmp.71 = getv ? :GenericChannel;
-        %tmp.72 = getv function %tmp.71 :setDeviceConfig;
-        %tmp.74 = lgetv %deviceConfig.2;
-        invoke %tmp.71 %tmp.72(%tmp.74);
+        symbol [ GenericChannel %tmp.70 68 8 22 ];
+        %tmp.70 = getv ? :GenericChannel;
+        symbol [ setDeviceConfig %tmp.71 68 23 38 ];
+        %tmp.71 = getv function %tmp.70 :setDeviceConfig;
+        %tmp.72 = lgetv %deviceConfig.2;
+        symbol [ deviceConfig %tmp.72 68 39 51 ];
+        invoke %tmp.70 %tmp.71(%tmp.72);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 69 8 ]
-        %tmp.76 = getv ? :GenericChannel;
-        %tmp.77 = getv function %tmp.76 :open;
-        invoke %tmp.76 %tmp.77();
+        symbol [ GenericChannel %tmp.74 69 8 22 ];
+        %tmp.74 = getv ? :GenericChannel;
+        symbol [ open %tmp.75 69 23 27 ];
+        %tmp.75 = getv function %tmp.74 :open;
+        invoke %tmp.74 %tmp.75();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 70 8 ]
-        %tmp.78 = true;
-        putv self :is_first_msg %tmp.78;
+        %tmp.76 = true;
+        symbol [ is_first_msg ? 70 8 20 ];
+        putv self :is_first_msg %tmp.76;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 71 8 ]
-        %tmp.79 = 0;
-        putv self :deviceNumber %tmp.79;
+        %tmp.77 = 0;
+        symbol [ deviceNumber ? 71 8 20 ];
+        putv self :deviceNumber %tmp.77;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_48_26_72_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 74; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc"; @line = 74; @symbol_functiondef = [onMessage,74,13,22]; @symbol_param<0> = [msg,74,23,26]; @symbol_param<0>_type<0> = [Message,74,30,37]; ]
     function onMessage(msg as Message) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_74_47_160_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 75 8 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_74_47_160_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_74_47_160_4_stop" ]
         %payload.1 = local;
+        symbol [ payload %payload.1 75 12 19 ];
         %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 75 22 25 ];
+        symbol [ getPayload %tmp.2 75 26 36 ];
         %tmp.2 = getv function %tmp.1 :getPayload;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %payload.1 %tmp.3;
+        symbol [ payload %payload.1 75 12 19 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 76 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_76_8_159_8_if_stmt:
+        symbol [ Ant %tmp.4 76 12 15 ];
         %tmp.4 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_CHANNEL_RESPONSE_EVENT %tmp.5 76 16 45 ];
         %tmp.5 = getv %tmp.4 :MSG_ID_CHANNEL_RESPONSE_EVENT;
         %tmp.6 = lgetv %msg;
+        symbol [ msg %tmp.6 76 49 52 ];
+        symbol [ messageId %tmp.7 76 53 62 ];
         %tmp.7 = getv %tmp.6 :messageId;
         %tmp.8 = eq %tmp.5 %tmp.7;
         bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_76_8_159_8_if_false;
@@ -246,57 +312,73 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_76_8_15
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_76_64_94_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 78 12 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_12_93_12_if_stmt:
+        symbol [ Ant %tmp.9 78 16 19 ];
         %tmp.9 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_RF_EVENT %tmp.10 78 20 35 ];
         %tmp.10 = getv %tmp.9 :MSG_ID_RF_EVENT;
-        %tmp.12 = lgetv %payload.1;
-        %tmp.13 = 0;
-        %tmp.14 = agetv %tmp.12 %tmp.13;
-        %tmp.15 = eq %tmp.10 %tmp.14;
-        bf %tmp.15 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_12_93_12_if_false;
+        %tmp.11 = lgetv %payload.1;
+        symbol [ payload %tmp.11 78 39 46 ];
+        %tmp.12 = 0;
+        %tmp.13 = agetv %tmp.11 %tmp.12;
+        %tmp.14 = eq %tmp.10 %tmp.13;
+        bf %tmp.14 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_12_93_12_if_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_12_93_12_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_51_88_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 79 16 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_51_88_12_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_51_88_12_stop" ]
         %event.2 = local;
-        %tmp.17 = lgetv %payload.1;
-        %tmp.18 = 1;
-        %tmp.19 = agetv %tmp.17 %tmp.18;
-        %tmp.20 = 0xFF;
-        %tmp.21 = bitand %tmp.19 %tmp.20;
-        lputv %event.2 %tmp.21;
+        symbol [ event %event.2 79 20 25 ];
+        %tmp.15 = lgetv %payload.1;
+        symbol [ payload %tmp.15 79 28 35 ];
+        %tmp.16 = 1;
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = 0xFF;
+        %tmp.19 = bitand %tmp.17 %tmp.18;
+        lputv %event.2 %tmp.19;
+        symbol [ event %event.2 79 20 25 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 81 4 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_4_87_16_if_stmt:
-        %tmp.22 = getm $.Toybox.Ant;
-        %tmp.23 = getv %tmp.22 :MSG_CODE_EVENT_CHANNEL_CLOSED;
-        %tmp.25 = lgetv %event.2;
-        %tmp.26 = eq %tmp.23 %tmp.25;
-        bf %tmp.26 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_4_87_16_if_false;
+        symbol [ Ant %tmp.20 81 8 11 ];
+        %tmp.20 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_CHANNEL_CLOSED %tmp.21 81 12 41 ];
+        %tmp.21 = getv %tmp.20 :MSG_CODE_EVENT_CHANNEL_CLOSED;
+        %tmp.22 = lgetv %event.2;
+        symbol [ event %tmp.22 81 45 50 ];
+        %tmp.23 = eq %tmp.21 %tmp.22;
+        bf %tmp.23 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_4_87_16_if_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_4_87_16_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_52_84_16_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 82 20 ]
-        %tmp.28 = getv ? :GenericChannel;
-        %tmp.29 = getv function %tmp.28 :open;
-        invoke %tmp.28 %tmp.29();
+        symbol [ GenericChannel %tmp.25 82 20 34 ];
+        %tmp.25 = getv ? :GenericChannel;
+        symbol [ open %tmp.26 82 35 39 ];
+        %tmp.26 = getv function %tmp.25 :open;
+        invoke %tmp.25 %tmp.26();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 83 20 ]
-        %tmp.30 = self;
-        %tmp.31 = getv function %tmp.30 :reset;
-        invoke %tmp.30 %tmp.31();
+        %tmp.27 = self;
+        symbol [ reset %tmp.28 83 20 25 ];
+        %tmp.28 = getv function %tmp.27 :reset;
+        invoke %tmp.27 %tmp.28();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_52_84_16_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_4_87_16_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_81_4_87_16_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 85 21 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_21_87_16_if_stmt:
-        %tmp.32 = getm $.Toybox.Ant;
-        %tmp.33 = getv %tmp.32 :MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH;
-        %tmp.35 = lgetv %event.2;
-        %tmp.36 = eq %tmp.33 %tmp.35;
-        bf %tmp.36 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_21_87_16_if_end;
+        symbol [ Ant %tmp.29 85 25 28 ];
+        %tmp.29 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH %tmp.30 85 29 64 ];
+        %tmp.30 = getv %tmp.29 :MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH;
+        %tmp.31 = lgetv %event.2;
+        symbol [ event %tmp.31 85 68 73 ];
+        %tmp.32 = eq %tmp.30 %tmp.31;
+        bf %tmp.32 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_21_87_16_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_21_87_16_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_75_87_16_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 86 20 ]
-        %tmp.37 = self;
-        %tmp.38 = getv function %tmp.37 :reset;
-        invoke %tmp.37 %tmp.38();
+        %tmp.33 = self;
+        symbol [ reset %tmp.34 86 20 25 ];
+        %tmp.34 = getv function %tmp.33 :reset;
+        invoke %tmp.33 %tmp.34();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_75_87_16_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_21_87_16_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_85_21_87_16_if_end:
@@ -306,27 +388,36 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_51_8
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_78_12_93_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 89 17 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_17_93_12_if_stmt:
-        %tmp.39 = getm $.Toybox.Ant;
-        %tmp.40 = getv %tmp.39 :MSG_ID_CLOSE_CHANNEL;
-        %tmp.42 = lgetv %payload.1;
-        %tmp.43 = 0;
-        %tmp.44 = agetv %tmp.42 %tmp.43;
-        %tmp.45 = eq %tmp.40 %tmp.44;
-        bf %tmp.45 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_17_93_12_if_end;
+        symbol [ Ant %tmp.35 89 21 24 ];
+        %tmp.35 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_CLOSE_CHANNEL %tmp.36 89 25 45 ];
+        %tmp.36 = getv %tmp.35 :MSG_ID_CLOSE_CHANNEL;
+        %tmp.37 = lgetv %payload.1;
+        symbol [ payload %tmp.37 89 49 56 ];
+        %tmp.38 = 0;
+        %tmp.39 = agetv %tmp.37 %tmp.38;
+        %tmp.40 = eq %tmp.36 %tmp.39;
+        bf %tmp.40 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_17_93_12_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_17_93_12_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_61_93_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 90 16 ]
-        %tmp.47 = getv ? :GenericChannel;
-        %tmp.48 = getv function %tmp.47 :close;
-        invoke %tmp.47 %tmp.48();
+        symbol [ GenericChannel %tmp.42 90 16 30 ];
+        %tmp.42 = getv ? :GenericChannel;
+        symbol [ close %tmp.43 90 31 36 ];
+        %tmp.43 = getv function %tmp.42 :close;
+        invoke %tmp.42 %tmp.43();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 91 16 ]
-        %tmp.50 = getv ? :GenericChannel;
-        %tmp.51 = getv function %tmp.50 :release;
-        invoke %tmp.50 %tmp.51();
+        symbol [ GenericChannel %tmp.45 91 16 30 ];
+        %tmp.45 = getv ? :GenericChannel;
+        symbol [ release %tmp.46 91 31 38 ];
+        %tmp.46 = getv function %tmp.45 :release;
+        invoke %tmp.45 %tmp.46();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 92 16 ]
-        %tmp.53 = getv ? :GenericChannel;
-        %tmp.54 = getv function %tmp.53 :open;
-        invoke %tmp.53 %tmp.54();
+        symbol [ GenericChannel %tmp.48 92 16 30 ];
+        %tmp.48 = getv ? :GenericChannel;
+        symbol [ open %tmp.49 92 31 35 ];
+        %tmp.49 = getv function %tmp.48 :open;
+        invoke %tmp.48 %tmp.49();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_61_93_12_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_17_93_12_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_89_17_93_12_if_end:
@@ -336,286 +427,364 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_76_64_9
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_76_8_159_8_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 95 13 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_13_159_8_if_stmt:
-        %tmp.55 = getm $.Toybox.Ant;
-        %tmp.56 = getv %tmp.55 :MSG_ID_BROADCAST_DATA;
-        %tmp.57 = lgetv %msg;
-        %tmp.58 = getv %tmp.57 :messageId;
-        %tmp.59 = eq %tmp.56 %tmp.58;
-        bf %tmp.59 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_13_159_8_if_end;
+        symbol [ Ant %tmp.50 95 17 20 ];
+        %tmp.50 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_BROADCAST_DATA %tmp.51 95 21 42 ];
+        %tmp.51 = getv %tmp.50 :MSG_ID_BROADCAST_DATA;
+        %tmp.52 = lgetv %msg;
+        symbol [ msg %tmp.52 95 46 49 ];
+        symbol [ messageId %tmp.53 95 50 59 ];
+        %tmp.53 = getv %tmp.52 :messageId;
+        %tmp.54 = eq %tmp.51 %tmp.53;
+        bf %tmp.54 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_13_159_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_13_159_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_61_159_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 96 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_61_159_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_95_61_159_8_stop" ]
         %dataType.3 = local;
-        %tmp.61 = lgetv %payload.1;
-        %tmp.62 = 0;
-        %tmp.63 = agetv %tmp.61 %tmp.62;
-        %tmp.64 = 0xFF;
-        %tmp.65 = bitand %tmp.63 %tmp.64;
-        lputv %dataType.3 %tmp.65;
+        symbol [ dataType %dataType.3 96 16 24 ];
+        %tmp.55 = lgetv %payload.1;
+        symbol [ payload %tmp.55 96 27 34 ];
+        %tmp.56 = 0;
+        %tmp.57 = agetv %tmp.55 %tmp.56;
+        %tmp.58 = 0xFF;
+        %tmp.59 = bitand %tmp.57 %tmp.58;
+        lputv %dataType.3 %tmp.59;
+        symbol [ dataType %dataType.3 96 16 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 97 12 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_97_12_102_12_if_stmt:
-        %tmp.67 = getv ? :is_first_msg;
-        bf %tmp.67 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_97_12_102_12_if_end;
+        symbol [ is_first_msg %tmp.61 97 16 28 ];
+        %tmp.61 = getv ? :is_first_msg;
+        bf %tmp.61 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_97_12_102_12_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_97_12_102_12_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_98_12_102_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 99 16 ]
-        %tmp.69 = getv ? :GenericChannel;
-        %tmp.70 = getv function %tmp.69 :getDeviceConfig;
-        %tmp.71 = invoke %tmp.69 %tmp.70();
-        %tmp.72 = getv %tmp.71 :deviceNumber;
-        putv self :deviceNumber %tmp.72;
+        symbol [ GenericChannel %tmp.63 99 31 45 ];
+        %tmp.63 = getv ? :GenericChannel;
+        symbol [ getDeviceConfig %tmp.64 99 46 61 ];
+        %tmp.64 = getv function %tmp.63 :getDeviceConfig;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        symbol [ deviceNumber %tmp.66 99 64 76 ];
+        %tmp.66 = getv %tmp.65 :deviceNumber;
+        symbol [ deviceNumber ? 99 16 28 ];
+        putv self :deviceNumber %tmp.66;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 100 16 ]
-        %tmp.73 = false;
-        putv self :is_first_msg %tmp.73;
+        %tmp.67 = false;
+        symbol [ is_first_msg ? 100 16 28 ];
+        putv self :is_first_msg %tmp.67;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 101 16 ]
-        %tmp.75 = getv ? :Application;
-        %tmp.76 = getv %tmp.75 :Storage;
-        %tmp.77 = getv function %tmp.76 :setValue;
-        %tmp.78 = "SensorId";
-        %tmp.80 = getv ? :deviceNumber;
-        invoke %tmp.76 %tmp.77(%tmp.78, %tmp.80);
+        symbol [ Application %tmp.69 101 16 27 ];
+        %tmp.69 = getv ? :Application;
+        symbol [ Storage %tmp.70 101 28 35 ];
+        %tmp.70 = getv %tmp.69 :Storage;
+        symbol [ setValue %tmp.71 101 36 44 ];
+        %tmp.71 = getv function %tmp.70 :setValue;
+        %tmp.72 = "SensorId";
+        symbol [ deviceNumber %tmp.74 101 57 69 ];
+        %tmp.74 = getv ? :deviceNumber;
+        invoke %tmp.70 %tmp.71(%tmp.72, %tmp.74);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_98_12_102_12_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_97_12_102_12_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_97_12_102_12_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 105 12 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_12_158_12_if_stmt:
-        %tmp.81 = 0x01;
-        %tmp.83 = lgetv %dataType.3;
-        %tmp.84 = eq %tmp.81 %tmp.83;
-        bf %tmp.84 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_12_158_12_if_false;
+        %tmp.75 = 0x01;
+        %tmp.76 = lgetv %dataType.3;
+        symbol [ dataType %tmp.76 105 24 32 ];
+        %tmp.77 = eq %tmp.75 %tmp.76;
+        bf %tmp.77 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_12_158_12_if_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_12_158_12_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_34_153_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 106 16 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_34_153_12_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_34_153_12_stop" ]
         %eventCount.4 = local;
-        %tmp.86 = lgetv %payload.1;
-        %tmp.87 = 1;
-        %tmp.88 = agetv %tmp.86 %tmp.87;
-        lputv %eventCount.4 %tmp.88;
+        symbol [ eventCount %eventCount.4 106 20 30 ];
+        %tmp.78 = lgetv %payload.1;
+        symbol [ payload %tmp.78 106 33 40 ];
+        %tmp.79 = 1;
+        %tmp.80 = agetv %tmp.78 %tmp.79;
+        lputv %eventCount.4 %tmp.80;
+        symbol [ eventCount %eventCount.4 106 20 30 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 107 16 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_107_16_110_16_if_stmt:
-        %tmp.90 = getv ? :deviceNumber;
-        %tmp.91 = 0;
-        %tmp.92 = eq %tmp.90 %tmp.91;
-        bf %tmp.92 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_107_16_110_16_if_end;
+        symbol [ deviceNumber %tmp.82 107 19 31 ];
+        %tmp.82 = getv ? :deviceNumber;
+        %tmp.83 = 0;
+        %tmp.84 = eq %tmp.82 %tmp.83;
+        bf %tmp.84 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_107_16_110_16_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_107_16_110_16_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_108_16_110_16_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 109 20 ]
-        %tmp.94 = getv ? :GenericChannel;
-        %tmp.95 = getv function %tmp.94 :getDeviceConfig;
-        %tmp.96 = invoke %tmp.94 %tmp.95();
-        %tmp.97 = getv %tmp.96 :deviceNumber;
-        putv self :deviceNumber %tmp.97;
+        symbol [ GenericChannel %tmp.86 109 35 49 ];
+        %tmp.86 = getv ? :GenericChannel;
+        symbol [ getDeviceConfig %tmp.87 109 50 65 ];
+        %tmp.87 = getv function %tmp.86 :getDeviceConfig;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        symbol [ deviceNumber %tmp.89 109 68 80 ];
+        %tmp.89 = getv %tmp.88 :deviceNumber;
+        symbol [ deviceNumber ? 109 20 32 ];
+        putv self :deviceNumber %tmp.89;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_108_16_110_16_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_107_16_110_16_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_107_16_110_16_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 111 16 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_16_152_16_if_stmt:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_20_111_58_begin:
-        %tmp.99 = getv ? :_eventCount;
-        %tmp.100 = null;
-        %tmp.101 = eq %tmp.99 %tmp.100;
-        bt %tmp.101 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_16_152_16_if_true;
+        symbol [ _eventCount %tmp.91 111 20 31 ];
+        %tmp.91 = getv ? :_eventCount;
+        %tmp.92 = null;
+        %tmp.93 = eq %tmp.91 %tmp.92;
+        bt %tmp.93 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_16_152_16_if_true;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_43_111_58_false:
-        %tmp.103 = getv ? :_eventCount;
-        %tmp.104 = as %tmp.103 { (!Null) };
-        %tmp.106 = lgetv %eventCount.4;
-        %tmp.107 = ne %tmp.104 %tmp.106;
-        push %tmp.107;
+        symbol [ _eventCount %tmp.95 111 43 54 ];
+        %tmp.95 = getv ? :_eventCount;
+        %tmp.96 = as %tmp.95 { (!Null) };
+        %tmp.97 = lgetv %eventCount.4;
+        symbol [ eventCount %tmp.97 111 58 68 ];
+        %tmp.98 = ne %tmp.96 %tmp.97;
+        push %tmp.98;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_43_111_58_end:
-        %tmp.108 = phi [%tmp.101 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_20_111_58_begin] [%tmp.107 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_43_111_58_false] [%tmp.108 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_43_111_58_end];
-        bf %tmp.108 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_16_152_16_if_end;
+        %tmp.99 = phi [%tmp.93 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_20_111_58_begin] [%tmp.98 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_43_111_58_false] [%tmp.99 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_43_111_58_end];
+        bf %tmp.99 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_16_152_16_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_16_152_16_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_70_152_16_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 112 20 ]
-        %tmp.110 = lgetv %eventCount.4;
-        putv self :_eventCount %tmp.110;
+        %tmp.100 = lgetv %eventCount.4;
+        symbol [ eventCount %tmp.100 112 34 44 ];
+        symbol [ _eventCount ? 112 20 31 ];
+        putv self :_eventCount %tmp.100;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 114 20 ]
-        %tmp.112 = lgetv %payload.1;
-        %tmp.113 = 5;
-        %tmp.114 = agetv %tmp.112 %tmp.113;
-        %tmp.115 = 0x0F;
-        %tmp.116 = bitand %tmp.114 %tmp.115;
-        %tmp.117 = 8;
-        %tmp.118 = shl %tmp.116 %tmp.117;
-        %tmp.120 = lgetv %payload.1;
-        %tmp.121 = 4;
-        %tmp.122 = agetv %tmp.120 %tmp.121;
-        %tmp.123 = bitor %tmp.118 %tmp.122;
-        putv self :totalHemoConcentration %tmp.123;
+        %tmp.101 = lgetv %payload.1;
+        symbol [ payload %tmp.101 114 47 54 ];
+        %tmp.102 = 5;
+        %tmp.103 = agetv %tmp.101 %tmp.102;
+        %tmp.104 = 0x0F;
+        %tmp.105 = bitand %tmp.103 %tmp.104;
+        %tmp.106 = 8;
+        %tmp.107 = shl %tmp.105 %tmp.106;
+        %tmp.108 = lgetv %payload.1;
+        symbol [ payload %tmp.108 114 73 80 ];
+        %tmp.109 = 4;
+        %tmp.110 = agetv %tmp.108 %tmp.109;
+        %tmp.111 = bitor %tmp.107 %tmp.110;
+        symbol [ totalHemoConcentration ? 114 20 42 ];
+        putv self :totalHemoConcentration %tmp.111;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 115 20 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_stmt:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_24_115_85_begin:
-        %tmp.125 = getv ? :totalHemoConcentration;
-        %tmp.126 = 0xFFE;
-        %tmp.127 = eq %tmp.125 %tmp.126;
-        bt %tmp.127 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_true;
+        symbol [ totalHemoConcentration %tmp.113 115 24 46 ];
+        %tmp.113 = getv ? :totalHemoConcentration;
+        %tmp.114 = 0xFFE;
+        %tmp.115 = eq %tmp.113 %tmp.114;
+        bt %tmp.115 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_true;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_59_115_85_false:
-        %tmp.129 = getv ? :totalHemoConcentration;
-        %tmp.130 = 0xFFF;
-        %tmp.131 = eq %tmp.129 %tmp.130;
-        push %tmp.131;
+        symbol [ totalHemoConcentration %tmp.117 115 59 81 ];
+        %tmp.117 = getv ? :totalHemoConcentration;
+        %tmp.118 = 0xFFF;
+        %tmp.119 = eq %tmp.117 %tmp.118;
+        push %tmp.119;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_59_115_85_end:
-        %tmp.132 = phi [%tmp.127 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_24_115_85_begin] [%tmp.131 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_59_115_85_false] [%tmp.132 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_59_115_85_end];
-        bf %tmp.132 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_false;
+        %tmp.120 = phi [%tmp.115 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_24_115_85_begin] [%tmp.119 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_59_115_85_false] [%tmp.120 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_59_115_85_end];
+        bf %tmp.120 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_else_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_92_117_20_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 116 24 ]
-        %tmp.133 = null;
-        putv self :totalHemoConcentration %tmp.133;
+        %tmp.121 = null;
+        symbol [ totalHemoConcentration ? 116 24 46 ];
+        putv self :totalHemoConcentration %tmp.121;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_92_117_20_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_else_false:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_118_25_120_20_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 119 24 ]
-        %tmp.134 = getv self :totalHemoConcentration;
-        %tmp.135 = 100f;
-        %tmp.136 = div %tmp.134 %tmp.135;
-        putv self :totalHemoConcentration dup %tmp.136;
+        symbol [ totalHemoConcentration %tmp.122 119 24 46 ];
+        %tmp.122 = getv self :totalHemoConcentration;
+        %tmp.123 = 100f;
+        %tmp.124 = div %tmp.122 %tmp.123;
+        symbol [ totalHemoConcentration ? 119 24 46 ];
+        putv self :totalHemoConcentration dup %tmp.124;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_118_25_120_20_stop:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_115_20_120_20_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 122 20 ]
-        %tmp.138 = lgetv %payload.1;
-        %tmp.139 = 7;
-        %tmp.140 = agetv %tmp.138 %tmp.139;
-        %tmp.141 = 2;
-        %tmp.142 = shl %tmp.140 %tmp.141;
-        %tmp.144 = lgetv %payload.1;
-        %tmp.145 = 6;
-        %tmp.146 = agetv %tmp.144 %tmp.145;
-        %tmp.147 = 6;
-        %tmp.148 = shr %tmp.146 %tmp.147;
-        %tmp.149 = bitor %tmp.142 %tmp.148;
-        putv self :currentHemoPercent %tmp.149;
+        %tmp.125 = lgetv %payload.1;
+        symbol [ payload %tmp.125 122 42 49 ];
+        %tmp.126 = 7;
+        %tmp.127 = agetv %tmp.125 %tmp.126;
+        %tmp.128 = 2;
+        %tmp.129 = shl %tmp.127 %tmp.128;
+        %tmp.130 = lgetv %payload.1;
+        symbol [ payload %tmp.130 122 60 67 ];
+        %tmp.131 = 6;
+        %tmp.132 = agetv %tmp.130 %tmp.131;
+        %tmp.133 = 6;
+        %tmp.134 = shr %tmp.132 %tmp.133;
+        %tmp.135 = bitor %tmp.129 %tmp.134;
+        symbol [ currentHemoPercent ? 122 20 38 ];
+        putv self :currentHemoPercent %tmp.135;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 123 20 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_stmt:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_24_123_77_begin:
-        %tmp.151 = getv ? :currentHemoPercent;
-        %tmp.152 = 0x3FE;
-        %tmp.153 = eq %tmp.151 %tmp.152;
-        bt %tmp.153 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_true;
+        symbol [ currentHemoPercent %tmp.137 123 24 42 ];
+        %tmp.137 = getv ? :currentHemoPercent;
+        %tmp.138 = 0x3FE;
+        %tmp.139 = eq %tmp.137 %tmp.138;
+        bt %tmp.139 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_true;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_55_123_77_false:
-        %tmp.155 = getv ? :currentHemoPercent;
-        %tmp.156 = 0x3FF;
-        %tmp.157 = eq %tmp.155 %tmp.156;
-        push %tmp.157;
+        symbol [ currentHemoPercent %tmp.141 123 55 73 ];
+        %tmp.141 = getv ? :currentHemoPercent;
+        %tmp.142 = 0x3FF;
+        %tmp.143 = eq %tmp.141 %tmp.142;
+        push %tmp.143;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_55_123_77_end:
-        %tmp.158 = phi [%tmp.153 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_24_123_77_begin] [%tmp.157 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_55_123_77_false] [%tmp.158 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_55_123_77_end];
-        bf %tmp.158 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_false;
+        %tmp.144 = phi [%tmp.139 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_24_123_77_begin] [%tmp.143 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_55_123_77_false] [%tmp.144 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_55_123_77_end];
+        bf %tmp.144 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_else_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_84_125_20_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 124 24 ]
-        %tmp.159 = null;
-        putv self :currentHemoPercent %tmp.159;
+        %tmp.145 = null;
+        symbol [ currentHemoPercent ? 124 24 42 ];
+        putv self :currentHemoPercent %tmp.145;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_84_125_20_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_else_false:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_126_25_128_20_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 127 24 ]
-        %tmp.160 = getv self :currentHemoPercent;
-        %tmp.161 = 10f;
-        %tmp.162 = div %tmp.160 %tmp.161;
-        putv self :currentHemoPercent dup %tmp.162;
+        symbol [ currentHemoPercent %tmp.146 127 24 42 ];
+        %tmp.146 = getv self :currentHemoPercent;
+        %tmp.147 = 10f;
+        %tmp.148 = div %tmp.146 %tmp.147;
+        symbol [ currentHemoPercent ? 127 24 42 ];
+        putv self :currentHemoPercent dup %tmp.148;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_126_25_128_20_stop:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_123_20_128_20_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 130 20 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_70_152_16_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_111_70_152_16_stop" ]
         %utcTimeRequired.5 = local;
-        %tmp.164 = lgetv %payload.1;
-        %tmp.165 = 2;
-        %tmp.166 = agetv %tmp.164 %tmp.165;
-        %tmp.167 = 0x1;
-        %tmp.168 = bitand %tmp.166 %tmp.167;
-        lputv %utcTimeRequired.5 %tmp.168;
+        symbol [ utcTimeRequired %utcTimeRequired.5 130 24 39 ];
+        %tmp.149 = lgetv %payload.1;
+        symbol [ payload %tmp.149 130 42 49 ];
+        %tmp.150 = 2;
+        %tmp.151 = agetv %tmp.149 %tmp.150;
+        %tmp.152 = 0x1;
+        %tmp.153 = bitand %tmp.151 %tmp.152;
+        lputv %utcTimeRequired.5 %tmp.153;
+        symbol [ utcTimeRequired %utcTimeRequired.5 130 24 39 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 131 20 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_20_151_20_if_stmt:
-        %tmp.170 = lgetv %utcTimeRequired.5;
-        bf %tmp.170 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_20_151_20_if_end;
+        %tmp.154 = lgetv %utcTimeRequired.5;
+        symbol [ utcTimeRequired %tmp.154 131 24 39 ];
+        bf %tmp.154 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_20_151_20_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_20_151_20_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_41_151_20_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 134 24 ]
-        %tmp.171 = lgetv %payload.1;
-        %tmp.172 = 0x10;
-        %tmp.173 = 0;
-        aputv %tmp.171 %tmp.173 %tmp.172;
+        %tmp.155 = lgetv %payload.1;
+        symbol [ payload %tmp.155 134 24 31 ];
+        %tmp.156 = 0x10;
+        %tmp.157 = 0;
+        aputv %tmp.155 %tmp.157 %tmp.156;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 135 24 ]
-        %tmp.174 = lgetv %payload.1;
-        %tmp.175 = 0x00;
-        %tmp.176 = 1;
-        aputv %tmp.174 %tmp.176 %tmp.175;
+        %tmp.158 = lgetv %payload.1;
+        symbol [ payload %tmp.158 135 24 31 ];
+        %tmp.159 = 0x00;
+        %tmp.160 = 1;
+        aputv %tmp.158 %tmp.160 %tmp.159;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 136 24 ]
-        %tmp.177 = lgetv %payload.1;
-        %tmp.178 = 0xFF;
-        %tmp.179 = 2;
-        aputv %tmp.177 %tmp.179 %tmp.178;
+        %tmp.161 = lgetv %payload.1;
+        symbol [ payload %tmp.161 136 24 31 ];
+        %tmp.162 = 0xFF;
+        %tmp.163 = 2;
+        aputv %tmp.161 %tmp.163 %tmp.162;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 137 24 ]
-        %tmp.180 = lgetv %payload.1;
-        %tmp.181 = 0;
-        %tmp.182 = 3;
-        aputv %tmp.180 %tmp.182 %tmp.181;
+        %tmp.164 = lgetv %payload.1;
+        symbol [ payload %tmp.164 137 24 31 ];
+        %tmp.165 = 0;
+        %tmp.166 = 3;
+        aputv %tmp.164 %tmp.166 %tmp.165;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 140 24 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_41_151_20_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_41_151_20_stop" ]
         %epoch.6 = local;
-        %tmp.183 = getm $.Toybox.Time;
-        %tmp.184 = getv function %tmp.183 :now;
-        %tmp.185 = invoke %tmp.183 %tmp.184();
-        %tmp.186 = getv function %tmp.185 :value;
-        %tmp.187 = invoke %tmp.185 %tmp.186();
-        %tmp.188 = 631065600;
-        %tmp.189 = sub %tmp.187 %tmp.188;
-        lputv %epoch.6 %tmp.189;
+        symbol [ epoch %epoch.6 140 28 33 ];
+        symbol [ Time %tmp.167 140 36 40 ];
+        %tmp.167 = getm $.Toybox.Time;
+        symbol [ now %tmp.168 140 41 44 ];
+        %tmp.168 = getv function %tmp.167 :now;
+        %tmp.169 = invoke %tmp.167 %tmp.168();
+        symbol [ value %tmp.170 140 47 52 ];
+        %tmp.170 = getv function %tmp.169 :value;
+        %tmp.171 = invoke %tmp.169 %tmp.170();
+        %tmp.172 = 631065600;
+        %tmp.173 = sub %tmp.171 %tmp.172;
+        lputv %epoch.6 %tmp.173;
+        symbol [ epoch %epoch.6 140 28 33 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 141 24 ]
-        %tmp.190 = lgetv %payload.1;
-        %tmp.192 = lgetv %epoch.6;
-        %tmp.193 = 0xFF;
-        %tmp.194 = bitand %tmp.192 %tmp.193;
-        %tmp.195 = 4;
-        aputv %tmp.190 %tmp.195 %tmp.194;
+        %tmp.174 = lgetv %payload.1;
+        symbol [ payload %tmp.174 141 24 31 ];
+        %tmp.175 = lgetv %epoch.6;
+        symbol [ epoch %tmp.175 141 38 43 ];
+        %tmp.176 = 0xFF;
+        %tmp.177 = bitand %tmp.175 %tmp.176;
+        %tmp.178 = 4;
+        aputv %tmp.174 %tmp.178 %tmp.177;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 142 24 ]
-        %tmp.196 = lgetv %payload.1;
-        %tmp.198 = lgetv %epoch.6;
-        %tmp.199 = 8;
-        %tmp.200 = shr %tmp.198 %tmp.199;
-        %tmp.201 = 0xFF;
-        %tmp.202 = bitand %tmp.200 %tmp.201;
-        %tmp.203 = 5;
-        aputv %tmp.196 %tmp.203 %tmp.202;
+        %tmp.179 = lgetv %payload.1;
+        symbol [ payload %tmp.179 142 24 31 ];
+        %tmp.180 = lgetv %epoch.6;
+        symbol [ epoch %tmp.180 142 38 43 ];
+        %tmp.181 = 8;
+        %tmp.182 = shr %tmp.180 %tmp.181;
+        %tmp.183 = 0xFF;
+        %tmp.184 = bitand %tmp.182 %tmp.183;
+        %tmp.185 = 5;
+        aputv %tmp.179 %tmp.185 %tmp.184;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 143 24 ]
-        %tmp.204 = lgetv %payload.1;
-        %tmp.206 = lgetv %epoch.6;
-        %tmp.207 = 16;
-        %tmp.208 = shr %tmp.206 %tmp.207;
-        %tmp.209 = 0xFF;
-        %tmp.210 = bitand %tmp.208 %tmp.209;
-        %tmp.211 = 6;
-        aputv %tmp.204 %tmp.211 %tmp.210;
+        %tmp.186 = lgetv %payload.1;
+        symbol [ payload %tmp.186 143 24 31 ];
+        %tmp.187 = lgetv %epoch.6;
+        symbol [ epoch %tmp.187 143 38 43 ];
+        %tmp.188 = 16;
+        %tmp.189 = shr %tmp.187 %tmp.188;
+        %tmp.190 = 0xFF;
+        %tmp.191 = bitand %tmp.189 %tmp.190;
+        %tmp.192 = 6;
+        aputv %tmp.186 %tmp.192 %tmp.191;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 144 24 ]
-        %tmp.212 = lgetv %payload.1;
-        %tmp.214 = lgetv %epoch.6;
-        %tmp.215 = 24;
-        %tmp.216 = shr %tmp.214 %tmp.215;
-        %tmp.217 = 0xFF;
-        %tmp.218 = bitand %tmp.216 %tmp.217;
-        %tmp.219 = 7;
-        aputv %tmp.212 %tmp.219 %tmp.218;
+        %tmp.193 = lgetv %payload.1;
+        symbol [ payload %tmp.193 144 24 31 ];
+        %tmp.194 = lgetv %epoch.6;
+        symbol [ epoch %tmp.194 144 38 43 ];
+        %tmp.195 = 24;
+        %tmp.196 = shr %tmp.194 %tmp.195;
+        %tmp.197 = 0xFF;
+        %tmp.198 = bitand %tmp.196 %tmp.197;
+        %tmp.199 = 7;
+        aputv %tmp.193 %tmp.199 %tmp.198;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 147 24 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_41_151_20_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_41_151_20_stop" ]
         %message.7 = local;
-        %tmp.222 = getm $.Toybox.Ant;
-        %tmp.223 = getv function ? %tmp.222 :Message;
-        %tmp.220 = newc %tmp.223 ();
-        lputv %message.7 %tmp.220;
+        symbol [ message %message.7 147 28 35 ];
+        symbol [ Ant %tmp.202 147 42 45 ];
+        %tmp.202 = getm $.Toybox.Ant;
+        symbol [ Message %tmp.203 147 46 53 ];
+        %tmp.203 = getv function ? %tmp.202 :Message;
+        %tmp.200 = newc %tmp.203 ();
+        lputv %message.7 %tmp.200;
+        symbol [ message %message.7 147 28 35 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 148 24 ]
-        %tmp.224 = lgetv %message.7;
-        %tmp.225 = getv function %tmp.224 :setPayload;
-        %tmp.227 = lgetv %payload.1;
-        invoke %tmp.224 %tmp.225(%tmp.227);
+        %tmp.204 = lgetv %message.7;
+        symbol [ message %tmp.204 148 24 31 ];
+        symbol [ setPayload %tmp.205 148 32 42 ];
+        %tmp.205 = getv function %tmp.204 :setPayload;
+        %tmp.206 = lgetv %payload.1;
+        symbol [ payload %tmp.206 148 43 50 ];
+        invoke %tmp.204 %tmp.205(%tmp.206);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 150 24 ]
-        %tmp.229 = getv ? :GenericChannel;
-        %tmp.230 = getv function %tmp.229 :sendAcknowledge;
-        %tmp.232 = lgetv %message.7;
-        invoke %tmp.229 %tmp.230(%tmp.232);
+        symbol [ GenericChannel %tmp.208 150 24 38 ];
+        %tmp.208 = getv ? :GenericChannel;
+        symbol [ sendAcknowledge %tmp.209 150 39 54 ];
+        %tmp.209 = getv function %tmp.208 :sendAcknowledge;
+        %tmp.210 = lgetv %message.7;
+        symbol [ message %tmp.210 150 55 62 ];
+        invoke %tmp.208 %tmp.209(%tmp.210);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_41_151_20_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_20_151_20_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_131_20_151_20_if_end:
@@ -627,27 +796,32 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_34_
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_105_12_158_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 154 17 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_154_17_158_12_if_stmt:
-        %tmp.233 = 0x50;
-        %tmp.235 = lgetv %dataType.3;
-        %tmp.236 = eq %tmp.233 %tmp.235;
-        bf %tmp.236 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_154_17_158_12_if_end;
+        %tmp.211 = 0x50;
+        %tmp.212 = lgetv %dataType.3;
+        symbol [ dataType %tmp.212 154 29 37 ];
+        %tmp.213 = eq %tmp.211 %tmp.212;
+        bf %tmp.213 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_154_17_158_12_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_154_17_158_12_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_154_39_158_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 155 4 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_4_157_10_if_stmt:
-        %tmp.238 = getv ? :deviceMfg;
-        %tmp.240 = lgetv %payload.1;
-        %tmp.241 = 4;
-        %tmp.242 = agetv %tmp.240 %tmp.241;
-        %tmp.243 = ne %tmp.238 %tmp.242;
-        bf %tmp.243 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_4_157_10_if_end;
+        symbol [ deviceMfg %tmp.215 155 8 17 ];
+        %tmp.215 = getv ? :deviceMfg;
+        %tmp.216 = lgetv %payload.1;
+        symbol [ payload %tmp.216 155 21 28 ];
+        %tmp.217 = 4;
+        %tmp.218 = agetv %tmp.216 %tmp.217;
+        %tmp.219 = ne %tmp.215 %tmp.218;
+        bf %tmp.219 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_4_157_10_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_4_157_10_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_33_157_10_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2Sensor.mc" 156 11 ]
-        %tmp.245 = lgetv %payload.1;
-        %tmp.246 = 4;
-        %tmp.247 = agetv %tmp.245 %tmp.246;
-        putv self :deviceMfg %tmp.247;
+        %tmp.220 = lgetv %payload.1;
+        symbol [ payload %tmp.220 156 23 30 ];
+        %tmp.221 = 4;
+        %tmp.222 = agetv %tmp.220 %tmp.221;
+        symbol [ deviceMfg ? 156 11 20 ];
+        putv self :deviceMfg %tmp.222;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_33_157_10_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_4_157_10_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2Sensor_mc_155_4_157_10_if_end:

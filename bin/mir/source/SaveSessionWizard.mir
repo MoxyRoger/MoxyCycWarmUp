@@ -1,17 +1,17 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Activity,1,13,21]; @symbol_usingAlias = [Act,1,25,28]; ]
 using Toybox.Activity as :Act;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 2; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Application,2,13,24]; @symbol_usingAlias = [App,2,28,31]; ]
 using Toybox.Application as :App;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 3; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Graphics,3,13,21]; @symbol_usingAlias = [Gfx,3,25,28]; ]
 using Toybox.Graphics as :Gfx;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 4; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [System,4,13,19]; @symbol_usingAlias = [Sys,4,23,26]; ]
 using Toybox.System as :Sys;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 5; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [WatchUi,5,13,20]; @symbol_usingAlias = [Ui,5,24,26]; ]
 using Toybox.WatchUi as :Ui;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 6; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Timer,6,13,18]; @symbol_usingAlias = [Timer,6,22,27]; ]
 using Toybox.Timer as :Timer;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 8; ]
-class DiscardConfirmationDelegate extends Ui.ConfirmationDelegate{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 8; @symbol_classdef = [DiscardConfirmationDelegate,8,6,33]; @symbol_extends<0> = [Ui,8,42,44]; @symbol_extends<1> = [ConfirmationDelegate,8,45,65]; ]
+class DiscardConfirmationDelegate extends Ui.ConfirmationDelegate {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 8; ]
     <init> {
     }
@@ -19,80 +19,107 @@ class DiscardConfirmationDelegate extends Ui.ConfirmationDelegate{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 10; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 10; @position = 15; @symbol_vardef = [_option,10,15,22]; ]
     protected
     var _option;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 12; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; @symbol_param<0> = [option,12,24,30]; ]
     function initialize(option) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_12_32_15_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 13 8 ]
+        symbol [ ConfirmationDelegate %tmp.2 13 8 28 ];
         %tmp.2 = getv ? :ConfirmationDelegate;
+        symbol [ initialize %tmp.3 13 29 39 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 14 8 ]
-        %tmp.5 = lgetv %option;
-        putv self :_option %tmp.5;
+        %tmp.4 = lgetv %option;
+        symbol [ option %tmp.4 14 18 24 ];
+        symbol [ _option ? 14 8 15 ];
+        putv self :_option %tmp.4;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_12_32_15_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 17; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 17; @symbol_functiondef = [onResponse,17,13,23]; @symbol_param<0> = [response,17,24,32]; ]
     function onResponse(response) {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_17_34_33_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 18 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_stmt:
-        %tmp.2 = lgetv %response;
-        %tmp.4 = getv ? :CONFIRM_YES;
-        %tmp.5 = eq %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_false;
+        %tmp.1 = lgetv %response;
+        symbol [ response %tmp.1 18 12 20 ];
+        symbol [ CONFIRM_YES %tmp.3 18 24 35 ];
+        %tmp.3 = getv ? :CONFIRM_YES;
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_else_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_37_25_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 20 12 ]
-        %tmp.6 = getm $.Toybox.Application;
-        %tmp.7 = getv function %tmp.6 :getApp;
-        %tmp.8 = invoke %tmp.6 %tmp.7();
-        %tmp.9 = getv function %tmp.8 :discardActivity;
-        invoke %tmp.8 %tmp.9();
+        symbol [ App %tmp.5 20 12 15 ];
+        %tmp.5 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.6 20 16 22 ];
+        %tmp.6 = getv function %tmp.5 :getApp;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        symbol [ discardActivity %tmp.8 20 25 40 ];
+        %tmp.8 = getv function %tmp.7 :discardActivity;
+        invoke %tmp.7 %tmp.8();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 23 12 ]
-        %tmp.10 = getm $.Toybox.WatchUi;
-        %tmp.11 = getv function %tmp.10 :popView;
-        %tmp.12 = getm $.Toybox.WatchUi;
-        %tmp.13 = getv %tmp.12 :SLIDE_IMMEDIATE;
-        invoke %tmp.10 %tmp.11(%tmp.13);
+        symbol [ Ui %tmp.9 23 12 14 ];
+        %tmp.9 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.10 23 15 22 ];
+        %tmp.10 = getv function %tmp.9 :popView;
+        symbol [ Ui %tmp.11 23 23 25 ];
+        %tmp.11 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.12 23 26 41 ];
+        %tmp.12 = getv %tmp.11 :SLIDE_IMMEDIATE;
+        invoke %tmp.9 %tmp.10(%tmp.12);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_37_25_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_else_false:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_26_13_30_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 27 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_26_13_30_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_26_13_30_8_stop" ]
         %menu.1 = local;
-        %tmp.17 = getv ? :SaveMenu;
-        %tmp.19 = getv ? :_option;
-        %tmp.14 = newc %tmp.17 (%tmp.19);
-        lputv %menu.1 %tmp.14;
+        symbol [ menu %menu.1 27 16 20 ];
+        symbol [ SaveMenu %tmp.16 27 27 35 ];
+        %tmp.16 = getv ? :SaveMenu;
+        symbol [ _option %tmp.18 27 36 43 ];
+        %tmp.18 = getv ? :_option;
+        %tmp.13 = newc %tmp.16 (%tmp.18);
+        lputv %menu.1 %tmp.13;
+        symbol [ menu %menu.1 27 16 20 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 28 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_26_13_30_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_26_13_30_8_stop" ]
         %delegate.2 = local;
-        %tmp.23 = getv ? :SaveMenuDelegate;
-        %tmp.25 = getv ? :_option;
-        %tmp.20 = newc %tmp.23 (%tmp.25);
-        lputv %delegate.2 %tmp.20;
+        symbol [ delegate %delegate.2 28 16 24 ];
+        symbol [ SaveMenuDelegate %tmp.22 28 31 47 ];
+        %tmp.22 = getv ? :SaveMenuDelegate;
+        symbol [ _option %tmp.24 28 48 55 ];
+        %tmp.24 = getv ? :_option;
+        %tmp.19 = newc %tmp.22 (%tmp.24);
+        lputv %delegate.2 %tmp.19;
+        symbol [ delegate %delegate.2 28 16 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 29 12 ]
-        %tmp.26 = getm $.Toybox.WatchUi;
-        %tmp.27 = getv function %tmp.26 :pushView;
-        %tmp.29 = lgetv %menu.1;
-        %tmp.31 = lgetv %delegate.2;
-        %tmp.32 = getm $.Toybox.WatchUi;
-        %tmp.33 = getv %tmp.32 :SLIDE_IMMEDIATE;
-        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.31, %tmp.33);
+        symbol [ Ui %tmp.25 29 12 14 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.26 29 15 23 ];
+        %tmp.26 = getv function %tmp.25 :pushView;
+        %tmp.27 = lgetv %menu.1;
+        symbol [ menu %tmp.27 29 24 28 ];
+        %tmp.28 = lgetv %delegate.2;
+        symbol [ delegate %tmp.28 29 30 38 ];
+        symbol [ Ui %tmp.29 29 40 42 ];
+        %tmp.29 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.30 29 43 58 ];
+        %tmp.30 = getv %tmp.29 :SLIDE_IMMEDIATE;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28, %tmp.30);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_26_13_30_8_stop:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_18_8_30_8_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 32 8 ]
-        %tmp.34 = true;
-        ret %tmp.34;
+        %tmp.31 = true;
+        ret %tmp.31;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_17_34_33_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 36; ]
-class DiscardConfirmation extends Ui.Confirmation{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 36; @symbol_classdef = [DiscardConfirmation,36,6,25]; @symbol_extends<0> = [Ui,36,34,36]; @symbol_extends<1> = [Confirmation,36,37,49]; ]
+class DiscardConfirmation extends Ui.Confirmation {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 36; ]
     <init> {
     }
@@ -100,19 +127,21 @@ class DiscardConfirmation extends Ui.Confirmation{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 38; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 38; @symbol_functiondef = [initialize,38,13,23]; ]
     function initialize() as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_38_26_40_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 39 8 ]
+        symbol [ Confirmation %tmp.2 39 8 20 ];
         %tmp.2 = getv ? :Confirmation;
+        symbol [ initialize %tmp.3 39 21 31 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         %tmp.4 = "Discard?";
         invoke %tmp.2 %tmp.3(%tmp.4);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_38_26_40_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 43; ]
-class SmartProgressBar extends Ui.ProgressBar{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 43; @symbol_classdef = [SmartProgressBar,43,6,22]; @symbol_extends<0> = [Ui,43,31,33]; @symbol_extends<1> = [ProgressBar,43,34,45]; ]
+class SmartProgressBar extends Ui.ProgressBar {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 43; ]
     <init> {
     }
@@ -120,57 +149,73 @@ class SmartProgressBar extends Ui.ProgressBar{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 45; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 45; @position = 15; @symbol_vardef = [_timer,45,15,21]; ]
     protected
     var _timer;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 46; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 46; @position = 15; @symbol_vardef = [_ticks,46,15,21]; ]
     protected
     var _ticks;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 47; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 47; @position = 15; @symbol_vardef = [_text,47,15,20]; ]
     protected
     var _text;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 49; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 49; @symbol_functiondef = [initialize,49,13,23]; @symbol_param<0> = [start,49,24,29]; @symbol_param<1> = [finish,49,31,37]; ]
     function initialize(start, finish) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_49_39_57_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 50 8 ]
+        symbol [ ProgressBar %tmp.2 50 8 19 ];
         %tmp.2 = getv ? :ProgressBar;
+        symbol [ initialize %tmp.3 50 20 30 ];
         %tmp.3 = getv function %tmp.2 :initialize;
-        %tmp.5 = lgetv %start;
-        %tmp.6 = null;
-        invoke %tmp.2 %tmp.3(%tmp.5, %tmp.6);
+        %tmp.4 = lgetv %start;
+        symbol [ start %tmp.4 50 31 36 ];
+        %tmp.5 = null;
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 52 8 ]
-        %tmp.9 = getm $.Toybox.Timer;
-        %tmp.10 = getv function ? %tmp.9 :Timer;
-        %tmp.7 = newc %tmp.10 ();
-        putv self :_timer %tmp.7;
+        symbol [ Timer %tmp.8 52 21 26 ];
+        %tmp.8 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.9 52 27 32 ];
+        %tmp.9 = getv function ? %tmp.8 :Timer;
+        %tmp.6 = newc %tmp.9 ();
+        symbol [ _timer ? 52 8 14 ];
+        putv self :_timer %tmp.6;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 53 8 ]
-        %tmp.12 = getv ? :_timer;
-        %tmp.13 = getv function %tmp.12 :start;
-        %tmp.14 = lgetv %self;
-        %tmp.15 = getv function %tmp.14 :method;
-        %tmp.17 = const :onTimer;
-        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
-        %tmp.19 = 1000;
-        %tmp.20 = true;
-        invoke %tmp.12 %tmp.13(%tmp.18, %tmp.19, %tmp.20);
+        symbol [ _timer %tmp.11 53 8 14 ];
+        %tmp.11 = getv ? :_timer;
+        symbol [ start %tmp.12 53 15 20 ];
+        %tmp.12 = getv function %tmp.11 :start;
+        %tmp.13 = self;
+        symbol [ self %tmp.13 53 21 25 ];
+        symbol [ method %tmp.14 53 26 32 ];
+        %tmp.14 = getv function %tmp.13 :method;
+        %tmp.16 = const :onTimer;
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        %tmp.18 = 1000;
+        %tmp.19 = true;
+        invoke %tmp.11 %tmp.12(%tmp.17, %tmp.18, %tmp.19);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 55 8 ]
-        %tmp.21 = 0;
-        putv self :_ticks %tmp.21;
+        %tmp.20 = 0;
+        symbol [ _ticks ? 55 8 14 ];
+        putv self :_ticks %tmp.20;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 56 8 ]
-        %tmp.23 = lgetv %finish;
-        putv self :_text %tmp.23;
+        %tmp.21 = lgetv %finish;
+        symbol [ finish %tmp.21 56 16 22 ];
+        symbol [ _text ? 56 8 13 ];
+        putv self :_text %tmp.21;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_49_39_57_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 59; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 59; @symbol_functiondef = [onTimer,59,13,20]; ]
     function onTimer() as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_59_31_75_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 60 8 ]
+        symbol [ _ticks %tmp.1 60 8 14 ];
         %tmp.1 = getv self :_ticks;
         %tmp.2 = 1;
         %tmp.3 = add %tmp.1 %tmp.2;
+        symbol [ _ticks ? 60 8 14 ];
         putv self :_ticks dup %tmp.3;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 61 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_61_8_74_8_if_stmt:
+        symbol [ _ticks %tmp.5 61 12 18 ];
         %tmp.5 = getv ? :_ticks;
         %tmp.6 = 2;
         %tmp.7 = eq %tmp.5 %tmp.6;
@@ -179,11 +224,14 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_61_25_64_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 62 12 ]
         %tmp.8 = self;
+        symbol [ setDisplayString %tmp.9 62 12 28 ];
         %tmp.9 = getv function %tmp.8 :setDisplayString;
+        symbol [ _text %tmp.11 62 29 34 ];
         %tmp.11 = getv ? :_text;
         invoke %tmp.8 %tmp.9(%tmp.11);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 63 12 ]
         %tmp.12 = self;
+        symbol [ setProgress %tmp.13 63 12 23 ];
         %tmp.13 = getv function %tmp.12 :setProgress;
         %tmp.14 = 100.0;
         invoke %tmp.12 %tmp.13(%tmp.14);
@@ -192,6 +240,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_61_8_74_8_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 65 13 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_65_13_74_8_if_stmt:
+        symbol [ _ticks %tmp.16 65 17 23 ];
         %tmp.16 = getv ? :_ticks;
         %tmp.17 = 3;
         %tmp.18 = eq %tmp.16 %tmp.17;
@@ -199,22 +248,33 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_65_13_74_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_65_30_74_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 66 12 ]
+        symbol [ _timer %tmp.20 66 12 18 ];
         %tmp.20 = getv ? :_timer;
+        symbol [ stop %tmp.21 66 19 23 ];
         %tmp.21 = getv function %tmp.20 :stop;
         invoke %tmp.20 %tmp.21();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 67 12 ]
         %tmp.22 = null;
+        symbol [ _timer ? 67 12 18 ];
         putv self :_timer %tmp.22;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 70 12 ]
+        symbol [ Ui %tmp.23 70 12 14 ];
         %tmp.23 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.24 70 15 22 ];
         %tmp.24 = getv function %tmp.23 :popView;
+        symbol [ Ui %tmp.25 70 23 25 ];
         %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.26 70 26 41 ];
         %tmp.26 = getv %tmp.25 :SLIDE_IMMEDIATE;
         invoke %tmp.23 %tmp.24(%tmp.26);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 73 12 ]
+        symbol [ Ui %tmp.27 73 12 14 ];
         %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.28 73 15 22 ];
         %tmp.28 = getv function %tmp.27 :popView;
+        symbol [ Ui %tmp.29 73 23 25 ];
         %tmp.29 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.30 73 26 41 ];
         %tmp.30 = getv %tmp.29 :SLIDE_IMMEDIATE;
         invoke %tmp.27 %tmp.28(%tmp.30);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_65_30_74_8_stop:
@@ -224,8 +284,8 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_59_31_75_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 78; ]
-class SaveProgressBarDelegate extends Ui.BehaviorDelegate{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 78; @symbol_classdef = [SaveProgressBarDelegate,78,6,29]; @symbol_extends<0> = [Ui,78,38,40]; @symbol_extends<1> = [BehaviorDelegate,78,41,57]; ]
+class SaveProgressBarDelegate extends Ui.BehaviorDelegate {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 78; ]
     <init> {
     }
@@ -233,18 +293,20 @@ class SaveProgressBarDelegate extends Ui.BehaviorDelegate{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 80; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 80; @symbol_functiondef = [initialize,80,13,23]; ]
     function initialize() as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_80_26_82_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 81 8 ]
+        symbol [ BehaviorDelegate %tmp.2 81 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 81 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_80_26_82_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 87; ]
-class SaveProgressBar extends SmartProgressBar{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 87; @symbol_classdef = [SaveProgressBar,87,6,21]; @symbol_extends<0> = [SmartProgressBar,87,30,46]; ]
+class SaveProgressBar extends SmartProgressBar {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 87; ]
     <init> {
     }
@@ -252,11 +314,13 @@ class SaveProgressBar extends SmartProgressBar{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 89; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 89; @symbol_functiondef = [initialize,89,13,23]; ]
     function initialize() as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_89_26_91_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 90 8 ]
+        symbol [ SmartProgressBar %tmp.2 90 8 24 ];
         %tmp.2 = getv ? :SmartProgressBar;
+        symbol [ initialize %tmp.3 90 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         %tmp.4 = "Saving";
         %tmp.5 = "Activity Saved";
@@ -264,8 +328,8 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_89_26_91_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 94; ]
-class SaveMenuDelegate extends Ui.MenuInputDelegate{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 94; @symbol_classdef = [SaveMenuDelegate,94,6,22]; @symbol_extends<0> = [Ui,94,31,33]; @symbol_extends<1> = [MenuInputDelegate,94,34,51]; ]
+class SaveMenuDelegate extends Ui.MenuInputDelegate {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 94; ]
     <init> {
     }
@@ -273,119 +337,165 @@ class SaveMenuDelegate extends Ui.MenuInputDelegate{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 96; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 96; @position = 15; @symbol_vardef = [_option,96,15,22]; ]
     protected
     var _option;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 98; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 98; @symbol_functiondef = [initialize,98,13,23]; @symbol_param<0> = [option,98,24,30]; ]
     function initialize(option) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_98_32_101_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 99 8 ]
+        symbol [ MenuInputDelegate %tmp.2 99 8 25 ];
         %tmp.2 = getv ? :MenuInputDelegate;
+        symbol [ initialize %tmp.3 99 26 36 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 100 8 ]
-        %tmp.5 = lgetv %option;
-        putv self :_option %tmp.5;
+        %tmp.4 = lgetv %option;
+        symbol [ option %tmp.4 100 18 24 ];
+        symbol [ _option ? 100 8 15 ];
+        putv self :_option %tmp.4;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_98_32_101_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 103; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 103; @symbol_functiondef = [onMenuItem,103,13,23]; @symbol_param<0> = [item,103,24,28]; ]
     function onMenuItem(item) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_103_38_129_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 104 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_8_128_8_if_stmt:
-        %tmp.2 = lgetv %item;
-        %tmp.4 = const :save;
-        %tmp.5 = eq %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_8_128_8_if_false;
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 104 12 16 ];
+        %tmp.3 = const :save;
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_8_128_8_if_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_8_128_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_27_115_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 106 12 ]
-        %tmp.6 = getm $.Toybox.Application;
-        %tmp.7 = getv function %tmp.6 :getApp;
-        %tmp.8 = invoke %tmp.6 %tmp.7();
-        %tmp.9 = getv function %tmp.8 :saveActivity;
-        invoke %tmp.8 %tmp.9();
+        symbol [ App %tmp.5 106 12 15 ];
+        %tmp.5 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.6 106 16 22 ];
+        %tmp.6 = getv function %tmp.5 :getApp;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        symbol [ saveActivity %tmp.8 106 25 37 ];
+        %tmp.8 = getv function %tmp.7 :saveActivity;
+        invoke %tmp.7 %tmp.8();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 107 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_27_115_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_27_115_8_stop" ]
         %view.1 = local;
-        %tmp.13 = getv ? :SaveProgressBar;
-        %tmp.10 = newc %tmp.13 ();
-        lputv %view.1 %tmp.10;
+        symbol [ view %view.1 107 16 20 ];
+        symbol [ SaveProgressBar %tmp.12 107 27 42 ];
+        %tmp.12 = getv ? :SaveProgressBar;
+        %tmp.9 = newc %tmp.12 ();
+        lputv %view.1 %tmp.9;
+        symbol [ view %view.1 107 16 20 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 108 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_27_115_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_27_115_8_stop" ]
         %delegate.2 = local;
-        %tmp.17 = getv ? :SaveProgressBarDelegate;
-        %tmp.14 = newc %tmp.17 ();
-        lputv %delegate.2 %tmp.14;
+        symbol [ delegate %delegate.2 108 16 24 ];
+        symbol [ SaveProgressBarDelegate %tmp.16 108 31 54 ];
+        %tmp.16 = getv ? :SaveProgressBarDelegate;
+        %tmp.13 = newc %tmp.16 ();
+        lputv %delegate.2 %tmp.13;
+        symbol [ delegate %delegate.2 108 16 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 111 12 ]
-        %tmp.18 = getm $.Toybox.WatchUi;
-        %tmp.19 = getv function %tmp.18 :popView;
-        %tmp.20 = getm $.Toybox.WatchUi;
-        %tmp.21 = getv %tmp.20 :SLIDE_IMMEDIATE;
-        invoke %tmp.18 %tmp.19(%tmp.21);
+        symbol [ Ui %tmp.17 111 12 14 ];
+        %tmp.17 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.18 111 15 22 ];
+        %tmp.18 = getv function %tmp.17 :popView;
+        symbol [ Ui %tmp.19 111 23 25 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.20 111 26 41 ];
+        %tmp.20 = getv %tmp.19 :SLIDE_IMMEDIATE;
+        invoke %tmp.17 %tmp.18(%tmp.20);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 114 12 ]
-        %tmp.22 = getm $.Toybox.WatchUi;
-        %tmp.23 = getv function %tmp.22 :pushView;
-        %tmp.25 = lgetv %view.1;
-        %tmp.27 = lgetv %delegate.2;
-        %tmp.28 = getm $.Toybox.WatchUi;
-        %tmp.29 = getv %tmp.28 :SLIDE_IMMEDIATE;
-        invoke %tmp.22 %tmp.23(%tmp.25, %tmp.27, %tmp.29);
+        symbol [ Ui %tmp.21 114 12 14 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.22 114 15 23 ];
+        %tmp.22 = getv function %tmp.21 :pushView;
+        %tmp.23 = lgetv %view.1;
+        symbol [ view %tmp.23 114 24 28 ];
+        %tmp.24 = lgetv %delegate.2;
+        symbol [ delegate %tmp.24 114 30 38 ];
+        symbol [ Ui %tmp.25 114 40 42 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.26 114 43 58 ];
+        %tmp.26 = getv %tmp.25 :SLIDE_IMMEDIATE;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.26);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_27_115_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_8_128_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_104_8_128_8_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 116 13 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_13_128_8_if_stmt:
-        %tmp.31 = lgetv %item;
-        %tmp.33 = const :discard;
-        %tmp.34 = eq %tmp.31 %tmp.33;
-        bf %tmp.34 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_13_128_8_if_false;
+        %tmp.27 = lgetv %item;
+        symbol [ item %tmp.27 116 17 21 ];
+        %tmp.29 = const :discard;
+        %tmp.30 = eq %tmp.27 %tmp.29;
+        bf %tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_13_128_8_if_false;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_13_128_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_35_125_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 117 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_35_125_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_35_125_8_stop" ]
         %view.3 = local;
-        %tmp.38 = getv ? :DiscardConfirmation;
-        %tmp.35 = newc %tmp.38 ();
-        lputv %view.3 %tmp.35;
+        symbol [ view %view.3 117 16 20 ];
+        symbol [ DiscardConfirmation %tmp.34 117 27 46 ];
+        %tmp.34 = getv ? :DiscardConfirmation;
+        %tmp.31 = newc %tmp.34 ();
+        lputv %view.3 %tmp.31;
+        symbol [ view %view.3 117 16 20 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 118 12 ]
         [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_35_125_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_35_125_8_stop" ]
         %delegate.4 = local;
-        %tmp.42 = getv ? :DiscardConfirmationDelegate;
-        %tmp.44 = getv ? :_option;
-        %tmp.39 = newc %tmp.42 (%tmp.44);
-        lputv %delegate.4 %tmp.39;
+        symbol [ delegate %delegate.4 118 16 24 ];
+        symbol [ DiscardConfirmationDelegate %tmp.38 118 31 58 ];
+        %tmp.38 = getv ? :DiscardConfirmationDelegate;
+        symbol [ _option %tmp.40 118 59 66 ];
+        %tmp.40 = getv ? :_option;
+        %tmp.35 = newc %tmp.38 (%tmp.40);
+        lputv %delegate.4 %tmp.35;
+        symbol [ delegate %delegate.4 118 16 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 121 12 ]
-        %tmp.45 = getm $.Toybox.WatchUi;
-        %tmp.46 = getv function %tmp.45 :popView;
-        %tmp.47 = getm $.Toybox.WatchUi;
-        %tmp.48 = getv %tmp.47 :SLIDE_IMMEDIATE;
-        invoke %tmp.45 %tmp.46(%tmp.48);
+        symbol [ Ui %tmp.41 121 12 14 ];
+        %tmp.41 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.42 121 15 22 ];
+        %tmp.42 = getv function %tmp.41 :popView;
+        symbol [ Ui %tmp.43 121 23 25 ];
+        %tmp.43 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.44 121 26 41 ];
+        %tmp.44 = getv %tmp.43 :SLIDE_IMMEDIATE;
+        invoke %tmp.41 %tmp.42(%tmp.44);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 124 12 ]
+        symbol [ Ui %tmp.45 124 12 14 ];
+        %tmp.45 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.46 124 15 23 ];
+        %tmp.46 = getv function %tmp.45 :pushView;
+        %tmp.47 = lgetv %view.3;
+        symbol [ view %tmp.47 124 24 28 ];
+        %tmp.48 = lgetv %delegate.4;
+        symbol [ delegate %tmp.48 124 30 38 ];
+        symbol [ Ui %tmp.49 124 40 42 ];
         %tmp.49 = getm $.Toybox.WatchUi;
-        %tmp.50 = getv function %tmp.49 :pushView;
-        %tmp.52 = lgetv %view.3;
-        %tmp.54 = lgetv %delegate.4;
-        %tmp.55 = getm $.Toybox.WatchUi;
-        %tmp.56 = getv %tmp.55 :SLIDE_IMMEDIATE;
-        invoke %tmp.49 %tmp.50(%tmp.52, %tmp.54, %tmp.56);
+        symbol [ SLIDE_IMMEDIATE %tmp.50 124 43 58 ];
+        %tmp.50 = getv %tmp.49 :SLIDE_IMMEDIATE;
+        invoke %tmp.45 %tmp.46(%tmp.47, %tmp.48, %tmp.50);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_35_125_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_13_128_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_116_13_128_8_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 126 13 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_13_128_8_if_stmt:
-        %tmp.58 = lgetv %item;
-        %tmp.60 = const :resume;
-        %tmp.61 = eq %tmp.58 %tmp.60;
-        bf %tmp.61 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_13_128_8_if_end;
+        %tmp.51 = lgetv %item;
+        symbol [ item %tmp.51 126 17 21 ];
+        %tmp.53 = const :resume;
+        %tmp.54 = eq %tmp.51 %tmp.53;
+        bf %tmp.54 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_13_128_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_13_128_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_34_128_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 127 12 ]
-        %tmp.62 = getm $.Toybox.Application;
-        %tmp.63 = getv function %tmp.62 :getApp;
-        %tmp.64 = invoke %tmp.62 %tmp.63();
-        %tmp.65 = getv function %tmp.64 :startActivity;
-        invoke %tmp.64 %tmp.65();
+        symbol [ App %tmp.55 127 12 15 ];
+        %tmp.55 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.56 127 16 22 ];
+        %tmp.56 = getv function %tmp.55 :getApp;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        symbol [ startActivity %tmp.58 127 25 38 ];
+        %tmp.58 = getv function %tmp.57 :startActivity;
+        invoke %tmp.57 %tmp.58();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_34_128_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_13_128_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_126_13_128_8_if_end:
@@ -396,23 +506,23 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc
 }
 [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 132; ]
 enum {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 133; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 133; @position = 4; @symbol_enumdec = [OPTION_SAVE,133,4,15]; ]
     OPTION_SAVE = 0x01,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 134; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 134; @position = 4; @symbol_enumdec = [OPTIONS_SAVE_DISCARD,134,4,24]; ]
     OPTIONS_SAVE_DISCARD = 0x03,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 135; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 135; @position = 4; @symbol_enumdec = [OPTIONS_SAVE_RESUME,135,4,23]; ]
     OPTIONS_SAVE_RESUME = 0x05,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 136; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 136; @position = 4; @symbol_enumdec = [OPTION_DISCARD,136,4,18]; ]
     OPTION_DISCARD = 0x02,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 137; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 137; @position = 4; @symbol_enumdec = [OPTION_RESUME,137,4,17]; ]
     OPTION_RESUME = 0x04,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 138; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 138; @position = 4; @symbol_enumdec = [OPTIONS_DISCARD_RESUME,138,4,26]; ]
     OPTIONS_DISCARD_RESUME = 0x06,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 139; @position = 4; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 139; @position = 4; @symbol_enumdec = [OPTIONS_SAVE_RESUME_DISCARD,139,4,31]; ]
     OPTIONS_SAVE_RESUME_DISCARD = 0x07
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 143; ]
-class SaveMenu extends Ui.Menu{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 143; @symbol_classdef = [SaveMenu,143,6,14]; @symbol_extends<0> = [Ui,143,23,25]; @symbol_extends<1> = [Menu,143,26,30]; ]
+class SaveMenu extends Ui.Menu {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 143; ]
     <init> {
     }
@@ -420,61 +530,75 @@ class SaveMenu extends Ui.Menu{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 145; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc"; @line = 145; @symbol_functiondef = [initialize,145,13,23]; @symbol_param<0> = [option,145,24,30]; ]
     function initialize(option) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_145_32_159_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 146 8 ]
+        symbol [ Menu %tmp.2 146 8 12 ];
         %tmp.2 = getv ? :Menu;
+        symbol [ initialize %tmp.3 146 13 23 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 148 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_8_150_8_if_stmt:
-        %tmp.5 = lgetv %option;
-        %tmp.7 = getv ? :OPTION_RESUME;
-        %tmp.8 = bitand %tmp.5 %tmp.7;
-        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_8_150_8_if_end;
+        %tmp.4 = lgetv %option;
+        symbol [ option %tmp.4 148 12 18 ];
+        symbol [ OPTION_RESUME %tmp.6 148 21 34 ];
+        %tmp.6 = getv ? :OPTION_RESUME;
+        %tmp.7 = bitand %tmp.4 %tmp.6;
+        bf %tmp.7 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_8_150_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_8_150_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_36_150_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 149 12 ]
-        %tmp.10 = getv ? :Menu;
-        %tmp.11 = getv function %tmp.10 :addItem;
-        %tmp.12 = "Resume";
-        %tmp.14 = const :resume;
-        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.14);
+        symbol [ Menu %tmp.9 149 12 16 ];
+        %tmp.9 = getv ? :Menu;
+        symbol [ addItem %tmp.10 149 17 24 ];
+        %tmp.10 = getv function %tmp.9 :addItem;
+        %tmp.11 = "Resume";
+        %tmp.13 = const :resume;
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.13);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_36_150_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_8_150_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_148_8_150_8_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 152 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_8_154_8_if_stmt:
-        %tmp.16 = lgetv %option;
-        %tmp.18 = getv ? :OPTION_DISCARD;
-        %tmp.19 = bitand %tmp.16 %tmp.18;
-        bf %tmp.19 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_8_154_8_if_end;
+        %tmp.14 = lgetv %option;
+        symbol [ option %tmp.14 152 12 18 ];
+        symbol [ OPTION_DISCARD %tmp.16 152 21 35 ];
+        %tmp.16 = getv ? :OPTION_DISCARD;
+        %tmp.17 = bitand %tmp.14 %tmp.16;
+        bf %tmp.17 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_8_154_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_8_154_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_37_154_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 153 12 ]
-        %tmp.21 = getv ? :Menu;
-        %tmp.22 = getv function %tmp.21 :addItem;
-        %tmp.23 = "Save";
-        %tmp.25 = const :save;
-        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.25);
+        symbol [ Menu %tmp.19 153 12 16 ];
+        %tmp.19 = getv ? :Menu;
+        symbol [ addItem %tmp.20 153 17 24 ];
+        %tmp.20 = getv function %tmp.19 :addItem;
+        %tmp.21 = "Save";
+        %tmp.23 = const :save;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.23);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_37_154_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_8_154_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_152_8_154_8_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 156 8 ]
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_8_158_8_if_stmt:
-        %tmp.27 = lgetv %option;
-        %tmp.29 = getv ? :OPTION_DISCARD;
-        %tmp.30 = bitand %tmp.27 %tmp.29;
-        bf %tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_8_158_8_if_end;
+        %tmp.24 = lgetv %option;
+        symbol [ option %tmp.24 156 12 18 ];
+        symbol [ OPTION_DISCARD %tmp.26 156 21 35 ];
+        %tmp.26 = getv ? :OPTION_DISCARD;
+        %tmp.27 = bitand %tmp.24 %tmp.26;
+        bf %tmp.27 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_8_158_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_8_158_8_if_true:
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_37_158_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\SaveSessionWizard.mc" 157 12 ]
-        %tmp.32 = getv ? :Menu;
-        %tmp.33 = getv function %tmp.32 :addItem;
-        %tmp.34 = "Discard";
-        %tmp.36 = const :discard;
-        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.36);
+        symbol [ Menu %tmp.29 157 12 16 ];
+        %tmp.29 = getv ? :Menu;
+        symbol [ addItem %tmp.30 157 17 24 ];
+        %tmp.30 = getv function %tmp.29 :addItem;
+        %tmp.31 = "Discard";
+        %tmp.33 = const :discard;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.33);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_37_158_8_stop:
         goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_8_158_8_if_end;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_SaveSessionWizard_mc_156_8_158_8_if_end:

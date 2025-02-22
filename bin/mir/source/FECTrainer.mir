@@ -1,9 +1,9 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [AntPlus,1,14,21]; ]
 import Toybox.AntPlus;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 2; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
 import Toybox.System;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 4; ]
-class MyFitnessEquipmentListener extends AntPlus.FitnessEquipmentListener{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 4; @symbol_classdef = [MyFitnessEquipmentListener,4,6,32]; @symbol_extends<0> = [AntPlus,4,41,48]; @symbol_extends<1> = [FitnessEquipmentListener,4,49,73]; ]
+class MyFitnessEquipmentListener extends AntPlus.FitnessEquipmentListener {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 4; ]
     <init> {
     }
@@ -11,23 +11,28 @@ class MyFitnessEquipmentListener extends AntPlus.FitnessEquipmentListener{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 5; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 5; @position = 8; @symbol_vardef = [fecSpeed,5,8,16]; ]
     var fecSpeed;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 6; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
     function initialize() as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_6_26_8_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 7 8 ]
+        symbol [ FitnessEquipmentListener %tmp.2 7 8 32 ];
         %tmp.2 = getv ? :FitnessEquipmentListener;
+        symbol [ initialize %tmp.3 7 33 43 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_6_26_8_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 10; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc"; @line = 10; @symbol_functiondef = [onFitnessEquipmentUpdate,10,13,37]; @symbol_param<0> = [data,10,38,42]; @symbol_param<0>_type<0> = [AntPlus,10,46,53]; @symbol_param<0>_type<1> = [FitnessEquipmentData,10,54,74]; ]
     function onFitnessEquipmentUpdate(data as AntPlus.FitnessEquipmentData) as Void {
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_10_84_12_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\FECTrainer.mc" 11 8 ]
         %tmp.1 = lgetv %data;
+        symbol [ data %tmp.1 11 19 23 ];
+        symbol [ feSpeed %tmp.2 11 24 31 ];
         %tmp.2 = getv %tmp.1 :feSpeed;
+        symbol [ fecSpeed ? 11 8 16 ];
         putv self :fecSpeed %tmp.2;
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_FECTrainer_mc_10_84_12_4_stop:
     }
