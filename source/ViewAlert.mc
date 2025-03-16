@@ -10,9 +10,8 @@ enum {
     BTN_START,
     BTN_STOP,
     BTN_NONE,
-    STP_WARM,
-    STP_PREP,
-    STP_SPRINT,
+    STP_CV1,
+    STP_CV2,
     STP_REST,
     STP_STEP,
     STP_COOL
@@ -72,7 +71,7 @@ class ViewAlert extends Ui.View {
                     App.getApp().clearBtnAlert();
                 }
                 else {
-                    drawLapAlert(dc);
+                    //drawLapAlert(dc);
                 }
             }
             else if (App.getApp().btnAlert == BTN_START) {
@@ -91,28 +90,20 @@ class ViewAlert extends Ui.View {
                     drawStopAlert(dc);
                 }
             }
-            else if (App.getApp().btnAlert == STP_WARM) {
+            else if (App.getApp().btnAlert == STP_CV1) {
                 if (Sys.getTimer() - timeStartAlert > 2000) {
                     App.getApp().clearBtnAlert();
                 }
                 else {
-                    drawSmo2Alert(dc, "WARMUP");
+                    drawSmo2Alert(dc, "1st CV Prep");
                 }
             }
-            else if (App.getApp().btnAlert == STP_PREP) {
+            else if (App.getApp().btnAlert == STP_CV2) {
                 if (Sys.getTimer() - timeStartAlert > 2000) {
                     App.getApp().clearBtnAlert();
                 }
                 else {
-                    drawSmo2Alert(dc, "STOP!");
-                }
-            }
-            else if (App.getApp().btnAlert == STP_SPRINT) {
-                if (Sys.getTimer() - timeStartAlert > 2000) {
-                    App.getApp().clearBtnAlert();
-                }
-                else {
-                    drawSmo2Alert(dc, "SPRINT!");
+                    drawSmo2Alert(dc, "2nd CV Prep");
                 }
             }
             else if (App.getApp().btnAlert == STP_REST) {
@@ -128,7 +119,7 @@ class ViewAlert extends Ui.View {
                     App.getApp().clearBtnAlert();
                 }
                 else {
-                    drawSmo2Alert(dc, "Step " + App.getApp().loadStep);
+                    drawSmo2Alert(dc, "Step " + App.getApp().accelerator);
                 }
             }
             else if (App.getApp().btnAlert == STP_COOL) {
@@ -149,7 +140,7 @@ class ViewAlert extends Ui.View {
         var font_num = Gfx.FONT_NUMBER_MEDIUM;
         var fgcolor = Gfx.COLOR_BLACK;
         var bgcolor = Gfx.COLOR_WHITE;
-        var distConv;
+//        var distConv;
         var text;
         var tHeight_num;
         var tHeight_label;
@@ -170,12 +161,12 @@ class ViewAlert extends Ui.View {
         dc.setColor(bgcolor, bgcolor);
         dc.clear();
         dc.setColor(fgcolor, Gfx.COLOR_TRANSPARENT);
-        if (Sys.getDeviceSettings().distanceUnits == Sys.UNIT_STATUTE) {
+/*        if (Sys.getDeviceSettings().distanceUnits == Sys.UNIT_STATUTE) {
             distConv = 0.000621371; //convert meters to miles
         }
         else {
             distConv = 0.001; // convert meters to kilometers
-        }
+        }*/
         text = "Lap";
         x = xCen;
         y = yCen - ((70.0 * g_ScaleFactorY).toNumber());
@@ -191,7 +182,7 @@ class ViewAlert extends Ui.View {
         x = xCen - (25.0 * g_ScaleFactorX).toNumber();
         y = yCen - ((15.0 * g_ScaleFactorY) + (0.5 * tHeight_num)).toNumber();
 //        y = yCen - ((15.0 * g_ScaleFactorY) + (0.5 * tHeight_num)).toNumber();
-        text = format_elapsed_time(((App.getApp().lapStartTime - App.getApp().lapPrevTime)/1000).toNumber());
+        //text = format_elapsed_time(((App.getApp().lapStartTime - App.getApp().lapPrevTime)/1000).toNumber());
         dc.drawText(x, y, font_num, text, Gfx.TEXT_JUSTIFY_LEFT);
 //        dc.drawText(xCen-25, yCen - 15 - 0.5 * tHeight_num, font_num, text, Gfx.TEXT_JUSTIFY_LEFT);
 
@@ -204,7 +195,7 @@ class ViewAlert extends Ui.View {
         x = xCen - (25.0 * g_ScaleFactorX).toNumber();
         y = yCen + ((30.0 * g_ScaleFactorY) - (0.5 * tHeight_num)).toNumber();    //TODO:
 //        y = yCen + ((30.0 * g_ScaleFactorY) - (0.5 * tHeight_num)).toNumber();    //TODO:
-        text = ((App.getApp().lapStartDist - App.getApp().lapPrevDist) * distConv).format("%.2f");
+        //text = ((App.getApp().lapStartDist - App.getApp().lapPrevDist) * distConv).format("%.2f");
         dc.drawText(x, y, font_num, text, Gfx.TEXT_JUSTIFY_LEFT);
 //        dc.drawText(xCen-25, yCen + 30 - 0.5 * tHeight_num, font_num, text, Gfx.TEXT_JUSTIFY_LEFT);
 
@@ -221,7 +212,6 @@ class ViewAlert extends Ui.View {
         var y3;
         var xCen = dc.getWidth() / 2;
         var yCen = dc.getHeight() / 2;
-
         x1 = xCen - (30 * g_ScaleFactorX).toNumber();
         y1 = yCen - (45 * g_ScaleFactorY).toNumber();
         x2 = xCen - (30 * g_ScaleFactorX).toNumber();
@@ -232,13 +222,10 @@ class ViewAlert extends Ui.View {
         dc.fillPolygon([ [x1, y1],
                          [x2, y2],
                          [x3, y3] ]);
-//        dc.fillPolygon([ [xCen - 30, yCen - 45],
-//                         [yCen - 30, yCen + 45],
-//                         [xCen + 40, yCen] ]);
 
         x1 = xCen - (27 * g_ScaleFactorX).toNumber();
         y1 = yCen - (39 * g_ScaleFactorY).toNumber();
-        x2 = yCen - (27 * g_ScaleFactorX).toNumber();
+        x2 = xCen - (27 * g_ScaleFactorX).toNumber();
         y2 = yCen + (39 * g_ScaleFactorY).toNumber();
         x3 = xCen + (34 * g_ScaleFactorX).toNumber();
         y3 = yCen;
@@ -246,9 +233,6 @@ class ViewAlert extends Ui.View {
         dc.fillPolygon([ [x1, y1],
                          [x2, y2],
                          [x3, y3] ]);
-//        dc.fillPolygon([ [xCen - 27, yCen - 39],
-//                         [xCen - 27, yCen + 39],
-//                         [xCen + 34, yCen] ]);
     }
 
     function drawStopAlert(dc) {
@@ -266,7 +250,7 @@ class ViewAlert extends Ui.View {
 
         x1 = xCen - (45 * g_ScaleFactorX).toNumber();
         y1 = yCen - (45 * g_ScaleFactorY).toNumber();
-        x2 = yCen - (45 * g_ScaleFactorX).toNumber();
+        x2 = xCen - (45 * g_ScaleFactorX).toNumber();
         y2 = yCen + (45 * g_ScaleFactorY).toNumber();
         x3 = xCen + (45 * g_ScaleFactorX).toNumber();
         y3 = yCen + (45 * g_ScaleFactorY).toNumber();
@@ -277,14 +261,10 @@ class ViewAlert extends Ui.View {
                          [x2, y2],
                          [x3, y3],
                          [x4, y4] ]);
-//        dc.fillPolygon([ [xCen - 45, yCen - 45],
-//                         [xCen - 45, yCen + 45],
-//                         [xCen + 45, yCen + 45],
-//                         [xCen + 45, yCen - 45] ]);
 
         x1 = xCen - (42 * g_ScaleFactorX).toNumber();
         y1 = yCen - (42 * g_ScaleFactorY).toNumber();
-        x2 = yCen - (42 * g_ScaleFactorX).toNumber();
+        x2 = xCen - (42 * g_ScaleFactorX).toNumber();
         y2 = yCen + (42 * g_ScaleFactorY).toNumber();
         x3 = xCen + (42 * g_ScaleFactorX).toNumber();
         y3 = yCen + (42 * g_ScaleFactorY).toNumber();

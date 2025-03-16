@@ -20,32 +20,46 @@ class MCycMenuDelegate extends WatchUi.MenuInputDelegate {
             mMO2.goToSearch();
             WatchUi.pushView(new MCycViewPair(mMO2), new MCycPairDelegate(), WatchUi.SLIDE_IMMEDIATE);
         }
-        if (!IS_FEC_NATIVE && item == :trainer) {
+        else if (!IS_FEC_NATIVE && item == :trainer) {
             mFEC.goToSearch();
             WatchUi.pushView(new MCycViewPair(mFEC), new MCycPairDelegate(), WatchUi.SLIDE_IMMEDIATE);
         }
-        if (item == :ftp) {
-            var view = new AlertPicker(PICKER_TYPE_FTP);
-            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_FTP, view), WatchUi.SLIDE_IMMEDIATE);
+        else if (item == :bp1) {
+            var view = new AlertPicker(PICKER_TYPE_BP1);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_BP1, view), WatchUi.SLIDE_IMMEDIATE);
+        }
+        else if (item == :bp2) {
+            var view = new AlertPicker(PICKER_TYPE_BP2);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_BP2, view), WatchUi.SLIDE_IMMEDIATE);
         }
         else if (item == :sensorLx) {
             var view = new AlertPicker(PICKER_TYPE_SENSORLX);
             WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_SENSORLX, view),
                         WatchUi.SLIDE_IMMEDIATE);
         }     
-        else if (item == :duration) {
-            var view = new AlertPicker(PICKER_TYPE_DURATION);
-            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_DURATION, view),
+        else if (item == :cvprep) {
+            var view = new AlertPicker(PICKER_TYPE_CVPREP);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_CVPREP, view),
                         WatchUi.SLIDE_IMMEDIATE);
         }
-        else if (item == :stepsize) {
-            var view = new AlertPicker(PICKER_TYPE_STEPSIZE);
-            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_STEPSIZE, view),
+        else if (item == :cvrest) {
+            var view = new AlertPicker(PICKER_TYPE_CVREST);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_CVREST, view),
                         WatchUi.SLIDE_IMMEDIATE);
         }
-        else if (item == :initload) {
-            var view = new AlertPicker(PICKER_TYPE_INITLOAD);
-            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_INITLOAD, view),
+        else if (item == :accel) {
+            var view = new AlertPicker(PICKER_TYPE_ACCEL);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_ACCEL, view),
+                        WatchUi.SLIDE_IMMEDIATE);
+        }
+        else if (item == :accelrest) {
+            var view = new AlertPicker(PICKER_TYPE_ACCELREST);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_ACCELREST, view),
+                        WatchUi.SLIDE_IMMEDIATE);
+        }
+        else if (item == :numaccel) {
+            var view = new AlertPicker(PICKER_TYPE_NUMACCEL);
+            WatchUi.pushView(view, new AlertPickerDelegate(PICKER_TYPE_NUMACCEL, view),
                         WatchUi.SLIDE_IMMEDIATE);
         }
         

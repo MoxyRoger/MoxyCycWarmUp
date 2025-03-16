@@ -51,33 +51,25 @@ enum {
 enum{
     STEP_INIT,
     COUNTDOWN,
-    WARM1,
-    WARM2,
-    WARM3,
+    CV1,
+    CV2,
     REST1,
-    STEPTEST,
-    COOLDOWN
+    ACCELS,
+    REST2,
+    STOP
 }
 
-enum{
-    SEND_INIT,
-    SEND_USER,
-    CONF_USER,
-    SEND_TARGPWR,
-    CONF_TARGPWR,
-    SEND_WINDRESIST,
-    CONF_WINDRESIST,
-    SEND_TRACKRESIST,
-    CONF_TRACKRESIST
-}
 
-const FTP_DEFAULT = 150;
-const DURATION_DEFAULT = 60;
-const STEPSIZE_DEFAULT = 20;
-const INITLOAD_DEFAULT = 60;
+const BP1_DEFAULT = 100;
+const BP2_DEFAULT = 200;
+const CVPREP_DEFAULT = 300;
+const CVREST_DEFAULT = 60;
+const ACCEL_DEFAULT = 20;
+const ACCELREST_DEFAULT = 60;
+const NUMACCEL_DEFAULT = 5;
 var IS_FEC_NATIVE = false;
 
-class MoxyStepTest extends Application.AppBase {
+class MoxyCycWarmup extends Application.AppBase {
     hidden var mTimer;
     hidden var mMO2;
     hidden var mFEC;
@@ -86,18 +78,25 @@ class MoxyStepTest extends Application.AppBase {
     hidden var mDelegate;
     hidden var mActivity;
     hidden var mFitContrib;
-    var lapStartDist = 0;
-    var lapStartTime = 0;
-    var lapPrevDist;
-    var lapPrevTime;
+    hidden var mInfo;
+    hidden var pwrHead = 0;
+    hidden var pwrTail = 0;
+    hidden var pwrSize = 10;
+    hidden var pwrBuffer;
+
+
     var btnAlert;
-    var targetPower = 0;
+    var targPwr1 = 0;
+    var targPwr2 = 0;
+    var BreakPt1 = 0;
+    var BreakPt2 = 0;
     var stepStartTime = 0;
     var stepIndex = STEP_INIT;
-    var stepDuration = 1000;
-    var loadStep = 0;
-    var is_lap_beg_marked = false;
-    var is_lap_end_marked = false;
+    var stepDuration = 1000;   // load durations in milliseconds
+    var accelerator = 0;
+    //var is_lap_beg_marked = false;
+    //var is_lap_end_marked = false;
+    var pwrSmooth = 0;
 
     function initialize() {
         AppBase.initialize();
@@ -106,20 +105,21 @@ class MoxyStepTest extends Application.AppBase {
         if (Toybox.AntPlus has :FitnessEquipment) {
             IS_FEC_NATIVE = true;
         }
+        //IS_FEC_NATIVE = false;  // ToDo: Remove after testing
+        pwrSize = 10;
+        pwrBuffer = new[pwrSize+1];
     }
-
+    
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         mMO2 = new MO2Sensor();
         if (IS_FEC_NATIVE) {
             mFEC = new MyFitnessEquipmentListener();
             mFECControl = new AntPlus.FitnessEquipment(mFEC);
-            System.println("yes it has");
         }
         else {
             mFEC = new FECTrainer();
             mFECControl = mFEC;
-            System.println("no it has not");
         }
         
         mViewAlert = new ViewAlert(mMO2);
@@ -133,6 +133,8 @@ class MoxyStepTest extends Application.AppBase {
 
 		createActivity();
         mTimer.start(self.method(:onTimerCallback), 1000, true);
+        resetSmooth();
+        pwrSmooth = 0;
     }
 
     function onStop(state) {
@@ -165,116 +167,173 @@ class MoxyStepTest extends Application.AppBase {
 				mFitContrib.compute(mMO2);
 			}
 		}
+        mInfo = Activity.getActivityInfo();
         checkStepTime();
+        smoothPower();
         WatchUi.requestUpdate();
     }
 
     function checkStepTime() {
-        var info = Activity.getActivityInfo();
-        if (info != null) {
-            if (info.timerTime != null){
-                if(stepIndex == STEPTEST){
-                    if (!is_lap_beg_marked && (info.timerTime - stepStartTime > 50*1000)) {
-                        mFitContrib.lap(4);
-                        mActivity.addLap();
-                        is_lap_beg_marked = true;
-                    }
-                    if (!is_lap_end_marked && (info.timerTime - stepStartTime > (stepDuration - 3000))) {
-                        mFitContrib.lap(0);
-                        mActivity.addLap();
-                        is_lap_end_marked = true;
-                    }
-                }
-                if (info.timerTime - stepStartTime > (stepDuration - 500)) {
-                    incrementStep();
-                    is_lap_beg_marked = false;
-                    is_lap_end_marked = false;
-                }
-            }
+        if (mInfo.timerTime - stepStartTime > ((stepDuration) - 500)) {
+            incrementStep();
         }
     }
 
+    function smoothPower() {
+        if (mInfo != null) {
+			if (mInfo.currentPower != null && mInfo.currentPower != 0) {
+                pwrBuffer[pwrHead] = mInfo.currentPower;
+            
+                pwrHead = (pwrHead + 1) % (pwrSize+1);
+                if (pwrHead == pwrTail) {
+                    pwrTail = (pwrTail + 1) % (pwrSize+1);
+                }
+                var i = pwrTail;
+                var count = 0;
+                pwrSmooth = 0.0;
+                do {
+                    pwrSmooth  += pwrBuffer[i];
+                    count += 1;
+                    i = (i + 1) % (pwrSize+1);
+                }
+                while (i != pwrHead);
+                pwrSmooth  = pwrSmooth  / count;
+                //System.println("i: " + i + " ct: " + count + " ipwr: " + mInfo.currentPower.format("%.2f") + " spwr: " + pwrSmooth.format("%.2f"));
+            }
+            else {
+                resetSmooth();
+                pwrSmooth = 0;
+            }
+        }
+        else {
+            resetSmooth();
+            pwrSmooth = 0;
+        }
+    }
+
+    function resetSmooth(){
+        pwrTail = 0;
+        pwrHead = 0;
+    }
+
+    function getStoredValue(name, def_value){
+        var value = Storage.getValue(name);
+        if (value == null) {
+            value = def_value;
+        }
+        return value;
+    }
+
     function incrementStep() {
-        var info = Activity.getActivityInfo();
-        var ftp;
-        var stepsize;
-        var initload;
-        if(stepIndex < STEPTEST) {
+        if (stepIndex == REST2) {
+            if (accelerator >= getStoredValue("numaccel", NUMACCEL_DEFAULT)) {
+                stepIndex = STOP;
+            }
+            else {
+                stepIndex = ACCELS;
+            }
+        }
+        else if (stepIndex == ACCELS) {
+            stepIndex = REST2;
+        }
+        else if(stepIndex < ACCELS) {
             stepIndex = stepIndex + 1;
         }
-        stepStartTime = info.timerTime;
+        
+        stepStartTime = mInfo.timerTime;
         switch(stepIndex) {
             case COUNTDOWN:
-                btnAlert = BTN_NONE;
-                stepDuration = 3 * 1000;
-                targetPower = 1;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                stepDuration = 5 * 1000;
+                targPwr1 = 0;
+                targPwr2 = 0;
+                mFECControl.controlEquipment(AntPlus.TRAINER_SLOPE, 2.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_SURFACE, 0.004);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_COEFF, 1.25);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_SPEED, 0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 10);
                 break;
-            case WARM1:
-                btnAlert = STP_WARM;
-                stepDuration = 180 * 1000;
-                ftp = Storage.getValue("FTP-watts");
-                if (ftp == null) {
-                    ftp = FTP_DEFAULT;
-                }
-                targetPower = 0.30 * ftp;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+            case CV1:
+                btnAlert = STP_CV1;
+                stepDuration = getStoredValue("cvprepdur", CVPREP_DEFAULT) * 1000;
+                BreakPt1 = getStoredValue("BP1-watts", BP1_DEFAULT);
+                targPwr1 = 0.60 * BreakPt1;
+                targPwr2 = 0.85 * BreakPt1;
+                mFECControl.controlEquipment(AntPlus.TRAINER_SLOPE, 0.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_SURFACE, 0.004);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_COEFF, 1.00);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_SPEED, 0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
                 break;
-            case WARM2:
-                btnAlert = STP_WARM;
-                stepDuration = 180 * 1000;
-                ftp = Storage.getValue("FTP-watts");
-                if (ftp == null) {
-                    ftp = FTP_DEFAULT;
-                }
-                targetPower = 0.45 * ftp;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
-                break;
-            case WARM3:
-                btnAlert = STP_WARM;
-                stepDuration = 180 * 1000;
-                ftp = Storage.getValue("FTP-watts");
-                if (ftp == null) {
-                    ftp = FTP_DEFAULT;
-                }
-                targetPower = 0.60 * ftp;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+            case CV2:
+                btnAlert = STP_CV2;
+                stepDuration = getStoredValue("cvprepdur", CVPREP_DEFAULT) * 1000;
+                BreakPt1 = getStoredValue("BP1-watts", BP1_DEFAULT);
+                targPwr1 = 0.70 * BreakPt1;
+                targPwr2 = 0.95 * BreakPt1;
+                mFECControl.controlEquipment(AntPlus.TRAINER_SLOPE, 0.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_SURFACE, 0.004);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_COEFF, 1.00);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_SPEED, 0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
                 break;
             case REST1:
                 btnAlert = STP_REST;
-                stepDuration = 60 * 1000;
-                targetPower = 0;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                stepDuration = getStoredValue("cvrestdur", CVREST_DEFAULT) * 1000;
+                BreakPt1 = getStoredValue("BP1-watts", BP1_DEFAULT);
+                targPwr1 = 0;
+                targPwr2 = 0.25 * BreakPt1;
+                mFECControl.controlEquipment(AntPlus.TRAINER_SLOPE, 0.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_SURFACE, 0.004);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_COEFF, 0.75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_SPEED, 0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
+                pwrSize = 3;
+                resetSmooth();
                 break;
-            case STEPTEST:
+            case ACCELS:
                 btnAlert = STP_STEP;
-                stepDuration = Storage.getValue("duration");
-                if (stepDuration == null) {
-                    stepDuration = DURATION_DEFAULT;
-                }
-                stepDuration = stepDuration * 1000;
-                initload = Storage.getValue("initload");
-                if (initload == null) {
-                    initload = INITLOAD_DEFAULT;
-                }
-                stepsize = Storage.getValue("stepsize");
-                if (stepsize == null) {
-                    stepsize = STEPSIZE_DEFAULT;
-                }
-                targetPower = stepsize * loadStep + initload;
-                loadStep = loadStep + 1;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+                stepDuration = getStoredValue("acceldur", ACCEL_DEFAULT) * 1000;
+                BreakPt2 = getStoredValue("BP2-watts", BP2_DEFAULT);
+                accelerator = accelerator + 1;
+                targPwr1 = (1.10 + 0.1 * accelerator) * BreakPt2;
+                targPwr2 = (1.50 + 0.1 * accelerator) * BreakPt2;
+                mFECControl.controlEquipment(AntPlus.TRAINER_SLOPE, 2.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_SURFACE, 0.004);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_COEFF, 1.25);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_SPEED, 0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
+                //mFitContrib.lap(4);
+                //mActivity.addLap();
                 break;
-            case COOLDOWN:
-                btnAlert = STP_COOL;
-                stepDuration = 360*1000;
-                ftp = Storage.getValue("FTP-watts");
-                if (ftp == null) {
-                    ftp = FTP_DEFAULT;
-                }
-                targetPower = 0.40 * ftp;
-                mFECControl.controlEquipment(AntPlus.TRAINER_TARGET_POWER, targetPower);
+            case REST2:
+                btnAlert = STP_REST;
+                stepDuration = getStoredValue("accelrestdur", ACCELREST_DEFAULT) * 1000;
+                BreakPt2 = getStoredValue("BP2-watts", BP2_DEFAULT);
+                targPwr1 = 0;
+                targPwr2 = 0.25 * BreakPt2;
+                mFECControl.controlEquipment(AntPlus.TRAINER_SLOPE, 0.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_SURFACE, 0.004);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_COEFF, 0.75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_SPEED, 0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
+                mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
+                mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
+                //mFitContrib.lap(0);
+                //mActivity.addLap();
                 break;
+            case STOP:
+                stopActivity();              // Stops the Activity
+                mDelegate.startSaveTimer();  // Brings up the save screen
             default:
         } 
     }
@@ -291,25 +350,13 @@ class MoxyStepTest extends Application.AppBase {
     function startActivity() {
         mActivity.start();
         btnAlert = BTN_START;
-        // set the start alert
     }
 
     function stopActivity() {
-        if(stepIndex < COOLDOWN) {      // make it so the first stop goes to cooldown.
-            if (is_lap_beg_marked && !is_lap_end_marked) {
-                mFitContrib.lap(0);
-                mActivity.addLap();
-                is_lap_beg_marked = false;
-            }
-            stepIndex = COOLDOWN;
-            incrementStep();
-        }
-        else {
-            mFitContrib.lap(4);
-            mActivity.addLap();
-            mActivity.stop();
-            btnAlert = BTN_STOP;
-        }
+        //mFitContrib.lap(4);
+        //mActivity.addLap();
+        mActivity.stop();
+        btnAlert = BTN_STOP;
     }
 
     function saveActivity() {
@@ -350,12 +397,12 @@ class MoxyStepTest extends Application.AppBase {
 
     function manualLap() {
         incrementStep();
-        if (is_lap_beg_marked && !is_lap_end_marked) {
-            mFitContrib.lap(0);
-            mActivity.addLap();
+        /*if (is_lap_beg_marked && !is_lap_end_marked) {
+            //mFitContrib.lap(0);
+            //mActivity.addLap();
             is_lap_beg_marked = false;
             is_lap_end_marked = false;
-        }
+        }*/
     }
 
 //Alert Functions

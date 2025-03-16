@@ -1,1309 +1,1324 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 1; ]
 import Toybox.Activity;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [ActivityRecording,2,14,31]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 2; ]
 import Toybox.ActivityRecording;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [AntPlus,3,14,21]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 3; ]
 import Toybox.AntPlus;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Application,4,14,25]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 4; ]
 import Toybox.Application;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [FitContributor,5,14,28]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 5; ]
 import Toybox.FitContributor;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Lang,6,14,18]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 6; ]
 import Toybox.Lang;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Position,7,14,22]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 7; ]
 import Toybox.Position;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 8; @symbol_importdef<0> = [Toybox,8,7,13]; @symbol_importdef<1> = [Sensor,8,14,20]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 8; ]
 import Toybox.Sensor;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 9; @symbol_importdef<0> = [Toybox,9,7,13]; @symbol_importdef<1> = [System,9,14,20]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 9; ]
 import Toybox.System;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 10; @symbol_importdef<0> = [Toybox,10,7,13]; @symbol_importdef<1> = [Timer,10,14,19]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 10; ]
 import Toybox.Timer;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 11; @symbol_importdef<0> = [Toybox,11,7,13]; @symbol_importdef<1> = [WatchUi,11,14,21]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 11; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 14; @position = 6; @symbol_constdef = [G_Start_Button,14,6,20]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 14; @position = 6; ]
 const G_Start_Button;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 15; @position = 6; @symbol_constdef = [G_Lap_Button,15,6,18]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 15; @position = 6; ]
 const G_Lap_Button;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 18; @position = 6; @symbol_constdef = [G_Palette_Sz,18,6,18]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 18; @position = 6; ]
 const G_Palette_Sz;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 21; @symbol_functiondef = [format_elapsed_time,21,9,28]; @symbol_param<0> = [seconds,21,29,36]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 21; ]
 function format_elapsed_time(seconds) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 22 4 ]
-    [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 22 4 ]
+    [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_stop" ]
     %hh.1 = local;
-    symbol [ hh %hh.1 22 8 10 ];
-    %tmp.1 = lgetv %seconds;
-    symbol [ seconds %tmp.1 22 13 20 ];
-    %tmp.2 = 3600;
-    %tmp.3 = div %tmp.1 %tmp.2;
-    lputv %hh.1 %tmp.3;
-    symbol [ hh %hh.1 22 8 10 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 23 4 ]
-    [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_stop" ]
+    %tmp.2 = lgetv %seconds;
+    %tmp.3 = 3600;
+    %tmp.4 = div %tmp.2 %tmp.3;
+    lputv %hh.1 %tmp.4;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 23 4 ]
+    [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_stop" ]
     %mm.2 = local;
-    symbol [ mm %mm.2 23 8 10 ];
-    %tmp.4 = lgetv %seconds;
-    symbol [ seconds %tmp.4 23 13 20 ];
-    %tmp.5 = 60;
-    %tmp.6 = div %tmp.4 %tmp.5;
+    %tmp.6 = lgetv %seconds;
     %tmp.7 = 60;
-    %tmp.8 = mod %tmp.6 %tmp.7;
-    lputv %mm.2 %tmp.8;
-    symbol [ mm %mm.2 23 8 10 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 24 4 ]
-    [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_stop" ]
+    %tmp.8 = div %tmp.6 %tmp.7;
+    %tmp.9 = 60;
+    %tmp.10 = mod %tmp.8 %tmp.9;
+    lputv %mm.2 %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 24 4 ]
+    [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_stop" ]
     %ss.3 = local;
-    symbol [ ss %ss.3 24 8 10 ];
-    %tmp.9 = lgetv %seconds;
-    symbol [ seconds %tmp.9 24 13 20 ];
-    %tmp.10 = 60;
-    %tmp.11 = mod %tmp.9 %tmp.10;
-    lputv %ss.3 %tmp.11;
-    symbol [ ss %ss.3 24 8 10 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 26 4 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_4_38_4_if_stmt:
-    %tmp.12 = lgetv %hh.1;
-    symbol [ hh %tmp.12 26 8 10 ];
-    %tmp.13 = 0;
-    %tmp.14 = ne %tmp.12 %tmp.13;
-    bf %tmp.14 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_4_38_4_if_else_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_4_38_4_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_17_32_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 27 8 ]
-    symbol [ Lang %tmp.15 27 15 19 ];
-    %tmp.15 = getm $.Toybox.Lang;
-    symbol [ format %tmp.16 27 20 26 ];
-    %tmp.16 = getv function %tmp.15 :format;
-    %tmp.17 = "$1$:$2$:$3$";
-    %tmp.18 = newa 3;
-    %tmp.19 = lgetv %hh.1;
-    symbol [ hh %tmp.19 28 31 33 ];
-    %tmp.20 = dup %tmp.18;
-    %tmp.21 = aputv %tmp.20 0 %tmp.19;
-    %tmp.22 = lgetv %mm.2;
-    symbol [ mm %tmp.22 29 31 33 ];
-    symbol [ format %tmp.23 29 34 40 ];
-    %tmp.23 = getv function %tmp.22 :format;
-    %tmp.24 = "%02d";
-    %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
-    %tmp.26 = dup %tmp.21;
-    %tmp.27 = aputv %tmp.26 1 %tmp.25;
-    %tmp.28 = lgetv %ss.3;
-    symbol [ ss %tmp.28 30 31 33 ];
-    symbol [ format %tmp.29 30 34 40 ];
-    %tmp.29 = getv function %tmp.28 :format;
-    %tmp.30 = "%02d";
-    %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
-    %tmp.32 = dup %tmp.27;
-    %tmp.33 = aputv %tmp.32 2 %tmp.31;
-    %tmp.34 = invoke %tmp.15 %tmp.16(%tmp.17, %tmp.33);
-    ret %tmp.34;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_17_32_4_stop:
-    goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_4_38_4_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_4_38_4_if_else_false:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_33_9_38_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 34 8 ]
-    symbol [ Lang %tmp.35 34 15 19 ];
-    %tmp.35 = getm $.Toybox.Lang;
-    symbol [ format %tmp.36 34 20 26 ];
-    %tmp.36 = getv function %tmp.35 :format;
-    %tmp.37 = "$1$:$2$";
-    %tmp.38 = newa 2;
-    %tmp.39 = lgetv %mm.2;
-    symbol [ mm %tmp.39 35 31 33 ];
-    %tmp.40 = dup %tmp.38;
-    %tmp.41 = aputv %tmp.40 0 %tmp.39;
-    %tmp.42 = lgetv %ss.3;
-    symbol [ ss %tmp.42 36 31 33 ];
-    symbol [ format %tmp.43 36 34 40 ];
-    %tmp.43 = getv function %tmp.42 :format;
-    %tmp.44 = "%02d";
-    %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
-    %tmp.46 = dup %tmp.41;
-    %tmp.47 = aputv %tmp.46 1 %tmp.45;
-    %tmp.48 = invoke %tmp.35 %tmp.36(%tmp.37, %tmp.47);
-    ret %tmp.48;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_33_9_38_4_stop:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_26_4_38_4_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_21_38_39_0_stop:
+    %tmp.12 = lgetv %seconds;
+    %tmp.13 = 60;
+    %tmp.14 = mod %tmp.12 %tmp.13;
+    lputv %ss.3 %tmp.14;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 26 4 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_4_38_4_if_stmt:
+    %tmp.16 = lgetv %hh.1;
+    %tmp.17 = 0;
+    %tmp.18 = ne %tmp.16 %tmp.17;
+    bf %tmp.18 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_4_38_4_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_4_38_4_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_17_32_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 27 8 ]
+    %tmp.19 = getm $.Toybox.Lang;
+    %tmp.20 = getv function %tmp.19 :format;
+    %tmp.21 = "$1$:$2$:$3$";
+    %tmp.22 = newa 3;
+    %tmp.24 = lgetv %hh.1;
+    %tmp.25 = dup %tmp.22;
+    %tmp.26 = aputv %tmp.25 0 %tmp.24;
+    %tmp.27 = lgetv %mm.2;
+    %tmp.28 = getv function %tmp.27 :format;
+    %tmp.29 = "%02d";
+    %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+    %tmp.31 = dup %tmp.26;
+    %tmp.32 = aputv %tmp.31 1 %tmp.30;
+    %tmp.33 = lgetv %ss.3;
+    %tmp.34 = getv function %tmp.33 :format;
+    %tmp.35 = "%02d";
+    %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
+    %tmp.37 = dup %tmp.32;
+    %tmp.38 = aputv %tmp.37 2 %tmp.36;
+    %tmp.39 = invoke %tmp.19 %tmp.20(%tmp.21, %tmp.38);
+    ret %tmp.39;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_17_32_4_stop:
+    goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_4_38_4_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_4_38_4_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_33_9_38_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 34 8 ]
+    %tmp.40 = getm $.Toybox.Lang;
+    %tmp.41 = getv function %tmp.40 :format;
+    %tmp.42 = "$1$:$2$";
+    %tmp.43 = newa 2;
+    %tmp.45 = lgetv %mm.2;
+    %tmp.46 = dup %tmp.43;
+    %tmp.47 = aputv %tmp.46 0 %tmp.45;
+    %tmp.48 = lgetv %ss.3;
+    %tmp.49 = getv function %tmp.48 :format;
+    %tmp.50 = "%02d";
+    %tmp.51 = invoke %tmp.48 %tmp.49(%tmp.50);
+    %tmp.52 = dup %tmp.47;
+    %tmp.53 = aputv %tmp.52 1 %tmp.51;
+    %tmp.54 = invoke %tmp.40 %tmp.41(%tmp.42, %tmp.53);
+    ret %tmp.54;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_33_9_38_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_26_4_38_4_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_21_38_39_0_stop:
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 41; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 41; ]
 enum {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 42; @position = 4; @symbol_enumdec = [VIBRATE_PERIOD,42,4,18]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 42; @position = 4; ]
     VIBRATE_PERIOD = 1000,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 43; @position = 4; @symbol_enumdec = [VIBRATE_DUTY_CYCLE,43,4,22]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 43; @position = 4; ]
     VIBRATE_DUTY_CYCLE = 50
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 51; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 51; ]
 enum {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 52; @position = 4; @symbol_enumdec = [STEP_INIT,52,4,13]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 52; @position = 4; ]
     STEP_INIT,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 53; @position = 4; @symbol_enumdec = [COUNTDOWN,53,4,13]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 53; @position = 4; ]
     COUNTDOWN,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 54; @position = 4; @symbol_enumdec = [WARM1,54,4,9]; ]
-    WARM1,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 55; @position = 4; @symbol_enumdec = [WARM2,55,4,9]; ]
-    WARM2,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 56; @position = 4; @symbol_enumdec = [WARM3,56,4,9]; ]
-    WARM3,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 57; @position = 4; @symbol_enumdec = [REST1,57,4,9]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 54; @position = 4; ]
+    CV1,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 55; @position = 4; ]
+    CV2,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 56; @position = 4; ]
     REST1,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 58; @position = 4; @symbol_enumdec = [STEPTEST,58,4,12]; ]
-    STEPTEST,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 59; @position = 4; @symbol_enumdec = [COOLDOWN,59,4,12]; ]
-    COOLDOWN
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 57; @position = 4; ]
+    ACCELS,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 58; @position = 4; ]
+    REST2,
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 59; @position = 4; ]
+    STOP
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 62; ]
-enum {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 63; @position = 4; @symbol_enumdec = [SEND_INIT,63,4,13]; ]
-    SEND_INIT,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 64; @position = 4; @symbol_enumdec = [SEND_USER,64,4,13]; ]
-    SEND_USER,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 65; @position = 4; @symbol_enumdec = [CONF_USER,65,4,13]; ]
-    CONF_USER,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 66; @position = 4; @symbol_enumdec = [SEND_TARGPWR,66,4,16]; ]
-    SEND_TARGPWR,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 67; @position = 4; @symbol_enumdec = [CONF_TARGPWR,67,4,16]; ]
-    CONF_TARGPWR,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 68; @position = 4; @symbol_enumdec = [SEND_WINDRESIST,68,4,19]; ]
-    SEND_WINDRESIST,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 69; @position = 4; @symbol_enumdec = [CONF_WINDRESIST,69,4,19]; ]
-    CONF_WINDRESIST,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 70; @position = 4; @symbol_enumdec = [SEND_TRACKRESIST,70,4,20]; ]
-    SEND_TRACKRESIST,
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 71; @position = 4; @symbol_enumdec = [CONF_TRACKRESIST,71,4,20]; ]
-    CONF_TRACKRESIST
-}
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 74; @position = 6; @symbol_constdef = [FTP_DEFAULT,74,6,17]; ]
-const FTP_DEFAULT = 150;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 75; @position = 6; @symbol_constdef = [DURATION_DEFAULT,75,6,22]; ]
-const DURATION_DEFAULT = 60;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 76; @position = 6; @symbol_constdef = [STEPSIZE_DEFAULT,76,6,22]; ]
-const STEPSIZE_DEFAULT = 20;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 77; @position = 6; @symbol_constdef = [INITLOAD_DEFAULT,77,6,22]; ]
-const INITLOAD_DEFAULT = 60;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 78; @position = 4; @symbol_vardef = [IS_FEC_NATIVE,78,4,17]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 63; @position = 6; ]
+const BP1_DEFAULT = 100;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 64; @position = 6; ]
+const BP2_DEFAULT = 200;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 65; @position = 6; ]
+const CVPREP_DEFAULT = 300;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 66; @position = 6; ]
+const CVREST_DEFAULT = 60;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 67; @position = 6; ]
+const ACCEL_DEFAULT = 20;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 68; @position = 6; ]
+const ACCELREST_DEFAULT = 60;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 69; @position = 6; ]
+const NUMACCEL_DEFAULT = 5;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 70; @position = 4; ]
 var IS_FEC_NATIVE = false;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 80; @symbol_classdef = [MoxyStepTest,80,6,18]; @symbol_extends<0> = [Application,80,27,38]; @symbol_extends<1> = [AppBase,80,39,46]; ]
-class MoxyStepTest extends Application.AppBase {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 80; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 72; ]
+class MoxyCycWarmup extends Application.AppBase{
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 72; ]
     <init> {
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 96 8 ]
-        symbol [ STEP_INIT %tmp.50 96 20 29 ];
-        %tmp.50 = getv ? :STEP_INIT;
-        putv self :stepIndex %tmp.50;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 94 8 ]
+        %tmp.56 = getv ? :STEP_INIT;
+        putv self :stepIndex %tmp.56;
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 80; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 72; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 81; @position = 15; @symbol_vardef = [mTimer,81,15,21]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 73; @position = 15; ]
     protected
     var mTimer;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 82; @position = 15; @symbol_vardef = [mMO2,82,15,19]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 74; @position = 15; ]
     protected
     var mMO2;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 83; @position = 15; @symbol_vardef = [mFEC,83,15,19]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 75; @position = 15; ]
     protected
     var mFEC;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 84; @position = 15; @symbol_vardef = [mFECControl,84,15,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 76; @position = 15; ]
     protected
     var mFECControl;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 85; @position = 15; @symbol_vardef = [mViewAlert,85,15,25]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 77; @position = 15; ]
     protected
     var mViewAlert;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 86; @position = 15; @symbol_vardef = [mDelegate,86,15,24]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 78; @position = 15; ]
     protected
     var mDelegate;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 87; @position = 15; @symbol_vardef = [mActivity,87,15,24]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 79; @position = 15; ]
     protected
     var mActivity;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 88; @position = 15; @symbol_vardef = [mFitContrib,88,15,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 80; @position = 15; ]
     protected
     var mFitContrib;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 89; @position = 8; @symbol_vardef = [lapStartDist,89,8,20]; ]
-    var lapStartDist = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 90; @position = 8; @symbol_vardef = [lapStartTime,90,8,20]; ]
-    var lapStartTime = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 91; @position = 8; @symbol_vardef = [lapPrevDist,91,8,19]; ]
-    var lapPrevDist;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 92; @position = 8; @symbol_vardef = [lapPrevTime,92,8,19]; ]
-    var lapPrevTime;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 93; @position = 8; @symbol_vardef = [btnAlert,93,8,16]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 81; @position = 15; ]
+    protected
+    var mInfo;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 82; @position = 15; ]
+    protected
+    var pwrHead = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 83; @position = 15; ]
+    protected
+    var pwrTail = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 84; @position = 15; ]
+    protected
+    var pwrSize = 10;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 85; @position = 15; ]
+    protected
+    var pwrBuffer;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 88; @position = 8; ]
     var btnAlert;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 94; @position = 8; @symbol_vardef = [targetPower,94,8,19]; ]
-    var targetPower = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 95; @position = 8; @symbol_vardef = [stepStartTime,95,8,21]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 89; @position = 8; ]
+    var targPwr1 = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 90; @position = 8; ]
+    var targPwr2 = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 91; @position = 8; ]
+    var BreakPt1 = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 92; @position = 8; ]
+    var BreakPt2 = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 93; @position = 8; ]
     var stepStartTime = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 96; @position = 8; @symbol_vardef = [stepIndex,96,8,17]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 94; @position = 8; ]
     var stepIndex;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 97; @position = 8; @symbol_vardef = [stepDuration,97,8,20]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 95; @position = 8; ]
     var stepDuration = 1000;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 98; @position = 8; @symbol_vardef = [loadStep,98,8,16]; ]
-    var loadStep = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 99; @position = 8; @symbol_vardef = [is_lap_beg_marked,99,8,25]; ]
-    var is_lap_beg_marked = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 100; @position = 8; @symbol_vardef = [is_lap_end_marked,100,8,25]; ]
-    var is_lap_end_marked = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 102; @symbol_functiondef = [initialize,102,13,23]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 96; @position = 8; ]
+    var accelerator = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 99; @position = 8; ]
+    var pwrSmooth = 0;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 101; ]
     function initialize() as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_102_26_109_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 103 8 ]
-        symbol [ AppBase %tmp.2 103 8 15 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_101_26_111_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 102 8 ]
         %tmp.2 = getv ? :AppBase;
-        symbol [ initialize %tmp.3 103 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 104 8 ]
-        symbol [ Timer %tmp.6 104 21 26 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 103 8 ]
         %tmp.6 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.7 104 27 32 ];
         %tmp.7 = getv function ? %tmp.6 :Timer;
         %tmp.4 = newc %tmp.7 ();
-        symbol [ mTimer ? 104 8 14 ];
         putv self :mTimer %tmp.4;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 105 8 ]
-        symbol [ BTN_NONE %tmp.9 105 19 27 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 104 8 ]
         %tmp.9 = getv ? :BTN_NONE;
-        symbol [ btnAlert ? 105 8 16 ];
         putv self :btnAlert %tmp.9;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 106 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_8_108_8_if_stmt:
-        symbol [ Toybox %tmp.11 106 12 18 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 105 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_8_107_8_if_stmt:
         %tmp.11 = getv ? :Toybox;
-        symbol [ AntPlus %tmp.12 106 19 26 ];
         %tmp.12 = getv %tmp.11 :AntPlus;
         %tmp.14 = const :FitnessEquipment;
         %tmp.15 = canhazplz %tmp.12 %tmp.14;
-        bf %tmp.15 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_8_108_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_8_108_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_50_108_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 107 12 ]
+        bf %tmp.15 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_8_107_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_8_107_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_50_107_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 106 12 ]
         %tmp.16 = true;
-        symbol [ IS_FEC_NATIVE ? 107 12 25 ];
         putv self :IS_FEC_NATIVE %tmp.16;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_50_108_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_8_108_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_106_8_108_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_102_26_109_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_50_107_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_8_107_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_105_8_107_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 109 8 ]
+        %tmp.17 = 10;
+        putv self :pwrSize %tmp.17;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 110 8 ]
+        %tmp.20 = getv ? :pwrSize;
+        %tmp.21 = 1;
+        %tmp.22 = add %tmp.20 %tmp.21;
+        %tmp.18 = newa %tmp.22;
+        putv self :pwrBuffer %tmp.18;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_101_26_111_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 112; @symbol_functiondef = [onStart,112,13,20]; @symbol_param<0> = [state,112,21,26]; @symbol_param<0>_type<0> = [Dictionary,112,30,40]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 114; ]
     function onStart(state as Dictionary or Null) as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_112_51_136_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 113 8 ]
-        symbol [ MO2Sensor %tmp.4 113 19 28 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_114_51_138_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 115 8 ]
         %tmp.4 = getv ? :MO2Sensor;
         %tmp.1 = newc %tmp.4 ();
-        symbol [ mMO2 ? 113 8 12 ];
         putv self :mMO2 %tmp.1;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 114 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_8_123_8_if_stmt:
-        symbol [ IS_FEC_NATIVE %tmp.6 114 12 25 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 116 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_8_123_8_if_stmt:
         %tmp.6 = getv ? :IS_FEC_NATIVE;
-        bf %tmp.6 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_8_123_8_if_else_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_8_123_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_27_118_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 115 12 ]
-        symbol [ MyFitnessEquipmentListener %tmp.10 115 23 49 ];
+        bf %tmp.6 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_8_123_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_8_123_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_27_119_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 117 12 ]
         %tmp.10 = getv ? :MyFitnessEquipmentListener;
         %tmp.7 = newc %tmp.10 ();
-        symbol [ mFEC ? 115 12 16 ];
         putv self :mFEC %tmp.7;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 116 12 ]
-        symbol [ AntPlus %tmp.13 116 30 37 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 118 12 ]
         %tmp.13 = getm $.Toybox.AntPlus;
-        symbol [ FitnessEquipment %tmp.14 116 38 54 ];
         %tmp.14 = getv function ? %tmp.13 :FitnessEquipment;
-        symbol [ mFEC %tmp.16 116 55 59 ];
         %tmp.16 = getv ? :mFEC;
         %tmp.11 = newc %tmp.14 (%tmp.16);
-        symbol [ mFECControl ? 116 12 23 ];
         putv self :mFECControl %tmp.11;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 117 12 ]
-        symbol [ System %tmp.17 117 12 18 ];
-        %tmp.17 = getm $.Toybox.System;
-        symbol [ println %tmp.18 117 19 26 ];
-        %tmp.18 = getv function %tmp.17 :println;
-        %tmp.19 = "yes it has";
-        invoke %tmp.17 %tmp.18(%tmp.19);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_27_118_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_8_123_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_8_123_8_if_else_false:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_119_13_123_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 120 12 ]
-        symbol [ FECTrainer %tmp.23 120 23 33 ];
-        %tmp.23 = getv ? :FECTrainer;
-        %tmp.20 = newc %tmp.23 ();
-        symbol [ mFEC ? 120 12 16 ];
-        putv self :mFEC %tmp.20;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 121 12 ]
-        symbol [ mFEC %tmp.25 121 26 30 ];
-        %tmp.25 = getv ? :mFEC;
-        symbol [ mFECControl ? 121 12 23 ];
-        putv self :mFECControl %tmp.25;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 122 12 ]
-        symbol [ System %tmp.26 122 12 18 ];
-        %tmp.26 = getm $.Toybox.System;
-        symbol [ println %tmp.27 122 19 26 ];
-        %tmp.27 = getv function %tmp.26 :println;
-        %tmp.28 = "no it has not";
-        invoke %tmp.26 %tmp.27(%tmp.28);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_119_13_123_8_stop:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_114_8_123_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 125 8 ]
-        symbol [ ViewAlert %tmp.32 125 25 34 ];
-        %tmp.32 = getv ? :ViewAlert;
-        symbol [ mMO2 %tmp.34 125 35 39 ];
-        %tmp.34 = getv ? :mMO2;
-        %tmp.29 = newc %tmp.32 (%tmp.34);
-        symbol [ mViewAlert ? 125 8 18 ];
-        putv self :mViewAlert %tmp.29;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 127 8 ]
-        symbol [ Sensor %tmp.35 127 8 14 ];
-        %tmp.35 = getm $.Toybox.Sensor;
-        symbol [ setEnabledSensors %tmp.36 127 15 32 ];
-        %tmp.36 = getv function %tmp.35 :setEnabledSensors;
-        %tmp.37 = newa 4;
-        symbol [ Sensor %tmp.38 127 34 40 ];
-        %tmp.38 = getm $.Toybox.Sensor;
-        symbol [ SENSOR_HEARTRATE %tmp.39 127 41 57 ];
-        %tmp.39 = getv %tmp.38 :SENSOR_HEARTRATE;
-        %tmp.40 = dup %tmp.37;
-        %tmp.41 = aputv %tmp.40 0 %tmp.39;
-        symbol [ Sensor %tmp.42 128 34 40 ];
-        %tmp.42 = getm $.Toybox.Sensor;
-        symbol [ SENSOR_BIKECADENCE %tmp.43 128 41 59 ];
-        %tmp.43 = getv %tmp.42 :SENSOR_BIKECADENCE;
-        %tmp.44 = dup %tmp.41;
-        %tmp.45 = aputv %tmp.44 1 %tmp.43;
-        symbol [ Sensor %tmp.46 129 34 40 ];
-        %tmp.46 = getm $.Toybox.Sensor;
-        symbol [ SENSOR_BIKESPEED %tmp.47 129 41 57 ];
-        %tmp.47 = getv %tmp.46 :SENSOR_BIKESPEED;
-        %tmp.48 = dup %tmp.45;
-        %tmp.49 = aputv %tmp.48 2 %tmp.47;
-        symbol [ Sensor %tmp.50 130 34 40 ];
-        %tmp.50 = getm $.Toybox.Sensor;
-        symbol [ SENSOR_BIKEPOWER %tmp.51 130 41 57 ];
-        %tmp.51 = getv %tmp.50 :SENSOR_BIKEPOWER;
-        %tmp.52 = dup %tmp.49;
-        %tmp.53 = aputv %tmp.52 3 %tmp.51;
-        invoke %tmp.35 %tmp.36(%tmp.53);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 132 8 ]
-        symbol [ Position %tmp.54 132 8 16 ];
-        %tmp.54 = getm $.Toybox.Position;
-        symbol [ enableLocationEvents %tmp.55 132 17 37 ];
-        %tmp.55 = getv function %tmp.54 :enableLocationEvents;
-        symbol [ Position %tmp.56 132 38 46 ];
-        %tmp.56 = getm $.Toybox.Position;
-        symbol [ LOCATION_CONTINUOUS %tmp.57 132 47 66 ];
-        %tmp.57 = getv %tmp.56 :LOCATION_CONTINUOUS;
-        %tmp.58 = self;
-        symbol [ method %tmp.59 132 67 73 ];
-        %tmp.59 = getv function %tmp.58 :method;
-        %tmp.61 = const :onPositionCallback;
-        %tmp.62 = invoke %tmp.58 %tmp.59(%tmp.61);
-        invoke %tmp.54 %tmp.55(%tmp.57, %tmp.62);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 134 2 ]
-        %tmp.63 = self;
-        symbol [ createActivity %tmp.64 134 2 16 ];
-        %tmp.64 = getv function %tmp.63 :createActivity;
-        invoke %tmp.63 %tmp.64();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 135 8 ]
-        symbol [ mTimer %tmp.66 135 8 14 ];
-        %tmp.66 = getv ? :mTimer;
-        symbol [ start %tmp.67 135 15 20 ];
-        %tmp.67 = getv function %tmp.66 :start;
-        %tmp.68 = self;
-        symbol [ self %tmp.68 135 21 25 ];
-        symbol [ method %tmp.69 135 26 32 ];
-        %tmp.69 = getv function %tmp.68 :method;
-        %tmp.71 = const :onTimerCallback;
-        %tmp.72 = invoke %tmp.68 %tmp.69(%tmp.71);
-        %tmp.73 = 1000;
-        %tmp.74 = true;
-        invoke %tmp.66 %tmp.67(%tmp.72, %tmp.73, %tmp.74);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_112_51_136_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_27_119_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_8_123_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_8_123_8_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_120_13_123_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 121 12 ]
+        %tmp.20 = getv ? :FECTrainer;
+        %tmp.17 = newc %tmp.20 ();
+        putv self :mFEC %tmp.17;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 122 12 ]
+        %tmp.22 = getv ? :mFEC;
+        putv self :mFECControl %tmp.22;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_120_13_123_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_116_8_123_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 125 8 ]
+        %tmp.26 = getv ? :ViewAlert;
+        %tmp.28 = getv ? :mMO2;
+        %tmp.23 = newc %tmp.26 (%tmp.28);
+        putv self :mViewAlert %tmp.23;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 127 8 ]
+        %tmp.29 = getm $.Toybox.Sensor;
+        %tmp.30 = getv function %tmp.29 :setEnabledSensors;
+        %tmp.31 = newa 4;
+        %tmp.32 = getm $.Toybox.Sensor;
+        %tmp.33 = getv %tmp.32 :SENSOR_HEARTRATE;
+        %tmp.34 = dup %tmp.31;
+        %tmp.35 = aputv %tmp.34 0 %tmp.33;
+        %tmp.36 = getm $.Toybox.Sensor;
+        %tmp.37 = getv %tmp.36 :SENSOR_BIKECADENCE;
+        %tmp.38 = dup %tmp.35;
+        %tmp.39 = aputv %tmp.38 1 %tmp.37;
+        %tmp.40 = getm $.Toybox.Sensor;
+        %tmp.41 = getv %tmp.40 :SENSOR_BIKESPEED;
+        %tmp.42 = dup %tmp.39;
+        %tmp.43 = aputv %tmp.42 2 %tmp.41;
+        %tmp.44 = getm $.Toybox.Sensor;
+        %tmp.45 = getv %tmp.44 :SENSOR_BIKEPOWER;
+        %tmp.46 = dup %tmp.43;
+        %tmp.47 = aputv %tmp.46 3 %tmp.45;
+        invoke %tmp.29 %tmp.30(%tmp.47);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 132 8 ]
+        %tmp.48 = getm $.Toybox.Position;
+        %tmp.49 = getv function %tmp.48 :enableLocationEvents;
+        %tmp.50 = getm $.Toybox.Position;
+        %tmp.51 = getv %tmp.50 :LOCATION_CONTINUOUS;
+        %tmp.52 = self;
+        %tmp.53 = getv function %tmp.52 :method;
+        %tmp.55 = const :onPositionCallback;
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.55);
+        invoke %tmp.48 %tmp.49(%tmp.51, %tmp.56);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 134 2 ]
+        %tmp.57 = self;
+        %tmp.58 = getv function %tmp.57 :createActivity;
+        invoke %tmp.57 %tmp.58();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 135 8 ]
+        %tmp.60 = getv ? :mTimer;
+        %tmp.61 = getv function %tmp.60 :start;
+        %tmp.62 = lgetv %self;
+        %tmp.63 = getv function %tmp.62 :method;
+        %tmp.65 = const :onTimerCallback;
+        %tmp.66 = invoke %tmp.62 %tmp.63(%tmp.65);
+        %tmp.67 = 1000;
+        %tmp.68 = true;
+        invoke %tmp.60 %tmp.61(%tmp.66, %tmp.67, %tmp.68);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 136 8 ]
+        %tmp.69 = self;
+        %tmp.70 = getv function %tmp.69 :resetSmooth;
+        invoke %tmp.69 %tmp.70();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 137 8 ]
+        %tmp.71 = 0;
+        putv self :pwrSmooth %tmp.71;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_114_51_138_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 138; @symbol_functiondef = [onStop,138,13,19]; @symbol_param<0> = [state,138,20,25]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 140; ]
     function onStop(state) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_138_27_149_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 139 8 ]
-        symbol [ mTimer %tmp.2 139 8 14 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_140_27_151_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 141 8 ]
         %tmp.2 = getv ? :mTimer;
-        symbol [ stop %tmp.3 139 15 19 ];
         %tmp.3 = getv function %tmp.2 :stop;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 142 8 ]
-        symbol [ Position %tmp.4 142 8 16 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 144 8 ]
         %tmp.4 = getm $.Toybox.Position;
-        symbol [ enableLocationEvents %tmp.5 142 17 37 ];
         %tmp.5 = getv function %tmp.4 :enableLocationEvents;
-        symbol [ Position %tmp.6 142 38 46 ];
         %tmp.6 = getm $.Toybox.Position;
-        symbol [ LOCATION_DISABLE %tmp.7 142 47 63 ];
         %tmp.7 = getv %tmp.6 :LOCATION_DISABLE;
         %tmp.8 = self;
-        symbol [ method %tmp.9 142 65 71 ];
         %tmp.9 = getv function %tmp.8 :method;
         %tmp.11 = const :onPositionCallback;
         %tmp.12 = invoke %tmp.8 %tmp.9(%tmp.11);
         invoke %tmp.4 %tmp.5(%tmp.7, %tmp.12);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 145 8 ]
-        symbol [ Sensor %tmp.13 145 8 14 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 147 8 ]
         %tmp.13 = getm $.Toybox.Sensor;
-        symbol [ setEnabledSensors %tmp.14 145 15 32 ];
         %tmp.14 = getv function %tmp.13 :setEnabledSensors;
         %tmp.15 = newa 0;
         invoke %tmp.13 %tmp.14(%tmp.15);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 148 8 ]
-        symbol [ mMO2 %tmp.17 148 8 12 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 150 8 ]
         %tmp.17 = getv ? :mMO2;
-        symbol [ release %tmp.18 148 13 20 ];
         %tmp.18 = getv function %tmp.17 :release;
         invoke %tmp.17 %tmp.18();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_138_27_149_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_140_27_151_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 151; @symbol_functiondef = [getInitialView,151,13,27]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 153; ]
     function getInitialView() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_151_30_156_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 152 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_151_30_156_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_151_30_156_4_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_153_30_158_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 154 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_153_30_158_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_153_30_158_4_stop" ]
         %view.1 = local;
-        symbol [ view %view.1 152 12 16 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 153 8 ]
-        symbol [ MCycView0 %tmp.4 153 19 28 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 155 8 ]
         %tmp.4 = getv ? :MCycView0;
-        symbol [ mMO2 %tmp.6 153 29 33 ];
         %tmp.6 = getv ? :mMO2;
-        symbol [ mFEC %tmp.8 153 35 39 ];
         %tmp.8 = getv ? :mFEC;
-        symbol [ mViewAlert %tmp.10 153 41 51 ];
         %tmp.10 = getv ? :mViewAlert;
         %tmp.1 = newc %tmp.4 (%tmp.6, %tmp.8, %tmp.10);
         lputv %view.1 %tmp.1;
-        symbol [ view %view.1 153 8 12 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 154 8 ]
-        symbol [ MCycDelegate %tmp.14 154 24 36 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 156 8 ]
         %tmp.14 = getv ? :MCycDelegate;
         %tmp.15 = 0;
-        %tmp.16 = lgetv %view.1;
-        symbol [ view %tmp.16 154 40 44 ];
-        symbol [ mMO2 %tmp.18 154 46 50 ];
-        %tmp.18 = getv ? :mMO2;
-        symbol [ mFEC %tmp.20 154 52 56 ];
-        %tmp.20 = getv ? :mFEC;
-        symbol [ mViewAlert %tmp.22 154 58 68 ];
-        %tmp.22 = getv ? :mViewAlert;
-        %tmp.11 = newc %tmp.14 (%tmp.15, %tmp.16, %tmp.18, %tmp.20, %tmp.22);
-        symbol [ mDelegate ? 154 8 17 ];
+        %tmp.17 = lgetv %view.1;
+        %tmp.19 = getv ? :mMO2;
+        %tmp.21 = getv ? :mFEC;
+        %tmp.23 = getv ? :mViewAlert;
+        %tmp.11 = newc %tmp.14 (%tmp.15, %tmp.17, %tmp.19, %tmp.21, %tmp.23);
         putv self :mDelegate %tmp.11;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 155 8 ]
-        %tmp.23 = newa 2;
-        %tmp.24 = lgetv %view.1;
-        symbol [ view %tmp.24 155 17 21 ];
-        %tmp.25 = dup %tmp.23;
-        %tmp.26 = aputv %tmp.25 0 %tmp.24;
-        symbol [ mDelegate %tmp.28 155 23 32 ];
-        %tmp.28 = getv ? :mDelegate;
-        %tmp.29 = dup %tmp.26;
-        %tmp.30 = aputv %tmp.29 1 %tmp.28;
-        ret %tmp.30;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_151_30_156_4_stop:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 157 8 ]
+        %tmp.24 = newa 2;
+        %tmp.26 = lgetv %view.1;
+        %tmp.27 = dup %tmp.24;
+        %tmp.28 = aputv %tmp.27 0 %tmp.26;
+        %tmp.30 = getv ? :mDelegate;
+        %tmp.31 = dup %tmp.28;
+        %tmp.32 = aputv %tmp.31 1 %tmp.30;
+        ret %tmp.32;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_153_30_158_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 158; @symbol_functiondef = [onPositionCallback,158,20,38]; @symbol_param<0> = [info,158,39,43]; @symbol_param<0>_type<0> = [Position,158,47,55]; @symbol_param<0>_type<1> = [Info,158,56,60]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 160; ]
     public
     function onPositionCallback(info as Position.Info) as Void {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 162; @symbol_functiondef = [onTimerCallback,162,13,28]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 164; ]
     function onTimerCallback() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_162_31_170_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 163 2 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_2_167_2_if_stmt:
-        symbol [ mFitContrib %tmp.2 163 6 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_164_31_174_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 165 2 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_2_169_2_if_stmt:
         %tmp.2 = getv ? :mFitContrib;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_2_167_2_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_2_167_2_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_27_167_2_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 164 3 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_3_166_3_if_stmt:
-        symbol [ mActivity %tmp.6 164 7 16 ];
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_2_169_2_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_2_169_2_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_27_169_2_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 166 3 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_3_168_3_if_stmt:
         %tmp.6 = getv ? :mActivity;
         %tmp.7 = null;
         %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_3_166_3_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_3_166_3_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_26_166_3_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 165 4 ]
-        symbol [ mFitContrib %tmp.10 165 4 15 ];
+        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_3_168_3_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_3_168_3_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_26_168_3_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 167 4 ]
         %tmp.10 = getv ? :mFitContrib;
         %tmp.11 = as %tmp.10 { (!Null) };
-        symbol [ compute %tmp.12 165 16 23 ];
         %tmp.12 = getv function %tmp.11 :compute;
-        symbol [ mMO2 %tmp.14 165 24 28 ];
         %tmp.14 = getv ? :mMO2;
         invoke %tmp.11 %tmp.12(%tmp.14);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_26_166_3_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_3_166_3_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_164_3_166_3_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_27_167_2_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_2_167_2_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_163_2_167_2_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 168 8 ]
-        %tmp.15 = self;
-        symbol [ checkStepTime %tmp.16 168 8 21 ];
-        %tmp.16 = getv function %tmp.15 :checkStepTime;
-        invoke %tmp.15 %tmp.16();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 169 8 ]
-        symbol [ WatchUi %tmp.17 169 8 15 ];
-        %tmp.17 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.18 169 16 29 ];
-        %tmp.18 = getv function %tmp.17 :requestUpdate;
-        invoke %tmp.17 %tmp.18();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_162_31_170_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_26_168_3_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_3_168_3_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_166_3_168_3_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_27_169_2_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_2_169_2_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_165_2_169_2_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 170 8 ]
+        %tmp.15 = getm $.Toybox.Activity;
+        %tmp.16 = getv function %tmp.15 :getActivityInfo;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        putv self :mInfo %tmp.17;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 171 8 ]
+        %tmp.18 = self;
+        %tmp.19 = getv function %tmp.18 :checkStepTime;
+        invoke %tmp.18 %tmp.19();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 172 8 ]
+        %tmp.20 = self;
+        %tmp.21 = getv function %tmp.20 :smoothPower;
+        invoke %tmp.20 %tmp.21();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 173 8 ]
+        %tmp.22 = getm $.Toybox.WatchUi;
+        %tmp.23 = getv function %tmp.22 :requestUpdate;
+        invoke %tmp.22 %tmp.23();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_164_31_174_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 172; @symbol_functiondef = [checkStepTime,172,13,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 176; ]
     function checkStepTime() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_172_29_195_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 173 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_172_29_195_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_172_29_195_4_stop" ]
-        %info.1 = local;
-        symbol [ info %info.1 173 12 16 ];
-        symbol [ Activity %tmp.1 173 19 27 ];
-        %tmp.1 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.2 173 28 43 ];
-        %tmp.2 = getv function %tmp.1 :getActivityInfo;
-        %tmp.3 = invoke %tmp.1 %tmp.2();
-        lputv %info.1 %tmp.3;
-        symbol [ info %info.1 173 12 16 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 174 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_8_194_8_if_stmt:
-        %tmp.4 = lgetv %info.1;
-        symbol [ info %tmp.4 174 12 16 ];
-        %tmp.5 = null;
-        %tmp.6 = ne %tmp.4 %tmp.5;
-        bf %tmp.6 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_8_194_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_8_194_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_26_194_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 175 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_12_193_12_if_stmt:
-        %tmp.7 = lgetv %info.1;
-        symbol [ info %tmp.7 175 16 20 ];
-        %tmp.8 = as %tmp.7 { (!Null) };
-        symbol [ timerTime %tmp.9 175 21 30 ];
-        %tmp.9 = getv %tmp.8 :timerTime;
-        %tmp.10 = null;
-        %tmp.11 = ne %tmp.9 %tmp.10;
-        bf %tmp.11 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_12_193_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_12_193_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_39_193_12_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 176 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_16_187_16_if_stmt:
-        symbol [ stepIndex %tmp.13 176 19 28 ];
-        %tmp.13 = getv ? :stepIndex;
-        symbol [ STEPTEST %tmp.15 176 32 40 ];
-        %tmp.15 = getv ? :STEPTEST;
-        %tmp.16 = eq %tmp.13 %tmp.15;
-        bf %tmp.16 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_16_187_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_16_187_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_41_187_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 177 20 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_20_181_20_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_24_177_87_begin:
-        symbol [ is_lap_beg_marked %tmp.18 177 25 42 ];
-        %tmp.18 = getv ? :is_lap_beg_marked;
-        %tmp.19 = not %tmp.18;
-        bf %tmp.19 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_20_181_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_46_177_87_true:
-        %tmp.20 = lgetv %info.1;
-        symbol [ info %tmp.20 177 47 51 ];
-        %tmp.21 = as %tmp.20 { (!Null) };
-        symbol [ timerTime %tmp.22 177 52 61 ];
-        %tmp.22 = getv %tmp.21 :timerTime;
-        symbol [ stepStartTime %tmp.24 177 64 77 ];
-        %tmp.24 = getv ? :stepStartTime;
-        %tmp.25 = sub %tmp.22 %tmp.24;
-        %tmp.26 = 50;
-        %tmp.27 = 1000;
-        %tmp.28 = mul %tmp.26 %tmp.27;
-        %tmp.29 = gt %tmp.25 %tmp.28;
-        push %tmp.29;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_46_177_87_end:
-        %tmp.30 = phi [%tmp.19 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_24_177_87_begin] [%tmp.29 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_46_177_87_true] [%tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_46_177_87_end];
-        bf %tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_20_181_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_20_181_20_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_90_181_20_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 178 24 ]
-        symbol [ mFitContrib %tmp.32 178 24 35 ];
-        %tmp.32 = getv ? :mFitContrib;
-        symbol [ lap %tmp.33 178 36 39 ];
-        %tmp.33 = getv function %tmp.32 :lap;
-        %tmp.34 = 4;
-        invoke %tmp.32 %tmp.33(%tmp.34);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 179 24 ]
-        symbol [ mActivity %tmp.36 179 24 33 ];
-        %tmp.36 = getv ? :mActivity;
-        symbol [ addLap %tmp.37 179 34 40 ];
-        %tmp.37 = getv function %tmp.36 :addLap;
-        invoke %tmp.36 %tmp.37();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 180 24 ]
-        %tmp.38 = true;
-        symbol [ is_lap_beg_marked ? 180 24 41 ];
-        putv self :is_lap_beg_marked %tmp.38;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_90_181_20_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_20_181_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_177_20_181_20_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 182 20 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_20_186_20_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_24_182_101_begin:
-        symbol [ is_lap_end_marked %tmp.40 182 25 42 ];
-        %tmp.40 = getv ? :is_lap_end_marked;
-        %tmp.41 = not %tmp.40;
-        bf %tmp.41 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_20_186_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_46_182_101_true:
-        %tmp.42 = lgetv %info.1;
-        symbol [ info %tmp.42 182 47 51 ];
-        %tmp.43 = as %tmp.42 { (!Null) };
-        symbol [ timerTime %tmp.44 182 52 61 ];
-        %tmp.44 = getv %tmp.43 :timerTime;
-        symbol [ stepStartTime %tmp.46 182 64 77 ];
-        %tmp.46 = getv ? :stepStartTime;
-        %tmp.47 = sub %tmp.44 %tmp.46;
-        symbol [ stepDuration %tmp.49 182 81 93 ];
-        %tmp.49 = getv ? :stepDuration;
-        %tmp.50 = 3000;
-        %tmp.51 = sub %tmp.49 %tmp.50;
-        %tmp.52 = gt %tmp.47 %tmp.51;
-        push %tmp.52;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_46_182_101_end:
-        %tmp.53 = phi [%tmp.41 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_24_182_101_begin] [%tmp.52 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_46_182_101_true] [%tmp.53 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_46_182_101_end];
-        bf %tmp.53 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_20_186_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_20_186_20_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_104_186_20_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 183 24 ]
-        symbol [ mFitContrib %tmp.55 183 24 35 ];
-        %tmp.55 = getv ? :mFitContrib;
-        symbol [ lap %tmp.56 183 36 39 ];
-        %tmp.56 = getv function %tmp.55 :lap;
-        %tmp.57 = 0;
-        invoke %tmp.55 %tmp.56(%tmp.57);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 184 24 ]
-        symbol [ mActivity %tmp.59 184 24 33 ];
-        %tmp.59 = getv ? :mActivity;
-        symbol [ addLap %tmp.60 184 34 40 ];
-        %tmp.60 = getv function %tmp.59 :addLap;
-        invoke %tmp.59 %tmp.60();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 185 24 ]
-        %tmp.61 = true;
-        symbol [ is_lap_end_marked ? 185 24 41 ];
-        putv self :is_lap_end_marked %tmp.61;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_104_186_20_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_20_186_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_182_20_186_20_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_41_187_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_16_187_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_176_16_187_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 188 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_16_192_16_if_stmt:
-        %tmp.62 = lgetv %info.1;
-        symbol [ info %tmp.62 188 20 24 ];
-        %tmp.63 = as %tmp.62 { (!Null) };
-        symbol [ timerTime %tmp.64 188 25 34 ];
-        %tmp.64 = getv %tmp.63 :timerTime;
-        symbol [ stepStartTime %tmp.66 188 37 50 ];
-        %tmp.66 = getv ? :stepStartTime;
-        %tmp.67 = sub %tmp.64 %tmp.66;
-        symbol [ stepDuration %tmp.69 188 54 66 ];
-        %tmp.69 = getv ? :stepDuration;
-        %tmp.70 = 500;
-        %tmp.71 = sub %tmp.69 %tmp.70;
-        %tmp.72 = gt %tmp.67 %tmp.71;
-        bf %tmp.72 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_16_192_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_16_192_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_75_192_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 189 20 ]
-        %tmp.73 = self;
-        symbol [ incrementStep %tmp.74 189 20 33 ];
-        %tmp.74 = getv function %tmp.73 :incrementStep;
-        invoke %tmp.73 %tmp.74();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 190 20 ]
-        %tmp.75 = false;
-        symbol [ is_lap_beg_marked ? 190 20 37 ];
-        putv self :is_lap_beg_marked %tmp.75;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 191 20 ]
-        %tmp.76 = false;
-        symbol [ is_lap_end_marked ? 191 20 37 ];
-        putv self :is_lap_end_marked %tmp.76;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_75_192_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_16_192_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_188_16_192_16_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_39_193_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_12_193_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_175_12_193_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_26_194_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_8_194_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_174_8_194_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_172_29_195_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_176_29_180_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 177 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_8_179_8_if_stmt:
+        %tmp.2 = getv ? :mInfo;
+        %tmp.3 = getv %tmp.2 :timerTime;
+        %tmp.5 = getv ? :stepStartTime;
+        %tmp.6 = sub %tmp.3 %tmp.5;
+        %tmp.8 = getv ? :stepDuration;
+        %tmp.9 = 500;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        %tmp.11 = gt %tmp.6 %tmp.10;
+        bf %tmp.11 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_8_179_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_8_179_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_70_179_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 178 12 ]
+        %tmp.12 = self;
+        %tmp.13 = getv function %tmp.12 :incrementStep;
+        invoke %tmp.12 %tmp.13();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_70_179_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_8_179_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_177_8_179_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_176_29_180_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 197; @symbol_functiondef = [incrementStep,197,13,26]; ]
-    function incrementStep() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 198 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_stop" ]
-        %info.1 = local;
-        symbol [ info %info.1 198 12 16 ];
-        symbol [ Activity %tmp.1 198 19 27 ];
-        %tmp.1 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.2 198 28 43 ];
-        %tmp.2 = getv function %tmp.1 :getActivityInfo;
-        %tmp.3 = invoke %tmp.1 %tmp.2();
-        lputv %info.1 %tmp.3;
-        symbol [ info %info.1 198 12 16 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 199 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_stop" ]
-        %ftp.2 = local;
-        symbol [ ftp %ftp.2 199 12 15 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 200 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_stop" ]
-        %stepsize.3 = local;
-        symbol [ stepsize %stepsize.3 200 12 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 201 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_stop" ]
-        %initload.4 = local;
-        symbol [ initload %initload.4 201 12 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 202 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_8_204_8_if_stmt:
-        symbol [ stepIndex %tmp.5 202 11 20 ];
-        %tmp.5 = getv ? :stepIndex;
-        symbol [ STEPTEST %tmp.7 202 23 31 ];
-        %tmp.7 = getv ? :STEPTEST;
-        %tmp.8 = lt %tmp.5 %tmp.7;
-        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_8_204_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_8_204_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_33_204_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 203 12 ]
-        symbol [ stepIndex %tmp.10 203 24 33 ];
-        %tmp.10 = getv ? :stepIndex;
-        %tmp.11 = 1;
-        %tmp.12 = add %tmp.10 %tmp.11;
-        symbol [ stepIndex ? 203 12 21 ];
-        putv self :stepIndex %tmp.12;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_33_204_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_8_204_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_202_8_204_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 205 8 ]
-        %tmp.13 = lgetv %info.1;
-        symbol [ info %tmp.13 205 24 28 ];
-        symbol [ timerTime %tmp.14 205 29 38 ];
-        %tmp.14 = getv %tmp.13 :timerTime;
-        symbol [ stepStartTime ? 205 8 21 ];
-        putv self :stepStartTime %tmp.14;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 206 8 ]
-        symbol [ stepIndex %tmp.16 206 15 24 ];
-        %tmp.16 = getv ? :stepIndex;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 182; ]
+    function smoothPower() {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_182_27_212_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 183 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_8_211_8_if_stmt:
+        %tmp.2 = getv ? :mInfo;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_8_211_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_8_211_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_27_207_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 184 3 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_stmt:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_7_184_59_begin:
+        %tmp.6 = getv ? :mInfo;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = getv %tmp.7 :currentPower;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_37_184_59_true:
+        %tmp.12 = getv ? :mInfo;
+        %tmp.13 = as %tmp.12 { (!Null) };
+        %tmp.14 = getv %tmp.13 :currentPower;
+        %tmp.15 = 0;
+        %tmp.16 = ne %tmp.14 %tmp.15;
         push %tmp.16;
-        switch %tmp.16 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtBegin:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 207 12 ]
-        %tmp.17 = dup %tmp.16;
-        symbol [ COUNTDOWN %tmp.19 207 17 26 ];
-        %tmp.19 = getv ? :COUNTDOWN;
-        %tmp.20 = getv function %tmp.17 :equals;
-        %tmp.21 = invoke %tmp.17 %tmp.20 (%tmp.19);
-        bt %tmp.21 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_207_12_212_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 213 12 ]
-        %tmp.22 = dup %tmp.16;
-        symbol [ WARM1 %tmp.24 213 17 22 ];
-        %tmp.24 = getv ? :WARM1;
-        %tmp.25 = getv function %tmp.22 :equals;
-        %tmp.26 = invoke %tmp.22 %tmp.25 (%tmp.24);
-        bt %tmp.26 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_213_12_222_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 223 12 ]
-        %tmp.27 = dup %tmp.16;
-        symbol [ WARM2 %tmp.29 223 17 22 ];
-        %tmp.29 = getv ? :WARM2;
-        %tmp.30 = getv function %tmp.27 :equals;
-        %tmp.31 = invoke %tmp.27 %tmp.30 (%tmp.29);
-        bt %tmp.31 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_223_12_232_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 233 12 ]
-        %tmp.32 = dup %tmp.16;
-        symbol [ WARM3 %tmp.34 233 17 22 ];
-        %tmp.34 = getv ? :WARM3;
-        %tmp.35 = getv function %tmp.32 :equals;
-        %tmp.36 = invoke %tmp.32 %tmp.35 (%tmp.34);
-        bt %tmp.36 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_233_12_242_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 243 12 ]
-        %tmp.37 = dup %tmp.16;
-        symbol [ REST1 %tmp.39 243 17 22 ];
-        %tmp.39 = getv ? :REST1;
-        %tmp.40 = getv function %tmp.37 :equals;
-        %tmp.41 = invoke %tmp.37 %tmp.40 (%tmp.39);
-        bt %tmp.41 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_243_12_248_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 249 12 ]
-        %tmp.42 = dup %tmp.16;
-        symbol [ STEPTEST %tmp.44 249 17 25 ];
-        %tmp.44 = getv ? :STEPTEST;
-        %tmp.45 = getv function %tmp.42 :equals;
-        %tmp.46 = invoke %tmp.42 %tmp.45 (%tmp.44);
-        bt %tmp.46 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_249_12_267_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 268 12 ]
-        %tmp.47 = dup %tmp.16;
-        symbol [ COOLDOWN %tmp.49 268 17 25 ];
-        %tmp.49 = getv ? :COOLDOWN;
-        %tmp.50 = getv function %tmp.47 :equals;
-        %tmp.51 = invoke %tmp.47 %tmp.50 (%tmp.49);
-        bt %tmp.51 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_268_12_277_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 278 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtDefault:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_defaultCodeBegin;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_207_12_212_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 208 16 ]
-        symbol [ BTN_NONE %tmp.53 208 27 35 ];
-        %tmp.53 = getv ? :BTN_NONE;
-        symbol [ btnAlert ? 208 16 24 ];
-        putv self :btnAlert %tmp.53;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 209 16 ]
-        %tmp.54 = 3;
-        %tmp.55 = 1000;
-        %tmp.56 = mul %tmp.54 %tmp.55;
-        symbol [ stepDuration ? 209 16 28 ];
-        putv self :stepDuration %tmp.56;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 210 16 ]
-        %tmp.57 = 1;
-        symbol [ targetPower ? 210 16 27 ];
-        putv self :targetPower %tmp.57;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 211 16 ]
-        symbol [ mFECControl %tmp.59 211 16 27 ];
-        %tmp.59 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.60 211 28 44 ];
-        %tmp.60 = getv function %tmp.59 :controlEquipment;
-        symbol [ AntPlus %tmp.61 211 45 52 ];
-        %tmp.61 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.62 211 53 73 ];
-        %tmp.62 = getv %tmp.61 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.64 211 75 86 ];
-        %tmp.64 = getv ? :targetPower;
-        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 212 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_213_12_222_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 214 16 ]
-        symbol [ STP_WARM %tmp.66 214 27 35 ];
-        %tmp.66 = getv ? :STP_WARM;
-        symbol [ btnAlert ? 214 16 24 ];
-        putv self :btnAlert %tmp.66;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 215 16 ]
-        %tmp.67 = 180;
-        %tmp.68 = 1000;
-        %tmp.69 = mul %tmp.67 %tmp.68;
-        symbol [ stepDuration ? 215 16 28 ];
-        putv self :stepDuration %tmp.69;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 216 16 ]
-        symbol [ Storage %tmp.71 216 22 29 ];
-        %tmp.71 = getv ? :Storage;
-        symbol [ getValue %tmp.72 216 30 38 ];
-        %tmp.72 = getv function %tmp.71 :getValue;
-        %tmp.73 = "FTP-watts";
-        %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
-        lputv %ftp.2 %tmp.74;
-        symbol [ ftp %ftp.2 216 16 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 217 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_16_219_16_if_stmt:
-        %tmp.75 = lgetv %ftp.2;
-        symbol [ ftp %tmp.75 217 20 23 ];
-        %tmp.76 = null;
-        %tmp.77 = eq %tmp.75 %tmp.76;
-        bf %tmp.77 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_16_219_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_16_219_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_33_219_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 218 20 ]
-        symbol [ FTP_DEFAULT %tmp.79 218 26 37 ];
-        %tmp.79 = getv ? :FTP_DEFAULT;
-        lputv %ftp.2 %tmp.79;
-        symbol [ ftp %ftp.2 218 20 23 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_33_219_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_16_219_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_217_16_219_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 220 16 ]
-        %tmp.80 = 0.30;
-        %tmp.81 = lgetv %ftp.2;
-        symbol [ ftp %tmp.81 220 37 40 ];
-        %tmp.82 = mul %tmp.80 %tmp.81;
-        symbol [ targetPower ? 220 16 27 ];
-        putv self :targetPower %tmp.82;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 221 16 ]
-        symbol [ mFECControl %tmp.84 221 16 27 ];
-        %tmp.84 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.85 221 28 44 ];
-        %tmp.85 = getv function %tmp.84 :controlEquipment;
-        symbol [ AntPlus %tmp.86 221 45 52 ];
-        %tmp.86 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.87 221 53 73 ];
-        %tmp.87 = getv %tmp.86 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.89 221 75 86 ];
-        %tmp.89 = getv ? :targetPower;
-        invoke %tmp.84 %tmp.85(%tmp.87, %tmp.89);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 222 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_223_12_232_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 224 16 ]
-        symbol [ STP_WARM %tmp.91 224 27 35 ];
-        %tmp.91 = getv ? :STP_WARM;
-        symbol [ btnAlert ? 224 16 24 ];
-        putv self :btnAlert %tmp.91;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 225 16 ]
-        %tmp.92 = 180;
-        %tmp.93 = 1000;
-        %tmp.94 = mul %tmp.92 %tmp.93;
-        symbol [ stepDuration ? 225 16 28 ];
-        putv self :stepDuration %tmp.94;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 226 16 ]
-        symbol [ Storage %tmp.96 226 22 29 ];
-        %tmp.96 = getv ? :Storage;
-        symbol [ getValue %tmp.97 226 30 38 ];
-        %tmp.97 = getv function %tmp.96 :getValue;
-        %tmp.98 = "FTP-watts";
-        %tmp.99 = invoke %tmp.96 %tmp.97(%tmp.98);
-        lputv %ftp.2 %tmp.99;
-        symbol [ ftp %ftp.2 226 16 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 227 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_16_229_16_if_stmt:
-        %tmp.100 = lgetv %ftp.2;
-        symbol [ ftp %tmp.100 227 20 23 ];
-        %tmp.101 = null;
-        %tmp.102 = eq %tmp.100 %tmp.101;
-        bf %tmp.102 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_16_229_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_16_229_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_33_229_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 228 20 ]
-        symbol [ FTP_DEFAULT %tmp.104 228 26 37 ];
-        %tmp.104 = getv ? :FTP_DEFAULT;
-        lputv %ftp.2 %tmp.104;
-        symbol [ ftp %ftp.2 228 20 23 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_33_229_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_16_229_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_227_16_229_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 230 16 ]
-        %tmp.105 = 0.45;
-        %tmp.106 = lgetv %ftp.2;
-        symbol [ ftp %tmp.106 230 37 40 ];
-        %tmp.107 = mul %tmp.105 %tmp.106;
-        symbol [ targetPower ? 230 16 27 ];
-        putv self :targetPower %tmp.107;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 231 16 ]
-        symbol [ mFECControl %tmp.109 231 16 27 ];
-        %tmp.109 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.110 231 28 44 ];
-        %tmp.110 = getv function %tmp.109 :controlEquipment;
-        symbol [ AntPlus %tmp.111 231 45 52 ];
-        %tmp.111 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.112 231 53 73 ];
-        %tmp.112 = getv %tmp.111 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.114 231 75 86 ];
-        %tmp.114 = getv ? :targetPower;
-        invoke %tmp.109 %tmp.110(%tmp.112, %tmp.114);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 232 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_233_12_242_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 234 16 ]
-        symbol [ STP_WARM %tmp.116 234 27 35 ];
-        %tmp.116 = getv ? :STP_WARM;
-        symbol [ btnAlert ? 234 16 24 ];
-        putv self :btnAlert %tmp.116;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 235 16 ]
-        %tmp.117 = 180;
-        %tmp.118 = 1000;
-        %tmp.119 = mul %tmp.117 %tmp.118;
-        symbol [ stepDuration ? 235 16 28 ];
-        putv self :stepDuration %tmp.119;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 236 16 ]
-        symbol [ Storage %tmp.121 236 22 29 ];
-        %tmp.121 = getv ? :Storage;
-        symbol [ getValue %tmp.122 236 30 38 ];
-        %tmp.122 = getv function %tmp.121 :getValue;
-        %tmp.123 = "FTP-watts";
-        %tmp.124 = invoke %tmp.121 %tmp.122(%tmp.123);
-        lputv %ftp.2 %tmp.124;
-        symbol [ ftp %ftp.2 236 16 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 237 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_16_239_16_if_stmt:
-        %tmp.125 = lgetv %ftp.2;
-        symbol [ ftp %tmp.125 237 20 23 ];
-        %tmp.126 = null;
-        %tmp.127 = eq %tmp.125 %tmp.126;
-        bf %tmp.127 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_16_239_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_16_239_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_33_239_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 238 20 ]
-        symbol [ FTP_DEFAULT %tmp.129 238 26 37 ];
-        %tmp.129 = getv ? :FTP_DEFAULT;
-        lputv %ftp.2 %tmp.129;
-        symbol [ ftp %ftp.2 238 20 23 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_33_239_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_16_239_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_237_16_239_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 240 16 ]
-        %tmp.130 = 0.60;
-        %tmp.131 = lgetv %ftp.2;
-        symbol [ ftp %tmp.131 240 37 40 ];
-        %tmp.132 = mul %tmp.130 %tmp.131;
-        symbol [ targetPower ? 240 16 27 ];
-        putv self :targetPower %tmp.132;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 241 16 ]
-        symbol [ mFECControl %tmp.134 241 16 27 ];
-        %tmp.134 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.135 241 28 44 ];
-        %tmp.135 = getv function %tmp.134 :controlEquipment;
-        symbol [ AntPlus %tmp.136 241 45 52 ];
-        %tmp.136 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.137 241 53 73 ];
-        %tmp.137 = getv %tmp.136 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.139 241 75 86 ];
-        %tmp.139 = getv ? :targetPower;
-        invoke %tmp.134 %tmp.135(%tmp.137, %tmp.139);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 242 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_243_12_248_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 244 16 ]
-        symbol [ STP_REST %tmp.141 244 27 35 ];
-        %tmp.141 = getv ? :STP_REST;
-        symbol [ btnAlert ? 244 16 24 ];
-        putv self :btnAlert %tmp.141;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 245 16 ]
-        %tmp.142 = 60;
-        %tmp.143 = 1000;
-        %tmp.144 = mul %tmp.142 %tmp.143;
-        symbol [ stepDuration ? 245 16 28 ];
-        putv self :stepDuration %tmp.144;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 246 16 ]
-        %tmp.145 = 0;
-        symbol [ targetPower ? 246 16 27 ];
-        putv self :targetPower %tmp.145;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 247 16 ]
-        symbol [ mFECControl %tmp.147 247 16 27 ];
-        %tmp.147 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.148 247 28 44 ];
-        %tmp.148 = getv function %tmp.147 :controlEquipment;
-        symbol [ AntPlus %tmp.149 247 45 52 ];
-        %tmp.149 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.150 247 53 73 ];
-        %tmp.150 = getv %tmp.149 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.152 247 75 86 ];
-        %tmp.152 = getv ? :targetPower;
-        invoke %tmp.147 %tmp.148(%tmp.150, %tmp.152);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 248 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_249_12_267_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 250 16 ]
-        symbol [ STP_STEP %tmp.154 250 27 35 ];
-        %tmp.154 = getv ? :STP_STEP;
-        symbol [ btnAlert ? 250 16 24 ];
-        putv self :btnAlert %tmp.154;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 251 16 ]
-        symbol [ Storage %tmp.156 251 31 38 ];
-        %tmp.156 = getv ? :Storage;
-        symbol [ getValue %tmp.157 251 39 47 ];
-        %tmp.157 = getv function %tmp.156 :getValue;
-        %tmp.158 = "duration";
-        %tmp.159 = invoke %tmp.156 %tmp.157(%tmp.158);
-        symbol [ stepDuration ? 251 16 28 ];
-        putv self :stepDuration %tmp.159;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 252 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_16_254_16_if_stmt:
-        symbol [ stepDuration %tmp.161 252 20 32 ];
-        %tmp.161 = getv ? :stepDuration;
-        %tmp.162 = null;
-        %tmp.163 = eq %tmp.161 %tmp.162;
-        bf %tmp.163 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_16_254_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_16_254_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_42_254_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 253 20 ]
-        symbol [ DURATION_DEFAULT %tmp.165 253 35 51 ];
-        %tmp.165 = getv ? :DURATION_DEFAULT;
-        symbol [ stepDuration ? 253 20 32 ];
-        putv self :stepDuration %tmp.165;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_42_254_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_16_254_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_252_16_254_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 255 16 ]
-        symbol [ stepDuration %tmp.167 255 31 43 ];
-        %tmp.167 = getv ? :stepDuration;
-        %tmp.168 = 1000;
-        %tmp.169 = mul %tmp.167 %tmp.168;
-        symbol [ stepDuration ? 255 16 28 ];
-        putv self :stepDuration %tmp.169;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 256 16 ]
-        symbol [ Storage %tmp.171 256 27 34 ];
-        %tmp.171 = getv ? :Storage;
-        symbol [ getValue %tmp.172 256 35 43 ];
-        %tmp.172 = getv function %tmp.171 :getValue;
-        %tmp.173 = "initload";
-        %tmp.174 = invoke %tmp.171 %tmp.172(%tmp.173);
-        lputv %initload.4 %tmp.174;
-        symbol [ initload %initload.4 256 16 24 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 257 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_16_259_16_if_stmt:
-        %tmp.175 = lgetv %initload.4;
-        symbol [ initload %tmp.175 257 20 28 ];
-        %tmp.176 = null;
-        %tmp.177 = eq %tmp.175 %tmp.176;
-        bf %tmp.177 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_16_259_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_16_259_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_38_259_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 258 20 ]
-        symbol [ INITLOAD_DEFAULT %tmp.179 258 31 47 ];
-        %tmp.179 = getv ? :INITLOAD_DEFAULT;
-        lputv %initload.4 %tmp.179;
-        symbol [ initload %initload.4 258 20 28 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_38_259_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_16_259_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_257_16_259_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 260 16 ]
-        symbol [ Storage %tmp.181 260 27 34 ];
-        %tmp.181 = getv ? :Storage;
-        symbol [ getValue %tmp.182 260 35 43 ];
-        %tmp.182 = getv function %tmp.181 :getValue;
-        %tmp.183 = "stepsize";
-        %tmp.184 = invoke %tmp.181 %tmp.182(%tmp.183);
-        lputv %stepsize.3 %tmp.184;
-        symbol [ stepsize %stepsize.3 260 16 24 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 261 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_16_263_16_if_stmt:
-        %tmp.185 = lgetv %stepsize.3;
-        symbol [ stepsize %tmp.185 261 20 28 ];
-        %tmp.186 = null;
-        %tmp.187 = eq %tmp.185 %tmp.186;
-        bf %tmp.187 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_16_263_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_16_263_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_38_263_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 262 20 ]
-        symbol [ STEPSIZE_DEFAULT %tmp.189 262 31 47 ];
-        %tmp.189 = getv ? :STEPSIZE_DEFAULT;
-        lputv %stepsize.3 %tmp.189;
-        symbol [ stepsize %stepsize.3 262 20 28 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_38_263_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_16_263_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_261_16_263_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 264 16 ]
-        %tmp.190 = lgetv %stepsize.3;
-        symbol [ stepsize %tmp.190 264 30 38 ];
-        symbol [ loadStep %tmp.192 264 41 49 ];
-        %tmp.192 = getv ? :loadStep;
-        %tmp.193 = mul %tmp.190 %tmp.192;
-        %tmp.194 = lgetv %initload.4;
-        symbol [ initload %tmp.194 264 52 60 ];
-        %tmp.195 = add %tmp.193 %tmp.194;
-        symbol [ targetPower ? 264 16 27 ];
-        putv self :targetPower %tmp.195;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 265 16 ]
-        symbol [ loadStep %tmp.197 265 27 35 ];
-        %tmp.197 = getv ? :loadStep;
-        %tmp.198 = 1;
-        %tmp.199 = add %tmp.197 %tmp.198;
-        symbol [ loadStep ? 265 16 24 ];
-        putv self :loadStep %tmp.199;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 266 16 ]
-        symbol [ mFECControl %tmp.201 266 16 27 ];
-        %tmp.201 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.202 266 28 44 ];
-        %tmp.202 = getv function %tmp.201 :controlEquipment;
-        symbol [ AntPlus %tmp.203 266 45 52 ];
-        %tmp.203 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.204 266 53 73 ];
-        %tmp.204 = getv %tmp.203 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.206 266 75 86 ];
-        %tmp.206 = getv ? :targetPower;
-        invoke %tmp.201 %tmp.202(%tmp.204, %tmp.206);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 267 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_268_12_277_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 269 16 ]
-        symbol [ STP_COOL %tmp.208 269 27 35 ];
-        %tmp.208 = getv ? :STP_COOL;
-        symbol [ btnAlert ? 269 16 24 ];
-        putv self :btnAlert %tmp.208;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 270 16 ]
-        %tmp.209 = 360;
-        %tmp.210 = 1000;
-        %tmp.211 = mul %tmp.209 %tmp.210;
-        symbol [ stepDuration ? 270 16 28 ];
-        putv self :stepDuration %tmp.211;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 271 16 ]
-        symbol [ Storage %tmp.213 271 22 29 ];
-        %tmp.213 = getv ? :Storage;
-        symbol [ getValue %tmp.214 271 30 38 ];
-        %tmp.214 = getv function %tmp.213 :getValue;
-        %tmp.215 = "FTP-watts";
-        %tmp.216 = invoke %tmp.213 %tmp.214(%tmp.215);
-        lputv %ftp.2 %tmp.216;
-        symbol [ ftp %ftp.2 271 16 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 272 16 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_16_274_16_if_stmt:
-        %tmp.217 = lgetv %ftp.2;
-        symbol [ ftp %tmp.217 272 20 23 ];
-        %tmp.218 = null;
-        %tmp.219 = eq %tmp.217 %tmp.218;
-        bf %tmp.219 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_16_274_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_16_274_16_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_33_274_16_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 273 20 ]
-        symbol [ FTP_DEFAULT %tmp.221 273 26 37 ];
-        %tmp.221 = getv ? :FTP_DEFAULT;
-        lputv %ftp.2 %tmp.221;
-        symbol [ ftp %ftp.2 273 20 23 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_33_274_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_16_274_16_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_272_16_274_16_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 275 16 ]
-        %tmp.222 = 0.40;
-        %tmp.223 = lgetv %ftp.2;
-        symbol [ ftp %tmp.223 275 37 40 ];
-        %tmp.224 = mul %tmp.222 %tmp.223;
-        symbol [ targetPower ? 275 16 27 ];
-        putv self :targetPower %tmp.224;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 276 16 ]
-        symbol [ mFECControl %tmp.226 276 16 27 ];
-        %tmp.226 = getv ? :mFECControl;
-        symbol [ controlEquipment %tmp.227 276 28 44 ];
-        %tmp.227 = getv function %tmp.226 :controlEquipment;
-        symbol [ AntPlus %tmp.228 276 45 52 ];
-        %tmp.228 = getm $.Toybox.AntPlus;
-        symbol [ TRAINER_TARGET_POWER %tmp.229 276 53 73 ];
-        %tmp.229 = getv %tmp.228 :TRAINER_TARGET_POWER;
-        symbol [ targetPower %tmp.231 276 75 86 ];
-        %tmp.231 = getv ? :targetPower;
-        invoke %tmp.226 %tmp.227(%tmp.229, %tmp.231);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 277 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_278_12_278_19_switchCase:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_defaultCodeBegin:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_206_8_279_8_switchStmtEnd:
-        pop;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_197_29_280_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_37_184_59_end:
+        %tmp.17 = phi [%tmp.10 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_7_184_59_begin] [%tmp.16 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_37_184_59_true] [%tmp.17 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_37_184_59_end];
+        bf %tmp.17 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_62_202_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 185 16 ]
+        %tmp.18 = getv self :pwrBuffer;
+        %tmp.20 = getv ? :mInfo;
+        %tmp.21 = as %tmp.20 { (!Null) };
+        %tmp.22 = getv %tmp.21 :currentPower;
+        %tmp.24 = getv ? :pwrHead;
+        aputv %tmp.18 %tmp.24 %tmp.22;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 187 16 ]
+        %tmp.26 = getv ? :pwrHead;
+        %tmp.27 = 1;
+        %tmp.28 = add %tmp.26 %tmp.27;
+        %tmp.30 = getv ? :pwrSize;
+        %tmp.31 = 1;
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = mod %tmp.28 %tmp.32;
+        putv self :pwrHead %tmp.33;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 188 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_16_190_16_if_stmt:
+        %tmp.35 = getv ? :pwrHead;
+        %tmp.37 = getv ? :pwrTail;
+        %tmp.38 = eq %tmp.35 %tmp.37;
+        bf %tmp.38 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_16_190_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_16_190_16_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_40_190_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 189 20 ]
+        %tmp.40 = getv ? :pwrTail;
+        %tmp.41 = 1;
+        %tmp.42 = add %tmp.40 %tmp.41;
+        %tmp.44 = getv ? :pwrSize;
+        %tmp.45 = 1;
+        %tmp.46 = add %tmp.44 %tmp.45;
+        %tmp.47 = mod %tmp.42 %tmp.46;
+        putv self :pwrTail %tmp.47;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_40_190_16_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_16_190_16_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_188_16_190_16_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 191 16 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_62_202_12_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_62_202_12_stop" ]
+        %i.1 = local;
+        %tmp.49 = getv ? :pwrTail;
+        lputv %i.1 %tmp.49;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 192 16 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_62_202_12_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_62_202_12_stop" ]
+        %count.2 = local;
+        %tmp.50 = 0;
+        lputv %count.2 %tmp.50;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 193 16 ]
+        %tmp.51 = 0.0;
+        putv self :pwrSmooth %tmp.51;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 194 16 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_194_16_199_35_do_while_begin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_194_19_198_16_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 195 20 ]
+        %tmp.52 = getv self :pwrSmooth;
+        %tmp.54 = getv ? :pwrBuffer;
+        %tmp.56 = lgetv %i.1;
+        %tmp.57 = agetv %tmp.54 %tmp.56;
+        %tmp.58 = add %tmp.52 %tmp.57;
+        putv self :pwrSmooth dup %tmp.58;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 196 20 ]
+        %tmp.59 = lgetv %count.2;
+        %tmp.60 = 1;
+        %tmp.61 = add %tmp.59 %tmp.60;
+        lputv %count.2 %tmp.61;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 197 20 ]
+        %tmp.63 = lgetv %i.1;
+        %tmp.64 = 1;
+        %tmp.65 = add %tmp.63 %tmp.64;
+        %tmp.67 = getv ? :pwrSize;
+        %tmp.68 = 1;
+        %tmp.69 = add %tmp.67 %tmp.68;
+        %tmp.70 = mod %tmp.65 %tmp.69;
+        lputv %i.1 %tmp.70;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_194_19_198_16_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_194_16_199_35_do_while_test:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 199 23 ]
+        %tmp.72 = lgetv %i.1;
+        %tmp.74 = getv ? :pwrHead;
+        %tmp.75 = ne %tmp.72 %tmp.74;
+        bt %tmp.75 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_194_16_199_35_do_while_begin;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_194_16_199_35_do_while_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 200 16 ]
+        %tmp.77 = getv ? :pwrSmooth;
+        %tmp.79 = lgetv %count.2;
+        %tmp.80 = div %tmp.77 %tmp.79;
+        putv self :pwrSmooth %tmp.80;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_62_202_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_203_17_206_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 204 16 ]
+        %tmp.81 = self;
+        %tmp.82 = getv function %tmp.81 :resetSmooth;
+        invoke %tmp.81 %tmp.82();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 205 16 ]
+        %tmp.83 = 0;
+        putv self :pwrSmooth %tmp.83;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_203_17_206_12_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_184_3_206_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_27_207_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_8_211_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_8_211_8_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_208_13_211_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 209 12 ]
+        %tmp.84 = self;
+        %tmp.85 = getv function %tmp.84 :resetSmooth;
+        invoke %tmp.84 %tmp.85();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 210 12 ]
+        %tmp.86 = 0;
+        putv self :pwrSmooth %tmp.86;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_208_13_211_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_183_8_211_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_182_27_212_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 283; @symbol_functiondef = [createActivity,283,13,27]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 214; ]
+    function resetSmooth() {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_214_26_217_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 215 8 ]
+        %tmp.1 = 0;
+        putv self :pwrTail %tmp.1;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 216 8 ]
+        %tmp.2 = 0;
+        putv self :pwrHead %tmp.2;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_214_26_217_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 219; ]
+    function getStoredValue(name, def_value) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_219_44_225_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 220 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_219_44_225_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_219_44_225_4_stop" ]
+        %value.1 = local;
+        %tmp.2 = getv ? :Storage;
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.5 = lgetv %name;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
+        lputv %value.1 %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 221 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_8_223_8_if_stmt:
+        %tmp.8 = lgetv %value.1;
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_8_223_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_8_223_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_27_223_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 222 12 ]
+        %tmp.12 = lgetv %def_value;
+        lputv %value.1 %tmp.12;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_27_223_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_8_223_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_221_8_223_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 224 8 ]
+        %tmp.14 = lgetv %value.1;
+        ret %tmp.14;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_219_44_225_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 227; ]
+    function incrementStep() {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_227_29_339_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 228 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_8_241_8_if_stmt:
+        %tmp.2 = getv ? :stepIndex;
+        %tmp.4 = getv ? :REST2;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_8_241_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_8_241_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_32_235_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 229 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_12_234_12_if_stmt:
+        %tmp.7 = getv ? :accelerator;
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :getStoredValue;
+        %tmp.10 = "numaccel";
+        %tmp.12 = getv ? :NUMACCEL_DEFAULT;
+        %tmp.13 = invoke %tmp.8 %tmp.9(%tmp.10, %tmp.12);
+        %tmp.14 = gte %tmp.7 %tmp.13;
+        bf %tmp.14 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_12_234_12_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_12_234_12_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_77_231_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 230 16 ]
+        %tmp.16 = getv ? :STOP;
+        putv self :stepIndex %tmp.16;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_77_231_12_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_12_234_12_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_12_234_12_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_232_17_234_12_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 233 16 ]
+        %tmp.18 = getv ? :ACCELS;
+        putv self :stepIndex %tmp.18;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_232_17_234_12_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_229_12_234_12_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_32_235_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_8_241_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_8_241_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 236 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_13_241_8_if_stmt:
+        %tmp.20 = getv ? :stepIndex;
+        %tmp.22 = getv ? :ACCELS;
+        %tmp.23 = eq %tmp.20 %tmp.22;
+        bf %tmp.23 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_13_241_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_13_241_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_38_238_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 237 12 ]
+        %tmp.25 = getv ? :REST2;
+        putv self :stepIndex %tmp.25;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_38_238_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_13_241_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_13_241_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 239 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_13_241_8_if_stmt:
+        %tmp.27 = getv ? :stepIndex;
+        %tmp.29 = getv ? :ACCELS;
+        %tmp.30 = lt %tmp.27 %tmp.29;
+        bf %tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_13_241_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_13_241_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_36_241_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 240 12 ]
+        %tmp.32 = getv ? :stepIndex;
+        %tmp.33 = 1;
+        %tmp.34 = add %tmp.32 %tmp.33;
+        putv self :stepIndex %tmp.34;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_36_241_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_13_241_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_239_13_241_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_236_13_241_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_228_8_241_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 243 8 ]
+        %tmp.36 = getv ? :mInfo;
+        %tmp.37 = getv %tmp.36 :timerTime;
+        putv self :stepStartTime %tmp.37;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 244 8 ]
+        %tmp.39 = getv ? :stepIndex;
+        push %tmp.39;
+        switch %tmp.39 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtBegin:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 245 12 ]
+        %tmp.40 = dup %tmp.39;
+        %tmp.42 = getv ? :COUNTDOWN;
+        %tmp.43 = getv function %tmp.40 :equals;
+        %tmp.44 = invoke %tmp.40 %tmp.43 (%tmp.42);
+        bt %tmp.44 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_245_12_256_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 257 12 ]
+        %tmp.45 = dup %tmp.39;
+        %tmp.47 = getv ? :CV1;
+        %tmp.48 = getv function %tmp.45 :equals;
+        %tmp.49 = invoke %tmp.45 %tmp.48 (%tmp.47);
+        bt %tmp.49 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_257_12_270_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 271 12 ]
+        %tmp.50 = dup %tmp.39;
+        %tmp.52 = getv ? :CV2;
+        %tmp.53 = getv function %tmp.50 :equals;
+        %tmp.54 = invoke %tmp.50 %tmp.53 (%tmp.52);
+        bt %tmp.54 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_271_12_284_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 285 12 ]
+        %tmp.55 = dup %tmp.39;
+        %tmp.57 = getv ? :REST1;
+        %tmp.58 = getv function %tmp.55 :equals;
+        %tmp.59 = invoke %tmp.55 %tmp.58 (%tmp.57);
+        bt %tmp.59 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_285_12_300_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 301 12 ]
+        %tmp.60 = dup %tmp.39;
+        %tmp.62 = getv ? :ACCELS;
+        %tmp.63 = getv function %tmp.60 :equals;
+        %tmp.64 = invoke %tmp.60 %tmp.63 (%tmp.62);
+        bt %tmp.64 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_301_12_317_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 318 12 ]
+        %tmp.65 = dup %tmp.39;
+        %tmp.67 = getv ? :REST2;
+        %tmp.68 = getv function %tmp.65 :equals;
+        %tmp.69 = invoke %tmp.65 %tmp.68 (%tmp.67);
+        bt %tmp.69 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_318_12_333_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 334 12 ]
+        %tmp.70 = dup %tmp.39;
+        %tmp.72 = getv ? :STOP;
+        %tmp.73 = getv function %tmp.70 :equals;
+        %tmp.74 = invoke %tmp.70 %tmp.73 (%tmp.72);
+        bt %tmp.74 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_334_12_336_42_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 337 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtDefault:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_defaultCodeBegin;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_245_12_256_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 246 16 ]
+        %tmp.75 = 5;
+        %tmp.76 = 1000;
+        %tmp.77 = mul %tmp.75 %tmp.76;
+        putv self :stepDuration %tmp.77;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 247 16 ]
+        %tmp.78 = 0;
+        putv self :targPwr1 %tmp.78;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 248 16 ]
+        %tmp.79 = 0;
+        putv self :targPwr2 %tmp.79;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 249 16 ]
+        %tmp.81 = getv ? :mFECControl;
+        %tmp.82 = getv function %tmp.81 :controlEquipment;
+        %tmp.83 = getm $.Toybox.AntPlus;
+        %tmp.84 = getv %tmp.83 :TRAINER_SLOPE;
+        %tmp.85 = 2.0;
+        invoke %tmp.81 %tmp.82(%tmp.84, %tmp.85);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 250 16 ]
+        %tmp.87 = getv ? :mFECControl;
+        %tmp.88 = getv function %tmp.87 :controlEquipment;
+        %tmp.89 = getm $.Toybox.AntPlus;
+        %tmp.90 = getv %tmp.89 :TRAINER_SURFACE;
+        %tmp.91 = 0.004;
+        invoke %tmp.87 %tmp.88(%tmp.90, %tmp.91);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 251 16 ]
+        %tmp.93 = getv ? :mFECControl;
+        %tmp.94 = getv function %tmp.93 :controlEquipment;
+        %tmp.95 = getm $.Toybox.AntPlus;
+        %tmp.96 = getv %tmp.95 :TRAINER_WIND_COEFF;
+        %tmp.97 = 1.25;
+        invoke %tmp.93 %tmp.94(%tmp.96, %tmp.97);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 252 16 ]
+        %tmp.99 = getv ? :mFECControl;
+        %tmp.100 = getv function %tmp.99 :controlEquipment;
+        %tmp.101 = getm $.Toybox.AntPlus;
+        %tmp.102 = getv %tmp.101 :TRAINER_WIND_SPEED;
+        %tmp.103 = 0;
+        invoke %tmp.99 %tmp.100(%tmp.102, %tmp.103);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 253 16 ]
+        %tmp.105 = getv ? :mFECControl;
+        %tmp.106 = getv function %tmp.105 :controlEquipment;
+        %tmp.107 = getm $.Toybox.AntPlus;
+        %tmp.108 = getv %tmp.107 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.109 = 1.0;
+        invoke %tmp.105 %tmp.106(%tmp.108, %tmp.109);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 254 16 ]
+        %tmp.111 = getv ? :mFECControl;
+        %tmp.112 = getv function %tmp.111 :controlEquipment;
+        %tmp.113 = getm $.Toybox.AntPlus;
+        %tmp.114 = getv %tmp.113 :TRAINER_USER_WEIGHT;
+        %tmp.115 = 75;
+        invoke %tmp.111 %tmp.112(%tmp.114, %tmp.115);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 255 16 ]
+        %tmp.117 = getv ? :mFECControl;
+        %tmp.118 = getv function %tmp.117 :controlEquipment;
+        %tmp.119 = getm $.Toybox.AntPlus;
+        %tmp.120 = getv %tmp.119 :TRAINER_BIKE_WEIGHT;
+        %tmp.121 = 10;
+        invoke %tmp.117 %tmp.118(%tmp.120, %tmp.121);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 256 16 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_257_12_270_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 258 16 ]
+        %tmp.123 = getv ? :STP_CV1;
+        putv self :btnAlert %tmp.123;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 259 16 ]
+        %tmp.124 = self;
+        %tmp.125 = getv function %tmp.124 :getStoredValue;
+        %tmp.126 = "cvprepdur";
+        %tmp.128 = getv ? :CVPREP_DEFAULT;
+        %tmp.129 = invoke %tmp.124 %tmp.125(%tmp.126, %tmp.128);
+        %tmp.130 = 1000;
+        %tmp.131 = mul %tmp.129 %tmp.130;
+        putv self :stepDuration %tmp.131;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 260 16 ]
+        %tmp.132 = self;
+        %tmp.133 = getv function %tmp.132 :getStoredValue;
+        %tmp.134 = "BP1-watts";
+        %tmp.136 = getv ? :BP1_DEFAULT;
+        %tmp.137 = invoke %tmp.132 %tmp.133(%tmp.134, %tmp.136);
+        putv self :BreakPt1 %tmp.137;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 261 16 ]
+        %tmp.138 = 0.60;
+        %tmp.140 = getv ? :BreakPt1;
+        %tmp.141 = mul %tmp.138 %tmp.140;
+        putv self :targPwr1 %tmp.141;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 262 16 ]
+        %tmp.142 = 0.85;
+        %tmp.144 = getv ? :BreakPt1;
+        %tmp.145 = mul %tmp.142 %tmp.144;
+        putv self :targPwr2 %tmp.145;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 263 16 ]
+        %tmp.147 = getv ? :mFECControl;
+        %tmp.148 = getv function %tmp.147 :controlEquipment;
+        %tmp.149 = getm $.Toybox.AntPlus;
+        %tmp.150 = getv %tmp.149 :TRAINER_SLOPE;
+        %tmp.151 = 0.0;
+        invoke %tmp.147 %tmp.148(%tmp.150, %tmp.151);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 264 16 ]
+        %tmp.153 = getv ? :mFECControl;
+        %tmp.154 = getv function %tmp.153 :controlEquipment;
+        %tmp.155 = getm $.Toybox.AntPlus;
+        %tmp.156 = getv %tmp.155 :TRAINER_SURFACE;
+        %tmp.157 = 0.004;
+        invoke %tmp.153 %tmp.154(%tmp.156, %tmp.157);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 265 16 ]
+        %tmp.159 = getv ? :mFECControl;
+        %tmp.160 = getv function %tmp.159 :controlEquipment;
+        %tmp.161 = getm $.Toybox.AntPlus;
+        %tmp.162 = getv %tmp.161 :TRAINER_WIND_COEFF;
+        %tmp.163 = 1.00;
+        invoke %tmp.159 %tmp.160(%tmp.162, %tmp.163);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 266 16 ]
+        %tmp.165 = getv ? :mFECControl;
+        %tmp.166 = getv function %tmp.165 :controlEquipment;
+        %tmp.167 = getm $.Toybox.AntPlus;
+        %tmp.168 = getv %tmp.167 :TRAINER_WIND_SPEED;
+        %tmp.169 = 0;
+        invoke %tmp.165 %tmp.166(%tmp.168, %tmp.169);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 267 16 ]
+        %tmp.171 = getv ? :mFECControl;
+        %tmp.172 = getv function %tmp.171 :controlEquipment;
+        %tmp.173 = getm $.Toybox.AntPlus;
+        %tmp.174 = getv %tmp.173 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.175 = 1.0;
+        invoke %tmp.171 %tmp.172(%tmp.174, %tmp.175);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 268 16 ]
+        %tmp.177 = getv ? :mFECControl;
+        %tmp.178 = getv function %tmp.177 :controlEquipment;
+        %tmp.179 = getm $.Toybox.AntPlus;
+        %tmp.180 = getv %tmp.179 :TRAINER_USER_WEIGHT;
+        %tmp.181 = 75;
+        invoke %tmp.177 %tmp.178(%tmp.180, %tmp.181);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 269 16 ]
+        %tmp.183 = getv ? :mFECControl;
+        %tmp.184 = getv function %tmp.183 :controlEquipment;
+        %tmp.185 = getm $.Toybox.AntPlus;
+        %tmp.186 = getv %tmp.185 :TRAINER_BIKE_WEIGHT;
+        %tmp.187 = 9;
+        invoke %tmp.183 %tmp.184(%tmp.186, %tmp.187);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 270 16 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_271_12_284_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 272 16 ]
+        %tmp.189 = getv ? :STP_CV2;
+        putv self :btnAlert %tmp.189;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 273 16 ]
+        %tmp.190 = self;
+        %tmp.191 = getv function %tmp.190 :getStoredValue;
+        %tmp.192 = "cvprepdur";
+        %tmp.194 = getv ? :CVPREP_DEFAULT;
+        %tmp.195 = invoke %tmp.190 %tmp.191(%tmp.192, %tmp.194);
+        %tmp.196 = 1000;
+        %tmp.197 = mul %tmp.195 %tmp.196;
+        putv self :stepDuration %tmp.197;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 274 16 ]
+        %tmp.198 = self;
+        %tmp.199 = getv function %tmp.198 :getStoredValue;
+        %tmp.200 = "BP1-watts";
+        %tmp.202 = getv ? :BP1_DEFAULT;
+        %tmp.203 = invoke %tmp.198 %tmp.199(%tmp.200, %tmp.202);
+        putv self :BreakPt1 %tmp.203;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 275 16 ]
+        %tmp.204 = 0.70;
+        %tmp.206 = getv ? :BreakPt1;
+        %tmp.207 = mul %tmp.204 %tmp.206;
+        putv self :targPwr1 %tmp.207;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 276 16 ]
+        %tmp.208 = 0.95;
+        %tmp.210 = getv ? :BreakPt1;
+        %tmp.211 = mul %tmp.208 %tmp.210;
+        putv self :targPwr2 %tmp.211;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 277 16 ]
+        %tmp.213 = getv ? :mFECControl;
+        %tmp.214 = getv function %tmp.213 :controlEquipment;
+        %tmp.215 = getm $.Toybox.AntPlus;
+        %tmp.216 = getv %tmp.215 :TRAINER_SLOPE;
+        %tmp.217 = 0.0;
+        invoke %tmp.213 %tmp.214(%tmp.216, %tmp.217);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 278 16 ]
+        %tmp.219 = getv ? :mFECControl;
+        %tmp.220 = getv function %tmp.219 :controlEquipment;
+        %tmp.221 = getm $.Toybox.AntPlus;
+        %tmp.222 = getv %tmp.221 :TRAINER_SURFACE;
+        %tmp.223 = 0.004;
+        invoke %tmp.219 %tmp.220(%tmp.222, %tmp.223);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 279 16 ]
+        %tmp.225 = getv ? :mFECControl;
+        %tmp.226 = getv function %tmp.225 :controlEquipment;
+        %tmp.227 = getm $.Toybox.AntPlus;
+        %tmp.228 = getv %tmp.227 :TRAINER_WIND_COEFF;
+        %tmp.229 = 1.00;
+        invoke %tmp.225 %tmp.226(%tmp.228, %tmp.229);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 280 16 ]
+        %tmp.231 = getv ? :mFECControl;
+        %tmp.232 = getv function %tmp.231 :controlEquipment;
+        %tmp.233 = getm $.Toybox.AntPlus;
+        %tmp.234 = getv %tmp.233 :TRAINER_WIND_SPEED;
+        %tmp.235 = 0;
+        invoke %tmp.231 %tmp.232(%tmp.234, %tmp.235);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 281 16 ]
+        %tmp.237 = getv ? :mFECControl;
+        %tmp.238 = getv function %tmp.237 :controlEquipment;
+        %tmp.239 = getm $.Toybox.AntPlus;
+        %tmp.240 = getv %tmp.239 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.241 = 1.0;
+        invoke %tmp.237 %tmp.238(%tmp.240, %tmp.241);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 282 16 ]
+        %tmp.243 = getv ? :mFECControl;
+        %tmp.244 = getv function %tmp.243 :controlEquipment;
+        %tmp.245 = getm $.Toybox.AntPlus;
+        %tmp.246 = getv %tmp.245 :TRAINER_USER_WEIGHT;
+        %tmp.247 = 75;
+        invoke %tmp.243 %tmp.244(%tmp.246, %tmp.247);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 283 16 ]
+        %tmp.249 = getv ? :mFECControl;
+        %tmp.250 = getv function %tmp.249 :controlEquipment;
+        %tmp.251 = getm $.Toybox.AntPlus;
+        %tmp.252 = getv %tmp.251 :TRAINER_BIKE_WEIGHT;
+        %tmp.253 = 9;
+        invoke %tmp.249 %tmp.250(%tmp.252, %tmp.253);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 284 16 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_285_12_300_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 286 16 ]
+        %tmp.255 = getv ? :STP_REST;
+        putv self :btnAlert %tmp.255;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 287 16 ]
+        %tmp.256 = self;
+        %tmp.257 = getv function %tmp.256 :getStoredValue;
+        %tmp.258 = "cvrestdur";
+        %tmp.260 = getv ? :CVREST_DEFAULT;
+        %tmp.261 = invoke %tmp.256 %tmp.257(%tmp.258, %tmp.260);
+        %tmp.262 = 1000;
+        %tmp.263 = mul %tmp.261 %tmp.262;
+        putv self :stepDuration %tmp.263;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 288 16 ]
+        %tmp.264 = self;
+        %tmp.265 = getv function %tmp.264 :getStoredValue;
+        %tmp.266 = "BP1-watts";
+        %tmp.268 = getv ? :BP1_DEFAULT;
+        %tmp.269 = invoke %tmp.264 %tmp.265(%tmp.266, %tmp.268);
+        putv self :BreakPt1 %tmp.269;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 289 16 ]
+        %tmp.270 = 0;
+        putv self :targPwr1 %tmp.270;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 290 16 ]
+        %tmp.271 = 0.25;
+        %tmp.273 = getv ? :BreakPt1;
+        %tmp.274 = mul %tmp.271 %tmp.273;
+        putv self :targPwr2 %tmp.274;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 291 16 ]
+        %tmp.276 = getv ? :mFECControl;
+        %tmp.277 = getv function %tmp.276 :controlEquipment;
+        %tmp.278 = getm $.Toybox.AntPlus;
+        %tmp.279 = getv %tmp.278 :TRAINER_SLOPE;
+        %tmp.280 = 0.0;
+        invoke %tmp.276 %tmp.277(%tmp.279, %tmp.280);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 292 16 ]
+        %tmp.282 = getv ? :mFECControl;
+        %tmp.283 = getv function %tmp.282 :controlEquipment;
+        %tmp.284 = getm $.Toybox.AntPlus;
+        %tmp.285 = getv %tmp.284 :TRAINER_SURFACE;
+        %tmp.286 = 0.004;
+        invoke %tmp.282 %tmp.283(%tmp.285, %tmp.286);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 293 16 ]
+        %tmp.288 = getv ? :mFECControl;
+        %tmp.289 = getv function %tmp.288 :controlEquipment;
+        %tmp.290 = getm $.Toybox.AntPlus;
+        %tmp.291 = getv %tmp.290 :TRAINER_WIND_COEFF;
+        %tmp.292 = 0.75;
+        invoke %tmp.288 %tmp.289(%tmp.291, %tmp.292);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 294 16 ]
+        %tmp.294 = getv ? :mFECControl;
+        %tmp.295 = getv function %tmp.294 :controlEquipment;
+        %tmp.296 = getm $.Toybox.AntPlus;
+        %tmp.297 = getv %tmp.296 :TRAINER_WIND_SPEED;
+        %tmp.298 = 0;
+        invoke %tmp.294 %tmp.295(%tmp.297, %tmp.298);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 295 16 ]
+        %tmp.300 = getv ? :mFECControl;
+        %tmp.301 = getv function %tmp.300 :controlEquipment;
+        %tmp.302 = getm $.Toybox.AntPlus;
+        %tmp.303 = getv %tmp.302 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.304 = 1.0;
+        invoke %tmp.300 %tmp.301(%tmp.303, %tmp.304);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 296 16 ]
+        %tmp.306 = getv ? :mFECControl;
+        %tmp.307 = getv function %tmp.306 :controlEquipment;
+        %tmp.308 = getm $.Toybox.AntPlus;
+        %tmp.309 = getv %tmp.308 :TRAINER_USER_WEIGHT;
+        %tmp.310 = 75;
+        invoke %tmp.306 %tmp.307(%tmp.309, %tmp.310);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 297 16 ]
+        %tmp.312 = getv ? :mFECControl;
+        %tmp.313 = getv function %tmp.312 :controlEquipment;
+        %tmp.314 = getm $.Toybox.AntPlus;
+        %tmp.315 = getv %tmp.314 :TRAINER_BIKE_WEIGHT;
+        %tmp.316 = 9;
+        invoke %tmp.312 %tmp.313(%tmp.315, %tmp.316);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 298 16 ]
+        %tmp.317 = 3;
+        putv self :pwrSize %tmp.317;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 299 16 ]
+        %tmp.318 = self;
+        %tmp.319 = getv function %tmp.318 :resetSmooth;
+        invoke %tmp.318 %tmp.319();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 300 16 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_301_12_317_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 302 16 ]
+        %tmp.321 = getv ? :STP_STEP;
+        putv self :btnAlert %tmp.321;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 303 16 ]
+        %tmp.322 = self;
+        %tmp.323 = getv function %tmp.322 :getStoredValue;
+        %tmp.324 = "acceldur";
+        %tmp.326 = getv ? :ACCEL_DEFAULT;
+        %tmp.327 = invoke %tmp.322 %tmp.323(%tmp.324, %tmp.326);
+        %tmp.328 = 1000;
+        %tmp.329 = mul %tmp.327 %tmp.328;
+        putv self :stepDuration %tmp.329;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 304 16 ]
+        %tmp.330 = self;
+        %tmp.331 = getv function %tmp.330 :getStoredValue;
+        %tmp.332 = "BP2-watts";
+        %tmp.334 = getv ? :BP2_DEFAULT;
+        %tmp.335 = invoke %tmp.330 %tmp.331(%tmp.332, %tmp.334);
+        putv self :BreakPt2 %tmp.335;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 305 16 ]
+        %tmp.337 = getv ? :accelerator;
+        %tmp.338 = 1;
+        %tmp.339 = add %tmp.337 %tmp.338;
+        putv self :accelerator %tmp.339;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 306 16 ]
+        %tmp.340 = 1.10;
+        %tmp.341 = 0.1;
+        %tmp.343 = getv ? :accelerator;
+        %tmp.344 = mul %tmp.341 %tmp.343;
+        %tmp.345 = add %tmp.340 %tmp.344;
+        %tmp.347 = getv ? :BreakPt2;
+        %tmp.348 = mul %tmp.345 %tmp.347;
+        putv self :targPwr1 %tmp.348;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 307 16 ]
+        %tmp.349 = 1.50;
+        %tmp.350 = 0.1;
+        %tmp.352 = getv ? :accelerator;
+        %tmp.353 = mul %tmp.350 %tmp.352;
+        %tmp.354 = add %tmp.349 %tmp.353;
+        %tmp.356 = getv ? :BreakPt2;
+        %tmp.357 = mul %tmp.354 %tmp.356;
+        putv self :targPwr2 %tmp.357;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 308 16 ]
+        %tmp.359 = getv ? :mFECControl;
+        %tmp.360 = getv function %tmp.359 :controlEquipment;
+        %tmp.361 = getm $.Toybox.AntPlus;
+        %tmp.362 = getv %tmp.361 :TRAINER_SLOPE;
+        %tmp.363 = 2.0;
+        invoke %tmp.359 %tmp.360(%tmp.362, %tmp.363);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 309 16 ]
+        %tmp.365 = getv ? :mFECControl;
+        %tmp.366 = getv function %tmp.365 :controlEquipment;
+        %tmp.367 = getm $.Toybox.AntPlus;
+        %tmp.368 = getv %tmp.367 :TRAINER_SURFACE;
+        %tmp.369 = 0.004;
+        invoke %tmp.365 %tmp.366(%tmp.368, %tmp.369);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 310 16 ]
+        %tmp.371 = getv ? :mFECControl;
+        %tmp.372 = getv function %tmp.371 :controlEquipment;
+        %tmp.373 = getm $.Toybox.AntPlus;
+        %tmp.374 = getv %tmp.373 :TRAINER_WIND_COEFF;
+        %tmp.375 = 1.25;
+        invoke %tmp.371 %tmp.372(%tmp.374, %tmp.375);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 311 16 ]
+        %tmp.377 = getv ? :mFECControl;
+        %tmp.378 = getv function %tmp.377 :controlEquipment;
+        %tmp.379 = getm $.Toybox.AntPlus;
+        %tmp.380 = getv %tmp.379 :TRAINER_WIND_SPEED;
+        %tmp.381 = 0;
+        invoke %tmp.377 %tmp.378(%tmp.380, %tmp.381);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 312 16 ]
+        %tmp.383 = getv ? :mFECControl;
+        %tmp.384 = getv function %tmp.383 :controlEquipment;
+        %tmp.385 = getm $.Toybox.AntPlus;
+        %tmp.386 = getv %tmp.385 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.387 = 1.0;
+        invoke %tmp.383 %tmp.384(%tmp.386, %tmp.387);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 313 16 ]
+        %tmp.389 = getv ? :mFECControl;
+        %tmp.390 = getv function %tmp.389 :controlEquipment;
+        %tmp.391 = getm $.Toybox.AntPlus;
+        %tmp.392 = getv %tmp.391 :TRAINER_USER_WEIGHT;
+        %tmp.393 = 75;
+        invoke %tmp.389 %tmp.390(%tmp.392, %tmp.393);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 314 16 ]
+        %tmp.395 = getv ? :mFECControl;
+        %tmp.396 = getv function %tmp.395 :controlEquipment;
+        %tmp.397 = getm $.Toybox.AntPlus;
+        %tmp.398 = getv %tmp.397 :TRAINER_BIKE_WEIGHT;
+        %tmp.399 = 9;
+        invoke %tmp.395 %tmp.396(%tmp.398, %tmp.399);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 317 16 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_318_12_333_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 319 16 ]
+        %tmp.401 = getv ? :STP_REST;
+        putv self :btnAlert %tmp.401;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 320 16 ]
+        %tmp.402 = self;
+        %tmp.403 = getv function %tmp.402 :getStoredValue;
+        %tmp.404 = "accelrestdur";
+        %tmp.406 = getv ? :ACCELREST_DEFAULT;
+        %tmp.407 = invoke %tmp.402 %tmp.403(%tmp.404, %tmp.406);
+        %tmp.408 = 1000;
+        %tmp.409 = mul %tmp.407 %tmp.408;
+        putv self :stepDuration %tmp.409;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 321 16 ]
+        %tmp.410 = self;
+        %tmp.411 = getv function %tmp.410 :getStoredValue;
+        %tmp.412 = "BP2-watts";
+        %tmp.414 = getv ? :BP2_DEFAULT;
+        %tmp.415 = invoke %tmp.410 %tmp.411(%tmp.412, %tmp.414);
+        putv self :BreakPt2 %tmp.415;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 322 16 ]
+        %tmp.416 = 0;
+        putv self :targPwr1 %tmp.416;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 323 16 ]
+        %tmp.417 = 0.25;
+        %tmp.419 = getv ? :BreakPt2;
+        %tmp.420 = mul %tmp.417 %tmp.419;
+        putv self :targPwr2 %tmp.420;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 324 16 ]
+        %tmp.422 = getv ? :mFECControl;
+        %tmp.423 = getv function %tmp.422 :controlEquipment;
+        %tmp.424 = getm $.Toybox.AntPlus;
+        %tmp.425 = getv %tmp.424 :TRAINER_SLOPE;
+        %tmp.426 = 0.0;
+        invoke %tmp.422 %tmp.423(%tmp.425, %tmp.426);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 325 16 ]
+        %tmp.428 = getv ? :mFECControl;
+        %tmp.429 = getv function %tmp.428 :controlEquipment;
+        %tmp.430 = getm $.Toybox.AntPlus;
+        %tmp.431 = getv %tmp.430 :TRAINER_SURFACE;
+        %tmp.432 = 0.004;
+        invoke %tmp.428 %tmp.429(%tmp.431, %tmp.432);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 326 16 ]
+        %tmp.434 = getv ? :mFECControl;
+        %tmp.435 = getv function %tmp.434 :controlEquipment;
+        %tmp.436 = getm $.Toybox.AntPlus;
+        %tmp.437 = getv %tmp.436 :TRAINER_WIND_COEFF;
+        %tmp.438 = 0.75;
+        invoke %tmp.434 %tmp.435(%tmp.437, %tmp.438);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 327 16 ]
+        %tmp.440 = getv ? :mFECControl;
+        %tmp.441 = getv function %tmp.440 :controlEquipment;
+        %tmp.442 = getm $.Toybox.AntPlus;
+        %tmp.443 = getv %tmp.442 :TRAINER_WIND_SPEED;
+        %tmp.444 = 0;
+        invoke %tmp.440 %tmp.441(%tmp.443, %tmp.444);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 328 16 ]
+        %tmp.446 = getv ? :mFECControl;
+        %tmp.447 = getv function %tmp.446 :controlEquipment;
+        %tmp.448 = getm $.Toybox.AntPlus;
+        %tmp.449 = getv %tmp.448 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.450 = 1.0;
+        invoke %tmp.446 %tmp.447(%tmp.449, %tmp.450);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 329 16 ]
+        %tmp.452 = getv ? :mFECControl;
+        %tmp.453 = getv function %tmp.452 :controlEquipment;
+        %tmp.454 = getm $.Toybox.AntPlus;
+        %tmp.455 = getv %tmp.454 :TRAINER_USER_WEIGHT;
+        %tmp.456 = 75;
+        invoke %tmp.452 %tmp.453(%tmp.455, %tmp.456);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 330 16 ]
+        %tmp.458 = getv ? :mFECControl;
+        %tmp.459 = getv function %tmp.458 :controlEquipment;
+        %tmp.460 = getm $.Toybox.AntPlus;
+        %tmp.461 = getv %tmp.460 :TRAINER_BIKE_WEIGHT;
+        %tmp.462 = 9;
+        invoke %tmp.458 %tmp.459(%tmp.461, %tmp.462);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 333 16 ]
+        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_334_12_336_42_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 335 16 ]
+        %tmp.463 = self;
+        %tmp.464 = getv function %tmp.463 :stopActivity;
+        invoke %tmp.463 %tmp.464();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 336 16 ]
+        %tmp.466 = getv ? :mDelegate;
+        %tmp.467 = getv function %tmp.466 :startSaveTimer;
+        invoke %tmp.466 %tmp.467();
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_337_12_337_19_switchCase:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_defaultCodeBegin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_244_8_338_8_switchStmtEnd:
+        pop;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_227_29_339_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 342; ]
     function createActivity() as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_283_38_289_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 284 8 ]
-        symbol [ ActivityRecording %tmp.1 284 20 37 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_342_38_348_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 343 8 ]
         %tmp.1 = getm $.Toybox.ActivityRecording;
-        symbol [ createSession %tmp.2 284 38 51 ];
         %tmp.2 = getv function %tmp.1 :createSession;
         %tmp.3 = newd 3;
         %tmp.5 = const :sport;
-        symbol [ Activity %tmp.6 285 22 30 ];
         %tmp.6 = getm $.Toybox.Activity;
-        symbol [ SPORT_CYCLING %tmp.7 285 31 44 ];
         %tmp.7 = getv %tmp.6 :SPORT_CYCLING;
         %tmp.8 = dup %tmp.3;
         %tmp.9 = aputv %tmp.8 %tmp.5 %tmp.7;
         %tmp.11 = const :subSport;
-        symbol [ Activity %tmp.12 286 25 33 ];
         %tmp.12 = getm $.Toybox.Activity;
-        symbol [ SUB_SPORT_INDOOR_CYCLING %tmp.13 286 34 58 ];
         %tmp.13 = getv %tmp.12 :SUB_SPORT_INDOOR_CYCLING;
         %tmp.14 = dup %tmp.9;
         %tmp.15 = aputv %tmp.14 %tmp.11 %tmp.13;
@@ -1312,347 +1327,185 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_283_38_28
         %tmp.19 = dup %tmp.15;
         %tmp.20 = aputv %tmp.19 %tmp.17 %tmp.18;
         %tmp.21 = invoke %tmp.1 %tmp.2(%tmp.20);
-        symbol [ mActivity ? 284 8 17 ];
         putv self :mActivity %tmp.21;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_283_38_289_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_342_38_348_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 291; @symbol_functiondef = [startActivity,291,13,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 350; ]
     function startActivity() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_291_29_295_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 292 8 ]
-        symbol [ mActivity %tmp.2 292 8 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_350_29_353_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 351 8 ]
         %tmp.2 = getv ? :mActivity;
-        symbol [ start %tmp.3 292 18 23 ];
         %tmp.3 = getv function %tmp.2 :start;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 293 8 ]
-        symbol [ BTN_START %tmp.5 293 19 28 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 352 8 ]
         %tmp.5 = getv ? :BTN_START;
-        symbol [ btnAlert ? 293 8 16 ];
         putv self :btnAlert %tmp.5;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_291_29_295_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_350_29_353_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 297; @symbol_functiondef = [stopActivity,297,13,25]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 355; ]
     function stopActivity() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_297_28_313_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 298 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_8_312_8_if_stmt:
-        symbol [ stepIndex %tmp.2 298 11 20 ];
-        %tmp.2 = getv ? :stepIndex;
-        symbol [ COOLDOWN %tmp.4 298 23 31 ];
-        %tmp.4 = getv ? :COOLDOWN;
-        %tmp.5 = lt %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_8_312_8_if_else_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_8_312_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_33_306_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 299 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_12_303_12_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_16_299_38_begin:
-        symbol [ is_lap_beg_marked %tmp.7 299 16 33 ];
-        %tmp.7 = getv ? :is_lap_beg_marked;
-        bf %tmp.7 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_12_303_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_37_299_38_true:
-        symbol [ is_lap_end_marked %tmp.9 299 38 55 ];
-        %tmp.9 = getv ? :is_lap_end_marked;
-        %tmp.10 = not %tmp.9;
-        push %tmp.10;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_37_299_38_end:
-        %tmp.11 = phi [%tmp.7 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_16_299_38_begin] [%tmp.10 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_37_299_38_true] [%tmp.11 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_37_299_38_end];
-        bf %tmp.11 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_12_303_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_12_303_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_57_303_12_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 300 16 ]
-        symbol [ mFitContrib %tmp.13 300 16 27 ];
-        %tmp.13 = getv ? :mFitContrib;
-        symbol [ lap %tmp.14 300 28 31 ];
-        %tmp.14 = getv function %tmp.13 :lap;
-        %tmp.15 = 0;
-        invoke %tmp.13 %tmp.14(%tmp.15);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 301 16 ]
-        symbol [ mActivity %tmp.17 301 16 25 ];
-        %tmp.17 = getv ? :mActivity;
-        symbol [ addLap %tmp.18 301 26 32 ];
-        %tmp.18 = getv function %tmp.17 :addLap;
-        invoke %tmp.17 %tmp.18();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 302 16 ]
-        %tmp.19 = false;
-        symbol [ is_lap_beg_marked ? 302 16 33 ];
-        putv self :is_lap_beg_marked %tmp.19;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_57_303_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_12_303_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_299_12_303_12_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 304 12 ]
-        symbol [ COOLDOWN %tmp.21 304 24 32 ];
-        %tmp.21 = getv ? :COOLDOWN;
-        symbol [ stepIndex ? 304 12 21 ];
-        putv self :stepIndex %tmp.21;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 305 12 ]
-        %tmp.22 = self;
-        symbol [ incrementStep %tmp.23 305 12 25 ];
-        %tmp.23 = getv function %tmp.22 :incrementStep;
-        invoke %tmp.22 %tmp.23();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_33_306_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_8_312_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_8_312_8_if_else_false:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_307_13_312_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 308 12 ]
-        symbol [ mFitContrib %tmp.25 308 12 23 ];
-        %tmp.25 = getv ? :mFitContrib;
-        symbol [ lap %tmp.26 308 24 27 ];
-        %tmp.26 = getv function %tmp.25 :lap;
-        %tmp.27 = 4;
-        invoke %tmp.25 %tmp.26(%tmp.27);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 309 12 ]
-        symbol [ mActivity %tmp.29 309 12 21 ];
-        %tmp.29 = getv ? :mActivity;
-        symbol [ addLap %tmp.30 309 22 28 ];
-        %tmp.30 = getv function %tmp.29 :addLap;
-        invoke %tmp.29 %tmp.30();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 310 12 ]
-        symbol [ mActivity %tmp.32 310 12 21 ];
-        %tmp.32 = getv ? :mActivity;
-        symbol [ stop %tmp.33 310 22 26 ];
-        %tmp.33 = getv function %tmp.32 :stop;
-        invoke %tmp.32 %tmp.33();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 311 12 ]
-        symbol [ BTN_STOP %tmp.35 311 23 31 ];
-        %tmp.35 = getv ? :BTN_STOP;
-        symbol [ btnAlert ? 311 12 20 ];
-        putv self :btnAlert %tmp.35;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_307_13_312_8_stop:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_298_8_312_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_297_28_313_4_stop:
-    }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 315; @symbol_functiondef = [saveActivity,315,13,25]; ]
-    function saveActivity() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_315_28_318_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 316 8 ]
-        symbol [ mActivity %tmp.2 316 8 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_355_28_360_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 358 8 ]
         %tmp.2 = getv ? :mActivity;
-        symbol [ save %tmp.3 316 18 22 ];
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 359 8 ]
+        %tmp.5 = getv ? :BTN_STOP;
+        putv self :btnAlert %tmp.5;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_355_28_360_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 362; ]
+    function saveActivity() {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_362_28_365_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 363 8 ]
+        %tmp.2 = getv ? :mActivity;
         %tmp.3 = getv function %tmp.2 :save;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 317 8 ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 364 8 ]
         %tmp.4 = null;
-        symbol [ mActivity ? 317 8 17 ];
         putv self :mActivity %tmp.4;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_315_28_318_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_362_28_365_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 320; @symbol_functiondef = [discardActivity,320,13,28]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 367; ]
     function discardActivity() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_320_31_323_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 321 8 ]
-        symbol [ mActivity %tmp.2 321 8 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_367_31_370_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 368 8 ]
         %tmp.2 = getv ? :mActivity;
-        symbol [ discard %tmp.3 321 18 25 ];
         %tmp.3 = getv function %tmp.2 :discard;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 322 8 ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 369 8 ]
         %tmp.4 = null;
-        symbol [ mActivity ? 322 8 17 ];
         putv self :mActivity %tmp.4;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_320_31_323_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_367_31_370_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 325; @symbol_functiondef = [isNullActivity,325,13,27]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 372; ]
     function isNullActivity() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_325_30_332_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 326 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_8_331_8_if_stmt:
-        symbol [ mActivity %tmp.2 326 12 21 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_372_30_379_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 373 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_8_378_8_if_stmt:
         %tmp.2 = getv ? :mActivity;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_8_331_8_if_else_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_8_331_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_31_328_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 327 12 ]
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_8_378_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_8_378_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_31_375_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 374 12 ]
         %tmp.5 = true;
         ret %tmp.5;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_31_328_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_8_331_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_8_331_8_if_else_false:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_329_13_331_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 330 12 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_31_375_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_8_378_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_8_378_8_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_376_13_378_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 377 12 ]
         %tmp.6 = false;
         ret %tmp.6;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_329_13_331_8_stop:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_326_8_331_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_325_30_332_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_376_13_378_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_373_8_378_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_372_30_379_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 334; @symbol_functiondef = [isRecordingActivity,334,13,32]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 381; ]
     function isRecordingActivity() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_334_35_336_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 335 8 ]
-        symbol [ mActivity %tmp.2 335 15 24 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_381_35_383_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 382 8 ]
         %tmp.2 = getv ? :mActivity;
-        symbol [ isRecording %tmp.3 335 25 36 ];
         %tmp.3 = getv function %tmp.2 :isRecording;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         ret %tmp.4;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_334_35_336_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_381_35_383_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 338; @symbol_functiondef = [startFitContrib,338,10,25]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 385; ]
     function startFitContrib() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_338_28_343_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 339 2 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_2_341_2_if_stmt:
-        symbol [ mFitContrib %tmp.2 339 6 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_385_28_390_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 386 2 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_2_388_2_if_stmt:
         %tmp.2 = getv ? :mFitContrib;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_2_341_2_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_2_341_2_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_27_341_2_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 340 3 ]
-        symbol [ MO2FitContributor %tmp.8 340 21 38 ];
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_2_388_2_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_2_388_2_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_27_388_2_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 387 3 ]
         %tmp.8 = getv ? :MO2FitContributor;
-        symbol [ mActivity %tmp.10 340 39 48 ];
         %tmp.10 = getv ? :mActivity;
         %tmp.5 = newc %tmp.8 (%tmp.10);
-        symbol [ mFitContrib ? 340 3 14 ];
         putv self :mFitContrib %tmp.5;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_27_341_2_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_2_341_2_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_339_2_341_2_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 342 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_27_388_2_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_2_388_2_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_386_2_388_2_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 389 8 ]
         %tmp.11 = self;
-        symbol [ setDeviceInfo %tmp.12 342 8 21 ];
         %tmp.12 = getv function %tmp.11 :setDeviceInfo;
         invoke %tmp.11 %tmp.12();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_338_28_343_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_385_28_390_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 345; @symbol_functiondef = [setDeviceInfo,345,13,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 392; ]
     function setDeviceInfo() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_345_29_349_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 346 2 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_2_348_2_if_stmt:
-        symbol [ mFitContrib %tmp.2 346 6 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_392_29_396_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 393 2 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_2_395_2_if_stmt:
         %tmp.2 = getv ? :mFitContrib;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_2_348_2_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_2_348_2_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_27_348_2_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 347 3 ]
-        symbol [ mFitContrib %tmp.6 347 3 14 ];
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_2_395_2_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_2_395_2_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_27_395_2_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 394 3 ]
         %tmp.6 = getv ? :mFitContrib;
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ setDeviceInfo %tmp.8 347 15 28 ];
         %tmp.8 = getv function %tmp.7 :setDeviceInfo;
         invoke %tmp.7 %tmp.8();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_27_348_2_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_2_348_2_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_346_2_348_2_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_345_29_349_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_27_395_2_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_2_395_2_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_393_2_395_2_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_392_29_396_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 351; @symbol_functiondef = [manualLap,351,13,22]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 398; ]
     function manualLap() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_351_25_359_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 352 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_398_25_406_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 399 8 ]
         %tmp.1 = self;
-        symbol [ incrementStep %tmp.2 352 8 21 ];
         %tmp.2 = getv function %tmp.1 :incrementStep;
         invoke %tmp.1 %tmp.2();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 353 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_8_358_8_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_12_353_34_begin:
-        symbol [ is_lap_beg_marked %tmp.4 353 12 29 ];
-        %tmp.4 = getv ? :is_lap_beg_marked;
-        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_8_358_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_33_353_34_true:
-        symbol [ is_lap_end_marked %tmp.6 353 34 51 ];
-        %tmp.6 = getv ? :is_lap_end_marked;
-        %tmp.7 = not %tmp.6;
-        push %tmp.7;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_33_353_34_end:
-        %tmp.8 = phi [%tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_12_353_34_begin] [%tmp.7 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_33_353_34_true] [%tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_33_353_34_end];
-        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_8_358_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_8_358_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_53_358_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 354 12 ]
-        symbol [ mFitContrib %tmp.10 354 12 23 ];
-        %tmp.10 = getv ? :mFitContrib;
-        symbol [ lap %tmp.11 354 24 27 ];
-        %tmp.11 = getv function %tmp.10 :lap;
-        %tmp.12 = 0;
-        invoke %tmp.10 %tmp.11(%tmp.12);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 355 12 ]
-        symbol [ mActivity %tmp.14 355 12 21 ];
-        %tmp.14 = getv ? :mActivity;
-        symbol [ addLap %tmp.15 355 22 28 ];
-        %tmp.15 = getv function %tmp.14 :addLap;
-        invoke %tmp.14 %tmp.15();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 356 12 ]
-        %tmp.16 = false;
-        symbol [ is_lap_beg_marked ? 356 12 29 ];
-        putv self :is_lap_beg_marked %tmp.16;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 357 12 ]
-        %tmp.17 = false;
-        symbol [ is_lap_end_marked ? 357 12 29 ];
-        putv self :is_lap_end_marked %tmp.17;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_53_358_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_8_358_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_353_8_358_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_351_25_359_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_398_25_406_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 362; @symbol_functiondef = [clearBtnAlert,362,13,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 409; ]
     function clearBtnAlert() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_362_29_364_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 363 8 ]
-        symbol [ BTN_NONE %tmp.2 363 19 27 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_409_29_411_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 410 8 ]
         %tmp.2 = getv ? :BTN_NONE;
-        symbol [ btnAlert ? 363 8 16 ];
         putv self :btnAlert %tmp.2;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MainApp_mc_362_29_364_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MainApp_mc_409_29_411_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc"; @line = 1; ]
 <init> {
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 14 6 ]
-    symbol [ WatchUi %tmp.3 14 23 30 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 14 6 ]
     %tmp.3 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.4 14 31 43 ];
     %tmp.4 = getv function %tmp.3 :loadResource;
-    symbol [ Rez %tmp.6 14 44 47 ];
     %tmp.6 = getv ? :Rez;
-    symbol [ Strings %tmp.7 14 48 55 ];
     %tmp.7 = getv %tmp.6 :Strings;
-    symbol [ StartActivityButton %tmp.8 14 56 75 ];
     %tmp.8 = getv %tmp.7 :StartActivityButton;
     %tmp.9 = invoke %tmp.3 %tmp.4(%tmp.8);
-    symbol [ toNumber %tmp.10 14 77 85 ];
     %tmp.10 = getv function %tmp.9 :toNumber;
     %tmp.11 = invoke %tmp.9 %tmp.10();
     putv self :G_Start_Button %tmp.11;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 15 6 ]
-    symbol [ WatchUi %tmp.12 15 21 28 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 15 6 ]
     %tmp.12 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.13 15 29 41 ];
     %tmp.13 = getv function %tmp.12 :loadResource;
-    symbol [ Rez %tmp.15 15 42 45 ];
     %tmp.15 = getv ? :Rez;
-    symbol [ Strings %tmp.16 15 46 53 ];
     %tmp.16 = getv %tmp.15 :Strings;
-    symbol [ LapButton %tmp.17 15 54 63 ];
     %tmp.17 = getv %tmp.16 :LapButton;
     %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
-    symbol [ toNumber %tmp.19 15 65 73 ];
     %tmp.19 = getv function %tmp.18 :toNumber;
     %tmp.20 = invoke %tmp.18 %tmp.19();
     putv self :G_Lap_Button %tmp.20;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MainApp.mc" 18 6 ]
-    symbol [ WatchUi %tmp.21 18 21 28 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MainApp.mc" 18 6 ]
     %tmp.21 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.22 18 29 41 ];
     %tmp.22 = getv function %tmp.21 :loadResource;
-    symbol [ Rez %tmp.24 18 42 45 ];
     %tmp.24 = getv ? :Rez;
-    symbol [ Strings %tmp.25 18 46 53 ];
     %tmp.25 = getv %tmp.24 :Strings;
-    symbol [ PaletteSize %tmp.26 18 54 65 ];
     %tmp.26 = getv %tmp.25 :PaletteSize;
     %tmp.27 = invoke %tmp.21 %tmp.22(%tmp.26);
-    symbol [ toNumber %tmp.28 18 67 75 ];
     %tmp.28 = getv function %tmp.27 :toNumber;
     %tmp.29 = invoke %tmp.27 %tmp.28();
     putv self :G_Palette_Sz %tmp.29;

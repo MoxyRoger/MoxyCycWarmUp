@@ -1,797 +1,669 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 1; ]
 import Toybox.Application;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 2; ]
 import Toybox.Graphics;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 3; ]
 import Toybox.Lang;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 4; ]
 import Toybox.System;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Timer,5,14,19]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 5; ]
 import Toybox.Timer;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [WatchUi,6,14,21]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 6; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 8; @symbol_classdef = [MCycMenuDelegate,8,6,22]; @symbol_extends<0> = [WatchUi,8,31,38]; @symbol_extends<1> = [MenuInputDelegate,8,39,56]; ]
-class MCycMenuDelegate extends WatchUi.MenuInputDelegate {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 8; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 8; ]
+class MCycMenuDelegate extends WatchUi.MenuInputDelegate{
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 8; ]
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 8; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 9; @position = 8; @symbol_vardef = [mMO2,9,8,12]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 9; @position = 8; ]
     var mMO2;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 10; @position = 8; @symbol_vardef = [mFEC,10,8,12]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 10; @position = 8; ]
     var mFEC;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; @symbol_param<0> = [mo2,12,24,27]; @symbol_param<1> = [fec,12,29,32]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 12; ]
     function initialize(mo2, fec) as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_12_34_16_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 13 8 ]
-        symbol [ MenuInputDelegate %tmp.2 13 8 25 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_12_34_16_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 13 8 ]
         %tmp.2 = getv ? :MenuInputDelegate;
-        symbol [ initialize %tmp.3 13 26 36 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 14 8 ]
-        %tmp.4 = lgetv %mo2;
-        symbol [ mo2 %tmp.4 14 15 18 ];
-        symbol [ mMO2 ? 14 8 12 ];
-        putv self :mMO2 %tmp.4;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 15 8 ]
-        %tmp.5 = lgetv %fec;
-        symbol [ fec %tmp.5 15 15 18 ];
-        symbol [ mFEC ? 15 8 12 ];
-        putv self :mFEC %tmp.5;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_12_34_16_4_stop:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 14 8 ]
+        %tmp.5 = lgetv %mo2;
+        putv self :mMO2 %tmp.5;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 15 8 ]
+        %tmp.7 = lgetv %fec;
+        putv self :mFEC %tmp.7;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_12_34_16_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 18; @symbol_functiondef = [onMenuItem,18,13,23]; @symbol_param<0> = [item,18,24,28]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 18; ]
     function onMenuItem(item) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_18_30_52_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 19 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_8_22_8_if_stmt:
-        %tmp.1 = lgetv %item;
-        symbol [ item %tmp.1 19 12 16 ];
-        %tmp.3 = const :sensor;
-        %tmp.4 = eq %tmp.1 %tmp.3;
-        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_8_22_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_8_22_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_29_22_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 20 12 ]
-        symbol [ mMO2 %tmp.6 20 12 16 ];
-        %tmp.6 = getv ? :mMO2;
-        symbol [ goToSearch %tmp.7 20 17 27 ];
-        %tmp.7 = getv function %tmp.6 :goToSearch;
-        invoke %tmp.6 %tmp.7();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 21 12 ]
-        symbol [ WatchUi %tmp.8 21 12 19 ];
-        %tmp.8 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.9 21 20 28 ];
-        %tmp.9 = getv function %tmp.8 :pushView;
-        symbol [ MCycViewPair %tmp.13 21 33 45 ];
-        %tmp.13 = getv ? :MCycViewPair;
-        symbol [ mMO2 %tmp.15 21 46 50 ];
-        %tmp.15 = getv ? :mMO2;
-        %tmp.10 = newc %tmp.13 (%tmp.15);
-        symbol [ MCycPairDelegate %tmp.19 21 57 73 ];
-        %tmp.19 = getv ? :MCycPairDelegate;
-        %tmp.16 = newc %tmp.19 ();
-        symbol [ WatchUi %tmp.20 21 77 84 ];
-        %tmp.20 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.21 21 85 100 ];
-        %tmp.21 = getv %tmp.20 :SLIDE_IMMEDIATE;
-        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.16, %tmp.21);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_29_22_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_8_22_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_19_8_22_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 23 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_8_26_8_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_12_23_39_begin:
-        symbol [ IS_FEC_NATIVE %tmp.23 23 13 26 ];
-        %tmp.23 = getv ? :IS_FEC_NATIVE;
-        %tmp.24 = not %tmp.23;
-        bf %tmp.24 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_8_26_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_30_23_39_true:
-        %tmp.25 = lgetv %item;
-        symbol [ item %tmp.25 23 30 34 ];
-        %tmp.27 = const :trainer;
-        %tmp.28 = eq %tmp.25 %tmp.27;
-        push %tmp.28;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_30_23_39_end:
-        %tmp.29 = phi [%tmp.24 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_12_23_39_begin] [%tmp.28 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_30_23_39_true] [%tmp.29 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_30_23_39_end];
-        bf %tmp.29 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_8_26_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_8_26_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_48_26_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 24 12 ]
-        symbol [ mFEC %tmp.31 24 12 16 ];
-        %tmp.31 = getv ? :mFEC;
-        symbol [ goToSearch %tmp.32 24 17 27 ];
-        %tmp.32 = getv function %tmp.31 :goToSearch;
-        invoke %tmp.31 %tmp.32();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 25 12 ]
-        symbol [ WatchUi %tmp.33 25 12 19 ];
-        %tmp.33 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.34 25 20 28 ];
-        %tmp.34 = getv function %tmp.33 :pushView;
-        symbol [ MCycViewPair %tmp.38 25 33 45 ];
-        %tmp.38 = getv ? :MCycViewPair;
-        symbol [ mFEC %tmp.40 25 46 50 ];
-        %tmp.40 = getv ? :mFEC;
-        %tmp.35 = newc %tmp.38 (%tmp.40);
-        symbol [ MCycPairDelegate %tmp.44 25 57 73 ];
-        %tmp.44 = getv ? :MCycPairDelegate;
-        %tmp.41 = newc %tmp.44 ();
-        symbol [ WatchUi %tmp.45 25 77 84 ];
-        %tmp.45 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.46 25 85 100 ];
-        %tmp.46 = getv %tmp.45 :SLIDE_IMMEDIATE;
-        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.41, %tmp.46);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_48_26_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_8_26_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_23_8_26_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 27 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_8_50_8_if_stmt:
-        %tmp.47 = lgetv %item;
-        symbol [ item %tmp.47 27 12 16 ];
-        %tmp.49 = const :ftp;
-        %tmp.50 = eq %tmp.47 %tmp.49;
-        bf %tmp.50 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_8_50_8_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_8_50_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_26_30_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 28 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_26_30_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_26_30_8_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_18_30_66_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 19 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_8_64_8_if_stmt:
+        %tmp.2 = lgetv %item;
+        %tmp.4 = const :sensor;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_8_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_8_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_29_22_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 20 12 ]
+        %tmp.7 = getv ? :mMO2;
+        %tmp.8 = getv function %tmp.7 :goToSearch;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 21 12 ]
+        %tmp.9 = getm $.Toybox.WatchUi;
+        %tmp.10 = getv function %tmp.9 :pushView;
+        %tmp.14 = getv ? :MCycViewPair;
+        %tmp.16 = getv ? :mMO2;
+        %tmp.11 = newc %tmp.14 (%tmp.16);
+        %tmp.20 = getv ? :MCycPairDelegate;
+        %tmp.17 = newc %tmp.20 ();
+        %tmp.21 = getm $.Toybox.WatchUi;
+        %tmp.22 = getv %tmp.21 :SLIDE_IMMEDIATE;
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.17, %tmp.22);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_29_22_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_8_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_8_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 23 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_stmt:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_17_23_44_begin:
+        %tmp.24 = getv ? :IS_FEC_NATIVE;
+        %tmp.25 = not %tmp.24;
+        bf %tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_35_23_44_true:
+        %tmp.27 = lgetv %item;
+        %tmp.29 = const :trainer;
+        %tmp.30 = eq %tmp.27 %tmp.29;
+        push %tmp.30;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_35_23_44_end:
+        %tmp.31 = phi [%tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_17_23_44_begin] [%tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_35_23_44_true] [%tmp.31 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_35_23_44_end];
+        bf %tmp.31 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_53_26_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 24 12 ]
+        %tmp.33 = getv ? :mFEC;
+        %tmp.34 = getv function %tmp.33 :goToSearch;
+        invoke %tmp.33 %tmp.34();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 25 12 ]
+        %tmp.35 = getm $.Toybox.WatchUi;
+        %tmp.36 = getv function %tmp.35 :pushView;
+        %tmp.40 = getv ? :MCycViewPair;
+        %tmp.42 = getv ? :mFEC;
+        %tmp.37 = newc %tmp.40 (%tmp.42);
+        %tmp.46 = getv ? :MCycPairDelegate;
+        %tmp.43 = newc %tmp.46 ();
+        %tmp.47 = getm $.Toybox.WatchUi;
+        %tmp.48 = getv %tmp.47 :SLIDE_IMMEDIATE;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.43, %tmp.48);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_53_26_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 27 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_13_64_8_if_stmt:
+        %tmp.50 = lgetv %item;
+        %tmp.52 = const :bp1;
+        %tmp.53 = eq %tmp.50 %tmp.52;
+        bf %tmp.53 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_31_30_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 28 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_31_30_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_31_30_8_stop" ]
         %view.1 = local;
-        symbol [ view %view.1 28 16 20 ];
-        symbol [ AlertPicker %tmp.54 28 27 38 ];
-        %tmp.54 = getv ? :AlertPicker;
-        symbol [ PICKER_TYPE_FTP %tmp.56 28 39 54 ];
-        %tmp.56 = getv ? :PICKER_TYPE_FTP;
-        %tmp.51 = newc %tmp.54 (%tmp.56);
-        lputv %view.1 %tmp.51;
-        symbol [ view %view.1 28 16 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 29 12 ]
-        symbol [ WatchUi %tmp.57 29 12 19 ];
-        %tmp.57 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.58 29 20 28 ];
-        %tmp.58 = getv function %tmp.57 :pushView;
-        %tmp.59 = lgetv %view.1;
-        symbol [ view %tmp.59 29 29 33 ];
-        symbol [ AlertPickerDelegate %tmp.63 29 39 58 ];
-        %tmp.63 = getv ? :AlertPickerDelegate;
-        symbol [ PICKER_TYPE_FTP %tmp.65 29 59 74 ];
-        %tmp.65 = getv ? :PICKER_TYPE_FTP;
-        %tmp.66 = lgetv %view.1;
-        symbol [ view %tmp.66 29 76 80 ];
-        %tmp.60 = newc %tmp.63 (%tmp.65, %tmp.66);
-        symbol [ WatchUi %tmp.67 29 83 90 ];
-        %tmp.67 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.68 29 91 106 ];
-        %tmp.68 = getv %tmp.67 :SLIDE_IMMEDIATE;
-        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.60, %tmp.68);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_26_30_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_8_50_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_8_50_8_if_false:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 31 13 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_13_50_8_if_stmt:
-        %tmp.69 = lgetv %item;
-        symbol [ item %tmp.69 31 17 21 ];
-        %tmp.71 = const :sensorLx;
-        %tmp.72 = eq %tmp.69 %tmp.71;
-        bf %tmp.72 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_13_50_8_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_13_50_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_36_35_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 32 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_36_35_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_36_35_8_stop" ]
+        %tmp.57 = getv ? :AlertPicker;
+        %tmp.59 = getv ? :PICKER_TYPE_BP1;
+        %tmp.54 = newc %tmp.57 (%tmp.59);
+        lputv %view.1 %tmp.54;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 29 12 ]
+        %tmp.60 = getm $.Toybox.WatchUi;
+        %tmp.61 = getv function %tmp.60 :pushView;
+        %tmp.63 = lgetv %view.1;
+        %tmp.67 = getv ? :AlertPickerDelegate;
+        %tmp.69 = getv ? :PICKER_TYPE_BP1;
+        %tmp.71 = lgetv %view.1;
+        %tmp.64 = newc %tmp.67 (%tmp.69, %tmp.71);
+        %tmp.72 = getm $.Toybox.WatchUi;
+        %tmp.73 = getv %tmp.72 :SLIDE_IMMEDIATE;
+        invoke %tmp.60 %tmp.61(%tmp.63, %tmp.64, %tmp.73);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_31_30_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 31 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_13_64_8_if_stmt:
+        %tmp.75 = lgetv %item;
+        %tmp.77 = const :bp2;
+        %tmp.78 = eq %tmp.75 %tmp.77;
+        bf %tmp.78 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_31_34_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 32 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_31_34_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_31_34_8_stop" ]
         %view.2 = local;
-        symbol [ view %view.2 32 16 20 ];
-        symbol [ AlertPicker %tmp.76 32 27 38 ];
-        %tmp.76 = getv ? :AlertPicker;
-        symbol [ PICKER_TYPE_SENSORLX %tmp.78 32 39 59 ];
-        %tmp.78 = getv ? :PICKER_TYPE_SENSORLX;
-        %tmp.73 = newc %tmp.76 (%tmp.78);
-        lputv %view.2 %tmp.73;
-        symbol [ view %view.2 32 16 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 33 12 ]
-        symbol [ WatchUi %tmp.79 33 12 19 ];
-        %tmp.79 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.80 33 20 28 ];
-        %tmp.80 = getv function %tmp.79 :pushView;
-        %tmp.81 = lgetv %view.2;
-        symbol [ view %tmp.81 33 29 33 ];
-        symbol [ AlertPickerDelegate %tmp.85 33 39 58 ];
-        %tmp.85 = getv ? :AlertPickerDelegate;
-        symbol [ PICKER_TYPE_SENSORLX %tmp.87 33 59 79 ];
-        %tmp.87 = getv ? :PICKER_TYPE_SENSORLX;
+        %tmp.82 = getv ? :AlertPicker;
+        %tmp.84 = getv ? :PICKER_TYPE_BP2;
+        %tmp.79 = newc %tmp.82 (%tmp.84);
+        lputv %view.2 %tmp.79;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 33 12 ]
+        %tmp.85 = getm $.Toybox.WatchUi;
+        %tmp.86 = getv function %tmp.85 :pushView;
         %tmp.88 = lgetv %view.2;
-        symbol [ view %tmp.88 33 81 85 ];
-        %tmp.82 = newc %tmp.85 (%tmp.87, %tmp.88);
-        symbol [ WatchUi %tmp.89 34 24 31 ];
-        %tmp.89 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.90 34 32 47 ];
-        %tmp.90 = getv %tmp.89 :SLIDE_IMMEDIATE;
-        invoke %tmp.79 %tmp.80(%tmp.81, %tmp.82, %tmp.90);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_36_35_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_13_50_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_13_50_8_if_false:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 36 13 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_13_50_8_if_stmt:
-        %tmp.91 = lgetv %item;
-        symbol [ item %tmp.91 36 17 21 ];
-        %tmp.93 = const :duration;
-        %tmp.94 = eq %tmp.91 %tmp.93;
-        bf %tmp.94 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_13_50_8_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_13_50_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_36_40_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 37 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_36_40_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_36_40_8_stop" ]
+        %tmp.92 = getv ? :AlertPickerDelegate;
+        %tmp.94 = getv ? :PICKER_TYPE_BP2;
+        %tmp.96 = lgetv %view.2;
+        %tmp.89 = newc %tmp.92 (%tmp.94, %tmp.96);
+        %tmp.97 = getm $.Toybox.WatchUi;
+        %tmp.98 = getv %tmp.97 :SLIDE_IMMEDIATE;
+        invoke %tmp.85 %tmp.86(%tmp.88, %tmp.89, %tmp.98);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_31_34_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 35 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_13_64_8_if_stmt:
+        %tmp.100 = lgetv %item;
+        %tmp.102 = const :sensorLx;
+        %tmp.103 = eq %tmp.100 %tmp.102;
+        bf %tmp.103 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_36_39_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 36 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_36_39_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_36_39_8_stop" ]
         %view.3 = local;
-        symbol [ view %view.3 37 16 20 ];
-        symbol [ AlertPicker %tmp.98 37 27 38 ];
-        %tmp.98 = getv ? :AlertPicker;
-        symbol [ PICKER_TYPE_DURATION %tmp.100 37 39 59 ];
-        %tmp.100 = getv ? :PICKER_TYPE_DURATION;
-        %tmp.95 = newc %tmp.98 (%tmp.100);
-        lputv %view.3 %tmp.95;
-        symbol [ view %view.3 37 16 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 38 12 ]
-        symbol [ WatchUi %tmp.101 38 12 19 ];
-        %tmp.101 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.102 38 20 28 ];
-        %tmp.102 = getv function %tmp.101 :pushView;
-        %tmp.103 = lgetv %view.3;
-        symbol [ view %tmp.103 38 29 33 ];
-        symbol [ AlertPickerDelegate %tmp.107 38 39 58 ];
-        %tmp.107 = getv ? :AlertPickerDelegate;
-        symbol [ PICKER_TYPE_DURATION %tmp.109 38 59 79 ];
-        %tmp.109 = getv ? :PICKER_TYPE_DURATION;
-        %tmp.110 = lgetv %view.3;
-        symbol [ view %tmp.110 38 81 85 ];
-        %tmp.104 = newc %tmp.107 (%tmp.109, %tmp.110);
-        symbol [ WatchUi %tmp.111 39 24 31 ];
-        %tmp.111 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.112 39 32 47 ];
-        %tmp.112 = getv %tmp.111 :SLIDE_IMMEDIATE;
-        invoke %tmp.101 %tmp.102(%tmp.103, %tmp.104, %tmp.112);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_36_40_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_13_50_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_13_50_8_if_false:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 41 13 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_13_50_8_if_stmt:
-        %tmp.113 = lgetv %item;
-        symbol [ item %tmp.113 41 17 21 ];
-        %tmp.115 = const :stepsize;
-        %tmp.116 = eq %tmp.113 %tmp.115;
-        bf %tmp.116 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_13_50_8_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_13_50_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_36_45_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 42 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_36_45_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_36_45_8_stop" ]
+        %tmp.107 = getv ? :AlertPicker;
+        %tmp.109 = getv ? :PICKER_TYPE_SENSORLX;
+        %tmp.104 = newc %tmp.107 (%tmp.109);
+        lputv %view.3 %tmp.104;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 37 12 ]
+        %tmp.110 = getm $.Toybox.WatchUi;
+        %tmp.111 = getv function %tmp.110 :pushView;
+        %tmp.113 = lgetv %view.3;
+        %tmp.117 = getv ? :AlertPickerDelegate;
+        %tmp.119 = getv ? :PICKER_TYPE_SENSORLX;
+        %tmp.121 = lgetv %view.3;
+        %tmp.114 = newc %tmp.117 (%tmp.119, %tmp.121);
+        %tmp.122 = getm $.Toybox.WatchUi;
+        %tmp.123 = getv %tmp.122 :SLIDE_IMMEDIATE;
+        invoke %tmp.110 %tmp.111(%tmp.113, %tmp.114, %tmp.123);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_36_39_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 40 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_13_64_8_if_stmt:
+        %tmp.125 = lgetv %item;
+        %tmp.127 = const :cvprep;
+        %tmp.128 = eq %tmp.125 %tmp.127;
+        bf %tmp.128 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_34_44_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 41 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_34_44_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_34_44_8_stop" ]
         %view.4 = local;
-        symbol [ view %view.4 42 16 20 ];
-        symbol [ AlertPicker %tmp.120 42 27 38 ];
-        %tmp.120 = getv ? :AlertPicker;
-        symbol [ PICKER_TYPE_STEPSIZE %tmp.122 42 39 59 ];
-        %tmp.122 = getv ? :PICKER_TYPE_STEPSIZE;
-        %tmp.117 = newc %tmp.120 (%tmp.122);
-        lputv %view.4 %tmp.117;
-        symbol [ view %view.4 42 16 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 43 12 ]
-        symbol [ WatchUi %tmp.123 43 12 19 ];
-        %tmp.123 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.124 43 20 28 ];
-        %tmp.124 = getv function %tmp.123 :pushView;
-        %tmp.125 = lgetv %view.4;
-        symbol [ view %tmp.125 43 29 33 ];
-        symbol [ AlertPickerDelegate %tmp.129 43 39 58 ];
-        %tmp.129 = getv ? :AlertPickerDelegate;
-        symbol [ PICKER_TYPE_STEPSIZE %tmp.131 43 59 79 ];
-        %tmp.131 = getv ? :PICKER_TYPE_STEPSIZE;
-        %tmp.132 = lgetv %view.4;
-        symbol [ view %tmp.132 43 81 85 ];
-        %tmp.126 = newc %tmp.129 (%tmp.131, %tmp.132);
-        symbol [ WatchUi %tmp.133 44 24 31 ];
-        %tmp.133 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.134 44 32 47 ];
-        %tmp.134 = getv %tmp.133 :SLIDE_IMMEDIATE;
-        invoke %tmp.123 %tmp.124(%tmp.125, %tmp.126, %tmp.134);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_36_45_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_13_50_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_13_50_8_if_false:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 46 13 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_13_50_8_if_stmt:
-        %tmp.135 = lgetv %item;
-        symbol [ item %tmp.135 46 17 21 ];
-        %tmp.137 = const :initload;
-        %tmp.138 = eq %tmp.135 %tmp.137;
-        bf %tmp.138 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_13_50_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_13_50_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_36_50_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 47 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_36_50_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_36_50_8_stop" ]
+        %tmp.132 = getv ? :AlertPicker;
+        %tmp.134 = getv ? :PICKER_TYPE_CVPREP;
+        %tmp.129 = newc %tmp.132 (%tmp.134);
+        lputv %view.4 %tmp.129;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 42 12 ]
+        %tmp.135 = getm $.Toybox.WatchUi;
+        %tmp.136 = getv function %tmp.135 :pushView;
+        %tmp.138 = lgetv %view.4;
+        %tmp.142 = getv ? :AlertPickerDelegate;
+        %tmp.144 = getv ? :PICKER_TYPE_CVPREP;
+        %tmp.146 = lgetv %view.4;
+        %tmp.139 = newc %tmp.142 (%tmp.144, %tmp.146);
+        %tmp.147 = getm $.Toybox.WatchUi;
+        %tmp.148 = getv %tmp.147 :SLIDE_IMMEDIATE;
+        invoke %tmp.135 %tmp.136(%tmp.138, %tmp.139, %tmp.148);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_34_44_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 45 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_13_64_8_if_stmt:
+        %tmp.150 = lgetv %item;
+        %tmp.152 = const :cvrest;
+        %tmp.153 = eq %tmp.150 %tmp.152;
+        bf %tmp.153 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_34_49_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 46 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_34_49_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_34_49_8_stop" ]
         %view.5 = local;
-        symbol [ view %view.5 47 16 20 ];
-        symbol [ AlertPicker %tmp.142 47 27 38 ];
-        %tmp.142 = getv ? :AlertPicker;
-        symbol [ PICKER_TYPE_INITLOAD %tmp.144 47 39 59 ];
-        %tmp.144 = getv ? :PICKER_TYPE_INITLOAD;
-        %tmp.139 = newc %tmp.142 (%tmp.144);
-        lputv %view.5 %tmp.139;
-        symbol [ view %view.5 47 16 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 48 12 ]
-        symbol [ WatchUi %tmp.145 48 12 19 ];
-        %tmp.145 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.146 48 20 28 ];
-        %tmp.146 = getv function %tmp.145 :pushView;
-        %tmp.147 = lgetv %view.5;
-        symbol [ view %tmp.147 48 29 33 ];
-        symbol [ AlertPickerDelegate %tmp.151 48 39 58 ];
-        %tmp.151 = getv ? :AlertPickerDelegate;
-        symbol [ PICKER_TYPE_INITLOAD %tmp.153 48 59 79 ];
-        %tmp.153 = getv ? :PICKER_TYPE_INITLOAD;
-        %tmp.154 = lgetv %view.5;
-        symbol [ view %tmp.154 48 81 85 ];
-        %tmp.148 = newc %tmp.151 (%tmp.153, %tmp.154);
-        symbol [ WatchUi %tmp.155 49 24 31 ];
-        %tmp.155 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.156 49 32 47 ];
-        %tmp.156 = getv %tmp.155 :SLIDE_IMMEDIATE;
-        invoke %tmp.145 %tmp.146(%tmp.147, %tmp.148, %tmp.156);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_36_50_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_13_50_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_46_13_50_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_41_13_50_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_36_13_50_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_31_13_50_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_27_8_50_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_18_30_52_4_stop:
+        %tmp.157 = getv ? :AlertPicker;
+        %tmp.159 = getv ? :PICKER_TYPE_CVREST;
+        %tmp.154 = newc %tmp.157 (%tmp.159);
+        lputv %view.5 %tmp.154;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 47 12 ]
+        %tmp.160 = getm $.Toybox.WatchUi;
+        %tmp.161 = getv function %tmp.160 :pushView;
+        %tmp.163 = lgetv %view.5;
+        %tmp.167 = getv ? :AlertPickerDelegate;
+        %tmp.169 = getv ? :PICKER_TYPE_CVREST;
+        %tmp.171 = lgetv %view.5;
+        %tmp.164 = newc %tmp.167 (%tmp.169, %tmp.171);
+        %tmp.172 = getm $.Toybox.WatchUi;
+        %tmp.173 = getv %tmp.172 :SLIDE_IMMEDIATE;
+        invoke %tmp.160 %tmp.161(%tmp.163, %tmp.164, %tmp.173);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_34_49_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 50 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_13_64_8_if_stmt:
+        %tmp.175 = lgetv %item;
+        %tmp.177 = const :accel;
+        %tmp.178 = eq %tmp.175 %tmp.177;
+        bf %tmp.178 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_33_54_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 51 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_33_54_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_33_54_8_stop" ]
+        %view.6 = local;
+        %tmp.182 = getv ? :AlertPicker;
+        %tmp.184 = getv ? :PICKER_TYPE_ACCEL;
+        %tmp.179 = newc %tmp.182 (%tmp.184);
+        lputv %view.6 %tmp.179;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 52 12 ]
+        %tmp.185 = getm $.Toybox.WatchUi;
+        %tmp.186 = getv function %tmp.185 :pushView;
+        %tmp.188 = lgetv %view.6;
+        %tmp.192 = getv ? :AlertPickerDelegate;
+        %tmp.194 = getv ? :PICKER_TYPE_ACCEL;
+        %tmp.196 = lgetv %view.6;
+        %tmp.189 = newc %tmp.192 (%tmp.194, %tmp.196);
+        %tmp.197 = getm $.Toybox.WatchUi;
+        %tmp.198 = getv %tmp.197 :SLIDE_IMMEDIATE;
+        invoke %tmp.185 %tmp.186(%tmp.188, %tmp.189, %tmp.198);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_33_54_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 55 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_13_64_8_if_stmt:
+        %tmp.200 = lgetv %item;
+        %tmp.202 = const :accelrest;
+        %tmp.203 = eq %tmp.200 %tmp.202;
+        bf %tmp.203 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_13_64_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_37_59_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 56 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_37_59_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_37_59_8_stop" ]
+        %view.7 = local;
+        %tmp.207 = getv ? :AlertPicker;
+        %tmp.209 = getv ? :PICKER_TYPE_ACCELREST;
+        %tmp.204 = newc %tmp.207 (%tmp.209);
+        lputv %view.7 %tmp.204;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 57 12 ]
+        %tmp.210 = getm $.Toybox.WatchUi;
+        %tmp.211 = getv function %tmp.210 :pushView;
+        %tmp.213 = lgetv %view.7;
+        %tmp.217 = getv ? :AlertPickerDelegate;
+        %tmp.219 = getv ? :PICKER_TYPE_ACCELREST;
+        %tmp.221 = lgetv %view.7;
+        %tmp.214 = newc %tmp.217 (%tmp.219, %tmp.221);
+        %tmp.222 = getm $.Toybox.WatchUi;
+        %tmp.223 = getv %tmp.222 :SLIDE_IMMEDIATE;
+        invoke %tmp.210 %tmp.211(%tmp.213, %tmp.214, %tmp.223);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_37_59_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_13_64_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 60 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_13_64_8_if_stmt:
+        %tmp.225 = lgetv %item;
+        %tmp.227 = const :numaccel;
+        %tmp.228 = eq %tmp.225 %tmp.227;
+        bf %tmp.228 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_13_64_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_36_64_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 61 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_36_64_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_36_64_8_stop" ]
+        %view.8 = local;
+        %tmp.232 = getv ? :AlertPicker;
+        %tmp.234 = getv ? :PICKER_TYPE_NUMACCEL;
+        %tmp.229 = newc %tmp.232 (%tmp.234);
+        lputv %view.8 %tmp.229;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 62 12 ]
+        %tmp.235 = getm $.Toybox.WatchUi;
+        %tmp.236 = getv function %tmp.235 :pushView;
+        %tmp.238 = lgetv %view.8;
+        %tmp.242 = getv ? :AlertPickerDelegate;
+        %tmp.244 = getv ? :PICKER_TYPE_NUMACCEL;
+        %tmp.246 = lgetv %view.8;
+        %tmp.239 = newc %tmp.242 (%tmp.244, %tmp.246);
+        %tmp.247 = getm $.Toybox.WatchUi;
+        %tmp.248 = getv %tmp.247 :SLIDE_IMMEDIATE;
+        invoke %tmp.235 %tmp.236(%tmp.238, %tmp.239, %tmp.248);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_36_64_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_13_64_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_60_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_55_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_50_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_45_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_40_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_35_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_31_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_27_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_23_13_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_19_8_64_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_18_30_66_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 56; @symbol_classdef = [Alert,56,6,11]; @symbol_extends<0> = [WatchUi,56,20,27]; @symbol_extends<1> = [View,56,28,32]; ]
-class Alert extends WatchUi.View {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 56; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 70; ]
+class Alert extends WatchUi.View{
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 70; ]
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 56; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 70; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 57; @position = 15; @symbol_vardef = [mTimer,57,15,21]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 71; @position = 15; ]
     protected
     var mTimer;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 58; @position = 15; @symbol_vardef = [mTimeout,58,15,23]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 72; @position = 15; ]
     protected
     var mTimeout;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 59; @position = 15; @symbol_vardef = [mText,59,15,20]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 73; @position = 15; ]
     protected
     var mText;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 61; @symbol_classdef = [Delegate,61,10,18]; @symbol_extends<0> = [WatchUi,61,27,34]; @symbol_extends<1> = [InputDelegate,61,35,48]; ]
-    class Delegate extends WatchUi.InputDelegate {
-        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 61; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 75; ]
+    class Delegate extends WatchUi.InputDelegate{
+        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 75; ]
         <init> {
         }
-        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 61; ]
+        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 75; ]
         static
         <init> {
         }
-        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 62; @position = 19; @symbol_vardef = [mView,62,19,24]; ]
+        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 76; @position = 19; ]
         protected
         var mView;
-        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 64; @symbol_functiondef = [initialize,64,17,27]; @symbol_param<0> = [view,64,28,32]; ]
+        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 78; ]
         function initialize(view) as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_64_34_67_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 65 12 ]
-            symbol [ InputDelegate %tmp.2 65 12 25 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_78_34_81_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 79 12 ]
             %tmp.2 = getv ? :InputDelegate;
-            symbol [ initialize %tmp.3 65 26 36 ];
             %tmp.3 = getv function %tmp.2 :initialize;
             invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 66 12 ]
-            %tmp.4 = lgetv %view;
-            symbol [ view %tmp.4 66 20 24 ];
-            symbol [ mView ? 66 12 17 ];
-            putv self :mView %tmp.4;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_64_34_67_8_stop:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 80 12 ]
+            %tmp.5 = lgetv %view;
+            putv self :mView %tmp.5;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_78_34_81_8_stop:
         }
-        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 69; @symbol_functiondef = [onKey,69,17,22]; @symbol_param<0> = [evt,69,23,26]; @symbol_return<0> = [Boolean,69,31,38]; ]
+        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 83; ]
         function onKey(evt) as Boolean {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_69_39_72_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 70 12 ]
-            symbol [ mView %tmp.2 70 12 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_83_39_86_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 84 12 ]
             %tmp.2 = getv ? :mView;
-            symbol [ dismiss %tmp.3 70 18 25 ];
             %tmp.3 = getv function %tmp.2 :dismiss;
             invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 71 12 ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 85 12 ]
             %tmp.4 = true;
             ret %tmp.4;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_69_39_72_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_83_39_86_8_stop:
         }
-        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 74; @symbol_functiondef = [onTap,74,17,22]; @symbol_param<0> = [evt,74,23,26]; @symbol_return<0> = [Boolean,74,31,38]; ]
+        [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 88; ]
         function onTap(evt) as Boolean {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_74_39_77_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 75 12 ]
-            symbol [ mView %tmp.2 75 12 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_88_39_91_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 89 12 ]
             %tmp.2 = getv ? :mView;
-            symbol [ dismiss %tmp.3 75 18 25 ];
             %tmp.3 = getv function %tmp.2 :dismiss;
             invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 76 12 ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 90 12 ]
             %tmp.4 = true;
             ret %tmp.4;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_74_39_77_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_88_39_91_8_stop:
         }
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 80; @symbol_functiondef = [show,80,20,24]; @symbol_param<0> = [text,80,25,29]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 94; ]
     static
     function show(text) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_80_31_82_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 81 8 ]
-        symbol [ Alert %tmp.4 81 12 17 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_94_31_96_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 95 8 ]
         %tmp.4 = getv ? :Alert;
-        %tmp.5 = lgetv %text;
-        symbol [ text %tmp.5 81 18 22 ];
-        newc %tmp.4 (%tmp.5);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_80_31_82_4_stop:
+        %tmp.6 = lgetv %text;
+        newc %tmp.4 (%tmp.6);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_94_31_96_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 84; @symbol_functiondef = [initialize,84,13,23]; @symbol_param<0> = [text,84,24,28]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 98; ]
     function initialize(text) as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_84_30_90_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 85 8 ]
-        symbol [ View %tmp.2 85 8 12 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_98_30_104_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 99 8 ]
         %tmp.2 = getv ? :View;
-        symbol [ initialize %tmp.3 85 13 23 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 86 8 ]
-        %tmp.4 = lgetv %text;
-        symbol [ text %tmp.4 86 16 20 ];
-        symbol [ mText ? 86 8 13 ];
-        putv self :mText %tmp.4;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 87 8 ]
-        %tmp.5 = 2000;
-        symbol [ mTimeout ? 87 8 16 ];
-        putv self :mTimeout %tmp.5;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 88 8 ]
-        symbol [ Timer %tmp.8 88 21 26 ];
-        %tmp.8 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.9 88 27 32 ];
-        %tmp.9 = getv function ? %tmp.8 :Timer;
-        %tmp.6 = newc %tmp.9 ();
-        symbol [ mTimer ? 88 8 14 ];
-        putv self :mTimer %tmp.6;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 89 8 ]
-        symbol [ WatchUi %tmp.10 89 8 15 ];
-        %tmp.10 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.11 89 16 24 ];
-        %tmp.11 = getv function %tmp.10 :pushView;
-        %tmp.12 = self;
-        symbol [ self %tmp.12 89 25 29 ];
-        symbol [ Delegate %tmp.16 89 35 43 ];
-        %tmp.16 = getv ? :Delegate;
-        %tmp.17 = self;
-        symbol [ self %tmp.17 89 44 48 ];
-        %tmp.13 = newc %tmp.16 (%tmp.17);
-        symbol [ WatchUi %tmp.18 89 51 58 ];
-        %tmp.18 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_IMMEDIATE %tmp.19 89 59 74 ];
-        %tmp.19 = getv %tmp.18 :SLIDE_IMMEDIATE;
-        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.19);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_84_30_90_4_stop:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 100 8 ]
+        %tmp.5 = lgetv %text;
+        putv self :mText %tmp.5;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 101 8 ]
+        %tmp.6 = 2000;
+        putv self :mTimeout %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 102 8 ]
+        %tmp.9 = getm $.Toybox.Timer;
+        %tmp.10 = getv function ? %tmp.9 :Timer;
+        %tmp.7 = newc %tmp.10 ();
+        putv self :mTimer %tmp.7;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 103 8 ]
+        %tmp.11 = getm $.Toybox.WatchUi;
+        %tmp.12 = getv function %tmp.11 :pushView;
+        %tmp.14 = self;
+        %tmp.18 = getv ? :Delegate;
+        %tmp.20 = self;
+        %tmp.15 = newc %tmp.18 (%tmp.20);
+        %tmp.21 = getm $.Toybox.WatchUi;
+        %tmp.22 = getv %tmp.21 :SLIDE_IMMEDIATE;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.15, %tmp.22);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_98_30_104_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 92; @symbol_functiondef = [onShow,92,13,19]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 106; ]
     function onShow() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_92_22_94_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 93 8 ]
-        symbol [ mTimer %tmp.2 93 8 14 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_106_22_108_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 107 8 ]
         %tmp.2 = getv ? :mTimer;
-        symbol [ start %tmp.3 93 15 20 ];
         %tmp.3 = getv function %tmp.2 :start;
         %tmp.4 = self;
-        symbol [ method %tmp.5 93 21 27 ];
         %tmp.5 = getv function %tmp.4 :method;
         %tmp.7 = const :dismiss;
         %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.7);
-        symbol [ mTimeout %tmp.10 93 39 47 ];
         %tmp.10 = getv ? :mTimeout;
         %tmp.11 = false;
         invoke %tmp.2 %tmp.3(%tmp.8, %tmp.10, %tmp.11);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_92_22_94_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_106_22_108_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 96; @symbol_functiondef = [onHide,96,13,19]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 110; ]
     function onHide() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_96_22_98_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 97 8 ]
-        symbol [ mTimer %tmp.2 97 8 14 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_110_22_112_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 111 8 ]
         %tmp.2 = getv ? :mTimer;
-        symbol [ stop %tmp.3 97 15 19 ];
         %tmp.3 = getv function %tmp.2 :stop;
         invoke %tmp.2 %tmp.3();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_96_22_98_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_110_22_112_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 100; @symbol_functiondef = [onUpdate,100,13,21]; @symbol_param<0> = [dc,100,22,24]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 114; ]
     function onUpdate(dc) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 101 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 115 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %tWidth.1 = local;
-        symbol [ tWidth %tWidth.1 101 12 18 ];
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 101 22 24 ];
-        symbol [ getTextWidthInPixels %tmp.2 101 25 45 ];
         %tmp.2 = getv function %tmp.1 :getTextWidthInPixels;
-        symbol [ mText %tmp.4 101 46 51 ];
         %tmp.4 = getv ? :mText;
-        symbol [ Graphics %tmp.5 101 53 61 ];
         %tmp.5 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.6 101 62 73 ];
         %tmp.6 = getv %tmp.5 :FONT_MEDIUM;
         %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
         lputv %tWidth.1 %tmp.7;
-        symbol [ tWidth %tWidth.1 101 12 18 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 102 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 116 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %tHeight.2 = local;
-        symbol [ tHeight %tHeight.2 102 12 19 ];
         %tmp.8 = lgetv %dc;
-        symbol [ dc %tmp.8 102 22 24 ];
-        symbol [ getFontHeight %tmp.9 102 25 38 ];
         %tmp.9 = getv function %tmp.8 :getFontHeight;
-        symbol [ Graphics %tmp.10 102 39 47 ];
         %tmp.10 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.11 102 48 59 ];
         %tmp.11 = getv %tmp.10 :FONT_MEDIUM;
         %tmp.12 = invoke %tmp.8 %tmp.9(%tmp.11);
         lputv %tHeight.2 %tmp.12;
-        symbol [ tHeight %tHeight.2 102 12 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 104 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 118 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %bWidth.3 = local;
-        symbol [ bWidth %bWidth.3 104 12 18 ];
-        %tmp.13 = lgetv %tWidth.1;
-        symbol [ tWidth %tmp.13 104 22 28 ];
-        %tmp.14 = 14;
-        %tmp.15 = add %tmp.13 %tmp.14;
-        lputv %bWidth.3 %tmp.15;
-        symbol [ bWidth %bWidth.3 104 12 18 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 105 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+        %tmp.14 = lgetv %tWidth.1;
+        %tmp.15 = 14;
+        %tmp.16 = add %tmp.14 %tmp.15;
+        lputv %bWidth.3 %tmp.16;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 119 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %bHeight.4 = local;
-        symbol [ bHeight %bHeight.4 105 12 19 ];
-        %tmp.16 = lgetv %tHeight.2;
-        symbol [ tHeight %tmp.16 105 22 29 ];
-        %tmp.17 = 14;
-        %tmp.18 = add %tmp.16 %tmp.17;
-        lputv %bHeight.4 %tmp.18;
-        symbol [ bHeight %bHeight.4 105 12 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 107 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+        %tmp.18 = lgetv %tHeight.2;
+        %tmp.19 = 14;
+        %tmp.20 = add %tmp.18 %tmp.19;
+        lputv %bHeight.4 %tmp.20;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 121 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %bX.5 = local;
-        symbol [ bX %bX.5 107 12 14 ];
-        %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 107 18 20 ];
-        symbol [ getWidth %tmp.20 107 21 29 ];
-        %tmp.20 = getv function %tmp.19 :getWidth;
-        %tmp.21 = invoke %tmp.19 %tmp.20();
-        %tmp.22 = lgetv %bWidth.3;
-        symbol [ bWidth %tmp.22 107 34 40 ];
-        %tmp.23 = sub %tmp.21 %tmp.22;
-        %tmp.24 = 2;
-        %tmp.25 = div %tmp.23 %tmp.24;
-        lputv %bX.5 %tmp.25;
-        symbol [ bX %bX.5 107 12 14 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 108 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :getWidth;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.25 = lgetv %bWidth.3;
+        %tmp.26 = sub %tmp.23 %tmp.25;
+        %tmp.27 = 2;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        lputv %bX.5 %tmp.28;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 122 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %bY.6 = local;
-        symbol [ bY %bY.6 108 12 14 ];
-        %tmp.26 = lgetv %dc;
-        symbol [ dc %tmp.26 108 18 20 ];
-        symbol [ getHeight %tmp.27 108 21 30 ];
-        %tmp.27 = getv function %tmp.26 :getHeight;
-        %tmp.28 = invoke %tmp.26 %tmp.27();
-        %tmp.29 = lgetv %bHeight.4;
-        symbol [ bHeight %tmp.29 108 35 42 ];
-        %tmp.30 = sub %tmp.28 %tmp.29;
-        %tmp.31 = 2;
-        %tmp.32 = div %tmp.30 %tmp.31;
-        lputv %bY.6 %tmp.32;
-        symbol [ bY %bY.6 108 12 14 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 110 8 ]
-        %tmp.33 = lgetv %dc;
-        symbol [ dc %tmp.33 110 8 10 ];
-        symbol [ setColor %tmp.34 110 11 19 ];
-        %tmp.34 = getv function %tmp.33 :setColor;
-        symbol [ Graphics %tmp.35 110 20 28 ];
-        %tmp.35 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.36 110 29 40 ];
-        %tmp.36 = getv %tmp.35 :COLOR_WHITE;
-        symbol [ Graphics %tmp.37 110 42 50 ];
-        %tmp.37 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.38 110 51 62 ];
-        %tmp.38 = getv %tmp.37 :COLOR_WHITE;
-        invoke %tmp.33 %tmp.34(%tmp.36, %tmp.38);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 111 8 ]
-        %tmp.39 = lgetv %dc;
-        symbol [ dc %tmp.39 111 8 10 ];
-        symbol [ fillRectangle %tmp.40 111 11 24 ];
-        %tmp.40 = getv function %tmp.39 :fillRectangle;
-        %tmp.41 = lgetv %bX.5;
-        symbol [ bX %tmp.41 111 25 27 ];
-        %tmp.42 = lgetv %bY.6;
-        symbol [ bY %tmp.42 111 29 31 ];
-        %tmp.43 = lgetv %bWidth.3;
-        symbol [ bWidth %tmp.43 111 33 39 ];
-        %tmp.44 = lgetv %bHeight.4;
-        symbol [ bHeight %tmp.44 111 41 48 ];
-        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.42, %tmp.43, %tmp.44);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 113 8 ]
-        %tmp.45 = lgetv %dc;
-        symbol [ dc %tmp.45 113 8 10 ];
-        symbol [ setColor %tmp.46 113 11 19 ];
-        %tmp.46 = getv function %tmp.45 :setColor;
-        symbol [ Graphics %tmp.47 113 20 28 ];
-        %tmp.47 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.48 113 29 40 ];
-        %tmp.48 = getv %tmp.47 :COLOR_BLACK;
-        symbol [ Graphics %tmp.49 113 42 50 ];
-        %tmp.49 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.50 113 51 62 ];
-        %tmp.50 = getv %tmp.49 :COLOR_WHITE;
-        invoke %tmp.45 %tmp.46(%tmp.48, %tmp.50);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 114 8 ]
-        for @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_test @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_incr @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_init:
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_begin" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_end" ]
+        %tmp.29 = lgetv %dc;
+        %tmp.30 = getv function %tmp.29 :getHeight;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        %tmp.33 = lgetv %bHeight.4;
+        %tmp.34 = sub %tmp.31 %tmp.33;
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        lputv %bY.6 %tmp.36;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 124 8 ]
+        %tmp.37 = lgetv %dc;
+        %tmp.38 = getv function %tmp.37 :setColor;
+        %tmp.39 = getm $.Toybox.Graphics;
+        %tmp.40 = getv %tmp.39 :COLOR_WHITE;
+        %tmp.41 = getm $.Toybox.Graphics;
+        %tmp.42 = getv %tmp.41 :COLOR_WHITE;
+        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.42);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 125 8 ]
+        %tmp.43 = lgetv %dc;
+        %tmp.44 = getv function %tmp.43 :fillRectangle;
+        %tmp.46 = lgetv %bX.5;
+        %tmp.48 = lgetv %bY.6;
+        %tmp.50 = lgetv %bWidth.3;
+        %tmp.52 = lgetv %bHeight.4;
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.48, %tmp.50, %tmp.52);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 127 8 ]
+        %tmp.53 = lgetv %dc;
+        %tmp.54 = getv function %tmp.53 :setColor;
+        %tmp.55 = getm $.Toybox.Graphics;
+        %tmp.56 = getv %tmp.55 :COLOR_BLACK;
+        %tmp.57 = getm $.Toybox.Graphics;
+        %tmp.58 = getv %tmp.57 :COLOR_WHITE;
+        invoke %tmp.53 %tmp.54(%tmp.56, %tmp.58);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 128 8 ]
+        for @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_test @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_incr @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_init:
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_begin" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_end" ]
         %i.7 = local;
-        symbol [ i %i.7 114 17 18 ];
-        %tmp.51 = 0;
-        lputv %i.7 %tmp.51;
-        symbol [ i %i.7 114 17 18 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_test:
-        %tmp.52 = lgetv %i.7;
-        symbol [ i %tmp.52 114 24 25 ];
-        %tmp.53 = 2;
-        %tmp.54 = lt %tmp.52 %tmp.53;
-        bf %tmp.54 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_begin:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_36_121_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 115 12 ]
-        %tmp.55 = lgetv %bX.5;
-        symbol [ bX %tmp.55 115 12 14 ];
-        %tmp.56 = lgetv %i.7;
-        symbol [ i %tmp.56 115 18 19 ];
-        %tmp.57 = add %tmp.55 %tmp.56;
-        lputv %bX.5 %tmp.57;
-        symbol [ bX %bX.5 115 12 14 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 116 12 ]
-        %tmp.58 = lgetv %bY.6;
-        symbol [ bY %tmp.58 116 12 14 ];
-        %tmp.59 = lgetv %i.7;
-        symbol [ i %tmp.59 116 18 19 ];
-        %tmp.60 = add %tmp.58 %tmp.59;
-        lputv %bY.6 %tmp.60;
-        symbol [ bY %bY.6 116 12 14 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 117 12 ]
-        %tmp.61 = lgetv %bWidth.3;
-        symbol [ bWidth %tmp.61 117 12 18 ];
+        %tmp.59 = 0;
+        lputv %i.7 %tmp.59;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_test:
+        %tmp.61 = lgetv %i.7;
         %tmp.62 = 2;
-        %tmp.63 = lgetv %i.7;
-        symbol [ i %tmp.63 117 27 28 ];
-        %tmp.64 = mul %tmp.62 %tmp.63;
-        %tmp.65 = sub %tmp.61 %tmp.64;
-        lputv %bWidth.3 %tmp.65;
-        symbol [ bWidth %bWidth.3 117 12 18 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 118 12 ]
-        %tmp.66 = lgetv %bHeight.4;
-        symbol [ bHeight %tmp.66 118 12 19 ];
-        %tmp.67 = 2;
-        %tmp.68 = lgetv %i.7;
-        symbol [ i %tmp.68 118 28 29 ];
-        %tmp.69 = mul %tmp.67 %tmp.68;
-        %tmp.70 = sub %tmp.66 %tmp.69;
-        lputv %bHeight.4 %tmp.70;
-        symbol [ bHeight %bHeight.4 118 12 19 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 120 12 ]
-        %tmp.71 = lgetv %dc;
-        symbol [ dc %tmp.71 120 12 14 ];
-        symbol [ drawRectangle %tmp.72 120 15 28 ];
-        %tmp.72 = getv function %tmp.71 :drawRectangle;
-        %tmp.73 = lgetv %bX.5;
-        symbol [ bX %tmp.73 120 29 31 ];
-        %tmp.74 = lgetv %bY.6;
-        symbol [ bY %tmp.74 120 33 35 ];
-        %tmp.75 = lgetv %bWidth.3;
-        symbol [ bWidth %tmp.75 120 37 43 ];
-        %tmp.76 = lgetv %bHeight.4;
-        symbol [ bHeight %tmp.76 120 45 52 ];
-        invoke %tmp.71 %tmp.72(%tmp.73, %tmp.74, %tmp.75, %tmp.76);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_36_121_8_stop:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_incr:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 114 ]
-        %tmp.79 = lgetv %i.7;
-        symbol [ i %tmp.79 114 33 34 ];
-        %tmp.80 = add %tmp.79 1;
-        lputv %i.7 %tmp.80;
-        symbol [ i %i.7 114 33 34 ];
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_test;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_114_8_121_8_for_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 123 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+        %tmp.63 = lt %tmp.61 %tmp.62;
+        bf %tmp.63 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_begin:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_36_135_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 129 12 ]
+        %tmp.64 = lgetv %bX.5;
+        %tmp.66 = lgetv %i.7;
+        %tmp.67 = add %tmp.64 %tmp.66;
+        lputv %bX.5 %tmp.67;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 130 12 ]
+        %tmp.68 = lgetv %bY.6;
+        %tmp.70 = lgetv %i.7;
+        %tmp.71 = add %tmp.68 %tmp.70;
+        lputv %bY.6 %tmp.71;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 131 12 ]
+        %tmp.72 = lgetv %bWidth.3;
+        %tmp.73 = 2;
+        %tmp.75 = lgetv %i.7;
+        %tmp.76 = mul %tmp.73 %tmp.75;
+        %tmp.77 = sub %tmp.72 %tmp.76;
+        lputv %bWidth.3 %tmp.77;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 132 12 ]
+        %tmp.78 = lgetv %bHeight.4;
+        %tmp.79 = 2;
+        %tmp.81 = lgetv %i.7;
+        %tmp.82 = mul %tmp.79 %tmp.81;
+        %tmp.83 = sub %tmp.78 %tmp.82;
+        lputv %bHeight.4 %tmp.83;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 134 12 ]
+        %tmp.84 = lgetv %dc;
+        %tmp.85 = getv function %tmp.84 :drawRectangle;
+        %tmp.87 = lgetv %bX.5;
+        %tmp.89 = lgetv %bY.6;
+        %tmp.91 = lgetv %bWidth.3;
+        %tmp.93 = lgetv %bHeight.4;
+        invoke %tmp.84 %tmp.85(%tmp.87, %tmp.89, %tmp.91, %tmp.93);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_36_135_8_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_incr:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 128 ]
+        %tmp.96 = lgetv %i.7;
+        %tmp.97 = add %tmp.96 1;
+        lputv %i.7 %tmp.97;
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_test;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_128_8_135_8_for_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 137 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %tX.8 = local;
-        symbol [ tX %tX.8 123 12 14 ];
-        %tmp.81 = lgetv %dc;
-        symbol [ dc %tmp.81 123 17 19 ];
-        symbol [ getWidth %tmp.82 123 20 28 ];
-        %tmp.82 = getv function %tmp.81 :getWidth;
-        %tmp.83 = invoke %tmp.81 %tmp.82();
-        %tmp.84 = 2;
-        %tmp.85 = div %tmp.83 %tmp.84;
-        lputv %tX.8 %tmp.85;
-        symbol [ tX %tX.8 123 12 14 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 124 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop" ]
+        %tmp.98 = lgetv %dc;
+        %tmp.99 = getv function %tmp.98 :getWidth;
+        %tmp.100 = invoke %tmp.98 %tmp.99();
+        %tmp.101 = 2;
+        %tmp.102 = div %tmp.100 %tmp.101;
+        lputv %tX.8 %tmp.102;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 138 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop" ]
         %tY.9 = local;
-        symbol [ tY %tY.9 124 12 14 ];
-        %tmp.86 = lgetv %dc;
-        symbol [ dc %tmp.86 124 18 20 ];
-        symbol [ getHeight %tmp.87 124 21 30 ];
-        %tmp.87 = getv function %tmp.86 :getHeight;
-        %tmp.88 = invoke %tmp.86 %tmp.87();
-        %tmp.89 = lgetv %tHeight.2;
-        symbol [ tHeight %tmp.89 124 35 42 ];
-        %tmp.90 = sub %tmp.88 %tmp.89;
-        %tmp.91 = 2;
-        %tmp.92 = div %tmp.90 %tmp.91;
-        lputv %tY.9 %tmp.92;
-        symbol [ tY %tY.9 124 12 14 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 126 8 ]
-        %tmp.93 = lgetv %dc;
-        symbol [ dc %tmp.93 126 8 10 ];
-        symbol [ setColor %tmp.94 126 11 19 ];
-        %tmp.94 = getv function %tmp.93 :setColor;
-        symbol [ Graphics %tmp.95 126 20 28 ];
-        %tmp.95 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.96 126 29 40 ];
-        %tmp.96 = getv %tmp.95 :COLOR_BLACK;
-        symbol [ Graphics %tmp.97 126 42 50 ];
-        %tmp.97 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.98 126 51 62 ];
-        %tmp.98 = getv %tmp.97 :COLOR_WHITE;
-        invoke %tmp.93 %tmp.94(%tmp.96, %tmp.98);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 127 8 ]
-        %tmp.99 = lgetv %dc;
-        symbol [ dc %tmp.99 127 8 10 ];
-        symbol [ drawText %tmp.100 127 11 19 ];
-        %tmp.100 = getv function %tmp.99 :drawText;
-        %tmp.101 = lgetv %tX.8;
-        symbol [ tX %tmp.101 127 20 22 ];
-        %tmp.102 = lgetv %tY.9;
-        symbol [ tY %tmp.102 127 24 26 ];
-        symbol [ Graphics %tmp.103 127 28 36 ];
-        %tmp.103 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.104 127 37 48 ];
-        %tmp.104 = getv %tmp.103 :FONT_MEDIUM;
-        symbol [ mText %tmp.106 127 50 55 ];
-        %tmp.106 = getv ? :mText;
-        symbol [ Graphics %tmp.107 127 57 65 ];
-        %tmp.107 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.108 127 66 85 ];
-        %tmp.108 = getv %tmp.107 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.99 %tmp.100(%tmp.101, %tmp.102, %tmp.104, %tmp.106, %tmp.108);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_100_26_128_4_stop:
+        %tmp.103 = lgetv %dc;
+        %tmp.104 = getv function %tmp.103 :getHeight;
+        %tmp.105 = invoke %tmp.103 %tmp.104();
+        %tmp.107 = lgetv %tHeight.2;
+        %tmp.108 = sub %tmp.105 %tmp.107;
+        %tmp.109 = 2;
+        %tmp.110 = div %tmp.108 %tmp.109;
+        lputv %tY.9 %tmp.110;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 140 8 ]
+        %tmp.111 = lgetv %dc;
+        %tmp.112 = getv function %tmp.111 :setColor;
+        %tmp.113 = getm $.Toybox.Graphics;
+        %tmp.114 = getv %tmp.113 :COLOR_BLACK;
+        %tmp.115 = getm $.Toybox.Graphics;
+        %tmp.116 = getv %tmp.115 :COLOR_WHITE;
+        invoke %tmp.111 %tmp.112(%tmp.114, %tmp.116);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 141 8 ]
+        %tmp.117 = lgetv %dc;
+        %tmp.118 = getv function %tmp.117 :drawText;
+        %tmp.120 = lgetv %tX.8;
+        %tmp.122 = lgetv %tY.9;
+        %tmp.123 = getm $.Toybox.Graphics;
+        %tmp.124 = getv %tmp.123 :FONT_MEDIUM;
+        %tmp.126 = getv ? :mText;
+        %tmp.127 = getm $.Toybox.Graphics;
+        %tmp.128 = getv %tmp.127 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.117 %tmp.118(%tmp.120, %tmp.122, %tmp.124, %tmp.126, %tmp.128);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_114_26_142_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 130; @symbol_functiondef = [dismiss,130,13,20]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 144; ]
     function dismiss() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_130_23_132_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc" 131 8 ]
-        symbol [ WatchUi %tmp.1 131 8 15 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_144_23_146_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc" 145 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 131 16 23 ];
         %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ SLIDE_IMMEDIATE %tmp.4 131 24 39 ];
         %tmp.4 = getv ? :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.4);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MCycMenuDelegate_mc_130_23_132_4_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MCycMenuDelegate_mc_144_23_146_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MCycMenuDelegate.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MCycMenuDelegate.mc"; @line = 1; ]
 <init> {
 }

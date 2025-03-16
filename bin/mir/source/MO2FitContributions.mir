@@ -1,607 +1,466 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 1; ]
 import Toybox.Application;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 2; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 3; ]
 import Toybox.System;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [FitContributor,4,14,28]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 4; ]
 import Toybox.FitContributor;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 6; @position = 6; @symbol_constdef = [SMO2_FIELD_ID,6,6,19]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 6; @position = 6; ]
 const SMO2_FIELD_ID = 0;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 7; @position = 6; @symbol_constdef = [THB_FIELD_ID,7,6,18]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 7; @position = 6; ]
 const THB_FIELD_ID = 1;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 8; @position = 6; @symbol_constdef = [DEVICE_INFO_ID,8,6,20]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 8; @position = 6; ]
 const DEVICE_INFO_ID = 2;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 9; @position = 6; @symbol_constdef = [INTENSITY_FIELD_ID,9,6,24]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 9; @position = 6; ]
 const INTENSITY_FIELD_ID = 3;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 12; @position = 6; @symbol_constdef = [G_currentHemoPercentUnits,12,6,31]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 12; @position = 6; ]
 const G_currentHemoPercentUnits;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 13; @position = 6; @symbol_constdef = [G_currentHemoPercentLabel,13,6,31]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 13; @position = 6; ]
 const G_currentHemoPercentLabel;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 16; @position = 6; @symbol_constdef = [G_totalHemoConcentrationUnits,16,6,35]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 16; @position = 6; ]
 const G_totalHemoConcentrationUnits;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 17; @position = 6; @symbol_constdef = [G_totalHemoConcentrationLabel,17,6,35]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 17; @position = 6; ]
 const G_totalHemoConcentrationLabel;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 18; @position = 6; @symbol_constdef = [G_AppSensor,18,6,17]; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 18; @position = 6; ]
 const G_AppSensor;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 20; @symbol_classdef = [MO2FitContributor,20,6,23]; ]
-class MO2FitContributor {
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 20; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 20; ]
+class MO2FitContributor{
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 20; ]
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 20; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 20; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 23; @position = 15; @symbol_vardef = [mSmO2,23,15,20]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 23; @position = 15; ]
     protected
     var mSmO2 = null;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 24; @position = 15; @symbol_vardef = [mThb,24,15,19]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 24; @position = 15; ]
     protected
     var mThb = null;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 25; @position = 15; @symbol_vardef = [mIntensity,25,15,25]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 25; @position = 15; ]
     protected
     var mIntensity = null;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 26; @position = 15; @symbol_vardef = [mDeviceInfo,26,15,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 26; @position = 15; ]
     protected
     var mDeviceInfo = null;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 27; @position = 15; @symbol_vardef = [location,27,15,23]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 27; @position = 15; ]
     protected
     var location;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 28; @position = 15; @symbol_vardef = [sensorId,28,15,23]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 28; @position = 15; ]
     protected
     var sensorId;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 31; @symbol_functiondef = [initialize,31,13,23]; @symbol_param<0> = [activity,31,24,32]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 31; ]
     function initialize(activity) as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_31_34_52_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 32 2 ]
-        symbol [ Application %tmp.1 32 13 24 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_31_34_52_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 32 2 ]
         %tmp.1 = getm $.Toybox.Application;
-        symbol [ Storage %tmp.2 32 25 32 ];
         %tmp.2 = getv %tmp.1 :Storage;
-        symbol [ getValue %tmp.3 32 33 41 ];
         %tmp.3 = getv function %tmp.2 :getValue;
         %tmp.4 = "SensorLx";
         %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
-        symbol [ location ? 32 2 10 ];
         putv self :location %tmp.5;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 33 2 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_2_38_8_if_stmt:
-        symbol [ location %tmp.7 33 6 14 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 33 2 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_2_38_8_if_stmt:
         %tmp.7 = getv ? :location;
         %tmp.8 = null;
         %tmp.9 = eq %tmp.7 %tmp.8;
-        bf %tmp.9 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_2_38_8_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_2_38_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_24_35_2_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 34 3 ]
-        symbol [ Glocations %tmp.11 34 14 24 ];
+        bf %tmp.9 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_2_38_8_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_2_38_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_24_35_2_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 34 3 ]
         %tmp.11 = getv ? :Glocations;
-        symbol [ size %tmp.12 34 25 29 ];
         %tmp.12 = getv function %tmp.11 :size;
         %tmp.13 = invoke %tmp.11 %tmp.12();
         %tmp.14 = 1;
         %tmp.15 = sub %tmp.13 %tmp.14;
-        symbol [ location ? 34 3 11 ];
         putv self :location %tmp.15;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_24_35_2_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_2_38_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_2_38_8_if_false:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 36 13 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_13_38_8_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_16_36_61_begin:
-        symbol [ location %tmp.17 36 16 24 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_24_35_2_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_2_38_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_2_38_8_if_false:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 36 13 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_13_38_8_if_stmt:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_16_36_61_begin:
         %tmp.17 = getv ? :location;
         %tmp.18 = as %tmp.17 { (!Null) };
-        symbol [ Glocations %tmp.20 36 27 37 ];
         %tmp.20 = getv ? :Glocations;
-        symbol [ size %tmp.21 36 38 42 ];
         %tmp.21 = getv function %tmp.20 :size;
         %tmp.22 = invoke %tmp.20 %tmp.21();
         %tmp.23 = 1;
         %tmp.24 = sub %tmp.22 %tmp.23;
         %tmp.25 = gt %tmp.18 %tmp.24;
-        bt %tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_13_38_8_if_true;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_50_36_61_false:
-        symbol [ location %tmp.27 36 50 58 ];
+        bt %tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_13_38_8_if_true;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_50_36_61_false:
         %tmp.27 = getv ? :location;
         %tmp.28 = 0;
         %tmp.29 = lt %tmp.27 %tmp.28;
         push %tmp.29;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_50_36_61_end:
-        %tmp.30 = phi [%tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_16_36_61_begin] [%tmp.29 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_50_36_61_false] [%tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_50_36_61_end];
-        bf %tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_13_38_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_13_38_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_64_38_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 37 12 ]
-        symbol [ Glocations %tmp.32 37 23 33 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_50_36_61_end:
+        %tmp.30 = phi [%tmp.25 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_16_36_61_begin] [%tmp.29 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_50_36_61_false] [%tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_50_36_61_end];
+        bf %tmp.30 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_13_38_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_13_38_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_64_38_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 37 12 ]
         %tmp.32 = getv ? :Glocations;
-        symbol [ size %tmp.33 37 34 38 ];
         %tmp.33 = getv function %tmp.32 :size;
         %tmp.34 = invoke %tmp.32 %tmp.33();
         %tmp.35 = 1;
         %tmp.36 = sub %tmp.34 %tmp.35;
-        symbol [ location ? 37 12 20 ];
         putv self :location %tmp.36;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_64_38_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_13_38_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_36_13_38_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_33_2_38_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 39 8 ]
-        symbol [ Application %tmp.37 39 19 30 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_64_38_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_13_38_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_36_13_38_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_33_2_38_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 39 8 ]
         %tmp.37 = getm $.Toybox.Application;
-        symbol [ Storage %tmp.38 39 31 38 ];
         %tmp.38 = getv %tmp.37 :Storage;
-        symbol [ getValue %tmp.39 39 39 47 ];
         %tmp.39 = getv function %tmp.38 :getValue;
         %tmp.40 = "SensorId";
         %tmp.41 = invoke %tmp.38 %tmp.39(%tmp.40);
-        symbol [ sensorId ? 39 8 16 ];
         putv self :sensorId %tmp.41;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 40 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_8_42_8_if_stmt:
-        symbol [ sensorId %tmp.43 40 11 19 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 40 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_8_42_8_if_stmt:
         %tmp.43 = getv ? :sensorId;
         %tmp.44 = null;
         %tmp.45 = eq %tmp.43 %tmp.44;
-        bf %tmp.45 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_8_42_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_8_42_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_29_42_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 41 12 ]
+        bf %tmp.45 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_8_42_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_8_42_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_29_42_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 41 12 ]
         %tmp.46 = 0;
-        symbol [ sensorId ? 41 12 20 ];
         putv self :sensorId %tmp.46;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_29_42_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_8_42_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_40_8_42_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 44 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_31_34_52_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_31_34_52_4_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_29_42_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_8_42_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_40_8_42_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 44 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_31_34_52_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_31_34_52_4_stop" ]
         %label.1 = local;
-        symbol [ label %label.1 44 12 17 ];
         %tmp.47 = " Sensor ";
-        symbol [ sensorId %tmp.49 44 33 41 ];
         %tmp.49 = getv ? :sensorId;
         %tmp.50 = add %tmp.47 %tmp.49;
         %tmp.51 = " on ";
         %tmp.52 = add %tmp.50 %tmp.51;
-        symbol [ WatchUi %tmp.53 44 53 60 ];
         %tmp.53 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.54 44 61 73 ];
         %tmp.54 = getv function %tmp.53 :loadResource;
-        symbol [ Glocations %tmp.56 44 74 84 ];
         %tmp.56 = getv ? :Glocations;
-        symbol [ location %tmp.58 44 85 93 ];
         %tmp.58 = getv ? :location;
         %tmp.59 = agetv %tmp.56 %tmp.58;
         %tmp.60 = invoke %tmp.53 %tmp.54(%tmp.59);
         %tmp.61 = add %tmp.52 %tmp.60;
         lputv %label.1 %tmp.61;
-        symbol [ label %label.1 44 12 17 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 45 8 ]
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 45 8 ]
         %tmp.62 = lgetv %activity;
-        symbol [ activity %tmp.62 45 16 24 ];
-        symbol [ createField %tmp.63 45 25 36 ];
         %tmp.63 = getv function %tmp.62 :createField;
-        symbol [ G_AppSensor %tmp.65 45 37 48 ];
         %tmp.65 = getv ? :G_AppSensor;
         %tmp.66 = " ";
         %tmp.67 = add %tmp.65 %tmp.66;
-        symbol [ G_currentHemoPercentLabel %tmp.69 45 57 82 ];
         %tmp.69 = getv ? :G_currentHemoPercentLabel;
         %tmp.70 = add %tmp.67 %tmp.69;
-        %tmp.71 = lgetv %label.1;
-        symbol [ label %tmp.71 45 85 90 ];
-        %tmp.72 = add %tmp.70 %tmp.71;
-        symbol [ SMO2_FIELD_ID %tmp.74 45 92 105 ];
-        %tmp.74 = getv ? :SMO2_FIELD_ID;
-        symbol [ FitContributor %tmp.75 45 107 121 ];
-        %tmp.75 = getm $.Toybox.FitContributor;
-        symbol [ DATA_TYPE_FLOAT %tmp.76 45 122 137 ];
-        %tmp.76 = getv %tmp.75 :DATA_TYPE_FLOAT;
-        %tmp.77 = newd 3;
-        %tmp.79 = const :nativeNum;
-        %tmp.80 = 57;
-        %tmp.81 = dup %tmp.77;
-        %tmp.82 = aputv %tmp.81 %tmp.79 %tmp.80;
-        %tmp.84 = const :mesgType;
-        symbol [ FitContributor %tmp.85 45 168 182 ];
-        %tmp.85 = getm $.Toybox.FitContributor;
-        symbol [ MESG_TYPE_RECORD %tmp.86 45 183 199 ];
-        %tmp.86 = getv %tmp.85 :MESG_TYPE_RECORD;
-        %tmp.87 = dup %tmp.82;
-        %tmp.88 = aputv %tmp.87 %tmp.84 %tmp.86;
-        %tmp.90 = const :units;
-        symbol [ G_currentHemoPercentUnits %tmp.92 45 209 234 ];
-        %tmp.92 = getv ? :G_currentHemoPercentUnits;
-        %tmp.93 = dup %tmp.88;
-        %tmp.94 = aputv %tmp.93 %tmp.90 %tmp.92;
-        %tmp.95 = invoke %tmp.62 %tmp.63(%tmp.72, %tmp.74, %tmp.76, %tmp.94);
-        symbol [ mSmO2 ? 45 8 13 ];
-        putv self :mSmO2 %tmp.95;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 46 8 ]
-        %tmp.96 = lgetv %activity;
-        symbol [ activity %tmp.96 46 15 23 ];
-        symbol [ createField %tmp.97 46 24 35 ];
-        %tmp.97 = getv function %tmp.96 :createField;
-        symbol [ G_AppSensor %tmp.99 46 36 47 ];
-        %tmp.99 = getv ? :G_AppSensor;
-        %tmp.100 = " ";
-        %tmp.101 = add %tmp.99 %tmp.100;
-        symbol [ G_totalHemoConcentrationLabel %tmp.103 46 56 85 ];
-        %tmp.103 = getv ? :G_totalHemoConcentrationLabel;
-        %tmp.104 = add %tmp.101 %tmp.103;
-        %tmp.105 = lgetv %label.1;
-        symbol [ label %tmp.105 46 88 93 ];
-        %tmp.106 = add %tmp.104 %tmp.105;
-        symbol [ THB_FIELD_ID %tmp.108 46 95 107 ];
-        %tmp.108 = getv ? :THB_FIELD_ID;
-        symbol [ FitContributor %tmp.109 46 109 123 ];
-        %tmp.109 = getm $.Toybox.FitContributor;
-        symbol [ DATA_TYPE_FLOAT %tmp.110 46 124 139 ];
-        %tmp.110 = getv %tmp.109 :DATA_TYPE_FLOAT;
-        %tmp.111 = newd 3;
-        %tmp.113 = const :nativeNum;
-        %tmp.114 = 54;
-        %tmp.115 = dup %tmp.111;
-        %tmp.116 = aputv %tmp.115 %tmp.113 %tmp.114;
-        %tmp.118 = const :mesgType;
-        symbol [ FitContributor %tmp.119 46 170 184 ];
-        %tmp.119 = getm $.Toybox.FitContributor;
-        symbol [ MESG_TYPE_RECORD %tmp.120 46 185 201 ];
-        %tmp.120 = getv %tmp.119 :MESG_TYPE_RECORD;
-        %tmp.121 = dup %tmp.116;
-        %tmp.122 = aputv %tmp.121 %tmp.118 %tmp.120;
-        %tmp.124 = const :units;
-        symbol [ G_totalHemoConcentrationUnits %tmp.126 46 211 240 ];
-        %tmp.126 = getv ? :G_totalHemoConcentrationUnits;
-        %tmp.127 = dup %tmp.122;
-        %tmp.128 = aputv %tmp.127 %tmp.124 %tmp.126;
-        %tmp.129 = invoke %tmp.96 %tmp.97(%tmp.106, %tmp.108, %tmp.110, %tmp.128);
-        symbol [ mThb ? 46 8 12 ];
-        putv self :mThb %tmp.129;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 47 2 ]
-        %tmp.130 = lgetv %activity;
-        symbol [ activity %tmp.130 47 15 23 ];
-        symbol [ createField %tmp.131 47 24 35 ];
-        %tmp.131 = getv function %tmp.130 :createField;
-        %tmp.132 = "FIT_Lap_Intensity";
-        symbol [ INTENSITY_FIELD_ID %tmp.134 47 57 75 ];
-        %tmp.134 = getv ? :INTENSITY_FIELD_ID;
-        symbol [ FitContributor %tmp.135 47 77 91 ];
-        %tmp.135 = getm $.Toybox.FitContributor;
-        symbol [ DATA_TYPE_UINT8 %tmp.136 47 92 107 ];
-        %tmp.136 = getv %tmp.135 :DATA_TYPE_UINT8;
-        %tmp.137 = newd 3;
-        %tmp.139 = const :nativeNum;
-        %tmp.140 = 23;
-        %tmp.141 = dup %tmp.137;
-        %tmp.142 = aputv %tmp.141 %tmp.139 %tmp.140;
-        %tmp.144 = const :mesgType;
-        symbol [ FitContributor %tmp.145 47 138 152 ];
-        %tmp.145 = getm $.Toybox.FitContributor;
-        symbol [ MESG_TYPE_LAP %tmp.146 47 153 166 ];
-        %tmp.146 = getv %tmp.145 :MESG_TYPE_LAP;
-        %tmp.147 = dup %tmp.142;
-        %tmp.148 = aputv %tmp.147 %tmp.144 %tmp.146;
-        %tmp.150 = const :units;
-        %tmp.151 = "";
-        %tmp.152 = dup %tmp.148;
-        %tmp.153 = aputv %tmp.152 %tmp.150 %tmp.151;
-        %tmp.154 = invoke %tmp.130 %tmp.131(%tmp.132, %tmp.134, %tmp.136, %tmp.153);
-        symbol [ mIntensity ? 47 2 12 ];
-        putv self :mIntensity %tmp.154;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 48 8 ]
-        %tmp.155 = lgetv %activity;
-        symbol [ activity %tmp.155 48 23 31 ];
-        symbol [ createField %tmp.156 48 32 43 ];
-        %tmp.156 = getv function %tmp.155 :createField;
-        %tmp.157 = "CIQ_device_info";
-        symbol [ DEVICE_INFO_ID %tmp.159 48 63 77 ];
-        %tmp.159 = getv ? :DEVICE_INFO_ID;
-        symbol [ FitContributor %tmp.160 48 79 93 ];
-        %tmp.160 = getm $.Toybox.FitContributor;
-        symbol [ DATA_TYPE_UINT8 %tmp.161 48 94 109 ];
-        %tmp.161 = getv %tmp.160 :DATA_TYPE_UINT8;
-        %tmp.162 = newd 2;
-        %tmp.164 = const :count;
-        %tmp.165 = 8;
-        %tmp.166 = dup %tmp.162;
-        %tmp.167 = aputv %tmp.166 %tmp.164 %tmp.165;
-        %tmp.169 = const :mesgType;
-        symbol [ FitContributor %tmp.170 48 135 149 ];
-        %tmp.170 = getm $.Toybox.FitContributor;
-        symbol [ MESG_TYPE_SESSION %tmp.171 48 150 167 ];
-        %tmp.171 = getv %tmp.170 :MESG_TYPE_SESSION;
-        %tmp.172 = dup %tmp.167;
-        %tmp.173 = aputv %tmp.172 %tmp.169 %tmp.171;
-        %tmp.174 = invoke %tmp.155 %tmp.156(%tmp.157, %tmp.159, %tmp.161, %tmp.173);
-        symbol [ mDeviceInfo ? 48 8 19 ];
-        putv self :mDeviceInfo %tmp.174;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 49 8 ]
-        symbol [ mSmO2 %tmp.176 49 8 13 ];
-        %tmp.176 = getv ? :mSmO2;
-        symbol [ setData %tmp.177 49 14 21 ];
-        %tmp.177 = getv function %tmp.176 :setData;
-        %tmp.178 = 0;
-        invoke %tmp.176 %tmp.177(%tmp.178);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 50 8 ]
-        symbol [ mThb %tmp.180 50 8 12 ];
-        %tmp.180 = getv ? :mThb;
-        symbol [ setData %tmp.181 50 13 20 ];
-        %tmp.181 = getv function %tmp.180 :setData;
-        %tmp.182 = 0;
-        invoke %tmp.180 %tmp.181(%tmp.182);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 51 8 ]
-        symbol [ mIntensity %tmp.184 51 8 18 ];
-        %tmp.184 = getv ? :mIntensity;
-        symbol [ setData %tmp.185 51 19 26 ];
-        %tmp.185 = getv function %tmp.184 :setData;
-        %tmp.186 = 4;
-        invoke %tmp.184 %tmp.185(%tmp.186);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_31_34_52_4_stop:
+        %tmp.72 = lgetv %label.1;
+        %tmp.73 = add %tmp.70 %tmp.72;
+        %tmp.75 = getv ? :SMO2_FIELD_ID;
+        %tmp.76 = getm $.Toybox.FitContributor;
+        %tmp.77 = getv %tmp.76 :DATA_TYPE_FLOAT;
+        %tmp.78 = newd 3;
+        %tmp.80 = const :nativeNum;
+        %tmp.81 = 57;
+        %tmp.82 = dup %tmp.78;
+        %tmp.83 = aputv %tmp.82 %tmp.80 %tmp.81;
+        %tmp.85 = const :mesgType;
+        %tmp.86 = getm $.Toybox.FitContributor;
+        %tmp.87 = getv %tmp.86 :MESG_TYPE_RECORD;
+        %tmp.88 = dup %tmp.83;
+        %tmp.89 = aputv %tmp.88 %tmp.85 %tmp.87;
+        %tmp.91 = const :units;
+        %tmp.93 = getv ? :G_currentHemoPercentUnits;
+        %tmp.94 = dup %tmp.89;
+        %tmp.95 = aputv %tmp.94 %tmp.91 %tmp.93;
+        %tmp.96 = invoke %tmp.62 %tmp.63(%tmp.73, %tmp.75, %tmp.77, %tmp.95);
+        putv self :mSmO2 %tmp.96;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 46 8 ]
+        %tmp.97 = lgetv %activity;
+        %tmp.98 = getv function %tmp.97 :createField;
+        %tmp.100 = getv ? :G_AppSensor;
+        %tmp.101 = " ";
+        %tmp.102 = add %tmp.100 %tmp.101;
+        %tmp.104 = getv ? :G_totalHemoConcentrationLabel;
+        %tmp.105 = add %tmp.102 %tmp.104;
+        %tmp.107 = lgetv %label.1;
+        %tmp.108 = add %tmp.105 %tmp.107;
+        %tmp.110 = getv ? :THB_FIELD_ID;
+        %tmp.111 = getm $.Toybox.FitContributor;
+        %tmp.112 = getv %tmp.111 :DATA_TYPE_FLOAT;
+        %tmp.113 = newd 3;
+        %tmp.115 = const :nativeNum;
+        %tmp.116 = 54;
+        %tmp.117 = dup %tmp.113;
+        %tmp.118 = aputv %tmp.117 %tmp.115 %tmp.116;
+        %tmp.120 = const :mesgType;
+        %tmp.121 = getm $.Toybox.FitContributor;
+        %tmp.122 = getv %tmp.121 :MESG_TYPE_RECORD;
+        %tmp.123 = dup %tmp.118;
+        %tmp.124 = aputv %tmp.123 %tmp.120 %tmp.122;
+        %tmp.126 = const :units;
+        %tmp.128 = getv ? :G_totalHemoConcentrationUnits;
+        %tmp.129 = dup %tmp.124;
+        %tmp.130 = aputv %tmp.129 %tmp.126 %tmp.128;
+        %tmp.131 = invoke %tmp.97 %tmp.98(%tmp.108, %tmp.110, %tmp.112, %tmp.130);
+        putv self :mThb %tmp.131;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 47 2 ]
+        %tmp.132 = lgetv %activity;
+        %tmp.133 = getv function %tmp.132 :createField;
+        %tmp.134 = "FIT_Lap_Intensity";
+        %tmp.136 = getv ? :INTENSITY_FIELD_ID;
+        %tmp.137 = getm $.Toybox.FitContributor;
+        %tmp.138 = getv %tmp.137 :DATA_TYPE_UINT8;
+        %tmp.139 = newd 3;
+        %tmp.141 = const :nativeNum;
+        %tmp.142 = 23;
+        %tmp.143 = dup %tmp.139;
+        %tmp.144 = aputv %tmp.143 %tmp.141 %tmp.142;
+        %tmp.146 = const :mesgType;
+        %tmp.147 = getm $.Toybox.FitContributor;
+        %tmp.148 = getv %tmp.147 :MESG_TYPE_LAP;
+        %tmp.149 = dup %tmp.144;
+        %tmp.150 = aputv %tmp.149 %tmp.146 %tmp.148;
+        %tmp.152 = const :units;
+        %tmp.153 = "";
+        %tmp.154 = dup %tmp.150;
+        %tmp.155 = aputv %tmp.154 %tmp.152 %tmp.153;
+        %tmp.156 = invoke %tmp.132 %tmp.133(%tmp.134, %tmp.136, %tmp.138, %tmp.155);
+        putv self :mIntensity %tmp.156;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 48 8 ]
+        %tmp.157 = lgetv %activity;
+        %tmp.158 = getv function %tmp.157 :createField;
+        %tmp.159 = "CIQ_device_info";
+        %tmp.161 = getv ? :DEVICE_INFO_ID;
+        %tmp.162 = getm $.Toybox.FitContributor;
+        %tmp.163 = getv %tmp.162 :DATA_TYPE_UINT8;
+        %tmp.164 = newd 2;
+        %tmp.166 = const :count;
+        %tmp.167 = 8;
+        %tmp.168 = dup %tmp.164;
+        %tmp.169 = aputv %tmp.168 %tmp.166 %tmp.167;
+        %tmp.171 = const :mesgType;
+        %tmp.172 = getm $.Toybox.FitContributor;
+        %tmp.173 = getv %tmp.172 :MESG_TYPE_SESSION;
+        %tmp.174 = dup %tmp.169;
+        %tmp.175 = aputv %tmp.174 %tmp.171 %tmp.173;
+        %tmp.176 = invoke %tmp.157 %tmp.158(%tmp.159, %tmp.161, %tmp.163, %tmp.175);
+        putv self :mDeviceInfo %tmp.176;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 49 8 ]
+        %tmp.178 = getv ? :mSmO2;
+        %tmp.179 = getv function %tmp.178 :setData;
+        %tmp.180 = 0;
+        invoke %tmp.178 %tmp.179(%tmp.180);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 50 8 ]
+        %tmp.182 = getv ? :mThb;
+        %tmp.183 = getv function %tmp.182 :setData;
+        %tmp.184 = 0;
+        invoke %tmp.182 %tmp.183(%tmp.184);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 51 8 ]
+        %tmp.186 = getv ? :mIntensity;
+        %tmp.187 = getv function %tmp.186 :setData;
+        %tmp.188 = 4;
+        invoke %tmp.186 %tmp.187(%tmp.188);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_31_34_52_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 54; @symbol_functiondef = [compute,54,13,20]; @symbol_param<0> = [sensor,54,21,27]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 54; ]
     function compute(sensor) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_54_29_67_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 55 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_8_66_8_if_stmt:
-        %tmp.1 = lgetv %sensor;
-        symbol [ sensor %tmp.1 55 12 18 ];
-        %tmp.2 = null;
-        %tmp.3 = ne %tmp.1 %tmp.2;
-        bf %tmp.3 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_8_66_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_8_66_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_29_66_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 56 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_29_66_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_29_66_8_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_54_29_67_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 55 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_8_66_8_if_stmt:
+        %tmp.2 = lgetv %sensor;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_8_66_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_8_66_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_29_66_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 56 12 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_29_66_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_29_66_8_stop" ]
         %SmO2.1 = local;
-        symbol [ SmO2 %SmO2.1 56 16 20 ];
-        %tmp.4 = lgetv %sensor;
-        symbol [ sensor %tmp.4 56 23 29 ];
-        %tmp.5 = as %tmp.4 { (!Null) };
-        symbol [ currentHemoPercent %tmp.6 56 30 48 ];
-        %tmp.6 = getv %tmp.5 :currentHemoPercent;
-        lputv %SmO2.1 %tmp.6;
-        symbol [ SmO2 %SmO2.1 56 16 20 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 57 3 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_29_66_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_29_66_8_stop" ]
+        %tmp.5 = lgetv %sensor;
+        %tmp.6 = as %tmp.5 { (!Null) };
+        %tmp.7 = getv %tmp.6 :currentHemoPercent;
+        lputv %SmO2.1 %tmp.7;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 57 3 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_29_66_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_29_66_8_stop" ]
         %THb.2 = local;
-        symbol [ THb %THb.2 57 7 10 ];
-        %tmp.7 = lgetv %sensor;
-        symbol [ sensor %tmp.7 57 13 19 ];
-        %tmp.8 = as %tmp.7 { (!Null) };
-        symbol [ totalHemoConcentration %tmp.9 57 20 42 ];
-        %tmp.9 = getv %tmp.8 :totalHemoConcentration;
-        lputv %THb.2 %tmp.9;
-        symbol [ THb %THb.2 57 7 10 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 58 3 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_7_58_30_begin:
-        %tmp.10 = lgetv %SmO2.1;
-        symbol [ SmO2 %tmp.10 58 7 11 ];
-        %tmp.11 = null;
-        %tmp.12 = ne %tmp.10 %tmp.11;
-        bf %tmp.12 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_else_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_23_58_30_true:
-        %tmp.13 = lgetv %THb.2;
-        symbol [ THb %tmp.13 58 23 26 ];
-        %tmp.14 = null;
-        %tmp.15 = ne %tmp.13 %tmp.14;
-        push %tmp.15;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_23_58_30_end:
-        %tmp.16 = phi [%tmp.12 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_7_58_30_begin] [%tmp.15 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_23_58_30_true] [%tmp.16 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_23_58_30_end];
-        bf %tmp.16 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_else_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_36_61_9_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 59 4 ]
-        symbol [ mSmO2 %tmp.18 59 4 9 ];
-        %tmp.18 = getv ? :mSmO2;
-        symbol [ setData %tmp.19 59 10 17 ];
-        %tmp.19 = getv function %tmp.18 :setData;
-        %tmp.20 = lgetv %SmO2.1;
-        symbol [ SmO2 %tmp.20 59 18 22 ];
-        %tmp.21 = as %tmp.20 { (!Null) };
-        symbol [ toFloat %tmp.22 59 23 30 ];
-        %tmp.22 = getv function %tmp.21 :toFloat;
-        %tmp.23 = invoke %tmp.21 %tmp.22();
-        invoke %tmp.18 %tmp.19(%tmp.23);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 60 10 ]
-        symbol [ mThb %tmp.25 60 10 14 ];
-        %tmp.25 = getv ? :mThb;
-        symbol [ setData %tmp.26 60 15 22 ];
-        %tmp.26 = getv function %tmp.25 :setData;
-        %tmp.27 = lgetv %THb.2;
-        symbol [ THb %tmp.27 60 23 26 ];
-        %tmp.28 = as %tmp.27 { (!Null) };
-        symbol [ toFloat %tmp.29 60 27 34 ];
-        %tmp.29 = getv function %tmp.28 :toFloat;
-        %tmp.30 = invoke %tmp.28 %tmp.29();
-        invoke %tmp.25 %tmp.26(%tmp.30);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_36_61_9_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_else_false:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_62_13_65_9_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 63 10 ]
-        symbol [ mSmO2 %tmp.32 63 10 15 ];
-        %tmp.32 = getv ? :mSmO2;
-        symbol [ setData %tmp.33 63 16 23 ];
-        %tmp.33 = getv function %tmp.32 :setData;
-        %tmp.34 = 0;
-        invoke %tmp.32 %tmp.33(%tmp.34);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 64 10 ]
-        symbol [ mThb %tmp.36 64 10 14 ];
-        %tmp.36 = getv ? :mThb;
-        symbol [ setData %tmp.37 64 15 22 ];
-        %tmp.37 = getv function %tmp.36 :setData;
-        %tmp.38 = 0;
-        invoke %tmp.36 %tmp.37(%tmp.38);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_62_13_65_9_stop:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_58_3_65_9_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_29_66_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_8_66_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_55_8_66_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_54_29_67_4_stop:
+        %tmp.8 = lgetv %sensor;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        %tmp.10 = getv %tmp.9 :totalHemoConcentration;
+        lputv %THb.2 %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 58 3 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_stmt:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_7_58_30_begin:
+        %tmp.12 = lgetv %SmO2.1;
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_23_58_30_true:
+        %tmp.16 = lgetv %THb.2;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        push %tmp.18;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_23_58_30_end:
+        %tmp.19 = phi [%tmp.14 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_7_58_30_begin] [%tmp.18 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_23_58_30_true] [%tmp.19 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_23_58_30_end];
+        bf %tmp.19 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_false;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_36_61_9_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 59 4 ]
+        %tmp.21 = getv ? :mSmO2;
+        %tmp.22 = getv function %tmp.21 :setData;
+        %tmp.23 = lgetv %SmO2.1;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        %tmp.25 = getv function %tmp.24 :toFloat;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        invoke %tmp.21 %tmp.22(%tmp.26);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 60 10 ]
+        %tmp.28 = getv ? :mThb;
+        %tmp.29 = getv function %tmp.28 :setData;
+        %tmp.30 = lgetv %THb.2;
+        %tmp.31 = as %tmp.30 { (!Null) };
+        %tmp.32 = getv function %tmp.31 :toFloat;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        invoke %tmp.28 %tmp.29(%tmp.33);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_36_61_9_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_false:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_62_13_65_9_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 63 10 ]
+        %tmp.35 = getv ? :mSmO2;
+        %tmp.36 = getv function %tmp.35 :setData;
+        %tmp.37 = 0;
+        invoke %tmp.35 %tmp.36(%tmp.37);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 64 10 ]
+        %tmp.39 = getv ? :mThb;
+        %tmp.40 = getv function %tmp.39 :setData;
+        %tmp.41 = 0;
+        invoke %tmp.39 %tmp.40(%tmp.41);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_62_13_65_9_stop:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_58_3_65_9_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_29_66_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_8_66_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_55_8_66_8_if_end:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_54_29_67_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 69; @symbol_functiondef = [lap,69,13,16]; @symbol_param<0> = [intensity,69,17,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 69; ]
     function lap(intensity) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_69_28_71_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 70 8 ]
-        symbol [ mIntensity %tmp.2 70 8 18 ];
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_69_28_71_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 70 8 ]
         %tmp.2 = getv ? :mIntensity;
-        symbol [ setData %tmp.3 70 19 26 ];
         %tmp.3 = getv function %tmp.2 :setData;
-        %tmp.4 = lgetv %intensity;
-        symbol [ intensity %tmp.4 70 27 36 ];
-        invoke %tmp.2 %tmp.3(%tmp.4);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_69_28_71_4_stop:
+        %tmp.5 = lgetv %intensity;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_69_28_71_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 73; @symbol_functiondef = [setDeviceInfo,73,13,26]; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 73; ]
     function setDeviceInfo() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_73_29_79_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 74 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_73_29_79_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_73_29_79_4_stop" ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_73_29_79_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 74 8 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_73_29_79_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_73_29_79_4_stop" ]
         %deviceMfg.1 = local;
-        symbol [ deviceMfg %deviceMfg.1 74 12 21 ];
-        symbol [ Application %tmp.1 74 24 35 ];
         %tmp.1 = getm $.Toybox.Application;
-        symbol [ Storage %tmp.2 74 36 43 ];
         %tmp.2 = getv %tmp.1 :Storage;
-        symbol [ getValue %tmp.3 74 44 52 ];
         %tmp.3 = getv function %tmp.2 :getValue;
         %tmp.4 = "DeviceMfg";
         %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
         lputv %deviceMfg.1 %tmp.5;
-        symbol [ deviceMfg %deviceMfg.1 74 12 21 ];
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 75 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_8_77_8_if_stmt:
-        %tmp.6 = lgetv %deviceMfg.1;
-        symbol [ deviceMfg %tmp.6 75 11 20 ];
-        %tmp.7 = null;
-        %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_8_77_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_8_77_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_30_77_8_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 76 12 ]
-        %tmp.9 = 0;
-        lputv %deviceMfg.1 %tmp.9;
-        symbol [ deviceMfg %deviceMfg.1 76 12 21 ];
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_30_77_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_8_77_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_75_8_77_8_if_end:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 78 8 ]
-        symbol [ mDeviceInfo %tmp.11 78 8 19 ];
-        %tmp.11 = getv ? :mDeviceInfo;
-        symbol [ setData %tmp.12 78 20 27 ];
-        %tmp.12 = getv function %tmp.11 :setData;
-        %tmp.13 = newa 8;
-        %tmp.14 = 31;
-        %tmp.15 = dup %tmp.13;
-        %tmp.16 = aputv %tmp.15 0 %tmp.14;
-        symbol [ location %tmp.18 78 32 40 ];
-        %tmp.18 = getv ? :location;
-        %tmp.19 = dup %tmp.16;
-        %tmp.20 = aputv %tmp.19 1 %tmp.18;
-        symbol [ sensorId %tmp.22 78 42 50 ];
-        %tmp.22 = getv ? :sensorId;
-        %tmp.23 = dup %tmp.20;
-        %tmp.24 = aputv %tmp.23 2 %tmp.22;
-        symbol [ sensorId %tmp.26 78 53 61 ];
-        %tmp.26 = getv ? :sensorId;
-        %tmp.27 = 8;
-        %tmp.28 = shr %tmp.26 %tmp.27;
-        %tmp.29 = dup %tmp.24;
-        %tmp.30 = aputv %tmp.29 3 %tmp.28;
-        symbol [ sensorId %tmp.32 78 70 78 ];
-        %tmp.32 = getv ? :sensorId;
-        %tmp.33 = 16;
-        %tmp.34 = shr %tmp.32 %tmp.33;
-        %tmp.35 = dup %tmp.30;
-        %tmp.36 = aputv %tmp.35 4 %tmp.34;
-        symbol [ sensorId %tmp.38 78 87 95 ];
-        %tmp.38 = getv ? :sensorId;
-        %tmp.39 = 24;
-        %tmp.40 = shr %tmp.38 %tmp.39;
-        %tmp.41 = dup %tmp.36;
-        %tmp.42 = aputv %tmp.41 5 %tmp.40;
-        %tmp.43 = lgetv %deviceMfg.1;
-        symbol [ deviceMfg %tmp.43 78 104 113 ];
-        %tmp.44 = dup %tmp.42;
-        %tmp.45 = aputv %tmp.44 6 %tmp.43;
-        %tmp.46 = lgetv %deviceMfg.1;
-        symbol [ deviceMfg %tmp.46 78 116 125 ];
-        %tmp.47 = 8;
-        %tmp.48 = shr %tmp.46 %tmp.47;
-        %tmp.49 = dup %tmp.45;
-        %tmp.50 = aputv %tmp.49 7 %tmp.48;
-        invoke %tmp.11 %tmp.12(%tmp.50);
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyStepTest_source_MO2FitContributions_mc_73_29_79_4_stop:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 75 8 ]
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_8_77_8_if_stmt:
+        %tmp.7 = lgetv %deviceMfg.1;
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        bf %tmp.9 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_8_77_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_8_77_8_if_true:
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_30_77_8_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 76 12 ]
+        %tmp.10 = 0;
+        lputv %deviceMfg.1 %tmp.10;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_30_77_8_stop:
+        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_8_77_8_if_end;
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_75_8_77_8_if_end:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 78 8 ]
+        %tmp.12 = getv ? :mDeviceInfo;
+        %tmp.13 = getv function %tmp.12 :setData;
+        %tmp.14 = newa 8;
+        %tmp.15 = 31;
+        %tmp.16 = dup %tmp.14;
+        %tmp.17 = aputv %tmp.16 0 %tmp.15;
+        %tmp.19 = getv ? :location;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        %tmp.23 = getv ? :sensorId;
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 2 %tmp.23;
+        %tmp.27 = getv ? :sensorId;
+        %tmp.28 = 8;
+        %tmp.29 = shr %tmp.27 %tmp.28;
+        %tmp.30 = dup %tmp.25;
+        %tmp.31 = aputv %tmp.30 3 %tmp.29;
+        %tmp.33 = getv ? :sensorId;
+        %tmp.34 = 16;
+        %tmp.35 = shr %tmp.33 %tmp.34;
+        %tmp.36 = dup %tmp.31;
+        %tmp.37 = aputv %tmp.36 4 %tmp.35;
+        %tmp.39 = getv ? :sensorId;
+        %tmp.40 = 24;
+        %tmp.41 = shr %tmp.39 %tmp.40;
+        %tmp.42 = dup %tmp.37;
+        %tmp.43 = aputv %tmp.42 5 %tmp.41;
+        %tmp.45 = lgetv %deviceMfg.1;
+        %tmp.46 = dup %tmp.43;
+        %tmp.47 = aputv %tmp.46 6 %tmp.45;
+        %tmp.49 = lgetv %deviceMfg.1;
+        %tmp.50 = 8;
+        %tmp.51 = shr %tmp.49 %tmp.50;
+        %tmp.52 = dup %tmp.47;
+        %tmp.53 = aputv %tmp.52 7 %tmp.51;
+        invoke %tmp.12 %tmp.13(%tmp.53);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_MO2FitContributions_mc_73_29_79_4_stop:
     }
 }
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc"; @line = 1; ]
 <init> {
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 12 6 ]
-    symbol [ WatchUi %tmp.51 12 34 41 ];
-    %tmp.51 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.52 12 42 54 ];
-    %tmp.52 = getv function %tmp.51 :loadResource;
-    symbol [ Rez %tmp.54 12 55 58 ];
-    %tmp.54 = getv ? :Rez;
-    symbol [ Strings %tmp.55 12 59 66 ];
-    %tmp.55 = getv %tmp.54 :Strings;
-    symbol [ smo2_units %tmp.56 12 67 77 ];
-    %tmp.56 = getv %tmp.55 :smo2_units;
-    %tmp.57 = invoke %tmp.51 %tmp.52(%tmp.56);
-    putv self :G_currentHemoPercentUnits %tmp.57;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 13 6 ]
-    symbol [ WatchUi %tmp.58 13 34 41 ];
-    %tmp.58 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.59 13 42 54 ];
-    %tmp.59 = getv function %tmp.58 :loadResource;
-    symbol [ Rez %tmp.61 13 55 58 ];
-    %tmp.61 = getv ? :Rez;
-    symbol [ Strings %tmp.62 13 59 66 ];
-    %tmp.62 = getv %tmp.61 :Strings;
-    symbol [ smo2_label %tmp.63 13 67 77 ];
-    %tmp.63 = getv %tmp.62 :smo2_label;
-    %tmp.64 = invoke %tmp.58 %tmp.59(%tmp.63);
-    putv self :G_currentHemoPercentLabel %tmp.64;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 16 6 ]
-    symbol [ WatchUi %tmp.65 16 38 45 ];
-    %tmp.65 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.66 16 46 58 ];
-    %tmp.66 = getv function %tmp.65 :loadResource;
-    symbol [ Rez %tmp.68 16 59 62 ];
-    %tmp.68 = getv ? :Rez;
-    symbol [ Strings %tmp.69 16 63 70 ];
-    %tmp.69 = getv %tmp.68 :Strings;
-    symbol [ thb_units %tmp.70 16 71 80 ];
-    %tmp.70 = getv %tmp.69 :thb_units;
-    %tmp.71 = invoke %tmp.65 %tmp.66(%tmp.70);
-    putv self :G_totalHemoConcentrationUnits %tmp.71;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 17 6 ]
-    symbol [ WatchUi %tmp.72 17 38 45 ];
-    %tmp.72 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.73 17 46 58 ];
-    %tmp.73 = getv function %tmp.72 :loadResource;
-    symbol [ Rez %tmp.75 17 59 62 ];
-    %tmp.75 = getv ? :Rez;
-    symbol [ Strings %tmp.76 17 63 70 ];
-    %tmp.76 = getv %tmp.75 :Strings;
-    symbol [ thb_label %tmp.77 17 71 80 ];
-    %tmp.77 = getv %tmp.76 :thb_label;
-    %tmp.78 = invoke %tmp.72 %tmp.73(%tmp.77);
-    putv self :G_totalHemoConcentrationLabel %tmp.78;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyStepTest\source\MO2FitContributions.mc" 18 6 ]
-    symbol [ WatchUi %tmp.79 18 20 27 ];
-    %tmp.79 = getm $.Toybox.WatchUi;
-    symbol [ loadResource %tmp.80 18 28 40 ];
-    %tmp.80 = getv function %tmp.79 :loadResource;
-    symbol [ Rez %tmp.82 18 41 44 ];
-    %tmp.82 = getv ? :Rez;
-    symbol [ Strings %tmp.83 18 45 52 ];
-    %tmp.83 = getv %tmp.82 :Strings;
-    symbol [ AppSensor %tmp.84 18 53 62 ];
-    %tmp.84 = getv %tmp.83 :AppSensor;
-    %tmp.85 = invoke %tmp.79 %tmp.80(%tmp.84);
-    putv self :G_AppSensor %tmp.85;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 12 6 ]
+    %tmp.54 = getm $.Toybox.WatchUi;
+    %tmp.55 = getv function %tmp.54 :loadResource;
+    %tmp.57 = getv ? :Rez;
+    %tmp.58 = getv %tmp.57 :Strings;
+    %tmp.59 = getv %tmp.58 :smo2_units;
+    %tmp.60 = invoke %tmp.54 %tmp.55(%tmp.59);
+    putv self :G_currentHemoPercentUnits %tmp.60;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 13 6 ]
+    %tmp.61 = getm $.Toybox.WatchUi;
+    %tmp.62 = getv function %tmp.61 :loadResource;
+    %tmp.64 = getv ? :Rez;
+    %tmp.65 = getv %tmp.64 :Strings;
+    %tmp.66 = getv %tmp.65 :smo2_label;
+    %tmp.67 = invoke %tmp.61 %tmp.62(%tmp.66);
+    putv self :G_currentHemoPercentLabel %tmp.67;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 16 6 ]
+    %tmp.68 = getm $.Toybox.WatchUi;
+    %tmp.69 = getv function %tmp.68 :loadResource;
+    %tmp.71 = getv ? :Rez;
+    %tmp.72 = getv %tmp.71 :Strings;
+    %tmp.73 = getv %tmp.72 :thb_units;
+    %tmp.74 = invoke %tmp.68 %tmp.69(%tmp.73);
+    putv self :G_totalHemoConcentrationUnits %tmp.74;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 17 6 ]
+    %tmp.75 = getm $.Toybox.WatchUi;
+    %tmp.76 = getv function %tmp.75 :loadResource;
+    %tmp.78 = getv ? :Rez;
+    %tmp.79 = getv %tmp.78 :Strings;
+    %tmp.80 = getv %tmp.79 :thb_label;
+    %tmp.81 = invoke %tmp.75 %tmp.76(%tmp.80);
+    putv self :G_totalHemoConcentrationLabel %tmp.81;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\MO2FitContributions.mc" 18 6 ]
+    %tmp.82 = getm $.Toybox.WatchUi;
+    %tmp.83 = getv function %tmp.82 :loadResource;
+    %tmp.85 = getv ? :Rez;
+    %tmp.86 = getv %tmp.85 :Strings;
+    %tmp.87 = getv %tmp.86 :AppSensor;
+    %tmp.88 = invoke %tmp.82 %tmp.83(%tmp.87);
+    putv self :G_AppSensor %tmp.88;
 }

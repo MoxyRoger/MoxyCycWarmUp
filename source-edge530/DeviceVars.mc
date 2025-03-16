@@ -2,8 +2,8 @@ using Toybox.Graphics as Gfx;
 
 module View0DeviceVars
 {
-	var TimeX = 125;
-    var TimeY = 50;
+	var TitleX = 125;
+    var TitleY = 50;
     var LineY = 132;
     var LineH = 2;
     var LabelY = 145;
@@ -15,7 +15,7 @@ module View0DeviceVars
     var VersionX = 197;
     var VersionY = 280;
     var VersionJ = Gfx.TEXT_JUSTIFY_RIGHT;
-    var TimeFont = Gfx.FONT_NUMBER_THAI_HOT;
+    var TitleFont = Gfx.FONT_MEDIUM;
     var LabelFont = Gfx.FONT_SMALL;
     var VersionFont = Gfx.FONT_SMALL;	
 }
@@ -58,30 +58,45 @@ module View2DeviceVars
 	function drawGrid(dc) {
 		var width = dc.getWidth();
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
-		dc.fillRectangle(0, 81, width, 2);
-		dc.fillRectangle(0, 162, width, 2);
-		dc.fillRectangle(0, 243, width, 2);
+		dc.fillRectangle(0, 142, width, 2);
+		dc.fillRectangle(0, 228, width, 2);
+		dc.fillRectangle(122, 228, 2, 94);
 	}
 	
-	var L1X = 125;
-	var L2X = 125;
-	var L3X = 125;
-	var L4X = 125;
-	var L1Y = 3;
-	var L2Y = 84;
-	var L3Y = 165;
-	var L4Y = 246;
-	var V1X = 125;
-	var V2X = 125;
-	var V3X = 125;
-	var V4X = 125;
-	var V1Y = 27;
-	var V2Y = 108;
-	var V3Y = 189;
-	var V4Y = 270;
+	var L1X = 123; //Timer
+	var L1Y = 147;
+	var V1X = 123;
+	var V1Y = 174;
+
+	var L2X = 185; //HR
+	var L2Y = 232;
+	var V2X = 185;
+	var V2Y = 255;
+
+	var L3X = 62;  //SmO2
+	var L3Y = 232;
+	var V3X = 62;
+	var V3Y = 255;
+
+	var L4X = 123; //Power
+	var L4Y = 60;
+	var V4X = 123;
+	var V4Y = 80;
+
+	var Targ1X = 27; //Targets
+	var Targ2X = 220;
+	var Targ1Y = 11;
+	var Targ2Y = 11;
+	var TargAng1 = 50;
+	var TargAng2 = 130;
 	var LFont = Gfx.FONT_SMALL;
 	var VNumFont = Gfx.FONT_NUMBER_HOT;
 	var VTxtFont = Gfx.FONT_LARGE;
+	var TargFont = Gfx.FONT_MEDIUM;
 	var LJust = Gfx.TEXT_JUSTIFY_CENTER;
 	var VJust = Gfx.TEXT_JUSTIFY_CENTER;
+	var meterX = 123;
+	var meterY = 128;
+	var meterR = 123;
+	var meterT = 25;
 }

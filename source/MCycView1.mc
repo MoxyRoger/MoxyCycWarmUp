@@ -14,21 +14,13 @@ class MCycView1 extends Ui.View {
     hidden var mV2;
     hidden var mL3 = "Heart Rate";   
     hidden var mV3;
-    hidden var mL4 = "Power";
+    hidden var mL4 = "Cadence";
     hidden var mV4;
-    hidden var mHasPower = true;
 
     function initialize(mo2, alert) {
         View.initialize();
         mMO2 = mo2;
         mViewAlert = alert;
-
-        if(Act.getActivityInfo() has :currentPower) {
-    		mHasPower = true;
-    	}
-    	else {
-    		mHasPower = false;
-    	}
     }
 
     function onLayout(dc) {
@@ -62,7 +54,7 @@ class MCycView1 extends Ui.View {
             THb_color = Gfx.COLOR_BLACK;
         }
         if (mMO2.currentHemoPercent != null && mMO2.totalHemoConcentration != null) {
-            mV1 = mMO2.currentHemoPercent.format("%.0f");
+            mV1 = mMO2.currentHemoPercent.format("%.1f");
             mV2 = mMO2.totalHemoConcentration.format("%.2f");
         }
         else {
@@ -84,29 +76,23 @@ class MCycView1 extends Ui.View {
             mV3 = info.currentHeartRate.format("%d");
         }
         else {
-            if (G_Palette_Sz <= 8){
-                dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-            }
-            else {
-                dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-            }
-            mV3 = "";
+            dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+            mV3 = "--";
         }
+            
         dc.drawText(device.L3X, device.L3Y, device.LFont, mL3, device.LJust);
         dc.drawText(device.V3X, device.V3Y, device.VFont, mV3, device.VJust);
 
-        if (mHasPower) {
-            if (info != null && info.currentPower != null) {
-                dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-            	mV4 = info.currentPower.format("%d");	            
-            }
-            else {
-                dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-            	mV4 = "";
-            }
-            dc.drawText(device.L4X, device.L4Y, device.LFont, mL4, device.LJust);
-        	dc.drawText(device.V4X, device.V4Y, device.VFont, mV4, device.VJust);         
+        if (info != null && info.currentCadence != null) {
+            dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
+            mV4 = info.currentCadence.format("%d");	            
         }
+        else {
+            dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+            mV4 = "--";
+        }
+        dc.drawText(device.L4X, device.L4Y, device.LFont, mL4, device.LJust);
+        dc.drawText(device.V4X, device.V4Y, device.VFont, mV4, device.VJust);         
 
         // Update Alerts
         mViewAlert.checkAlerts(dc);

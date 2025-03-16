@@ -31,7 +31,7 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
         return switchToView((mIndex + 2) % 3, transition);
     }
 
-    hidden function startSaveTimer() {
+    function startSaveTimer() {
         mTimer = new Timer.Timer();
         mTimer.start(self.method(:promptToSave), 3000, false);
     }
@@ -62,14 +62,9 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
                 Application.getApp().createActivity(); // creates a new Activity in case of a discard or save
             }
             if (Application.getApp().isRecordingActivity()) {
-                if(Application.getApp().stepIndex < COOLDOWN) {
-                    Application.getApp().stopActivity();
-                }
-                else {
-                    Application.getApp().stopActivity();
-                    startSaveTimer();
-                    WatchUi.requestUpdate();
-                }
+                Application.getApp().stopActivity();
+                startSaveTimer();
+                WatchUi.requestUpdate();
             }
             else {
                 Application.getApp().startActivity();
@@ -79,40 +74,21 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
             }
         }
         else if (key == G_Lap_Button) {
-            if (Application.getApp().isNullActivity()) {
-                WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+            var info = Activity.getActivityInfo();
+            if (info.timerTime != null && info.timerTime > 0) {
+                Application.getApp().manualLap();
             }
-            else {
-                var info = Activity.getActivityInfo();
-                if (info.timerTime == null || info.timerTime == 0) {
-                    Application.getApp().discardActivity();
-                    WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
-                }
-                else if (Application.getApp().isRecordingActivity()) {
-                    if (Application.getApp().btnAlert != BTN_LAP) {
-                        Application.getApp().manualLap();
-                    }
-                    else {
-                        Application.getApp().clearBtnAlert();
-                    }
-                    WatchUi.requestUpdate();
-                }
-                else {
-                    promptToSave();
-                }
-            }
+            WatchUi.requestUpdate();
         }
         else if (key == WatchUi.KEY_ESC) {			//This case allows the Edge520 back button to exit the app before it's started.
-        	if (Application.getApp().isNullActivity()) {
+        	var info = Activity.getActivityInfo();
+            if (info.timerTime == null || info.timerTime == 0) {
                 WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
             }
-            else {
-                var info = Activity.getActivityInfo();
-                if (info.timerTime == null || info.timerTime == 0) {
-                    Application.getApp().discardActivity();
-                    WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
-                }
+            else if (info.timerState != Activity.TIMER_STATE_ON) {
+                promptToSave();
             }
+            
         }
         return true;
     }
@@ -154,10 +130,13 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
             menu.addItem("Pair Trainer"    , :trainer);
         }
         menu.addItem("Sensor Location"     , :sensorLx);
-        menu.addItem("Enter FTP"           , :ftp);
-        menu.addItem("Set Step Duration"   , :duration);
-        menu.addItem("Set Load Step Size"  , :stepsize);
-        menu.addItem("Set Initial Load"    , :initload);
+        menu.addItem("Enter BP1 Watts"     , :bp1);
+        menu.addItem("Enter BP2 Watts"     , :bp2);
+        menu.addItem("CV Prep Duration "   , :cvprep);
+        menu.addItem("CV Rest Duration"    , :cvrest);
+        menu.addItem("Accelerator Duration", :accel);
+        menu.addItem("Accel Rest Duration" , :accelrest);
+        menu.addItem("Number of Accels"    , :numaccel);
 
 
         WatchUi.pushView(menu, new MCycMenuDelegate(mMO2, mFEC), WatchUi.SLIDE_IMMEDIATE);
@@ -180,7 +159,8 @@ class MCycDelegate extends WatchUi.BehaviorDelegate {
             view = new MCycView1(mMO2, mViewAlert);
         }
         else {
-            view = new MCycView2(mMO2, mFEC, mViewAlert);
+            //view = new MCycView2(mMO2, mFEC, mViewAlert);
+            view = new MCycView2(mMO2, mViewAlert);
         }
 
         mIndex = index;

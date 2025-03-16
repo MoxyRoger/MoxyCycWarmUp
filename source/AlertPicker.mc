@@ -4,11 +4,14 @@ using Toybox.WatchUi as Ui;
 using Toybox.System as Sys;
 
 enum {
-    PICKER_TYPE_FTP,
+    PICKER_TYPE_BP1,
+    PICKER_TYPE_BP2,
     PICKER_TYPE_SENSORLX,
-    PICKER_TYPE_DURATION,
-    PICKER_TYPE_STEPSIZE,
-    PICKER_TYPE_INITLOAD
+    PICKER_TYPE_CVPREP,
+    PICKER_TYPE_CVREST,
+    PICKER_TYPE_ACCEL,
+    PICKER_TYPE_ACCELREST,
+    PICKER_TYPE_NUMACCEL
 }
 
 
@@ -63,20 +66,26 @@ class AlertPicker extends Ui.View {
         View.initialize();
         mType = type;
 
-        if (mType == PICKER_TYPE_FTP) {
-            mText = "FTP(watts)";
+        if (mType == PICKER_TYPE_BP1) {
+            mText = "BP1 (watts)";
         }
-        else if (mType == PICKER_TYPE_SENSORLX) {
-            mText = "Sensor Loc";
+        else if (mType == PICKER_TYPE_BP2) {
+            mText = "BP2 (watts)";
         }
-        else if (mType == PICKER_TYPE_DURATION) {
-            mText = "Step Duration (Seconds)";
+        else if (mType == PICKER_TYPE_CVPREP) {
+            mText = "CV Prep Duration (sec)";
         }
-        else if (mType == PICKER_TYPE_STEPSIZE) {
-            mText = "Load Step Size (watts)";
+        else if (mType == PICKER_TYPE_CVREST) {
+            mText = "CV Rest Duration (sec)";
         }
-        else if (mType == PICKER_TYPE_INITLOAD) {
-            mText = "Inital Load (watts)";
+        else if (mType == PICKER_TYPE_ACCEL) {
+            mText = "Accelerator Duration (sec)";
+        }
+        else if (mType == PICKER_TYPE_ACCELREST) {
+            mText = "Accel Rest Duration (sec)";
+        }
+        else if (mType == PICKER_TYPE_NUMACCEL) {
+            mText = "Number of Accelerators";
         }
     }
 
@@ -95,10 +104,17 @@ class AlertPicker extends Ui.View {
         dc.drawText(width / 2, margin, txtFont, mText, Gfx.TEXT_JUSTIFY_CENTER);
 
         var dispval=0;
-        if (mType == PICKER_TYPE_FTP) {
-            mSetPoint = App.Storage.getValue("FTP-watts");
+        if (mType == PICKER_TYPE_BP1) {
+            mSetPoint = App.Storage.getValue("BP1-watts");
             if (mSetPoint == null) {
-                mSetPoint = FTP_DEFAULT;
+                mSetPoint = BP1_DEFAULT;
+            }
+            dispval = mSetPoint.format("%d");
+        }
+        else if (mType == PICKER_TYPE_BP2) {
+            mSetPoint = App.Storage.getValue("BP2-watts");
+            if (mSetPoint == null) {
+                mSetPoint = BP2_DEFAULT;
             }
             dispval = mSetPoint.format("%d");
         }
@@ -113,24 +129,38 @@ class AlertPicker extends Ui.View {
             numFont = Gfx.FONT_MEDIUM;
             dispval = Ui.loadResource(Glocations[mSetPoint]);
         }
-        if (mType == PICKER_TYPE_DURATION) {
-            mSetPoint = App.Storage.getValue("duration");
+        if (mType == PICKER_TYPE_CVPREP) {
+            mSetPoint = App.Storage.getValue("cvprepdur");
             if (mSetPoint == null) {
-                mSetPoint = DURATION_DEFAULT;
+                mSetPoint = CVPREP_DEFAULT;
             }
             dispval = mSetPoint.format("%d");
         }
-        if (mType == PICKER_TYPE_STEPSIZE) {
-            mSetPoint = App.Storage.getValue("stepsize");
+        if (mType == PICKER_TYPE_CVREST) {
+            mSetPoint = App.Storage.getValue("cvrestdur");
             if (mSetPoint == null) {
-                mSetPoint = STEPSIZE_DEFAULT;
+                mSetPoint = CVREST_DEFAULT;
             }
             dispval = mSetPoint.format("%d");
         }
-        if (mType == PICKER_TYPE_INITLOAD) {
-            mSetPoint = App.Storage.getValue("initload");
+        if (mType == PICKER_TYPE_ACCEL) {
+            mSetPoint = App.Storage.getValue("acceldur");
             if (mSetPoint == null) {
-                mSetPoint = INITLOAD_DEFAULT;
+                mSetPoint = ACCEL_DEFAULT;
+            }
+            dispval = mSetPoint.format("%d");
+        }
+        if (mType == PICKER_TYPE_ACCELREST) {
+            mSetPoint = App.Storage.getValue("accelrestdur");
+            if (mSetPoint == null) {
+                mSetPoint = ACCELREST_DEFAULT;
+            }
+            dispval = mSetPoint.format("%d");
+        }
+        if (mType == PICKER_TYPE_NUMACCEL) {
+            mSetPoint = App.Storage.getValue("numaccel");
+            if (mSetPoint == null) {
+                mSetPoint = NUMACCEL_DEFAULT;
             }
             dispval = mSetPoint.format("%d");
         }
@@ -179,10 +209,19 @@ class AlertPickerDelegate extends Ui.InputDelegate {
         mView = view;
         mType = type;
 
-        if (mType == PICKER_TYPE_FTP) {
-            mSetPoint = App.Storage.getValue("FTP-watts");
+        if (mType == PICKER_TYPE_BP1) {
+            mSetPoint = App.Storage.getValue("BP1-watts");
             if (mSetPoint == null) {
-                mSetPoint = FTP_DEFAULT;
+                mSetPoint = BP1_DEFAULT;
+            }
+            max = 600;
+            min = 25;
+            incr = 1;
+        }
+        else if (mType == PICKER_TYPE_BP2) {
+            mSetPoint = App.Storage.getValue("BP2-watts");
+            if (mSetPoint == null) {
+                mSetPoint = BP2_DEFAULT;
             }
             max = 600;
             min = 25;
@@ -200,28 +239,46 @@ class AlertPickerDelegate extends Ui.InputDelegate {
             min = 0;
             incr = 1;
         }
-        if (mType == PICKER_TYPE_DURATION) {
-            mSetPoint = App.Storage.getValue("duration");
+        if (mType == PICKER_TYPE_CVPREP) {
+            mSetPoint = App.Storage.getValue("cvprepdur");
             if (mSetPoint == null) {
-                mSetPoint = DURATION_DEFAULT;
+                mSetPoint = CVPREP_DEFAULT;
             }
             max = 600;
             min = 60;
             incr = 1;
         }
-        if (mType == PICKER_TYPE_STEPSIZE) {
-            mSetPoint = App.Storage.getValue("stepsize");
+        if (mType == PICKER_TYPE_CVREST) {
+            mSetPoint = App.Storage.getValue("cvrestdur");
             if (mSetPoint == null) {
-                mSetPoint = STEPSIZE_DEFAULT;
+                mSetPoint = CVREST_DEFAULT;
             }
             max = 250;
             min = 1;
             incr = 1;
         }
-        if (mType == PICKER_TYPE_INITLOAD) {
-            mSetPoint = App.Storage.getValue("initload");
+        if (mType == PICKER_TYPE_ACCEL) {
+            mSetPoint = App.Storage.getValue("acceldur");
             if (mSetPoint == null) {
-                mSetPoint = INITLOAD_DEFAULT;
+                mSetPoint = ACCEL_DEFAULT;
+            }
+            max = 600;
+            min = 1;
+            incr = 1;
+        }
+        if (mType == PICKER_TYPE_ACCELREST) {
+            mSetPoint = App.Storage.getValue("accelrestdur");
+            if (mSetPoint == null) {
+                mSetPoint = ACCELREST_DEFAULT;
+            }
+            max = 600;
+            min = 1;
+            incr = 1;
+        }
+        if (mType == PICKER_TYPE_NUMACCEL) {
+            mSetPoint = App.Storage.getValue("numaccel");
+            if (mSetPoint == null) {
+                mSetPoint = NUMACCEL_DEFAULT;
             }
             max = 600;
             min = 1;
@@ -274,8 +331,11 @@ class AlertPickerDelegate extends Ui.InputDelegate {
             mSetPoint = min;
         }
 
-        if (mType == PICKER_TYPE_FTP) {
-            App.Storage.setValue("FTP-watts", mSetPoint);
+        if (mType == PICKER_TYPE_BP1) {
+            App.Storage.setValue("BP1-watts", mSetPoint);
+        }
+        else if (mType == PICKER_TYPE_BP2) {
+            App.Storage.setValue("BP2-watts", mSetPoint);
         }
         else if (mType == PICKER_TYPE_SENSORLX) {
 			var val = mSetPoint;
@@ -285,14 +345,20 @@ class AlertPickerDelegate extends Ui.InputDelegate {
             App.Storage.setValue("SensorLx", val);
             App.getApp().setDeviceInfo();
         }
-        if (mType == PICKER_TYPE_DURATION) {
-            App.Storage.setValue("duration", mSetPoint);
+        else if (mType == PICKER_TYPE_CVPREP) {
+            App.Storage.setValue("cvprepdur", mSetPoint);
         }
-        if (mType == PICKER_TYPE_STEPSIZE) {
-            App.Storage.setValue("stepsize", mSetPoint);
+        else if (mType == PICKER_TYPE_CVREST) {
+            App.Storage.setValue("cvrestdur", mSetPoint);
         }
-        if (mType == PICKER_TYPE_INITLOAD) {
-            App.Storage.setValue("initload", mSetPoint);
+        else if (mType == PICKER_TYPE_ACCEL) {
+            App.Storage.setValue("acceldur", mSetPoint);
+        }
+        else if (mType == PICKER_TYPE_ACCELREST) {
+            App.Storage.setValue("accelrestdur", mSetPoint);
+        }
+        else if (mType == PICKER_TYPE_NUMACCEL) {
+            App.Storage.setValue("numaccel", mSetPoint);
         }
 
         Ui.requestUpdate();

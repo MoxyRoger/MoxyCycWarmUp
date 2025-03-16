@@ -5,13 +5,26 @@ import Toybox.Time;
 
 class FECTrainer extends Ant.GenericChannel
 {
-    var is_first_msg = true;
     var deviceNumber = 0;
     var deviceMfg = 0;
     var instPower = 0;
     var fecSpeed;
-    var targPower = 0;
-    var ackSequence = SEND_INIT;        // controlled by MainApp and Internally
+    hidden var is_first_msg = true;
+    hidden var targPower = 0;
+    hidden var basicResist = 50;
+    hidden var slope = 0;
+    hidden var surface = .004;   // Default value
+    hidden var windCoeff = 0.51; // Default value
+    hidden var windSpeed = 0;    // Default value
+    hidden var draftFact = 1.0;  // Default value
+    hidden var userWt = 75;      // Default value
+    hidden var bikeWt = 10;      // Default value
+    hidden var sendTargPwr = false;
+    hidden var sendBasRst  = false;
+    hidden var sendTrack   = false;
+    hidden var sendWind    = false;
+    hidden var sendUser    = false;
+    hidden var unConfirmed = 0;
 
     function initialize() {
         deviceNumber = Application.Storage.getValue("FECId");
@@ -71,11 +84,44 @@ class FECTrainer extends Ant.GenericChannel
     }
 
     function controlEquipment(mode, value){
-        if (mode ==  AntPlus.TRAINER_TARGET_POWER) {
-            ackSequence = SEND_TARGPWR;
-            targPower = value.toLong();
-        }
-        
+        switch(mode) {
+            case AntPlus.TRAINER_TARGET_POWER:
+                targPower = value.toNumber(); //Target power setting of the fitness equipment. 0 - 4000W input range, unit 0.25W.
+                sendTargPwr = true;
+                break;
+            case AntPlus.TRAINER_RESISTANCE:
+                basicResist = value.toNumber(); //Basic resistance value of the fitness equipment. Percent of max resistance 0 - 100 input range, unit 0.5%.
+                sendBasRst = true;
+                break;
+            case AntPlus.TRAINER_USER_WEIGHT:
+                userWt = value.toFloat();
+                sendUser = true;
+                break;
+            case AntPlus.TRAINER_BIKE_WEIGHT:
+                bikeWt = value.toFloat();
+                sendUser = true;
+                break;
+            case AntPlus.TRAINER_WIND_COEFF:
+                windCoeff = value.toFloat();
+                sendWind = true;
+                break;
+            case AntPlus.TRAINER_WIND_SPEED:
+                windSpeed = value.toFloat();
+                sendWind = true;
+                break;
+            case AntPlus.TRAINER_WIND_DRAFT_FACTOR:
+                draftFact = value.toFloat();
+                sendWind = true;
+                break;
+            case AntPlus.TRAINER_SLOPE:
+                slope = value.toFloat();
+                sendTrack = true;
+                break;
+            case AntPlus.TRAINER_SURFACE:
+                surface = value.toFloat();
+                sendTrack = true;
+                break;            
+        }        
     }
 
     function onMessage(msg as Message) as Void {
@@ -92,18 +138,31 @@ class FECTrainer extends Ant.GenericChannel
                     reset();
                 }
                 else if (Ant.MSG_CODE_EVENT_TRANSFER_TX_COMPLETED == event){  // Confirms that the Acknowledge was received
-                  switch(ackSequence) {
-                    case SEND_USER:
-                        ackSequence = CONF_USER;
+                  switch (unConfirmed){
+                    case 0:
                         break;
-                    case SEND_TARGPWR:
-                        ackSequence = CONF_TARGPWR;
+                    case 1:
+                        sendTargPwr = false;
+                        unConfirmed = 0;
                         break;
-                    case SEND_WINDRESIST:
-                        ackSequence = CONF_WINDRESIST;
+                    case 2:
+                        sendBasRst = false;
+                        unConfirmed = 0;
                         break;
-                    case SEND_TRACKRESIST:
-                        ackSequence = CONF_TRACKRESIST;
+                    case 3:
+                        sendUser = false;
+                        unConfirmed = 0;
+                        System.println("User confirmed " + payload[4] + ", " + payload[5] + ", " + payload[6] + ", " + payload[7]);
+                        break;
+                    case 4:
+                        sendWind = false;
+                        unConfirmed = 0;
+                        System.println("Wind confirmed" + payload[4] + ", " + payload[5] + ", " + payload[6] + ", " + payload[7]);
+                        break;
+                    case 5:
+                        sendTrack = false;
+                        unConfirmed = 0;
+                        System.println("Track confirmed" + payload[4] + ", " + payload[5] + ", " + payload[6] + ", " + payload[7]);
                         break;
                   }
               }
@@ -122,7 +181,7 @@ class FECTrainer extends Ant.GenericChannel
                 deviceNumber = GenericChannel.getDeviceConfig().deviceNumber;
                 is_first_msg = false;
                 Application.Storage.setValue("FECId", deviceNumber);
-                ackSequence = SEND_TARGPWR;
+                sendTargPwr = true;
             }
 
             if(deviceNumber == 0)
@@ -143,69 +202,71 @@ class FECTrainer extends Ant.GenericChannel
                     }
                     break;
             }
-            
-            switch(ackSequence){
-                case SEND_USER:
-                    //var weight = Application.Storage.getValue("Weight-kg");
-                    ackload[0] = 0x37;                           // User Configuration data page  [37][DC][05][FF][80][0C][46][00]
-                    ackload[1] = 0x00; //((100 * weight) % 256) & 0xFF;  // Weight LSB
-                    ackload[2] = 0x00; //((100 * weight) / 256) & 0xFF;  // Weight MSB
-                    ackload[3] = 0xFF;                           // Reserved
-                    ackload[4] = 0x80;                           // Wheel offset bits 0-3 , Bike Weight LSN bits 4-7
-                    ackload[5] = 0x0C;                           // Bike Weight MSB - 10 Kg / .05 = 200 = 0xC8
-                    ackload[6] = 0x46;                           // Wheel Diameter
-                    ackload[7] = 0x00;                           // Gear Ratio
-                    message.setPayload(ackload);
-                    GenericChannel.sendAcknowledge(message);
-                    break;
-                case SEND_TARGPWR:
-                    //var targPower = Application.getApp().targetPower.toLong();
-                    ackload[0] = 0x31;                   // Target Power data page
-                    ackload[1] = 0xFF;                   // Reserved
-                    ackload[2] = 0xFF;                   // Reserved
-                    ackload[3] = 0xFF;                   // Reserved
-                    ackload[4] = 0xFF;                   // Reserved
-                    ackload[5] = 0xFF;                   // Reserved
-                    ackload[6] = (targPower * 4) % 256;  // 0.25 Watts LSB
-                    ackload[7] = (targPower * 4) / 256;  // 0.25 Watts MSB
-                    message.setPayload(ackload);
-                    GenericChannel.sendAcknowledge(message);
-                    break;
-                case SEND_WINDRESIST:
-                    ackload[0] = 0x32;  // Wind Resistance  [32][FF][FF][FF][FF][33][7F][64]
-                    ackload[1] = 0xFF;  // Reserved
-                    ackload[2] = 0xFF;  // Reserved
-                    ackload[3] = 0xFF;  // Reserved
-                    ackload[4] = 0xFF;  // Reserved
-                    ackload[5] = 0x33;  // Use Default Value
-                    if(Application.getApp().targetPower == 1){
-                        ackload[6] = 0x70;  // Tail Wind for gear selection
-                    }
-                    else{
-                        ackload[6] = 0x7F;  // Use Default Value
-                    }
-                    ackload[7] = 0x64;  // Use Default Value
-                    message.setPayload(ackload);
-                    GenericChannel.sendAcknowledge(message);
-                    break;
-                case SEND_TRACKRESIST:
-                    ackload[0] = 0x33;  // Track Resistance [33][FF][FF][FF][FF][1A][4F][50]
-                    ackload[1] = 0xFF;  // Reserved
-                    ackload[2] = 0xFF;  // Reserved
-                    ackload[3] = 0xFF;  // Reserved
-                    ackload[4] = 0xFF;  // Reserved
-                    if(Application.getApp().targetPower == 1){
-                        ackload[5] = 0x66;  // 0.70% Slope LSB for gear selection
-                        ackload[6] = 0x4E;  // 0.70% Slope MSB for gear selection
-                    }
-                    else{
-                        ackload[5] = 0x1A;  // 2.5% Slope LSB
-                        ackload[6] = 0x4F;  // 2.5% Slope MSB
-                    }
-                    ackload[7] = 0x50;  // Use Default Value of .004 / 5e-5
-                    message.setPayload(ackload);
-                    GenericChannel.sendAcknowledge(message);
-                    break;
+
+            if (sendTargPwr && (unConfirmed == 0 || unConfirmed == 1)) {
+                ackload[0] = 0x31;                   // Target Power data page
+                ackload[1] = 0xFF;                   // Reserved
+                ackload[2] = 0xFF;                   // Reserved
+                ackload[3] = 0xFF;                   // Reserved
+                ackload[4] = 0xFF;                   // Reserved
+                ackload[5] = 0xFF;                   // Reserved
+                ackload[6] = (targPower * 4) % 256;  // 0.25 Watts LSB
+                ackload[7] = (targPower * 4) / 256;  // 0.25 Watts MSB
+                message.setPayload(ackload);
+                GenericChannel.sendAcknowledge(message);
+                unConfirmed = 1;
+            }
+            else if (sendBasRst && (unConfirmed == 0 || unConfirmed == 2)) {
+                ackload[0] = 0x30;                   // Basic Resistance data page
+                ackload[1] = 0xFF;                   // Reserved
+                ackload[2] = 0xFF;                   // Reserved
+                ackload[3] = 0xFF;                   // Reserved
+                ackload[4] = 0xFF;                   // Reserved
+                ackload[5] = 0xFF;                   // Reserved
+                ackload[6] = 0xFF;                   // Reserved
+                ackload[7] = basicResist * 2;        // 0% to 100% in 0.5% units
+                message.setPayload(ackload);
+                GenericChannel.sendAcknowledge(message);
+                unConfirmed = 2;
+            }
+            else if (sendUser && (unConfirmed == 0 || unConfirmed == 3)) {
+                ackload[0] = 0x37;                                     // User Configuration data page  [37][DC][05][FF][80][0C][46][00]
+                ackload[1] = (100 * userWt).toNumber() & 0xFF;         // User Weight LSB - .01 kg units
+                ackload[2] = ((100 * userWt).toNumber() / 256) & 0xFF; // Weight MSB - .01 kg units
+                ackload[3] = 0xFF;                                     // Reserved
+                ackload[4] = ((bikeWt * 20).toNumber() & 0x0F) * 16;   // Wheel offset bits 0-3 , Bike Weight LSN bits 4-7 (not programmed)
+                ackload[5] = ((bikeWt * 20).toNumber() / 16) & 0xFF;   // Bike Weight- .05 kg units (not programmed)
+                ackload[6] = 0x46;//;                                  // Wheel Diameter (not programmed)
+                ackload[7] = 0x00;                                     // Gear Ratio (not programmed)
+                message.setPayload(ackload);
+                GenericChannel.sendAcknowledge(message);
+                unConfirmed = 3;
+            }
+            else if (sendWind && (unConfirmed == 0 || unConfirmed == 4)) {
+                ackload[0] = 0x32;  // Wind Resistance  [32][FF][FF][FF][FF][33][7F][64]
+                ackload[1] = 0xFF;  // Reserved
+                ackload[2] = 0xFF;  // Reserved
+                ackload[3] = 0xFF;  // Reserved
+                ackload[4] = 0xFF;  // Reserved
+                ackload[5] = (windCoeff * 100).toNumber() & 0xFF;   // Wind Resistance Coefficient
+                ackload[6] = (windSpeed + 127).toNumber() & 0xFF;   // Wind Speed
+                ackload[7] = (draftFact * 100).toNumber() & 0xFF;   // Drafting Factor
+                message.setPayload(ackload);
+                GenericChannel.sendAcknowledge(message);
+                unConfirmed = 4;
+            }
+            else if (sendTrack && (unConfirmed == 0 || unConfirmed == 5)) {
+                ackload[0] = 0x33;  // Track Resistance data page[33][FF][FF][FF][FF][1A][4F][50]
+                ackload[1] = 0xFF;  // Reserved
+                ackload[2] = 0xFF;  // Reserved
+                ackload[3] = 0xFF;  // Reserved
+                ackload[4] = 0xFF;  // Reserved
+                ackload[5] = ((slope + 200) * 100).toNumber() & 0xFF;         // Slope LSB
+                ackload[6] = (((slope + 200) * 100).toNumber() / 256) & 0xFF; // Slope MSB
+                ackload[7] = (20000 * surface).toNumber();                    // Coefficient of Rolling Resistance
+                message.setPayload(ackload);
+                GenericChannel.sendAcknowledge(message);
+                unConfirmed = 5;
             }
         }
     }

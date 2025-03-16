@@ -10,7 +10,6 @@ class MCycView0 extends Ui.View {
     hidden var mFEC;
     hidden var mViewAlert;
 
-    hidden var mTime;
     hidden var mVersion;
     hidden var mVerShowTime;
     hidden var mHasPower;
@@ -36,8 +35,7 @@ class MCycView0 extends Ui.View {
     }
 
     function onShow() {
-        mVersion = Ui.loadResource(Rez.Strings.AppName);
-        mVersion += " ";
+        mVersion = "Ver: ";
         mVersion += Ui.loadResource(Rez.Strings.AppVersion);
         mVerShowTime = Sys.getTimer();
     }
@@ -49,7 +47,7 @@ class MCycView0 extends Ui.View {
 
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_WHITE);
 		dc.clear();
-
+        dc.setPenWidth(1);
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
 		dc.fillRectangle(0, device.LineY, width, device.LineH);
 		dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
@@ -70,11 +68,7 @@ class MCycView0 extends Ui.View {
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
         var info = Act.getActivityInfo();
 
-        var time = 0;
         if (info != null) {
-            if (info.timerTime != null) {
-                time = info.timerTime / 1000;
-            }
             if (info.currentHeartRate != null) {
             	dc.fillCircle(device.HRX, device.IndicatorY, mIndRad-1);
             }
@@ -91,8 +85,8 @@ class MCycView0 extends Ui.View {
         }
         
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-        mTime = format_elapsed_time(time);
-        dc.drawText(device.TimeX, device.TimeY, device.TimeFont, mTime, Gfx.TEXT_JUSTIFY_CENTER); 
+        dc.drawText(device.TitleX, device.TitleY, device.TitleFont, "Moxy Cycling", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(device.TitleX, device.TitleY + 1.2 * dc.getFontHeight(device.TitleFont), device.TitleFont, "Warmup", Gfx.TEXT_JUSTIFY_CENTER);
 
         // Update Alerts
         mViewAlert.checkAlerts(dc);
