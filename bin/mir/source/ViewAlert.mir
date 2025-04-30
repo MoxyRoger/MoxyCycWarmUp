@@ -955,7 +955,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_205_32
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 216 8 ]
         %tmp.21 = lgetv %yCen.8;
         %tmp.22 = 45;
-        %tmp.24 = getv ? :g_ScaleFactorY;
+        %tmp.24 = getv ? :g_ScaleFactorX;
         %tmp.25 = mul %tmp.22 %tmp.24;
         %tmp.26 = getv function %tmp.25 :toNumber;
         %tmp.27 = invoke %tmp.25 %tmp.26();
@@ -973,7 +973,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_205_32
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 218 8 ]
         %tmp.39 = lgetv %yCen.8;
         %tmp.40 = 45;
-        %tmp.42 = getv ? :g_ScaleFactorY;
+        %tmp.42 = getv ? :g_ScaleFactorX;
         %tmp.43 = mul %tmp.40 %tmp.42;
         %tmp.44 = getv function %tmp.43 :toNumber;
         %tmp.45 = invoke %tmp.43 %tmp.44();
@@ -1043,7 +1043,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_205_32
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 227 8 ]
         %tmp.110 = lgetv %yCen.8;
         %tmp.111 = 39;
-        %tmp.113 = getv ? :g_ScaleFactorY;
+        %tmp.113 = getv ? :g_ScaleFactorX;
         %tmp.114 = mul %tmp.111 %tmp.113;
         %tmp.115 = getv function %tmp.114 :toNumber;
         %tmp.116 = invoke %tmp.114 %tmp.115();
@@ -1061,7 +1061,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_205_32
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 229 8 ]
         %tmp.128 = lgetv %yCen.8;
         %tmp.129 = 39;
-        %tmp.131 = getv ? :g_ScaleFactorY;
+        %tmp.131 = getv ? :g_ScaleFactorX;
         %tmp.132 = mul %tmp.129 %tmp.131;
         %tmp.133 = getv function %tmp.132 :toNumber;
         %tmp.134 = invoke %tmp.132 %tmp.133();
@@ -1178,7 +1178,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 252 8 ]
         %tmp.21 = lgetv %yCen.10;
         %tmp.22 = 45;
-        %tmp.24 = getv ? :g_ScaleFactorY;
+        %tmp.24 = getv ? :g_ScaleFactorX;
         %tmp.25 = mul %tmp.22 %tmp.24;
         %tmp.26 = getv function %tmp.25 :toNumber;
         %tmp.27 = invoke %tmp.25 %tmp.26();
@@ -1196,7 +1196,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 254 8 ]
         %tmp.39 = lgetv %yCen.10;
         %tmp.40 = 45;
-        %tmp.42 = getv ? :g_ScaleFactorY;
+        %tmp.42 = getv ? :g_ScaleFactorX;
         %tmp.43 = mul %tmp.40 %tmp.42;
         %tmp.44 = getv function %tmp.43 :toNumber;
         %tmp.45 = invoke %tmp.43 %tmp.44();
@@ -1214,7 +1214,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 256 8 ]
         %tmp.57 = lgetv %yCen.10;
         %tmp.58 = 45;
-        %tmp.60 = getv ? :g_ScaleFactorY;
+        %tmp.60 = getv ? :g_ScaleFactorX;
         %tmp.61 = mul %tmp.58 %tmp.60;
         %tmp.62 = getv function %tmp.61 :toNumber;
         %tmp.63 = invoke %tmp.61 %tmp.62();
@@ -1232,7 +1232,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 258 8 ]
         %tmp.75 = lgetv %yCen.10;
         %tmp.76 = 45;
-        %tmp.78 = getv ? :g_ScaleFactorY;
+        %tmp.78 = getv ? :g_ScaleFactorX;
         %tmp.79 = mul %tmp.76 %tmp.78;
         %tmp.80 = getv function %tmp.79 :toNumber;
         %tmp.81 = invoke %tmp.79 %tmp.80();
@@ -1299,7 +1299,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 266 8 ]
         %tmp.146 = lgetv %yCen.10;
         %tmp.147 = 42;
-        %tmp.149 = getv ? :g_ScaleFactorY;
+        %tmp.149 = getv ? :g_ScaleFactorX;
         %tmp.150 = mul %tmp.147 %tmp.149;
         %tmp.151 = getv function %tmp.150 :toNumber;
         %tmp.152 = invoke %tmp.150 %tmp.151();
@@ -1317,7 +1317,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 268 8 ]
         %tmp.164 = lgetv %yCen.10;
         %tmp.165 = 42;
-        %tmp.167 = getv ? :g_ScaleFactorY;
+        %tmp.167 = getv ? :g_ScaleFactorX;
         %tmp.168 = mul %tmp.165 %tmp.167;
         %tmp.169 = getv function %tmp.168 :toNumber;
         %tmp.170 = invoke %tmp.168 %tmp.169();
@@ -1335,7 +1335,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 270 8 ]
         %tmp.182 = lgetv %yCen.10;
         %tmp.183 = 42;
-        %tmp.185 = getv ? :g_ScaleFactorY;
+        %tmp.185 = getv ? :g_ScaleFactorX;
         %tmp.186 = mul %tmp.183 %tmp.185;
         %tmp.187 = getv function %tmp.186 :toNumber;
         %tmp.188 = invoke %tmp.186 %tmp.187();
@@ -1353,7 +1353,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_ViewAlert_mc_238_31
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\ViewAlert.mc" 272 8 ]
         %tmp.200 = lgetv %yCen.10;
         %tmp.201 = 42;
-        %tmp.203 = getv ? :g_ScaleFactorY;
+        %tmp.203 = getv ? :g_ScaleFactorX;
         %tmp.204 = mul %tmp.201 %tmp.203;
         %tmp.205 = sub %tmp.200 %tmp.204;
         lputv %y4.8 %tmp.205;

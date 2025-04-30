@@ -32,7 +32,6 @@ module Rez {
         (:initialized) var left_shin as ResourceId;
         (:initialized) var left_leg as ResourceId;
         (:initialized) var left_quad as ResourceId;
-        (:initialized) var FECIdentityTitle as ResourceId;
         (:initialized) var LapButton as ResourceId;
         (:initialized) var right_hamstring as ResourceId;
         (:initialized) var right_shoulder as ResourceId;

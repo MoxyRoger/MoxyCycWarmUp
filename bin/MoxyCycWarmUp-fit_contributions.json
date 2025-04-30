@@ -39,8 +39,8 @@
       "smo2_units" : "%",
       "thb_label" : "THb",
       "thb_units" : "THb",
-      "AppName" : "Warmup",
-      "AppVersion" : "0.0.4"
+      "AppName" : "Moxy Warmup",
+      "AppVersion" : "0.1.1"
     }
   }
 }

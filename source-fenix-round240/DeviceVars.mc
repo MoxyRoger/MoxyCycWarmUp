@@ -64,8 +64,8 @@ module View2DeviceVars
 	}
 
 	var L1X = 120;  //Timer
-	var L1Y = 160;
-	var V1X = 125;
+	var L1Y = 162;
+	var V1X = 120;
 	var V1Y = 207;
 
 	var L2X = null; //HR

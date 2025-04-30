@@ -7,6 +7,7 @@ const SMO2_FIELD_ID = 0;
 const THB_FIELD_ID = 1;
 const DEVICE_INFO_ID = 2;
 const INTENSITY_FIELD_ID = 3;
+const TAGS_FIELD_ID = 4;
 
 // format and units for displaying SmO2 data
 const G_currentHemoPercentUnits = WatchUi.loadResource(Rez.Strings.smo2_units);
@@ -24,8 +25,12 @@ class MO2FitContributor {
     hidden var mThb = null;
     hidden var mIntensity = null;
     hidden var mDeviceInfo = null;
+    hidden var mTags = null;
     hidden var location;
     hidden var sensorId;
+    hidden var tagFieldName = "MoxyTags";             // Field name recognized by Intervals.icu
+    hidden var tags = "TRM_Warmup";    // multiple tags are space delimited
+    hidden var tagLength = tags.length() + 1;
 
     // Constructor
     function initialize(activity) {
@@ -46,9 +51,11 @@ class MO2FitContributor {
         mThb = activity.createField(G_AppSensor + " " + G_totalHemoConcentrationLabel + label, THB_FIELD_ID, FitContributor.DATA_TYPE_FLOAT, { :nativeNum=>54, :mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>G_totalHemoConcentrationUnits });
 		mIntensity = activity.createField("FIT_Lap_Intensity", INTENSITY_FIELD_ID, FitContributor.DATA_TYPE_UINT8, { :nativeNum=>23, :mesgType=>FitContributor.MESG_TYPE_LAP,  :units=>""});
         mDeviceInfo =  activity.createField("CIQ_device_info", DEVICE_INFO_ID, FitContributor.DATA_TYPE_UINT8, { :count=>8, :mesgType=>FitContributor.MESG_TYPE_SESSION });
+        mTags = activity.createField(tagFieldName, TAGS_FIELD_ID, FitContributor.DATA_TYPE_STRING, { :count=>tagLength, :mesgType=>FitContributor.MESG_TYPE_SESSION });
         mSmO2.setData(0);
         mThb.setData(0);
         mIntensity.setData(4);
+        mTags.setData(tags);
     }
 
     function compute(sensor) {

@@ -1,0 +1,303 @@
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 1; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 2; ]
+using Toybox.System;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 4; ]
+module View0DeviceVars {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 4; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 18 8 ]
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+        putv self :VersionJ %tmp.2;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 19 8 ]
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :FONT_MEDIUM;
+        putv self :TitleFont %tmp.4;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 20 8 ]
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :FONT_SMALL;
+        putv self :LabelFont %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 21 8 ]
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :FONT_XTINY;
+        putv self :VersionFont %tmp.8;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 6; @position = 5; ]
+    var TitleX = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 7; @position = 8; ]
+    var TitleY = 40;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 8; @position = 8; ]
+    var LineY = 129;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 9; @position = 8; ]
+    var LineH = 2;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 10; @position = 8; ]
+    var LabelY = 142;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 11; @position = 8; ]
+    var IndicatorY = 185;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 12; @position = 8; ]
+    var MO2X = 43;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 13; @position = 8; ]
+    var HRX = 101;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 14; @position = 8; ]
+    var FECX = 159;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 15; @position = 8; ]
+    var PowerX = 217;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 16; @position = 8; ]
+    var VersionX = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 17; @position = 8; ]
+    var VersionY = 205;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 18; @position = 8; ]
+    var VersionJ;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 19; @position = 8; ]
+    var TitleFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 20; @position = 8; ]
+    var LabelFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 21; @position = 8; ]
+    var VersionFont;
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 24; ]
+module View1DeviceVars {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 24; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 50 5 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :FONT_XTINY;
+        putv self :LFont %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 51 5 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :FONT_NUMBER_MEDIUM;
+        putv self :VFont %tmp.12;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 52 5 ]
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :TEXT_JUSTIFY_CENTER;
+        putv self :LJust %tmp.14;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 53 5 ]
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :TEXT_JUSTIFY_CENTER;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :TEXT_JUSTIFY_VCENTER;
+        %tmp.19 = bitor %tmp.16 %tmp.18;
+        putv self :VJust %tmp.19;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 26; ]
+    function drawGrid(dc) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_26_23_32_1_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 27 2 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_26_23_32_1_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_26_23_32_1_stop" ]
+        %width.1 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 28 2 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :setColor;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv %tmp.6 :COLOR_GREEN;
+        %tmp.8 = getm $.Toybox.Graphics;
+        %tmp.9 = getv %tmp.8 :COLOR_GREEN;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 29 2 ]
+        %tmp.10 = lgetv %dc;
+        %tmp.11 = getv function %tmp.10 :fillRectangle;
+        %tmp.12 = 0;
+        %tmp.13 = 89;
+        %tmp.15 = lgetv %width.1;
+        %tmp.16 = 2;
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.15, %tmp.16);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 30 2 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :fillRectangle;
+        %tmp.19 = 0;
+        %tmp.20 = 174;
+        %tmp.22 = lgetv %width.1;
+        %tmp.23 = 2;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.22, %tmp.23);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 31 2 ]
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :fillRectangle;
+        %tmp.26 = 129;
+        %tmp.27 = 89;
+        %tmp.28 = 2;
+        %tmp.29 = 85;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.28, %tmp.29);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_26_23_32_1_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 34; @position = 5; ]
+    var L1X = 129;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 35; @position = 5; ]
+    var L2X = 129;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 36; @position = 5; ]
+    var L3X = 185;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 37; @position = 5; ]
+    var L4X = 67;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 38; @position = 5; ]
+    var L1Y = 14;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 39; @position = 5; ]
+    var L2Y = 229;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 40; @position = 5; ]
+    var L3Y = 95;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 41; @position = 5; ]
+    var L4Y = 95;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 42; @position = 5; ]
+    var V1X = 129;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 43; @position = 5; ]
+    var V2X = 129;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 44; @position = 5; ]
+    var V3X = 185;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 45; @position = 5; ]
+    var V4X = 67;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 46; @position = 5; ]
+    var V1Y = 62;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 47; @position = 5; ]
+    var V2Y = 203;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 48; @position = 5; ]
+    var V3Y = 143;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 49; @position = 5; ]
+    var V4Y = 143;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 50; @position = 5; ]
+    var LFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 51; @position = 5; ]
+    var VFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 52; @position = 5; ]
+    var LJust;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 53; @position = 5; ]
+    var VJust;
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 57; ]
+module View2DeviceVars {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 57; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 93 5 ]
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :FONT_XTINY;
+        putv self :LFont %tmp.31;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 94 5 ]
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :FONT_NUMBER_MEDIUM;
+        putv self :VNumFont %tmp.33;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 95 5 ]
+        %tmp.34 = getm $.Toybox.Graphics;
+        %tmp.35 = getv %tmp.34 :FONT_LARGE;
+        putv self :VTxtFont %tmp.35;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 96 5 ]
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :FONT_MEDIUM;
+        putv self :TargFont %tmp.37;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 97 5 ]
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_CENTER;
+        putv self :LJust %tmp.39;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 98 5 ]
+        %tmp.40 = getm $.Toybox.Graphics;
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        %tmp.42 = getm $.Toybox.Graphics;
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_VCENTER;
+        %tmp.44 = bitor %tmp.41 %tmp.43;
+        putv self :VJust %tmp.44;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 59; ]
+    function drawGrid(dc) {
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_59_23_64_1_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 60 2 ]
+        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_59_23_64_1_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_59_23_64_1_stop" ]
+        %width.1 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 61 2 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :setColor;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv %tmp.6 :COLOR_GREEN;
+        %tmp.8 = getm $.Toybox.Graphics;
+        %tmp.9 = getv %tmp.8 :COLOR_GREEN;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 62 2 ]
+        %tmp.10 = lgetv %dc;
+        %tmp.11 = getv function %tmp.10 :fillRectangle;
+        %tmp.12 = 40;
+        %tmp.13 = 110;
+        %tmp.14 = 180;
+        %tmp.15 = 2;
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.14, %tmp.15);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc" 63 2 ]
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :fillRectangle;
+        %tmp.18 = 0;
+        %tmp.19 = 168;
+        %tmp.21 = lgetv %width.1;
+        %tmp.22 = 2;
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19, %tmp.21, %tmp.22);
+C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round260_DeviceVars_mc_59_23_64_1_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 66; @position = 5; ]
+    var L1X = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 67; @position = 5; ]
+    var L1Y = 176;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 68; @position = 5; ]
+    var V1X = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 69; @position = 5; ]
+    var V1Y = 221;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 71; @position = 5; ]
+    var L2X = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 72; @position = 5; ]
+    var L2Y = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 73; @position = 5; ]
+    var V2X = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 74; @position = 5; ]
+    var V2Y = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 76; @position = 5; ]
+    var L3X = 191;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 77; @position = 5; ]
+    var L3Y = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 78; @position = 5; ]
+    var V3X = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 79; @position = 5; ]
+    var V3Y = 140;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 81; @position = 5; ]
+    var L4X = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 82; @position = 5; ]
+    var L4Y = 40;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 83; @position = 5; ]
+    var V4X = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 84; @position = 5; ]
+    var V4Y = 84;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 86; @position = 5; ]
+    var Targ1X = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 87; @position = 5; ]
+    var Targ2X = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 88; @position = 5; ]
+    var Targ1Y = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 89; @position = 5; ]
+    var Targ2Y = null;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 90; @position = 5; ]
+    var TargAng1 = 50;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 91; @position = 5; ]
+    var TargAng2 = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 93; @position = 5; ]
+    var LFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 94; @position = 5; ]
+    var VNumFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 95; @position = 5; ]
+    var VTxtFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 96; @position = 5; ]
+    var TargFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 97; @position = 5; ]
+    var LJust;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 98; @position = 5; ]
+    var VJust;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 100; @position = 5; ]
+    var meterX = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 101; @position = 5; ]
+    var meterY = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 102; @position = 5; ]
+    var meterR = 125;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 103; @position = 5; ]
+    var meterT = 20;
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round260\DeviceVars.mc"; @line = 1; ]
+<init> {
+}

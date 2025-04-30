@@ -97,7 +97,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
         %tmp.10 = lgetv %dc;
         %tmp.11 = getv function %tmp.10 :fillRectangle;
         %tmp.12 = 0;
-        %tmp.13 = 100;
+        %tmp.13 = 105;
         %tmp.15 = lgetv %width.1;
         %tmp.16 = 2;
         invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.15, %tmp.16);
@@ -105,7 +105,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
         %tmp.17 = lgetv %dc;
         %tmp.18 = getv function %tmp.17 :fillRectangle;
         %tmp.19 = 0;
-        %tmp.20 = 200;
+        %tmp.20 = 210;
         %tmp.22 = lgetv %width.1;
         %tmp.23 = 2;
         invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.22, %tmp.23);
@@ -113,7 +113,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
         %tmp.24 = lgetv %dc;
         %tmp.25 = getv function %tmp.24 :fillRectangle;
         %tmp.26 = 0;
-        %tmp.27 = 300;
+        %tmp.27 = 315;
         %tmp.29 = lgetv %width.1;
         %tmp.30 = 2;
         invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.29, %tmp.30);
@@ -130,11 +130,11 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 37; @position = 5; ]
     var L1Y = 4;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 38; @position = 5; ]
-    var L2Y = 104;
+    var L2Y = 109;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 39; @position = 5; ]
-    var L3Y = 204;
+    var L3Y = 214;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 40; @position = 5; ]
-    var L4Y = 304;
+    var L4Y = 319;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 41; @position = 5; ]
     var V1X = 141;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 42; @position = 5; ]
@@ -146,11 +146,11 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 45; @position = 5; ]
     var V1Y = 28;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 46; @position = 5; ]
-    var V2Y = 128;
+    var V2Y = 133;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 47; @position = 5; ]
-    var V3Y = 228;
+    var V3Y = 238;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 48; @position = 5; ]
-    var V4Y = 328;
+    var V4Y = 343;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 49; @position = 5; ]
     var LFont;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 50; @position = 5; ]
@@ -211,7 +211,7 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
         %tmp.10 = lgetv %dc;
         %tmp.11 = getv function %tmp.10 :fillRectangle;
         %tmp.12 = 0;
-        %tmp.13 = 100;
+        %tmp.13 = 210;
         %tmp.15 = lgetv %width.1;
         %tmp.16 = 2;
         invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.15, %tmp.16);
@@ -219,56 +219,56 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
         %tmp.17 = lgetv %dc;
         %tmp.18 = getv function %tmp.17 :fillRectangle;
         %tmp.19 = 0;
-        %tmp.20 = 200;
+        %tmp.20 = 315;
         %tmp.22 = lgetv %width.1;
         %tmp.23 = 2;
         invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.22, %tmp.23);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc" 63 2 ]
         %tmp.24 = lgetv %dc;
         %tmp.25 = getv function %tmp.24 :fillRectangle;
-        %tmp.26 = 0;
-        %tmp.27 = 300;
-        %tmp.29 = lgetv %width.1;
-        %tmp.30 = 2;
-        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.29, %tmp.30);
+        %tmp.26 = 140;
+        %tmp.27 = 315;
+        %tmp.28 = 2;
+        %tmp.29 = 103;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.28, %tmp.29);
 C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars_mc_58_23_64_1_stop:
     }
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 66; @position = 5; ]
     var L1X = 141;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 67; @position = 5; ]
-    var L1Y = 4;
+    var L1Y = 214;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 68; @position = 5; ]
     var V1X = 141;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 69; @position = 5; ]
-    var V1Y = 28;
+    var V1Y = 238;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 71; @position = 5; ]
-    var L2X = 141;
+    var L2X = 211;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 72; @position = 5; ]
-    var L2Y = 104;
+    var L2Y = 319;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 73; @position = 5; ]
-    var V2X = 141;
+    var V2X = 211;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 74; @position = 5; ]
-    var V2Y = 128;
+    var V2Y = 343;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 76; @position = 5; ]
-    var L3X = 141;
+    var L3X = 70;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 77; @position = 5; ]
-    var L3Y = 204;
+    var L3Y = 319;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 78; @position = 5; ]
-    var V3X = 141;
+    var V3X = 70;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 79; @position = 5; ]
-    var V3Y = 228;
+    var V3Y = 343;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 81; @position = 5; ]
     var L4X = 141;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 82; @position = 5; ]
-    var L4Y = 304;
+    var L4Y = 95;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 83; @position = 5; ]
     var V4X = 141;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 84; @position = 5; ]
-    var V4Y = 328;
+    var V4Y = 120;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 86; @position = 5; ]
     var Targ1X = 35;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 87; @position = 5; ]
-    var Targ2X = 215;
+    var Targ2X = 247;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 88; @position = 5; ]
     var Targ1Y = 14;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 89; @position = 5; ]
@@ -290,13 +290,13 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_edge1030_DeviceVars
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 98; @position = 5; ]
     var VJust;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 100; @position = 5; ]
-    var meterX = 123;
+    var meterX = 140;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 101; @position = 5; ]
-    var meterY = 128;
+    var meterY = 155;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 102; @position = 5; ]
-    var meterR = 123;
+    var meterR = 135;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 103; @position = 5; ]
-    var meterT = 25;
+    var meterT = 30;
 }
 [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-edge1030\DeviceVars.mc"; @line = 1; ]
 <init> {

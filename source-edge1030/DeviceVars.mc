@@ -25,9 +25,9 @@ module View1DeviceVars
 	function drawGrid(dc) {
 		var width = dc.getWidth();
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
-		dc.fillRectangle(0, 100, width, 2);
-		dc.fillRectangle(0, 200, width, 2);
-		dc.fillRectangle(0, 300, width, 2);
+		dc.fillRectangle(0, 105, width, 2);  //(x,y,width,height)
+		dc.fillRectangle(0, 210, width, 2);
+		dc.fillRectangle(0, 315, width, 2);
 	}
 	
 	var L1X = 141;
@@ -35,17 +35,17 @@ module View1DeviceVars
 	var L3X = 141;
 	var L4X = 141;
 	var L1Y = 4;
-	var L2Y = 104;
-	var L3Y = 204;
-	var L4Y = 304;
+	var L2Y = 109;
+	var L3Y = 214;
+	var L4Y = 319;
 	var V1X = 141;
 	var V2X = 141;
 	var V3X = 141;
 	var V4X = 141;
 	var V1Y = 28;
-	var V2Y = 128;
-	var V3Y = 228;
-	var V4Y = 328;
+	var V2Y = 133;
+	var V3Y = 238;
+	var V4Y = 343;
 	var LFont = Gfx.FONT_SMALL;
 	var VFont = Gfx.FONT_NUMBER_THAI_HOT;
 	var LJust = Gfx.TEXT_JUSTIFY_CENTER;
@@ -58,33 +58,33 @@ module View2DeviceVars
 	function drawGrid(dc) {
 		var width = dc.getWidth();
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
-		dc.fillRectangle(0, 100, width, 2);
-		dc.fillRectangle(0, 200, width, 2);
-		dc.fillRectangle(0, 300, width, 2);
+		dc.fillRectangle(0, 210, width, 2);
+		dc.fillRectangle(0, 315, width, 2);
+		dc.fillRectangle(140, 315, 2, 103);
 	}
 	
 	var L1X = 141; //Timer
-	var L1Y = 4;
+	var L1Y = 214;
 	var V1X = 141;
-	var V1Y = 28;
+	var V1Y = 238;
 
-	var L2X = 141; //HR
-	var L2Y = 104;
-	var V2X = 141;
-	var V2Y = 128;
+	var L2X = 211; //HR
+	var L2Y = 319;
+	var V2X = 211;
+	var V2Y = 343;
 
-	var L3X = 141; //SmO2
-	var L3Y = 204;
-	var V3X = 141;
-	var V3Y = 228;
+	var L3X = 70; //SmO2
+	var L3Y = 319;
+	var V3X = 70;
+	var V3Y = 343;
 
 	var L4X = 141; //Power
-	var L4Y = 304;
+	var L4Y = 95;
 	var V4X = 141;
-	var V4Y = 328;
+	var V4Y = 120;
 
 	var Targ1X = 35; //Targets
-	var Targ2X = 215;
+	var Targ2X = 247;
 	var Targ1Y = 14;
 	var Targ2Y = 14;
 	var TargAng1 = 50;
@@ -97,9 +97,9 @@ module View2DeviceVars
 	var LJust = Gfx.TEXT_JUSTIFY_CENTER;
 	var VJust = Gfx.TEXT_JUSTIFY_CENTER;
 
-	var meterX = 123; //Meter
-	var meterY = 128;
-	var meterR = 123;
-	var meterT = 25;
+	var meterX = 140; //Meter
+	var meterY = 155;
+	var meterR = 135;
+	var meterT = 30;
 }
 

@@ -236,9 +236,9 @@ C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_fenix_round240_Devi
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round240\DeviceVars.mc"; @line = 66; @position = 5; ]
     var L1X = 120;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round240\DeviceVars.mc"; @line = 67; @position = 5; ]
-    var L1Y = 160;
+    var L1Y = 162;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round240\DeviceVars.mc"; @line = 68; @position = 5; ]
-    var V1X = 125;
+    var V1X = 120;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round240\DeviceVars.mc"; @line = 69; @position = 5; ]
     var V1Y = 207;
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-fenix-round240\DeviceVars.mc"; @line = 71; @position = 5; ]

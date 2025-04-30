@@ -213,9 +213,9 @@ class ViewAlert extends Ui.View {
         var xCen = dc.getWidth() / 2;
         var yCen = dc.getHeight() / 2;
         x1 = xCen - (30 * g_ScaleFactorX).toNumber();
-        y1 = yCen - (45 * g_ScaleFactorY).toNumber();
+        y1 = yCen - (45 * g_ScaleFactorX).toNumber();
         x2 = xCen - (30 * g_ScaleFactorX).toNumber();
-        y2 = yCen + (45 * g_ScaleFactorY).toNumber();
+        y2 = yCen + (45 * g_ScaleFactorX).toNumber();
         x3 = xCen + (40 * g_ScaleFactorX).toNumber();
         y3 = yCen;
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
@@ -224,9 +224,9 @@ class ViewAlert extends Ui.View {
                          [x3, y3] ]);
 
         x1 = xCen - (27 * g_ScaleFactorX).toNumber();
-        y1 = yCen - (39 * g_ScaleFactorY).toNumber();
+        y1 = yCen - (39 * g_ScaleFactorX).toNumber();
         x2 = xCen - (27 * g_ScaleFactorX).toNumber();
-        y2 = yCen + (39 * g_ScaleFactorY).toNumber();
+        y2 = yCen + (39 * g_ScaleFactorX).toNumber();
         x3 = xCen + (34 * g_ScaleFactorX).toNumber();
         y3 = yCen;
         dc.setColor(Gfx.COLOR_DK_GREEN, Gfx.COLOR_DK_GREEN);
@@ -249,13 +249,13 @@ class ViewAlert extends Ui.View {
         var yCen = dc.getHeight() / 2;
 
         x1 = xCen - (45 * g_ScaleFactorX).toNumber();
-        y1 = yCen - (45 * g_ScaleFactorY).toNumber();
+        y1 = yCen - (45 * g_ScaleFactorX).toNumber();
         x2 = xCen - (45 * g_ScaleFactorX).toNumber();
-        y2 = yCen + (45 * g_ScaleFactorY).toNumber();
+        y2 = yCen + (45 * g_ScaleFactorX).toNumber();
         x3 = xCen + (45 * g_ScaleFactorX).toNumber();
-        y3 = yCen + (45 * g_ScaleFactorY).toNumber();
+        y3 = yCen + (45 * g_ScaleFactorX).toNumber();
         x4 = xCen + (45 * g_ScaleFactorX).toNumber();
-        y4 = yCen - (45 * g_ScaleFactorY).toNumber();
+        y4 = yCen - (45 * g_ScaleFactorX).toNumber();
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.fillPolygon([ [x1, y1],
                          [x2, y2],
@@ -263,13 +263,13 @@ class ViewAlert extends Ui.View {
                          [x4, y4] ]);
 
         x1 = xCen - (42 * g_ScaleFactorX).toNumber();
-        y1 = yCen - (42 * g_ScaleFactorY).toNumber();
+        y1 = yCen - (42 * g_ScaleFactorX).toNumber();
         x2 = xCen - (42 * g_ScaleFactorX).toNumber();
-        y2 = yCen + (42 * g_ScaleFactorY).toNumber();
+        y2 = yCen + (42 * g_ScaleFactorX).toNumber();
         x3 = xCen + (42 * g_ScaleFactorX).toNumber();
-        y3 = yCen + (42 * g_ScaleFactorY).toNumber();
+        y3 = yCen + (42 * g_ScaleFactorX).toNumber();
         x4 = xCen + (42 * g_ScaleFactorX).toNumber();
-        y4 = yCen - (42 * g_ScaleFactorY);
+        y4 = yCen - (42 * g_ScaleFactorX);
         dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_RED);
         dc.fillPolygon([ [x1, y1],
                          [x2, y2],

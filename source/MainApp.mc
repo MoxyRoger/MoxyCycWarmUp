@@ -312,8 +312,9 @@ class MoxyCycWarmup extends Application.AppBase {
                 mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
                 mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
                 mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
-                //mFitContrib.lap(4);
-                //mActivity.addLap();
+                mFitContrib.lap(4);          // Mark the lap as recovery
+                mActivity.addLap();
+                mFitContrib.lap(0);          // In case the user stops the activity before the end, mark the final lap as recovery
                 break;
             case REST2:
                 btnAlert = STP_REST;
@@ -328,11 +329,14 @@ class MoxyCycWarmup extends Application.AppBase {
                 mFECControl.controlEquipment(AntPlus.TRAINER_WIND_DRAFT_FACTOR, 1.0);
                 mFECControl.controlEquipment(AntPlus.TRAINER_USER_WEIGHT, 75);
                 mFECControl.controlEquipment(AntPlus.TRAINER_BIKE_WEIGHT, 9);
-                //mFitContrib.lap(0);
-                //mActivity.addLap();
+                mFitContrib.lap(0);          // Mark the lap as active
+                mActivity.addLap();
+                mFitContrib.lap(4);          // In case the user stops the activity before the end, mark the final lap as recovery
                 break;
             case STOP:
                 stopActivity();              // Stops the Activity
+                mFitContrib.lap(4);
+                mActivity.addLap();
                 mDelegate.startSaveTimer();  // Brings up the save screen
             default:
         } 

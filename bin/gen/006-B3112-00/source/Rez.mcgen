@@ -6,79 +6,66 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
-        (:initialized) var AppIcon as Symbol;
+        (:initialized) var AppIcon as ResourceId;
     } // Drawables
 
-    module Fonts {
-    } // Fonts
-
-    module JsonData {
-    } // JsonData
-
-    module Layouts {
-    } // Layouts
-
-    module Menus {
-    } // Menus
-
     module Strings {
-        (:initialized) var PaletteSize as Symbol;
-        (:initialized) var thb_units as Symbol;
-        (:initialized) var torso_front as Symbol;
-        (:initialized) var range0 as Symbol;
-        (:initialized) var left_hamstring as Symbol;
-        (:initialized) var range1 as Symbol;
-        (:initialized) var range2 as Symbol;
-        (:initialized) var right_lower_back as Symbol;
-        (:initialized) var right_abdomen as Symbol;
-        (:initialized) var left_brachioradialis as Symbol;
-        (:initialized) var left_forearm_extensors as Symbol;
-        (:initialized) var none as Symbol;
-        (:initialized) var left_chest as Symbol;
-        (:initialized) var right_chest as Symbol;
-        (:initialized) var right_leg as Symbol;
-        (:initialized) var right_brachioradialis as Symbol;
-        (:initialized) var AppSensor as Symbol;
-        (:initialized) var left_abdomen as Symbol;
-        (:initialized) var left_lower_back as Symbol;
-        (:initialized) var left_shin as Symbol;
-        (:initialized) var left_leg as Symbol;
-        (:initialized) var left_quad as Symbol;
-        (:initialized) var FECIdentityTitle as Symbol;
-        (:initialized) var LapButton as Symbol;
-        (:initialized) var right_hamstring as Symbol;
-        (:initialized) var right_shoulder as Symbol;
-        (:initialized) var right_shin as Symbol;
-        (:initialized) var thb_label as Symbol;
-        (:initialized) var right_bicep as Symbol;
-        (:initialized) var SensorIdentityTitle as Symbol;
-        (:initialized) var left_shoulder as Symbol;
-        (:initialized) var right_quad as Symbol;
-        (:initialized) var smo2_label as Symbol;
-        (:initialized) var right_arm as Symbol;
-        (:initialized) var throat as Symbol;
-        (:initialized) var SensorLocationTitle as Symbol;
-        (:initialized) var torso_back as Symbol;
-        (:initialized) var AppName as Symbol;
-        (:initialized) var AppVersion as Symbol;
-        (:initialized) var left_arm as Symbol;
-        (:initialized) var smo2_units as Symbol;
-        (:initialized) var left_bicep as Symbol;
-        (:initialized) var right_calf as Symbol;
-        (:initialized) var left_calf as Symbol;
-        (:initialized) var left_tricep as Symbol;
-        (:initialized) var right_tricep as Symbol;
-        (:initialized) var HRMLabel as Symbol;
-        (:initialized) var StartActivityButton as Symbol;
-        (:initialized) var left_glute as Symbol;
-        (:initialized) var DeviceMfg as Symbol;
-        (:initialized) var neck as Symbol;
-        (:initialized) var PWRLabel as Symbol;
-        (:initialized) var MO2Label as Symbol;
-        (:initialized) var left_upper_back as Symbol;
-        (:initialized) var right_upper_back as Symbol;
-        (:initialized) var right_forearm_extensors as Symbol;
-        (:initialized) var SPDLabel as Symbol;
-        (:initialized) var right_glute as Symbol;
+        (:initialized) var PaletteSize as ResourceId;
+        (:initialized) var thb_units as ResourceId;
+        (:initialized) var torso_front as ResourceId;
+        (:initialized) var range0 as ResourceId;
+        (:initialized) var left_hamstring as ResourceId;
+        (:initialized) var range1 as ResourceId;
+        (:initialized) var range2 as ResourceId;
+        (:initialized) var right_lower_back as ResourceId;
+        (:initialized) var right_abdomen as ResourceId;
+        (:initialized) var left_brachioradialis as ResourceId;
+        (:initialized) var left_forearm_extensors as ResourceId;
+        (:initialized) var none as ResourceId;
+        (:initialized) var left_chest as ResourceId;
+        (:initialized) var right_chest as ResourceId;
+        (:initialized) var right_leg as ResourceId;
+        (:initialized) var right_brachioradialis as ResourceId;
+        (:initialized) var AppSensor as ResourceId;
+        (:initialized) var left_abdomen as ResourceId;
+        (:initialized) var left_lower_back as ResourceId;
+        (:initialized) var left_shin as ResourceId;
+        (:initialized) var left_leg as ResourceId;
+        (:initialized) var left_quad as ResourceId;
+        (:initialized) var LapButton as ResourceId;
+        (:initialized) var right_hamstring as ResourceId;
+        (:initialized) var right_shoulder as ResourceId;
+        (:initialized) var right_shin as ResourceId;
+        (:initialized) var thb_label as ResourceId;
+        (:initialized) var right_bicep as ResourceId;
+        (:initialized) var SensorIdentityTitle as ResourceId;
+        (:initialized) var left_shoulder as ResourceId;
+        (:initialized) var right_quad as ResourceId;
+        (:initialized) var smo2_label as ResourceId;
+        (:initialized) var right_arm as ResourceId;
+        (:initialized) var throat as ResourceId;
+        (:initialized) var SensorLocationTitle as ResourceId;
+        (:initialized) var torso_back as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var AppVersion as ResourceId;
+        (:initialized) var left_arm as ResourceId;
+        (:initialized) var smo2_units as ResourceId;
+        (:initialized) var left_bicep as ResourceId;
+        (:initialized) var right_calf as ResourceId;
+        (:initialized) var left_calf as ResourceId;
+        (:initialized) var left_tricep as ResourceId;
+        (:initialized) var right_tricep as ResourceId;
+        (:initialized) var HRMLabel as ResourceId;
+        (:initialized) var StartActivityButton as ResourceId;
+        (:initialized) var left_glute as ResourceId;
+        (:initialized) var DeviceMfg as ResourceId;
+        (:initialized) var neck as ResourceId;
+        (:initialized) var PWRLabel as ResourceId;
+        (:initialized) var MO2Label as ResourceId;
+        (:initialized) var left_upper_back as ResourceId;
+        (:initialized) var right_upper_back as ResourceId;
+        (:initialized) var right_forearm_extensors as ResourceId;
+        (:initialized) var SPDLabel as ResourceId;
+        (:initialized) var right_glute as ResourceId;
     } // Strings
 } // Rez
