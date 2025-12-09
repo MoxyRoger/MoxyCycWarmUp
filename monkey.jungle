@@ -127,6 +127,7 @@ fr265.resourcePath = $(base.resourcePath);resource-icon-40x40;resource-start_btn
 fr265s.resourcePath = $(base.resourcePath);resource-icon-60x60;resource-start_btn-std;resource-color-palette-std
 fr57042mm.resourcePath = $(base.resourcePath);resource-icon-54x54;resource-start_btn-std;resource-color-palette-std
 fr57047mm.resourcePath = $(base.resourcePath);resource-icon-65x65;resource-start_btn-std;resource-color-palette-std
+fr735xt.resourcePath = $(base.resourcePath);resource-icon-40x40;resource-start_btn-std;resource-color-palette-std
 fr745.resourcePath = $(base.resourcePath);resource-icon-40x40;resource-start_btn-std;resource-color-palette-std
 fr935.resourcePath = $(base.resourcePath);resource-icon-40x40;resource-start_btn-std;resource-color-palette-std
 fr945.resourcePath = $(base.resourcePath);resource-icon-40x40;resource-start_btn-std;resource-color-palette-std
