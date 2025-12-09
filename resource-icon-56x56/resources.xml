@@ -1,0 +1,5 @@
+<resources>
+    <bitmaps>
+        <bitmap id="AppIcon" filename="../resources/images/Icon56-56.png"/>
+    </bitmaps>
+</resources>

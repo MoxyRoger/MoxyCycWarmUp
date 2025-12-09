@@ -1,7 +1,7 @@
 <resources>
     <strings>
         <string id="AppName">Moxy Warmup</string>
-        <string id="AppVersion">0.1.1</string>
+        <string id="AppVersion">0.1.2</string>
         <string id="AppSensor">1st</string>
         
         <string id="MO2Label">MO2</string>

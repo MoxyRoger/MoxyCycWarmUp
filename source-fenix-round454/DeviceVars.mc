@@ -64,9 +64,9 @@ module View2DeviceVars
 	}
 	
 	var L1X = 226; // Timer
-	var L1Y = 204;
+	var L1Y = 200;
 	var V1X = 226;
-	var V1Y = 280;
+	var V1Y = 282;
 
 	var L2X = null; // Heart Rate
 	var L2Y = null;
@@ -74,14 +74,14 @@ module View2DeviceVars
 	var V2Y = null;
 
 	var L3X = 226; // SmO2
-	var L3Y = 328;
+	var L3Y = 324;
 	var V3X = 226;
-	var V3Y = 403;  
+	var V3Y = 404;  
 
 	var L4X = 226; // Power
 	var L4Y = 83;
 	var V4X = 226;
-	var V4Y = 158;
+	var V4Y = 159;
 
 	var Targ1X = null; // Targets
 	var Targ2X = null;

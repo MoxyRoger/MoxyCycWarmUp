@@ -1,13 +1,13 @@
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 1; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Ant,1,14,17]; ]
 import Toybox.Ant;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 2; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 3; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
 import Toybox.System;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 4; ]
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
 import Toybox.Time;
-[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 6; ]
-class FECTrainer extends Ant.GenericChannel{
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 6; @symbol_classdef = [FECTrainer,6,6,16]; @symbol_extends<0> = [Ant,6,25,28]; @symbol_extends<1> = [GenericChannel,6,29,43]; ]
+class FECTrainer extends Ant.GenericChannel {
     [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 6; ]
     <init> {
     }
@@ -15,1382 +15,1732 @@ class FECTrainer extends Ant.GenericChannel{
     static
     <init> {
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 8; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 8; @position = 8; @symbol_vardef = [deviceNumber,8,8,20]; ]
     var deviceNumber = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 9; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 9; @position = 8; @symbol_vardef = [deviceMfg,9,8,17]; ]
     var deviceMfg = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 10; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 10; @position = 8; @symbol_vardef = [instPower,10,8,17]; ]
     var instPower = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 11; @position = 8; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 11; @position = 8; @symbol_vardef = [fecSpeed,11,8,16]; ]
     var fecSpeed;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 12; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 12; @position = 15; @symbol_vardef = [is_first_msg,12,15,27]; ]
     protected
     var is_first_msg = true;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 13; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 13; @position = 15; @symbol_vardef = [targPower,13,15,24]; ]
     protected
     var targPower = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 14; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 14; @position = 15; @symbol_vardef = [basicResist,14,15,26]; ]
     protected
     var basicResist = 50;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 15; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 15; @position = 15; @symbol_vardef = [slope,15,15,20]; ]
     protected
     var slope = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 16; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 16; @position = 15; @symbol_vardef = [surface,16,15,22]; ]
     protected
     var surface = .004;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 17; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 17; @position = 15; @symbol_vardef = [windCoeff,17,15,24]; ]
     protected
     var windCoeff = 0.51;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 18; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 18; @position = 15; @symbol_vardef = [windSpeed,18,15,24]; ]
     protected
     var windSpeed = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 19; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 19; @position = 15; @symbol_vardef = [draftFact,19,15,24]; ]
     protected
     var draftFact = 1.0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 20; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 20; @position = 15; @symbol_vardef = [userWt,20,15,21]; ]
     protected
     var userWt = 75;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 21; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 21; @position = 15; @symbol_vardef = [bikeWt,21,15,21]; ]
     protected
     var bikeWt = 10;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 22; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 22; @position = 15; @symbol_vardef = [sendTargPwr,22,15,26]; ]
     protected
     var sendTargPwr = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 23; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 23; @position = 15; @symbol_vardef = [sendBasRst,23,15,25]; ]
     protected
     var sendBasRst = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 24; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 24; @position = 15; @symbol_vardef = [sendTrack,24,15,24]; ]
     protected
     var sendTrack = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 25; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 25; @position = 15; @symbol_vardef = [sendWind,25,15,23]; ]
     protected
     var sendWind = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 26; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 26; @position = 15; @symbol_vardef = [sendUser,26,15,23]; ]
     protected
     var sendUser = false;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 27; @position = 15; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 27; @position = 15; @symbol_vardef = [unConfirmed,27,15,26]; ]
     protected
     var unConfirmed = 0;
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 29; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 29; @symbol_functiondef = [initialize,29,13,23]; ]
     function initialize() as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 30 8 ]
+        symbol [ Application %tmp.2 30 23 34 ];
         %tmp.2 = getv ? :Application;
+        symbol [ Storage %tmp.3 30 35 42 ];
         %tmp.3 = getv %tmp.2 :Storage;
+        symbol [ getValue %tmp.4 30 43 51 ];
         %tmp.4 = getv function %tmp.3 :getValue;
         %tmp.5 = "FECId";
         %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        symbol [ deviceNumber ? 30 8 20 ];
         putv self :deviceNumber %tmp.6;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 31 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_stmt:
+        symbol [ deviceNumber %tmp.8 31 11 23 ];
         %tmp.8 = getv ? :deviceNumber;
         %tmp.9 = null;
         %tmp.10 = eq %tmp.8 %tmp.9;
-        bf %tmp.10 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_33_33_8_start:
+        bf %tmp.10 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_33_33_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 32 12 ]
         %tmp.11 = 0;
+        symbol [ deviceNumber ? 32 12 24 ];
         putv self :deviceNumber %tmp.11;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_33_33_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_33_33_8_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_31_8_33_8_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 34 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_stop" ]
         %channelAssignment.1 = local;
+        symbol [ channelAssignment %channelAssignment.1 34 12 29 ];
+        symbol [ Ant %tmp.14 34 36 39 ];
         %tmp.14 = getm $.Toybox.Ant;
+        symbol [ ChannelAssignment %tmp.15 34 40 57 ];
         %tmp.15 = getv function ? %tmp.14 :ChannelAssignment;
+        symbol [ Ant %tmp.16 35 12 15 ];
         %tmp.16 = getm $.Toybox.Ant;
+        symbol [ CHANNEL_TYPE_RX_NOT_TX %tmp.17 35 16 38 ];
         %tmp.17 = getv %tmp.16 :CHANNEL_TYPE_RX_NOT_TX;
+        symbol [ Ant %tmp.18 36 12 15 ];
         %tmp.18 = getm $.Toybox.Ant;
+        symbol [ NETWORK_PLUS %tmp.19 36 16 28 ];
         %tmp.19 = getv %tmp.18 :NETWORK_PLUS;
         %tmp.12 = newc %tmp.15 (%tmp.17, %tmp.19);
         lputv %channelAssignment.1 %tmp.12;
+        symbol [ channelAssignment %channelAssignment.1 34 12 29 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 38 8 ]
+        symbol [ GenericChannel %tmp.21 38 8 22 ];
         %tmp.21 = getv ? :GenericChannel;
+        symbol [ initialize %tmp.22 38 23 33 ];
         %tmp.22 = getv function %tmp.21 :initialize;
         %tmp.23 = self;
+        symbol [ method %tmp.24 38 34 40 ];
         %tmp.24 = getv function %tmp.23 :method;
         %tmp.26 = const :onMessage;
+        symbol [ onMessage %tmp.26 38 42 51 const ];
         %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
-        %tmp.29 = lgetv %channelAssignment.1;
-        invoke %tmp.21 %tmp.22(%tmp.27, %tmp.29);
+        %tmp.28 = lgetv %channelAssignment.1;
+        symbol [ channelAssignment %tmp.28 38 54 71 ];
+        invoke %tmp.21 %tmp.22(%tmp.27, %tmp.28);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 40 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_stop" ]
         %deviceConfig.2 = local;
-        %tmp.32 = getm $.Toybox.Ant;
-        %tmp.33 = getv function ? %tmp.32 :DeviceConfig;
-        %tmp.34 = newd 8;
-        %tmp.36 = const :deviceNumber;
-        %tmp.38 = getv ? :deviceNumber;
-        %tmp.39 = dup %tmp.34;
-        %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
-        %tmp.42 = const :deviceType;
-        %tmp.43 = 17;
-        %tmp.44 = dup %tmp.40;
-        %tmp.45 = aputv %tmp.44 %tmp.42 %tmp.43;
-        %tmp.47 = const :transmissionType;
-        %tmp.48 = 0;
-        %tmp.49 = dup %tmp.45;
-        %tmp.50 = aputv %tmp.49 %tmp.47 %tmp.48;
-        %tmp.52 = const :messagePeriod;
-        %tmp.53 = 8192;
-        %tmp.54 = dup %tmp.50;
-        %tmp.55 = aputv %tmp.54 %tmp.52 %tmp.53;
-        %tmp.57 = const :radioFrequency;
-        %tmp.58 = 57;
-        %tmp.59 = dup %tmp.55;
-        %tmp.60 = aputv %tmp.59 %tmp.57 %tmp.58;
-        %tmp.62 = const :searchTimeoutLowPriority;
-        %tmp.63 = 10;
-        %tmp.64 = dup %tmp.60;
-        %tmp.65 = aputv %tmp.64 %tmp.62 %tmp.63;
-        %tmp.67 = const :searchTimeoutHighPriority;
-        %tmp.68 = 0;
-        %tmp.69 = dup %tmp.65;
-        %tmp.70 = aputv %tmp.69 %tmp.67 %tmp.68;
-        %tmp.72 = const :searchThreshold;
-        %tmp.73 = 0;
-        %tmp.74 = dup %tmp.70;
-        %tmp.75 = aputv %tmp.74 %tmp.72 %tmp.73;
-        %tmp.30 = newc %tmp.33 (%tmp.75);
-        lputv %deviceConfig.2 %tmp.30;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 51 8 ]
-        %tmp.77 = getv ? :GenericChannel;
-        %tmp.78 = getv function %tmp.77 :setDeviceConfig;
-        %tmp.80 = lgetv %deviceConfig.2;
-        invoke %tmp.77 %tmp.78(%tmp.80);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 52 8 ]
-        %tmp.82 = getv ? :GenericChannel;
-        %tmp.83 = getv function %tmp.82 :open;
-        invoke %tmp.82 %tmp.83();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_stop:
-    }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 55; ]
-    function reset() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_55_21_58_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 56 8 ]
-        %tmp.1 = true;
-        putv self :is_first_msg %tmp.1;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 57 8 ]
-        %tmp.2 = 0;
-        putv self :instPower %tmp.2;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_55_21_58_4_stop:
-    }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 60; ]
-    function goToSearch() {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 61 8 ]
-        %tmp.2 = getv ? :GenericChannel;
-        %tmp.3 = getv function %tmp.2 :close;
-        invoke %tmp.2 %tmp.3();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 62 8 ]
-        %tmp.5 = getv ? :GenericChannel;
-        %tmp.6 = getv function %tmp.5 :release;
-        invoke %tmp.5 %tmp.6();
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 63 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_stop" ]
-        %channelAssignment.1 = local;
-        %tmp.9 = getm $.Toybox.Ant;
-        %tmp.10 = getv function ? %tmp.9 :ChannelAssignment;
-        %tmp.11 = getm $.Toybox.Ant;
-        %tmp.12 = getv %tmp.11 :CHANNEL_TYPE_RX_NOT_TX;
-        %tmp.13 = getm $.Toybox.Ant;
-        %tmp.14 = getv %tmp.13 :NETWORK_PLUS;
-        %tmp.7 = newc %tmp.10 (%tmp.12, %tmp.14);
-        lputv %channelAssignment.1 %tmp.7;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 67 8 ]
-        %tmp.16 = getv ? :GenericChannel;
-        %tmp.17 = getv function %tmp.16 :initialize;
-        %tmp.18 = self;
-        %tmp.19 = getv function %tmp.18 :method;
-        %tmp.21 = const :onMessage;
-        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
-        %tmp.24 = lgetv %channelAssignment.1;
-        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.24);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 69 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_stop" ]
-        %deviceConfig.2 = local;
-        %tmp.27 = getm $.Toybox.Ant;
-        %tmp.28 = getv function ? %tmp.27 :DeviceConfig;
-        %tmp.29 = newd 8;
-        %tmp.31 = const :deviceNumber;
-        %tmp.32 = 0;
-        %tmp.33 = dup %tmp.29;
-        %tmp.34 = aputv %tmp.33 %tmp.31 %tmp.32;
-        %tmp.36 = const :deviceType;
-        %tmp.37 = 17;
-        %tmp.38 = dup %tmp.34;
-        %tmp.39 = aputv %tmp.38 %tmp.36 %tmp.37;
-        %tmp.41 = const :transmissionType;
-        %tmp.42 = 0;
+        symbol [ deviceConfig %deviceConfig.2 40 12 24 ];
+        symbol [ Ant %tmp.31 40 31 34 ];
+        %tmp.31 = getm $.Toybox.Ant;
+        symbol [ DeviceConfig %tmp.32 40 35 47 ];
+        %tmp.32 = getv function ? %tmp.31 :DeviceConfig;
+        %tmp.33 = newd 8;
+        %tmp.35 = const :deviceNumber;
+        symbol [ deviceNumber %tmp.35 41 13 25 const ];
+        symbol [ deviceNumber %tmp.37 41 42 54 ];
+        %tmp.37 = getv ? :deviceNumber;
+        %tmp.38 = dup %tmp.33;
+        %tmp.39 = aputv %tmp.38 %tmp.35 %tmp.37;
+        %tmp.41 = const :deviceType;
+        symbol [ deviceType %tmp.41 42 13 23 const ];
+        %tmp.42 = 17;
         %tmp.43 = dup %tmp.39;
         %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
-        %tmp.46 = const :messagePeriod;
-        %tmp.47 = 8192;
+        %tmp.46 = const :transmissionType;
+        symbol [ transmissionType %tmp.46 43 13 29 const ];
+        %tmp.47 = 0;
         %tmp.48 = dup %tmp.44;
         %tmp.49 = aputv %tmp.48 %tmp.46 %tmp.47;
-        %tmp.51 = const :radioFrequency;
-        %tmp.52 = 57;
+        %tmp.51 = const :messagePeriod;
+        symbol [ messagePeriod %tmp.51 44 13 26 const ];
+        %tmp.52 = 8192;
         %tmp.53 = dup %tmp.49;
         %tmp.54 = aputv %tmp.53 %tmp.51 %tmp.52;
-        %tmp.56 = const :searchTimeoutLowPriority;
-        %tmp.57 = 10;
+        %tmp.56 = const :radioFrequency;
+        symbol [ radioFrequency %tmp.56 45 13 27 const ];
+        %tmp.57 = 57;
         %tmp.58 = dup %tmp.54;
         %tmp.59 = aputv %tmp.58 %tmp.56 %tmp.57;
-        %tmp.61 = const :searchTimeoutHighPriority;
-        %tmp.62 = 0;
+        %tmp.61 = const :searchTimeoutLowPriority;
+        symbol [ searchTimeoutLowPriority %tmp.61 46 13 37 const ];
+        %tmp.62 = 10;
         %tmp.63 = dup %tmp.59;
         %tmp.64 = aputv %tmp.63 %tmp.61 %tmp.62;
-        %tmp.66 = const :searchThreshold;
+        %tmp.66 = const :searchTimeoutHighPriority;
+        symbol [ searchTimeoutHighPriority %tmp.66 47 13 38 const ];
         %tmp.67 = 0;
         %tmp.68 = dup %tmp.64;
         %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
-        %tmp.25 = newc %tmp.28 (%tmp.69);
-        lputv %deviceConfig.2 %tmp.25;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 80 8 ]
-        %tmp.71 = getv ? :GenericChannel;
-        %tmp.72 = getv function %tmp.71 :setDeviceConfig;
-        %tmp.74 = lgetv %deviceConfig.2;
-        invoke %tmp.71 %tmp.72(%tmp.74);
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 81 8 ]
+        %tmp.71 = const :searchThreshold;
+        symbol [ searchThreshold %tmp.71 48 13 28 const ];
+        %tmp.72 = 0;
+        %tmp.73 = dup %tmp.69;
+        %tmp.74 = aputv %tmp.73 %tmp.71 %tmp.72;
+        %tmp.29 = newc %tmp.32 (%tmp.74);
+        lputv %deviceConfig.2 %tmp.29;
+        symbol [ deviceConfig %deviceConfig.2 40 12 24 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 51 8 ]
+        symbol [ GenericChannel %tmp.76 51 8 22 ];
         %tmp.76 = getv ? :GenericChannel;
-        %tmp.77 = getv function %tmp.76 :open;
-        invoke %tmp.76 %tmp.77();
+        symbol [ setDeviceConfig %tmp.77 51 23 38 ];
+        %tmp.77 = getv function %tmp.76 :setDeviceConfig;
+        %tmp.78 = lgetv %deviceConfig.2;
+        symbol [ deviceConfig %tmp.78 51 39 51 ];
+        invoke %tmp.76 %tmp.77(%tmp.78);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 52 8 ]
+        symbol [ GenericChannel %tmp.80 52 8 22 ];
+        %tmp.80 = getv ? :GenericChannel;
+        symbol [ open %tmp.81 52 23 27 ];
+        %tmp.81 = getv function %tmp.80 :open;
+        invoke %tmp.80 %tmp.81();
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_29_26_53_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 55; @symbol_functiondef = [reset,55,13,18]; ]
+    function reset() {
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_55_21_58_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 56 8 ]
+        %tmp.1 = true;
+        symbol [ is_first_msg ? 56 8 20 ];
+        putv self :is_first_msg %tmp.1;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 57 8 ]
+        %tmp.2 = 0;
+        symbol [ instPower ? 57 8 17 ];
+        putv self :instPower %tmp.2;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_55_21_58_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 60; @symbol_functiondef = [goToSearch,60,13,23]; ]
+    function goToSearch() {
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 61 8 ]
+        symbol [ GenericChannel %tmp.2 61 8 22 ];
+        %tmp.2 = getv ? :GenericChannel;
+        symbol [ close %tmp.3 61 23 28 ];
+        %tmp.3 = getv function %tmp.2 :close;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 62 8 ]
+        symbol [ GenericChannel %tmp.5 62 8 22 ];
+        %tmp.5 = getv ? :GenericChannel;
+        symbol [ release %tmp.6 62 23 30 ];
+        %tmp.6 = getv function %tmp.5 :release;
+        invoke %tmp.5 %tmp.6();
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 63 8 ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_stop" ]
+        %channelAssignment.1 = local;
+        symbol [ channelAssignment %channelAssignment.1 63 12 29 ];
+        symbol [ Ant %tmp.9 63 36 39 ];
+        %tmp.9 = getm $.Toybox.Ant;
+        symbol [ ChannelAssignment %tmp.10 63 40 57 ];
+        %tmp.10 = getv function ? %tmp.9 :ChannelAssignment;
+        symbol [ Ant %tmp.11 64 12 15 ];
+        %tmp.11 = getm $.Toybox.Ant;
+        symbol [ CHANNEL_TYPE_RX_NOT_TX %tmp.12 64 16 38 ];
+        %tmp.12 = getv %tmp.11 :CHANNEL_TYPE_RX_NOT_TX;
+        symbol [ Ant %tmp.13 65 12 15 ];
+        %tmp.13 = getm $.Toybox.Ant;
+        symbol [ NETWORK_PLUS %tmp.14 65 16 28 ];
+        %tmp.14 = getv %tmp.13 :NETWORK_PLUS;
+        %tmp.7 = newc %tmp.10 (%tmp.12, %tmp.14);
+        lputv %channelAssignment.1 %tmp.7;
+        symbol [ channelAssignment %channelAssignment.1 63 12 29 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 67 8 ]
+        symbol [ GenericChannel %tmp.16 67 8 22 ];
+        %tmp.16 = getv ? :GenericChannel;
+        symbol [ initialize %tmp.17 67 23 33 ];
+        %tmp.17 = getv function %tmp.16 :initialize;
+        %tmp.18 = self;
+        symbol [ method %tmp.19 67 34 40 ];
+        %tmp.19 = getv function %tmp.18 :method;
+        %tmp.21 = const :onMessage;
+        symbol [ onMessage %tmp.21 67 42 51 const ];
+        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
+        %tmp.23 = lgetv %channelAssignment.1;
+        symbol [ channelAssignment %tmp.23 67 54 71 ];
+        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.23);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 69 8 ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_stop" ]
+        %deviceConfig.2 = local;
+        symbol [ deviceConfig %deviceConfig.2 69 12 24 ];
+        symbol [ Ant %tmp.26 69 31 34 ];
+        %tmp.26 = getm $.Toybox.Ant;
+        symbol [ DeviceConfig %tmp.27 69 35 47 ];
+        %tmp.27 = getv function ? %tmp.26 :DeviceConfig;
+        %tmp.28 = newd 8;
+        %tmp.30 = const :deviceNumber;
+        symbol [ deviceNumber %tmp.30 70 13 25 const ];
+        %tmp.31 = 0;
+        %tmp.32 = dup %tmp.28;
+        %tmp.33 = aputv %tmp.32 %tmp.30 %tmp.31;
+        %tmp.35 = const :deviceType;
+        symbol [ deviceType %tmp.35 71 13 23 const ];
+        %tmp.36 = 17;
+        %tmp.37 = dup %tmp.33;
+        %tmp.38 = aputv %tmp.37 %tmp.35 %tmp.36;
+        %tmp.40 = const :transmissionType;
+        symbol [ transmissionType %tmp.40 72 13 29 const ];
+        %tmp.41 = 0;
+        %tmp.42 = dup %tmp.38;
+        %tmp.43 = aputv %tmp.42 %tmp.40 %tmp.41;
+        %tmp.45 = const :messagePeriod;
+        symbol [ messagePeriod %tmp.45 73 13 26 const ];
+        %tmp.46 = 8192;
+        %tmp.47 = dup %tmp.43;
+        %tmp.48 = aputv %tmp.47 %tmp.45 %tmp.46;
+        %tmp.50 = const :radioFrequency;
+        symbol [ radioFrequency %tmp.50 74 13 27 const ];
+        %tmp.51 = 57;
+        %tmp.52 = dup %tmp.48;
+        %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+        %tmp.55 = const :searchTimeoutLowPriority;
+        symbol [ searchTimeoutLowPriority %tmp.55 75 13 37 const ];
+        %tmp.56 = 10;
+        %tmp.57 = dup %tmp.53;
+        %tmp.58 = aputv %tmp.57 %tmp.55 %tmp.56;
+        %tmp.60 = const :searchTimeoutHighPriority;
+        symbol [ searchTimeoutHighPriority %tmp.60 76 13 38 const ];
+        %tmp.61 = 0;
+        %tmp.62 = dup %tmp.58;
+        %tmp.63 = aputv %tmp.62 %tmp.60 %tmp.61;
+        %tmp.65 = const :searchThreshold;
+        symbol [ searchThreshold %tmp.65 77 13 28 const ];
+        %tmp.66 = 0;
+        %tmp.67 = dup %tmp.63;
+        %tmp.68 = aputv %tmp.67 %tmp.65 %tmp.66;
+        %tmp.24 = newc %tmp.27 (%tmp.68);
+        lputv %deviceConfig.2 %tmp.24;
+        symbol [ deviceConfig %deviceConfig.2 69 12 24 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 80 8 ]
+        symbol [ GenericChannel %tmp.70 80 8 22 ];
+        %tmp.70 = getv ? :GenericChannel;
+        symbol [ setDeviceConfig %tmp.71 80 23 38 ];
+        %tmp.71 = getv function %tmp.70 :setDeviceConfig;
+        %tmp.72 = lgetv %deviceConfig.2;
+        symbol [ deviceConfig %tmp.72 80 39 51 ];
+        invoke %tmp.70 %tmp.71(%tmp.72);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 81 8 ]
+        symbol [ GenericChannel %tmp.74 81 8 22 ];
+        %tmp.74 = getv ? :GenericChannel;
+        symbol [ open %tmp.75 81 23 27 ];
+        %tmp.75 = getv function %tmp.74 :open;
+        invoke %tmp.74 %tmp.75();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 82 8 ]
-        %tmp.78 = true;
-        putv self :is_first_msg %tmp.78;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 83 8 ]
-        %tmp.79 = 0;
-        putv self :deviceNumber %tmp.79;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_stop:
-    }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 86; ]
-    function controlEquipment(mode, value) {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_86_42_125_4_start:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 87 8 ]
-        %tmp.2 = lgetv %mode;
-        push %tmp.2;
-        switch %tmp.2 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtBegin:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 88 12 ]
-        %tmp.3 = dup %tmp.2;
-        %tmp.5 = getv ? :AntPlus;
-        %tmp.6 = getv %tmp.5 :TRAINER_TARGET_POWER;
-        %tmp.7 = getv function %tmp.3 :equals;
-        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
-        bt %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_88_12_91_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 92 12 ]
-        %tmp.9 = dup %tmp.2;
-        %tmp.11 = getv ? :AntPlus;
-        %tmp.12 = getv %tmp.11 :TRAINER_RESISTANCE;
-        %tmp.13 = getv function %tmp.9 :equals;
-        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
-        bt %tmp.14 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_92_12_95_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 96 12 ]
-        %tmp.15 = dup %tmp.2;
-        %tmp.17 = getv ? :AntPlus;
-        %tmp.18 = getv %tmp.17 :TRAINER_USER_WEIGHT;
-        %tmp.19 = getv function %tmp.15 :equals;
-        %tmp.20 = invoke %tmp.15 %tmp.19 (%tmp.18);
-        bt %tmp.20 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_96_12_99_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 100 12 ]
-        %tmp.21 = dup %tmp.2;
-        %tmp.23 = getv ? :AntPlus;
-        %tmp.24 = getv %tmp.23 :TRAINER_BIKE_WEIGHT;
-        %tmp.25 = getv function %tmp.21 :equals;
-        %tmp.26 = invoke %tmp.21 %tmp.25 (%tmp.24);
-        bt %tmp.26 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_100_12_103_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 104 12 ]
-        %tmp.27 = dup %tmp.2;
-        %tmp.29 = getv ? :AntPlus;
-        %tmp.30 = getv %tmp.29 :TRAINER_WIND_COEFF;
-        %tmp.31 = getv function %tmp.27 :equals;
-        %tmp.32 = invoke %tmp.27 %tmp.31 (%tmp.30);
-        bt %tmp.32 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_104_12_107_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 108 12 ]
-        %tmp.33 = dup %tmp.2;
-        %tmp.35 = getv ? :AntPlus;
-        %tmp.36 = getv %tmp.35 :TRAINER_WIND_SPEED;
-        %tmp.37 = getv function %tmp.33 :equals;
-        %tmp.38 = invoke %tmp.33 %tmp.37 (%tmp.36);
-        bt %tmp.38 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_108_12_111_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 112 12 ]
-        %tmp.39 = dup %tmp.2;
-        %tmp.41 = getv ? :AntPlus;
-        %tmp.42 = getv %tmp.41 :TRAINER_WIND_DRAFT_FACTOR;
-        %tmp.43 = getv function %tmp.39 :equals;
-        %tmp.44 = invoke %tmp.39 %tmp.43 (%tmp.42);
-        bt %tmp.44 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_112_12_115_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 116 12 ]
-        %tmp.45 = dup %tmp.2;
-        %tmp.47 = getv ? :AntPlus;
-        %tmp.48 = getv %tmp.47 :TRAINER_SLOPE;
-        %tmp.49 = getv function %tmp.45 :equals;
-        %tmp.50 = invoke %tmp.45 %tmp.49 (%tmp.48);
-        bt %tmp.50 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_116_12_119_21_switchCase;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 120 12 ]
-        %tmp.51 = dup %tmp.2;
-        %tmp.53 = getv ? :AntPlus;
-        %tmp.54 = getv %tmp.53 :TRAINER_SURFACE;
-        %tmp.55 = getv function %tmp.51 :equals;
-        %tmp.56 = invoke %tmp.51 %tmp.55 (%tmp.54);
-        bt %tmp.56 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_120_12_123_21_switchCase;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtDefault:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_defaultCodeBegin;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_88_12_91_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 89 16 ]
-        %tmp.57 = lgetv %value;
-        %tmp.58 = getv function %tmp.57 :toNumber;
-        %tmp.59 = invoke %tmp.57 %tmp.58();
-        putv self :targPower %tmp.59;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 90 16 ]
-        %tmp.60 = true;
-        putv self :sendTargPwr %tmp.60;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 91 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_92_12_95_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 93 16 ]
-        %tmp.61 = lgetv %value;
-        %tmp.62 = getv function %tmp.61 :toNumber;
-        %tmp.63 = invoke %tmp.61 %tmp.62();
-        putv self :basicResist %tmp.63;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 94 16 ]
-        %tmp.64 = true;
-        putv self :sendBasRst %tmp.64;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 95 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_96_12_99_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 97 16 ]
-        %tmp.65 = lgetv %value;
-        %tmp.66 = getv function %tmp.65 :toFloat;
-        %tmp.67 = invoke %tmp.65 %tmp.66();
-        putv self :userWt %tmp.67;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 98 16 ]
-        %tmp.68 = true;
-        putv self :sendUser %tmp.68;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 99 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_100_12_103_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 101 16 ]
-        %tmp.69 = lgetv %value;
-        %tmp.70 = getv function %tmp.69 :toFloat;
-        %tmp.71 = invoke %tmp.69 %tmp.70();
-        putv self :bikeWt %tmp.71;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 102 16 ]
-        %tmp.72 = true;
-        putv self :sendUser %tmp.72;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 103 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_104_12_107_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 105 16 ]
-        %tmp.73 = lgetv %value;
-        %tmp.74 = getv function %tmp.73 :toFloat;
-        %tmp.75 = invoke %tmp.73 %tmp.74();
-        putv self :windCoeff %tmp.75;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 106 16 ]
         %tmp.76 = true;
-        putv self :sendWind %tmp.76;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 107 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_108_12_111_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 109 16 ]
-        %tmp.77 = lgetv %value;
-        %tmp.78 = getv function %tmp.77 :toFloat;
-        %tmp.79 = invoke %tmp.77 %tmp.78();
-        putv self :windSpeed %tmp.79;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 110 16 ]
-        %tmp.80 = true;
-        putv self :sendWind %tmp.80;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 111 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_112_12_115_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 113 16 ]
-        %tmp.81 = lgetv %value;
-        %tmp.82 = getv function %tmp.81 :toFloat;
-        %tmp.83 = invoke %tmp.81 %tmp.82();
-        putv self :draftFact %tmp.83;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 114 16 ]
-        %tmp.84 = true;
-        putv self :sendWind %tmp.84;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 115 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_116_12_119_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 117 16 ]
-        %tmp.85 = lgetv %value;
-        %tmp.86 = getv function %tmp.85 :toFloat;
-        %tmp.87 = invoke %tmp.85 %tmp.86();
-        putv self :slope %tmp.87;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 118 16 ]
-        %tmp.88 = true;
-        putv self :sendTrack %tmp.88;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 119 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_120_12_123_21_switchCase:
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 121 16 ]
-        %tmp.89 = lgetv %value;
-        %tmp.90 = getv function %tmp.89 :toFloat;
-        %tmp.91 = invoke %tmp.89 %tmp.90();
-        putv self :surface %tmp.91;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 122 16 ]
-        %tmp.92 = true;
-        putv self :sendTrack %tmp.92;
-[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 123 16 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_defaultCodeBegin:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd:
-        pop;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_86_42_125_4_stop:
+        symbol [ is_first_msg ? 82 8 20 ];
+        putv self :is_first_msg %tmp.76;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 83 8 ]
+        %tmp.77 = 0;
+        symbol [ deviceNumber ? 83 8 20 ];
+        putv self :deviceNumber %tmp.77;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_60_26_84_4_stop:
     }
-    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 127; ]
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 86; @symbol_functiondef = [controlEquipment,86,13,29]; @symbol_param<0> = [mode,86,30,34]; @symbol_param<1> = [value,86,36,41]; ]
+    function controlEquipment(mode, value) {
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_86_42_125_4_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 87 8 ]
+        %tmp.1 = lgetv %mode;
+        symbol [ mode %tmp.1 87 15 19 ];
+        push %tmp.1;
+        switch %tmp.1 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtBegin:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 88 12 ]
+        %tmp.2 = dup %tmp.1;
+        symbol [ AntPlus %tmp.4 88 17 24 ];
+        %tmp.4 = getv ? :AntPlus;
+        symbol [ TRAINER_TARGET_POWER %tmp.5 88 25 45 ];
+        %tmp.5 = getv %tmp.4 :TRAINER_TARGET_POWER;
+        %tmp.6 = getv function %tmp.2 :equals;
+        %tmp.7 = invoke %tmp.2 %tmp.6 (%tmp.5);
+        bt %tmp.7 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_88_12_91_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 92 12 ]
+        %tmp.8 = dup %tmp.1;
+        symbol [ AntPlus %tmp.10 92 17 24 ];
+        %tmp.10 = getv ? :AntPlus;
+        symbol [ TRAINER_RESISTANCE %tmp.11 92 25 43 ];
+        %tmp.11 = getv %tmp.10 :TRAINER_RESISTANCE;
+        %tmp.12 = getv function %tmp.8 :equals;
+        %tmp.13 = invoke %tmp.8 %tmp.12 (%tmp.11);
+        bt %tmp.13 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_92_12_95_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 96 12 ]
+        %tmp.14 = dup %tmp.1;
+        symbol [ AntPlus %tmp.16 96 17 24 ];
+        %tmp.16 = getv ? :AntPlus;
+        symbol [ TRAINER_USER_WEIGHT %tmp.17 96 25 44 ];
+        %tmp.17 = getv %tmp.16 :TRAINER_USER_WEIGHT;
+        %tmp.18 = getv function %tmp.14 :equals;
+        %tmp.19 = invoke %tmp.14 %tmp.18 (%tmp.17);
+        bt %tmp.19 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_96_12_99_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 100 12 ]
+        %tmp.20 = dup %tmp.1;
+        symbol [ AntPlus %tmp.22 100 17 24 ];
+        %tmp.22 = getv ? :AntPlus;
+        symbol [ TRAINER_BIKE_WEIGHT %tmp.23 100 25 44 ];
+        %tmp.23 = getv %tmp.22 :TRAINER_BIKE_WEIGHT;
+        %tmp.24 = getv function %tmp.20 :equals;
+        %tmp.25 = invoke %tmp.20 %tmp.24 (%tmp.23);
+        bt %tmp.25 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_100_12_103_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 104 12 ]
+        %tmp.26 = dup %tmp.1;
+        symbol [ AntPlus %tmp.28 104 17 24 ];
+        %tmp.28 = getv ? :AntPlus;
+        symbol [ TRAINER_WIND_COEFF %tmp.29 104 25 43 ];
+        %tmp.29 = getv %tmp.28 :TRAINER_WIND_COEFF;
+        %tmp.30 = getv function %tmp.26 :equals;
+        %tmp.31 = invoke %tmp.26 %tmp.30 (%tmp.29);
+        bt %tmp.31 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_104_12_107_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 108 12 ]
+        %tmp.32 = dup %tmp.1;
+        symbol [ AntPlus %tmp.34 108 17 24 ];
+        %tmp.34 = getv ? :AntPlus;
+        symbol [ TRAINER_WIND_SPEED %tmp.35 108 25 43 ];
+        %tmp.35 = getv %tmp.34 :TRAINER_WIND_SPEED;
+        %tmp.36 = getv function %tmp.32 :equals;
+        %tmp.37 = invoke %tmp.32 %tmp.36 (%tmp.35);
+        bt %tmp.37 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_108_12_111_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 112 12 ]
+        %tmp.38 = dup %tmp.1;
+        symbol [ AntPlus %tmp.40 112 17 24 ];
+        %tmp.40 = getv ? :AntPlus;
+        symbol [ TRAINER_WIND_DRAFT_FACTOR %tmp.41 112 25 50 ];
+        %tmp.41 = getv %tmp.40 :TRAINER_WIND_DRAFT_FACTOR;
+        %tmp.42 = getv function %tmp.38 :equals;
+        %tmp.43 = invoke %tmp.38 %tmp.42 (%tmp.41);
+        bt %tmp.43 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_112_12_115_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 116 12 ]
+        %tmp.44 = dup %tmp.1;
+        symbol [ AntPlus %tmp.46 116 17 24 ];
+        %tmp.46 = getv ? :AntPlus;
+        symbol [ TRAINER_SLOPE %tmp.47 116 25 38 ];
+        %tmp.47 = getv %tmp.46 :TRAINER_SLOPE;
+        %tmp.48 = getv function %tmp.44 :equals;
+        %tmp.49 = invoke %tmp.44 %tmp.48 (%tmp.47);
+        bt %tmp.49 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_116_12_119_21_switchCase;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 120 12 ]
+        %tmp.50 = dup %tmp.1;
+        symbol [ AntPlus %tmp.52 120 17 24 ];
+        %tmp.52 = getv ? :AntPlus;
+        symbol [ TRAINER_SURFACE %tmp.53 120 25 40 ];
+        %tmp.53 = getv %tmp.52 :TRAINER_SURFACE;
+        %tmp.54 = getv function %tmp.50 :equals;
+        %tmp.55 = invoke %tmp.50 %tmp.54 (%tmp.53);
+        bt %tmp.55 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_120_12_123_21_switchCase;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtDefault:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_defaultCodeBegin;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_88_12_91_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 89 16 ]
+        %tmp.56 = lgetv %value;
+        symbol [ value %tmp.56 89 28 33 ];
+        symbol [ toNumber %tmp.57 89 34 42 ];
+        %tmp.57 = getv function %tmp.56 :toNumber;
+        %tmp.58 = invoke %tmp.56 %tmp.57();
+        symbol [ targPower ? 89 16 25 ];
+        putv self :targPower %tmp.58;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 90 16 ]
+        %tmp.59 = true;
+        symbol [ sendTargPwr ? 90 16 27 ];
+        putv self :sendTargPwr %tmp.59;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 91 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_92_12_95_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 93 16 ]
+        %tmp.60 = lgetv %value;
+        symbol [ value %tmp.60 93 30 35 ];
+        symbol [ toNumber %tmp.61 93 36 44 ];
+        %tmp.61 = getv function %tmp.60 :toNumber;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        symbol [ basicResist ? 93 16 27 ];
+        putv self :basicResist %tmp.62;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 94 16 ]
+        %tmp.63 = true;
+        symbol [ sendBasRst ? 94 16 26 ];
+        putv self :sendBasRst %tmp.63;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 95 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_96_12_99_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 97 16 ]
+        %tmp.64 = lgetv %value;
+        symbol [ value %tmp.64 97 25 30 ];
+        symbol [ toFloat %tmp.65 97 31 38 ];
+        %tmp.65 = getv function %tmp.64 :toFloat;
+        %tmp.66 = invoke %tmp.64 %tmp.65();
+        symbol [ userWt ? 97 16 22 ];
+        putv self :userWt %tmp.66;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 98 16 ]
+        %tmp.67 = true;
+        symbol [ sendUser ? 98 16 24 ];
+        putv self :sendUser %tmp.67;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 99 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_100_12_103_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 101 16 ]
+        %tmp.68 = lgetv %value;
+        symbol [ value %tmp.68 101 25 30 ];
+        symbol [ toFloat %tmp.69 101 31 38 ];
+        %tmp.69 = getv function %tmp.68 :toFloat;
+        %tmp.70 = invoke %tmp.68 %tmp.69();
+        symbol [ bikeWt ? 101 16 22 ];
+        putv self :bikeWt %tmp.70;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 102 16 ]
+        %tmp.71 = true;
+        symbol [ sendUser ? 102 16 24 ];
+        putv self :sendUser %tmp.71;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 103 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_104_12_107_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 105 16 ]
+        %tmp.72 = lgetv %value;
+        symbol [ value %tmp.72 105 28 33 ];
+        symbol [ toFloat %tmp.73 105 34 41 ];
+        %tmp.73 = getv function %tmp.72 :toFloat;
+        %tmp.74 = invoke %tmp.72 %tmp.73();
+        symbol [ windCoeff ? 105 16 25 ];
+        putv self :windCoeff %tmp.74;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 106 16 ]
+        %tmp.75 = true;
+        symbol [ sendWind ? 106 16 24 ];
+        putv self :sendWind %tmp.75;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 107 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_108_12_111_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 109 16 ]
+        %tmp.76 = lgetv %value;
+        symbol [ value %tmp.76 109 28 33 ];
+        symbol [ toFloat %tmp.77 109 34 41 ];
+        %tmp.77 = getv function %tmp.76 :toFloat;
+        %tmp.78 = invoke %tmp.76 %tmp.77();
+        symbol [ windSpeed ? 109 16 25 ];
+        putv self :windSpeed %tmp.78;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 110 16 ]
+        %tmp.79 = true;
+        symbol [ sendWind ? 110 16 24 ];
+        putv self :sendWind %tmp.79;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 111 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_112_12_115_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 113 16 ]
+        %tmp.80 = lgetv %value;
+        symbol [ value %tmp.80 113 28 33 ];
+        symbol [ toFloat %tmp.81 113 34 41 ];
+        %tmp.81 = getv function %tmp.80 :toFloat;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        symbol [ draftFact ? 113 16 25 ];
+        putv self :draftFact %tmp.82;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 114 16 ]
+        %tmp.83 = true;
+        symbol [ sendWind ? 114 16 24 ];
+        putv self :sendWind %tmp.83;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 115 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_116_12_119_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 117 16 ]
+        %tmp.84 = lgetv %value;
+        symbol [ value %tmp.84 117 24 29 ];
+        symbol [ toFloat %tmp.85 117 30 37 ];
+        %tmp.85 = getv function %tmp.84 :toFloat;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        symbol [ slope ? 117 16 21 ];
+        putv self :slope %tmp.86;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 118 16 ]
+        %tmp.87 = true;
+        symbol [ sendTrack ? 118 16 25 ];
+        putv self :sendTrack %tmp.87;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 119 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_120_12_123_21_switchCase:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 121 16 ]
+        %tmp.88 = lgetv %value;
+        symbol [ value %tmp.88 121 26 31 ];
+        symbol [ toFloat %tmp.89 121 32 39 ];
+        %tmp.89 = getv function %tmp.88 :toFloat;
+        %tmp.90 = invoke %tmp.88 %tmp.89();
+        symbol [ surface ? 121 16 23 ];
+        putv self :surface %tmp.90;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 122 16 ]
+        %tmp.91 = true;
+        symbol [ sendTrack ? 122 16 25 ];
+        putv self :sendTrack %tmp.91;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 123 16 ]
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_defaultCodeBegin:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_87_8_124_8_switchStmtEnd:
+        pop;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_86_42_125_4_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 127; @symbol_functiondef = [onMessage,127,13,22]; @symbol_param<0> = [msg,127,23,26]; @symbol_param<0>_type<0> = [Message,127,30,37]; ]
     function onMessage(msg as Message) as Void {
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 128 8 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_stop" ]
         %payload.1 = local;
+        symbol [ payload %payload.1 128 12 19 ];
         %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 128 22 25 ];
+        symbol [ getPayload %tmp.2 128 26 36 ];
         %tmp.2 = getv function %tmp.1 :getPayload;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %payload.1 %tmp.3;
+        symbol [ payload %payload.1 128 12 19 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 129 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_stmt:
+        symbol [ Ant %tmp.4 129 12 15 ];
         %tmp.4 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_CHANNEL_RESPONSE_EVENT %tmp.5 129 16 45 ];
         %tmp.5 = getv %tmp.4 :MSG_ID_CHANNEL_RESPONSE_EVENT;
         %tmp.6 = lgetv %msg;
+        symbol [ msg %tmp.6 129 49 52 ];
+        symbol [ messageId %tmp.7 129 53 62 ];
         %tmp.7 = getv %tmp.6 :messageId;
         %tmp.8 = eq %tmp.5 %tmp.7;
-        bf %tmp.8 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_64_174_8_start:
+        bf %tmp.8 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_64_174_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 130 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_stmt:
+        symbol [ Ant %tmp.9 130 16 19 ];
         %tmp.9 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_RF_EVENT %tmp.10 130 20 35 ];
         %tmp.10 = getv %tmp.9 :MSG_ID_RF_EVENT;
-        %tmp.12 = lgetv %payload.1;
-        %tmp.13 = 0;
-        %tmp.14 = agetv %tmp.12 %tmp.13;
-        %tmp.15 = eq %tmp.10 %tmp.14;
-        bf %tmp.15 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_start:
+        %tmp.11 = lgetv %payload.1;
+        symbol [ payload %tmp.11 130 39 46 ];
+        %tmp.12 = 0;
+        %tmp.13 = agetv %tmp.11 %tmp.12;
+        %tmp.14 = eq %tmp.10 %tmp.13;
+        bf %tmp.14 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 131 16 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_stop" ]
         %event.2 = local;
-        %tmp.17 = lgetv %payload.1;
-        %tmp.18 = 1;
-        %tmp.19 = agetv %tmp.17 %tmp.18;
-        %tmp.20 = 0xFF;
-        %tmp.21 = bitand %tmp.19 %tmp.20;
-        lputv %event.2 %tmp.21;
+        symbol [ event %event.2 131 20 25 ];
+        %tmp.15 = lgetv %payload.1;
+        symbol [ payload %tmp.15 131 28 35 ];
+        %tmp.16 = 1;
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = 0xFF;
+        %tmp.19 = bitand %tmp.17 %tmp.18;
+        lputv %event.2 %tmp.19;
+        symbol [ event %event.2 131 20 25 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 132 4 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_stmt:
-        %tmp.22 = getm $.Toybox.Ant;
-        %tmp.23 = getv %tmp.22 :MSG_CODE_EVENT_CHANNEL_CLOSED;
-        %tmp.25 = lgetv %event.2;
-        %tmp.26 = eq %tmp.23 %tmp.25;
-        bf %tmp.26 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_52_136_16_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_stmt:
+        symbol [ Ant %tmp.20 132 8 11 ];
+        %tmp.20 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_CHANNEL_CLOSED %tmp.21 132 12 41 ];
+        %tmp.21 = getv %tmp.20 :MSG_CODE_EVENT_CHANNEL_CLOSED;
+        %tmp.22 = lgetv %event.2;
+        symbol [ event %tmp.22 132 45 50 ];
+        %tmp.23 = eq %tmp.21 %tmp.22;
+        bf %tmp.23 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_52_136_16_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 133 20 ]
-        %tmp.28 = getv ? :GenericChannel;
-        %tmp.29 = getv function %tmp.28 :open;
-        invoke %tmp.28 %tmp.29();
+        symbol [ GenericChannel %tmp.25 133 20 34 ];
+        %tmp.25 = getv ? :GenericChannel;
+        symbol [ open %tmp.26 133 35 39 ];
+        %tmp.26 = getv function %tmp.25 :open;
+        invoke %tmp.25 %tmp.26();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 134 20 ]
-        %tmp.31 = getv ? :GenericChannel;
-        %tmp.32 = getv function %tmp.31 :getDeviceConfig;
-        %tmp.33 = invoke %tmp.31 %tmp.32();
-        %tmp.34 = getv %tmp.33 :deviceNumber;
-        putv self :deviceNumber %tmp.34;
+        symbol [ GenericChannel %tmp.28 134 35 49 ];
+        %tmp.28 = getv ? :GenericChannel;
+        symbol [ getDeviceConfig %tmp.29 134 50 65 ];
+        %tmp.29 = getv function %tmp.28 :getDeviceConfig;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        symbol [ deviceNumber %tmp.31 134 68 80 ];
+        %tmp.31 = getv %tmp.30 :deviceNumber;
+        symbol [ deviceNumber ? 134 20 32 ];
+        putv self :deviceNumber %tmp.31;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 135 20 ]
-        %tmp.35 = self;
-        %tmp.36 = getv function %tmp.35 :reset;
-        invoke %tmp.35 %tmp.36();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_52_136_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_false:
+        %tmp.32 = self;
+        symbol [ reset %tmp.33 135 20 25 ];
+        %tmp.33 = getv function %tmp.32 :reset;
+        invoke %tmp.32 %tmp.33();
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_52_136_16_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 137 21 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_stmt:
-        %tmp.37 = getm $.Toybox.Ant;
-        %tmp.38 = getv %tmp.37 :MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH;
-        %tmp.40 = lgetv %event.2;
-        %tmp.41 = eq %tmp.38 %tmp.40;
-        bf %tmp.41 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_75_139_16_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_stmt:
+        symbol [ Ant %tmp.34 137 25 28 ];
+        %tmp.34 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH %tmp.35 137 29 64 ];
+        %tmp.35 = getv %tmp.34 :MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH;
+        %tmp.36 = lgetv %event.2;
+        symbol [ event %tmp.36 137 68 73 ];
+        %tmp.37 = eq %tmp.35 %tmp.36;
+        bf %tmp.37 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_75_139_16_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 138 20 ]
-        %tmp.42 = self;
-        %tmp.43 = getv function %tmp.42 :reset;
-        invoke %tmp.42 %tmp.43();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_75_139_16_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_false:
+        %tmp.38 = self;
+        symbol [ reset %tmp.39 138 20 25 ];
+        %tmp.39 = getv function %tmp.38 :reset;
+        invoke %tmp.38 %tmp.39();
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_75_139_16_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 140 21 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_stmt:
-        %tmp.44 = getm $.Toybox.Ant;
-        %tmp.45 = getv %tmp.44 :MSG_CODE_EVENT_TRANSFER_TX_COMPLETED;
-        %tmp.47 = lgetv %event.2;
-        %tmp.48 = eq %tmp.45 %tmp.47;
-        bf %tmp.48 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_75_168_14_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_stmt:
+        symbol [ Ant %tmp.40 140 25 28 ];
+        %tmp.40 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_TRANSFER_TX_COMPLETED %tmp.41 140 29 65 ];
+        %tmp.41 = getv %tmp.40 :MSG_CODE_EVENT_TRANSFER_TX_COMPLETED;
+        %tmp.42 = lgetv %event.2;
+        symbol [ event %tmp.42 140 69 74 ];
+        %tmp.43 = eq %tmp.41 %tmp.42;
+        bf %tmp.43 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_75_168_14_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 141 18 ]
-        %tmp.50 = getv ? :unConfirmed;
-        push %tmp.50;
-        switch %tmp.50 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtBegin:
+        symbol [ unConfirmed %tmp.45 141 26 37 ];
+        %tmp.45 = getv ? :unConfirmed;
+        push %tmp.45;
+        switch %tmp.45 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtBegin:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 142 20 ]
-        %tmp.51 = dup %tmp.50;
-        %tmp.52 = 0;
-        %tmp.53 = getv function %tmp.51 :equals;
-        %tmp.54 = invoke %tmp.51 %tmp.53 (%tmp.52);
-        bt %tmp.54 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_142_20_143_29_switchCase;
+        %tmp.46 = dup %tmp.45;
+        %tmp.47 = 0;
+        %tmp.48 = getv function %tmp.46 :equals;
+        %tmp.49 = invoke %tmp.46 %tmp.48 (%tmp.47);
+        bt %tmp.49 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_142_20_143_29_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 144 20 ]
-        %tmp.55 = dup %tmp.50;
-        %tmp.56 = 1;
-        %tmp.57 = getv function %tmp.55 :equals;
-        %tmp.58 = invoke %tmp.55 %tmp.57 (%tmp.56);
-        bt %tmp.58 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_144_20_147_29_switchCase;
+        %tmp.50 = dup %tmp.45;
+        %tmp.51 = 1;
+        %tmp.52 = getv function %tmp.50 :equals;
+        %tmp.53 = invoke %tmp.50 %tmp.52 (%tmp.51);
+        bt %tmp.53 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_144_20_147_29_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 148 20 ]
-        %tmp.59 = dup %tmp.50;
-        %tmp.60 = 2;
-        %tmp.61 = getv function %tmp.59 :equals;
-        %tmp.62 = invoke %tmp.59 %tmp.61 (%tmp.60);
-        bt %tmp.62 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_148_20_151_29_switchCase;
+        %tmp.54 = dup %tmp.45;
+        %tmp.55 = 2;
+        %tmp.56 = getv function %tmp.54 :equals;
+        %tmp.57 = invoke %tmp.54 %tmp.56 (%tmp.55);
+        bt %tmp.57 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_148_20_151_29_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 152 20 ]
-        %tmp.63 = dup %tmp.50;
-        %tmp.64 = 3;
-        %tmp.65 = getv function %tmp.63 :equals;
-        %tmp.66 = invoke %tmp.63 %tmp.65 (%tmp.64);
-        bt %tmp.66 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_152_20_156_29_switchCase;
+        %tmp.58 = dup %tmp.45;
+        %tmp.59 = 3;
+        %tmp.60 = getv function %tmp.58 :equals;
+        %tmp.61 = invoke %tmp.58 %tmp.60 (%tmp.59);
+        bt %tmp.61 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_152_20_156_29_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 157 20 ]
-        %tmp.67 = dup %tmp.50;
-        %tmp.68 = 4;
-        %tmp.69 = getv function %tmp.67 :equals;
-        %tmp.70 = invoke %tmp.67 %tmp.69 (%tmp.68);
-        bt %tmp.70 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_157_20_161_29_switchCase;
+        %tmp.62 = dup %tmp.45;
+        %tmp.63 = 4;
+        %tmp.64 = getv function %tmp.62 :equals;
+        %tmp.65 = invoke %tmp.62 %tmp.64 (%tmp.63);
+        bt %tmp.65 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_157_20_161_29_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 162 20 ]
-        %tmp.71 = dup %tmp.50;
-        %tmp.72 = 5;
-        %tmp.73 = getv function %tmp.71 :equals;
-        %tmp.74 = invoke %tmp.71 %tmp.73 (%tmp.72);
-        bt %tmp.74 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_162_20_166_29_switchCase;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtDefault:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_defaultCodeBegin;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_142_20_143_29_switchCase:
+        %tmp.66 = dup %tmp.45;
+        %tmp.67 = 5;
+        %tmp.68 = getv function %tmp.66 :equals;
+        %tmp.69 = invoke %tmp.66 %tmp.68 (%tmp.67);
+        bt %tmp.69 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_162_20_166_29_switchCase;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtDefault:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_defaultCodeBegin;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_142_20_143_29_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 143 24 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_144_20_147_29_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_144_20_147_29_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 145 24 ]
-        %tmp.75 = false;
-        putv self :sendTargPwr %tmp.75;
+        %tmp.70 = false;
+        symbol [ sendTargPwr ? 145 24 35 ];
+        putv self :sendTargPwr %tmp.70;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 146 24 ]
-        %tmp.76 = 0;
-        putv self :unConfirmed %tmp.76;
+        %tmp.71 = 0;
+        symbol [ unConfirmed ? 146 24 35 ];
+        putv self :unConfirmed %tmp.71;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 147 24 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_148_20_151_29_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_148_20_151_29_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 149 24 ]
-        %tmp.77 = false;
-        putv self :sendBasRst %tmp.77;
+        %tmp.72 = false;
+        symbol [ sendBasRst ? 149 24 34 ];
+        putv self :sendBasRst %tmp.72;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 150 24 ]
-        %tmp.78 = 0;
-        putv self :unConfirmed %tmp.78;
+        %tmp.73 = 0;
+        symbol [ unConfirmed ? 150 24 35 ];
+        putv self :unConfirmed %tmp.73;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 151 24 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_152_20_156_29_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_152_20_156_29_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 153 24 ]
-        %tmp.79 = false;
-        putv self :sendUser %tmp.79;
+        %tmp.74 = false;
+        symbol [ sendUser ? 153 24 32 ];
+        putv self :sendUser %tmp.74;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 154 24 ]
-        %tmp.80 = 0;
-        putv self :unConfirmed %tmp.80;
+        %tmp.75 = 0;
+        symbol [ unConfirmed ? 154 24 35 ];
+        putv self :unConfirmed %tmp.75;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 155 24 ]
-        %tmp.81 = getm $.Toybox.System;
-        %tmp.82 = getv function %tmp.81 :println;
-        %tmp.83 = "User confirmed ";
+        symbol [ System %tmp.76 155 24 30 ];
+        %tmp.76 = getm $.Toybox.System;
+        symbol [ println %tmp.77 155 31 38 ];
+        %tmp.77 = getv function %tmp.76 :println;
+        %tmp.78 = "User confirmed ";
+        %tmp.79 = lgetv %payload.1;
+        symbol [ payload %tmp.79 155 59 66 ];
+        %tmp.80 = 4;
+        %tmp.81 = agetv %tmp.79 %tmp.80;
+        %tmp.82 = add %tmp.78 %tmp.81;
+        %tmp.83 = ", ";
+        %tmp.84 = add %tmp.82 %tmp.83;
         %tmp.85 = lgetv %payload.1;
-        %tmp.86 = 4;
+        symbol [ payload %tmp.85 155 79 86 ];
+        %tmp.86 = 5;
         %tmp.87 = agetv %tmp.85 %tmp.86;
-        %tmp.88 = add %tmp.83 %tmp.87;
+        %tmp.88 = add %tmp.84 %tmp.87;
         %tmp.89 = ", ";
         %tmp.90 = add %tmp.88 %tmp.89;
-        %tmp.92 = lgetv %payload.1;
-        %tmp.93 = 5;
-        %tmp.94 = agetv %tmp.92 %tmp.93;
-        %tmp.95 = add %tmp.90 %tmp.94;
-        %tmp.96 = ", ";
-        %tmp.97 = add %tmp.95 %tmp.96;
-        %tmp.99 = lgetv %payload.1;
-        %tmp.100 = 6;
-        %tmp.101 = agetv %tmp.99 %tmp.100;
-        %tmp.102 = add %tmp.97 %tmp.101;
-        %tmp.103 = ", ";
-        %tmp.104 = add %tmp.102 %tmp.103;
-        %tmp.106 = lgetv %payload.1;
-        %tmp.107 = 7;
-        %tmp.108 = agetv %tmp.106 %tmp.107;
-        %tmp.109 = add %tmp.104 %tmp.108;
-        invoke %tmp.81 %tmp.82(%tmp.109);
+        %tmp.91 = lgetv %payload.1;
+        symbol [ payload %tmp.91 155 99 106 ];
+        %tmp.92 = 6;
+        %tmp.93 = agetv %tmp.91 %tmp.92;
+        %tmp.94 = add %tmp.90 %tmp.93;
+        %tmp.95 = ", ";
+        %tmp.96 = add %tmp.94 %tmp.95;
+        %tmp.97 = lgetv %payload.1;
+        symbol [ payload %tmp.97 155 119 126 ];
+        %tmp.98 = 7;
+        %tmp.99 = agetv %tmp.97 %tmp.98;
+        %tmp.100 = add %tmp.96 %tmp.99;
+        invoke %tmp.76 %tmp.77(%tmp.100);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 156 24 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_157_20_161_29_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_157_20_161_29_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 158 24 ]
-        %tmp.110 = false;
-        putv self :sendWind %tmp.110;
+        %tmp.101 = false;
+        symbol [ sendWind ? 158 24 32 ];
+        putv self :sendWind %tmp.101;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 159 24 ]
-        %tmp.111 = 0;
-        putv self :unConfirmed %tmp.111;
+        %tmp.102 = 0;
+        symbol [ unConfirmed ? 159 24 35 ];
+        putv self :unConfirmed %tmp.102;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 160 24 ]
-        %tmp.112 = getm $.Toybox.System;
-        %tmp.113 = getv function %tmp.112 :println;
-        %tmp.114 = "Wind confirmed";
-        %tmp.116 = lgetv %payload.1;
-        %tmp.117 = 4;
-        %tmp.118 = agetv %tmp.116 %tmp.117;
-        %tmp.119 = add %tmp.114 %tmp.118;
-        %tmp.120 = ", ";
-        %tmp.121 = add %tmp.119 %tmp.120;
-        %tmp.123 = lgetv %payload.1;
-        %tmp.124 = 5;
-        %tmp.125 = agetv %tmp.123 %tmp.124;
-        %tmp.126 = add %tmp.121 %tmp.125;
-        %tmp.127 = ", ";
-        %tmp.128 = add %tmp.126 %tmp.127;
-        %tmp.130 = lgetv %payload.1;
-        %tmp.131 = 6;
-        %tmp.132 = agetv %tmp.130 %tmp.131;
-        %tmp.133 = add %tmp.128 %tmp.132;
-        %tmp.134 = ", ";
-        %tmp.135 = add %tmp.133 %tmp.134;
-        %tmp.137 = lgetv %payload.1;
-        %tmp.138 = 7;
-        %tmp.139 = agetv %tmp.137 %tmp.138;
-        %tmp.140 = add %tmp.135 %tmp.139;
-        invoke %tmp.112 %tmp.113(%tmp.140);
+        symbol [ System %tmp.103 160 24 30 ];
+        %tmp.103 = getm $.Toybox.System;
+        symbol [ println %tmp.104 160 31 38 ];
+        %tmp.104 = getv function %tmp.103 :println;
+        %tmp.105 = "Wind confirmed";
+        %tmp.106 = lgetv %payload.1;
+        symbol [ payload %tmp.106 160 58 65 ];
+        %tmp.107 = 4;
+        %tmp.108 = agetv %tmp.106 %tmp.107;
+        %tmp.109 = add %tmp.105 %tmp.108;
+        %tmp.110 = ", ";
+        %tmp.111 = add %tmp.109 %tmp.110;
+        %tmp.112 = lgetv %payload.1;
+        symbol [ payload %tmp.112 160 78 85 ];
+        %tmp.113 = 5;
+        %tmp.114 = agetv %tmp.112 %tmp.113;
+        %tmp.115 = add %tmp.111 %tmp.114;
+        %tmp.116 = ", ";
+        %tmp.117 = add %tmp.115 %tmp.116;
+        %tmp.118 = lgetv %payload.1;
+        symbol [ payload %tmp.118 160 98 105 ];
+        %tmp.119 = 6;
+        %tmp.120 = agetv %tmp.118 %tmp.119;
+        %tmp.121 = add %tmp.117 %tmp.120;
+        %tmp.122 = ", ";
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = lgetv %payload.1;
+        symbol [ payload %tmp.124 160 118 125 ];
+        %tmp.125 = 7;
+        %tmp.126 = agetv %tmp.124 %tmp.125;
+        %tmp.127 = add %tmp.123 %tmp.126;
+        invoke %tmp.103 %tmp.104(%tmp.127);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 161 24 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_162_20_166_29_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_162_20_166_29_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 163 24 ]
-        %tmp.141 = false;
-        putv self :sendTrack %tmp.141;
+        %tmp.128 = false;
+        symbol [ sendTrack ? 163 24 33 ];
+        putv self :sendTrack %tmp.128;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 164 24 ]
-        %tmp.142 = 0;
-        putv self :unConfirmed %tmp.142;
+        %tmp.129 = 0;
+        symbol [ unConfirmed ? 164 24 35 ];
+        putv self :unConfirmed %tmp.129;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 165 24 ]
-        %tmp.143 = getm $.Toybox.System;
-        %tmp.144 = getv function %tmp.143 :println;
-        %tmp.145 = "Track confirmed";
-        %tmp.147 = lgetv %payload.1;
-        %tmp.148 = 4;
-        %tmp.149 = agetv %tmp.147 %tmp.148;
-        %tmp.150 = add %tmp.145 %tmp.149;
-        %tmp.151 = ", ";
-        %tmp.152 = add %tmp.150 %tmp.151;
-        %tmp.154 = lgetv %payload.1;
-        %tmp.155 = 5;
-        %tmp.156 = agetv %tmp.154 %tmp.155;
-        %tmp.157 = add %tmp.152 %tmp.156;
-        %tmp.158 = ", ";
-        %tmp.159 = add %tmp.157 %tmp.158;
-        %tmp.161 = lgetv %payload.1;
-        %tmp.162 = 6;
-        %tmp.163 = agetv %tmp.161 %tmp.162;
-        %tmp.164 = add %tmp.159 %tmp.163;
-        %tmp.165 = ", ";
-        %tmp.166 = add %tmp.164 %tmp.165;
-        %tmp.168 = lgetv %payload.1;
-        %tmp.169 = 7;
-        %tmp.170 = agetv %tmp.168 %tmp.169;
-        %tmp.171 = add %tmp.166 %tmp.170;
-        invoke %tmp.143 %tmp.144(%tmp.171);
+        symbol [ System %tmp.130 165 24 30 ];
+        %tmp.130 = getm $.Toybox.System;
+        symbol [ println %tmp.131 165 31 38 ];
+        %tmp.131 = getv function %tmp.130 :println;
+        %tmp.132 = "Track confirmed";
+        %tmp.133 = lgetv %payload.1;
+        symbol [ payload %tmp.133 165 59 66 ];
+        %tmp.134 = 4;
+        %tmp.135 = agetv %tmp.133 %tmp.134;
+        %tmp.136 = add %tmp.132 %tmp.135;
+        %tmp.137 = ", ";
+        %tmp.138 = add %tmp.136 %tmp.137;
+        %tmp.139 = lgetv %payload.1;
+        symbol [ payload %tmp.139 165 79 86 ];
+        %tmp.140 = 5;
+        %tmp.141 = agetv %tmp.139 %tmp.140;
+        %tmp.142 = add %tmp.138 %tmp.141;
+        %tmp.143 = ", ";
+        %tmp.144 = add %tmp.142 %tmp.143;
+        %tmp.145 = lgetv %payload.1;
+        symbol [ payload %tmp.145 165 99 106 ];
+        %tmp.146 = 6;
+        %tmp.147 = agetv %tmp.145 %tmp.146;
+        %tmp.148 = add %tmp.144 %tmp.147;
+        %tmp.149 = ", ";
+        %tmp.150 = add %tmp.148 %tmp.149;
+        %tmp.151 = lgetv %payload.1;
+        symbol [ payload %tmp.151 165 119 126 ];
+        %tmp.152 = 7;
+        %tmp.153 = agetv %tmp.151 %tmp.152;
+        %tmp.154 = add %tmp.150 %tmp.153;
+        invoke %tmp.130 %tmp.131(%tmp.154);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 166 24 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_defaultCodeBegin:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_defaultCodeBegin:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_141_18_167_18_switchStmtEnd:
         pop;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_75_168_14_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_false:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_75_168_14_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_140_21_168_14_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_137_21_168_14_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_132_4_168_14_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_51_169_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 170 17 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_stmt:
-        %tmp.172 = getm $.Toybox.Ant;
-        %tmp.173 = getv %tmp.172 :MSG_ID_CLOSE_CHANNEL;
-        %tmp.175 = lgetv %payload.1;
-        %tmp.176 = 0;
-        %tmp.177 = agetv %tmp.175 %tmp.176;
-        %tmp.178 = eq %tmp.173 %tmp.177;
-        bf %tmp.178 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_61_173_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_stmt:
+        symbol [ Ant %tmp.155 170 21 24 ];
+        %tmp.155 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_CLOSE_CHANNEL %tmp.156 170 25 45 ];
+        %tmp.156 = getv %tmp.155 :MSG_ID_CLOSE_CHANNEL;
+        %tmp.157 = lgetv %payload.1;
+        symbol [ payload %tmp.157 170 49 56 ];
+        %tmp.158 = 0;
+        %tmp.159 = agetv %tmp.157 %tmp.158;
+        %tmp.160 = eq %tmp.156 %tmp.159;
+        bf %tmp.160 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_61_173_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 171 16 ]
-        %tmp.180 = getv ? :GenericChannel;
-        %tmp.181 = getv function %tmp.180 :close;
-        invoke %tmp.180 %tmp.181();
+        symbol [ GenericChannel %tmp.162 171 16 30 ];
+        %tmp.162 = getv ? :GenericChannel;
+        symbol [ close %tmp.163 171 31 36 ];
+        %tmp.163 = getv function %tmp.162 :close;
+        invoke %tmp.162 %tmp.163();
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 172 16 ]
-        %tmp.183 = getv ? :GenericChannel;
-        %tmp.184 = getv function %tmp.183 :open;
-        invoke %tmp.183 %tmp.184();
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_61_173_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_64_174_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_false:
+        symbol [ GenericChannel %tmp.165 172 16 30 ];
+        %tmp.165 = getv ? :GenericChannel;
+        symbol [ open %tmp.166 172 31 35 ];
+        %tmp.166 = getv function %tmp.165 :open;
+        invoke %tmp.165 %tmp.166();
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_61_173_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_170_17_173_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_130_12_173_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_64_174_8_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 175 13 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_stmt:
-        %tmp.185 = getm $.Toybox.Ant;
-        %tmp.186 = getv %tmp.185 :MSG_ID_BROADCAST_DATA;
-        %tmp.187 = lgetv %msg;
-        %tmp.188 = getv %tmp.187 :messageId;
-        %tmp.189 = eq %tmp.186 %tmp.188;
-        bf %tmp.189 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_stmt:
+        symbol [ Ant %tmp.167 175 17 20 ];
+        %tmp.167 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_BROADCAST_DATA %tmp.168 175 21 42 ];
+        %tmp.168 = getv %tmp.167 :MSG_ID_BROADCAST_DATA;
+        %tmp.169 = lgetv %msg;
+        symbol [ msg %tmp.169 175 46 49 ];
+        symbol [ messageId %tmp.170 175 50 59 ];
+        %tmp.170 = getv %tmp.169 :messageId;
+        %tmp.171 = eq %tmp.168 %tmp.170;
+        bf %tmp.171 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 176 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop" ]
         %dataType.3 = local;
-        %tmp.191 = lgetv %payload.1;
-        %tmp.192 = 0;
-        %tmp.193 = agetv %tmp.191 %tmp.192;
-        %tmp.194 = 0xFF;
-        %tmp.195 = bitand %tmp.193 %tmp.194;
-        lputv %dataType.3 %tmp.195;
+        symbol [ dataType %dataType.3 176 16 24 ];
+        %tmp.172 = lgetv %payload.1;
+        symbol [ payload %tmp.172 176 27 34 ];
+        %tmp.173 = 0;
+        %tmp.174 = agetv %tmp.172 %tmp.173;
+        %tmp.175 = 0xFF;
+        %tmp.176 = bitand %tmp.174 %tmp.175;
+        lputv %dataType.3 %tmp.176;
+        symbol [ dataType %dataType.3 176 16 24 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 177 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop" ]
         %ackload.4 = local;
-        %tmp.197 = 8;
-        %tmp.196 = newa %tmp.197;
-        lputv %ackload.4 %tmp.196;
+        symbol [ ackload %ackload.4 177 16 23 ];
+        %tmp.178 = 8;
+        %tmp.177 = newa %tmp.178;
+        lputv %ackload.4 %tmp.177;
+        symbol [ ackload %ackload.4 177 16 23 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 178 12 ]
-        [ "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start" "C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop" ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop" ]
         %message.5 = local;
-        %tmp.200 = getm $.Toybox.Ant;
-        %tmp.201 = getv function ? %tmp.200 :Message;
-        %tmp.198 = newc %tmp.201 ();
-        lputv %message.5 %tmp.198;
+        symbol [ message %message.5 178 16 23 ];
+        symbol [ Ant %tmp.181 178 30 33 ];
+        %tmp.181 = getm $.Toybox.Ant;
+        symbol [ Message %tmp.182 178 34 41 ];
+        %tmp.182 = getv function ? %tmp.181 :Message;
+        %tmp.179 = newc %tmp.182 ();
+        lputv %message.5 %tmp.179;
+        symbol [ message %message.5 178 16 23 ];
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 179 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_stmt:
-        %tmp.203 = getv ? :is_first_msg;
-        bf %tmp.203 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_180_12_185_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_stmt:
+        symbol [ is_first_msg %tmp.184 179 16 28 ];
+        %tmp.184 = getv ? :is_first_msg;
+        bf %tmp.184 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_180_12_185_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 181 16 ]
-        %tmp.205 = getv ? :GenericChannel;
-        %tmp.206 = getv function %tmp.205 :getDeviceConfig;
-        %tmp.207 = invoke %tmp.205 %tmp.206();
-        %tmp.208 = getv %tmp.207 :deviceNumber;
-        putv self :deviceNumber %tmp.208;
+        symbol [ GenericChannel %tmp.186 181 31 45 ];
+        %tmp.186 = getv ? :GenericChannel;
+        symbol [ getDeviceConfig %tmp.187 181 46 61 ];
+        %tmp.187 = getv function %tmp.186 :getDeviceConfig;
+        %tmp.188 = invoke %tmp.186 %tmp.187();
+        symbol [ deviceNumber %tmp.189 181 64 76 ];
+        %tmp.189 = getv %tmp.188 :deviceNumber;
+        symbol [ deviceNumber ? 181 16 28 ];
+        putv self :deviceNumber %tmp.189;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 182 16 ]
-        %tmp.209 = false;
-        putv self :is_first_msg %tmp.209;
+        %tmp.190 = false;
+        symbol [ is_first_msg ? 182 16 28 ];
+        putv self :is_first_msg %tmp.190;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 183 16 ]
-        %tmp.211 = getv ? :Application;
-        %tmp.212 = getv %tmp.211 :Storage;
-        %tmp.213 = getv function %tmp.212 :setValue;
-        %tmp.214 = "FECId";
-        %tmp.216 = getv ? :deviceNumber;
-        invoke %tmp.212 %tmp.213(%tmp.214, %tmp.216);
+        symbol [ Application %tmp.192 183 16 27 ];
+        %tmp.192 = getv ? :Application;
+        symbol [ Storage %tmp.193 183 28 35 ];
+        %tmp.193 = getv %tmp.192 :Storage;
+        symbol [ setValue %tmp.194 183 36 44 ];
+        %tmp.194 = getv function %tmp.193 :setValue;
+        %tmp.195 = "FECId";
+        symbol [ deviceNumber %tmp.197 183 54 66 ];
+        %tmp.197 = getv ? :deviceNumber;
+        invoke %tmp.193 %tmp.194(%tmp.195, %tmp.197);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 184 16 ]
-        %tmp.217 = true;
-        putv self :sendTargPwr %tmp.217;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_180_12_185_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_end:
+        %tmp.198 = true;
+        symbol [ sendTargPwr ? 184 16 27 ];
+        putv self :sendTargPwr %tmp.198;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_180_12_185_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_179_12_185_12_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 187 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_stmt:
-        %tmp.219 = getv ? :deviceNumber;
-        %tmp.220 = 0;
-        %tmp.221 = eq %tmp.219 %tmp.220;
-        bf %tmp.221 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_188_12_190_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_stmt:
+        symbol [ deviceNumber %tmp.200 187 15 27 ];
+        %tmp.200 = getv ? :deviceNumber;
+        %tmp.201 = 0;
+        %tmp.202 = eq %tmp.200 %tmp.201;
+        bf %tmp.202 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_188_12_190_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 189 16 ]
-        %tmp.223 = getv ? :GenericChannel;
-        %tmp.224 = getv function %tmp.223 :getDeviceConfig;
-        %tmp.225 = invoke %tmp.223 %tmp.224();
-        %tmp.226 = getv %tmp.225 :deviceNumber;
-        putv self :deviceNumber %tmp.226;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_188_12_190_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_end:
+        symbol [ GenericChannel %tmp.204 189 31 45 ];
+        %tmp.204 = getv ? :GenericChannel;
+        symbol [ getDeviceConfig %tmp.205 189 46 61 ];
+        %tmp.205 = getv function %tmp.204 :getDeviceConfig;
+        %tmp.206 = invoke %tmp.204 %tmp.205();
+        symbol [ deviceNumber %tmp.207 189 64 76 ];
+        %tmp.207 = getv %tmp.206 :deviceNumber;
+        symbol [ deviceNumber ? 189 16 28 ];
+        putv self :deviceNumber %tmp.207;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_188_12_190_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_187_12_190_12_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 192 12 ]
-        %tmp.228 = lgetv %dataType.3;
-        push %tmp.228;
-        switch %tmp.228 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtBegin:
+        %tmp.208 = lgetv %dataType.3;
+        symbol [ dataType %tmp.208 192 19 27 ];
+        push %tmp.208;
+        switch %tmp.208 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtBegin:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 193 16 ]
-        %tmp.229 = dup %tmp.228;
-        %tmp.230 = 0x10;
-        %tmp.231 = getv function %tmp.229 :equals;
-        %tmp.232 = invoke %tmp.229 %tmp.231 (%tmp.230);
-        bt %tmp.232 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_193_16_195_25_switchCase;
+        %tmp.209 = dup %tmp.208;
+        %tmp.210 = 0x10;
+        %tmp.211 = getv function %tmp.209 :equals;
+        %tmp.212 = invoke %tmp.209 %tmp.211 (%tmp.210);
+        bt %tmp.212 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_193_16_195_25_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 196 16 ]
-        %tmp.233 = dup %tmp.228;
-        %tmp.234 = 0x19;
-        %tmp.235 = getv function %tmp.233 :equals;
-        %tmp.236 = invoke %tmp.233 %tmp.235 (%tmp.234);
-        bt %tmp.236 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_196_16_198_25_switchCase;
+        %tmp.213 = dup %tmp.208;
+        %tmp.214 = 0x19;
+        %tmp.215 = getv function %tmp.213 :equals;
+        %tmp.216 = invoke %tmp.213 %tmp.215 (%tmp.214);
+        bt %tmp.216 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_196_16_198_25_switchCase;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 199 16 ]
-        %tmp.237 = dup %tmp.228;
-        %tmp.238 = 0x50;
-        %tmp.239 = getv function %tmp.237 :equals;
-        %tmp.240 = invoke %tmp.237 %tmp.239 (%tmp.238);
-        bt %tmp.240 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_199_16_203_25_switchCase;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtDefault:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_defaultCodeBegin;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_193_16_195_25_switchCase:
+        %tmp.217 = dup %tmp.208;
+        %tmp.218 = 0x50;
+        %tmp.219 = getv function %tmp.217 :equals;
+        %tmp.220 = invoke %tmp.217 %tmp.219 (%tmp.218);
+        bt %tmp.220 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_199_16_203_25_switchCase;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtDefault:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_defaultCodeBegin;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_193_16_195_25_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 194 20 ]
-        %tmp.242 = lgetv %payload.1;
-        %tmp.243 = 4;
-        %tmp.244 = agetv %tmp.242 %tmp.243;
-        %tmp.246 = lgetv %payload.1;
-        %tmp.247 = 5;
-        %tmp.248 = agetv %tmp.246 %tmp.247;
-        %tmp.249 = 256;
-        %tmp.250 = mul %tmp.248 %tmp.249;
-        %tmp.251 = add %tmp.244 %tmp.250;
-        %tmp.252 = 3.6;
-        %tmp.253 = mul %tmp.251 %tmp.252;
-        %tmp.254 = 1000;
-        %tmp.255 = div %tmp.253 %tmp.254;
-        putv self :fecSpeed %tmp.255;
+        %tmp.221 = lgetv %payload.1;
+        symbol [ payload %tmp.221 194 32 39 ];
+        %tmp.222 = 4;
+        %tmp.223 = agetv %tmp.221 %tmp.222;
+        %tmp.224 = lgetv %payload.1;
+        symbol [ payload %tmp.224 194 45 52 ];
+        %tmp.225 = 5;
+        %tmp.226 = agetv %tmp.224 %tmp.225;
+        %tmp.227 = 256;
+        %tmp.228 = mul %tmp.226 %tmp.227;
+        %tmp.229 = add %tmp.223 %tmp.228;
+        %tmp.230 = 3.6;
+        %tmp.231 = mul %tmp.229 %tmp.230;
+        %tmp.232 = 1000;
+        %tmp.233 = div %tmp.231 %tmp.232;
+        symbol [ fecSpeed ? 194 20 28 ];
+        putv self :fecSpeed %tmp.233;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 195 20 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_196_16_198_25_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_196_16_198_25_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 197 20 ]
-        %tmp.257 = lgetv %payload.1;
-        %tmp.258 = 5;
-        %tmp.259 = agetv %tmp.257 %tmp.258;
-        %tmp.261 = lgetv %payload.1;
-        %tmp.262 = 6;
-        %tmp.263 = agetv %tmp.261 %tmp.262;
-        %tmp.264 = 0x0F;
-        %tmp.265 = bitand %tmp.263 %tmp.264;
-        %tmp.266 = 256;
-        %tmp.267 = mul %tmp.265 %tmp.266;
-        %tmp.268 = add %tmp.259 %tmp.267;
-        putv self :instPower %tmp.268;
+        %tmp.234 = lgetv %payload.1;
+        symbol [ payload %tmp.234 197 32 39 ];
+        %tmp.235 = 5;
+        %tmp.236 = agetv %tmp.234 %tmp.235;
+        %tmp.237 = lgetv %payload.1;
+        symbol [ payload %tmp.237 197 46 53 ];
+        %tmp.238 = 6;
+        %tmp.239 = agetv %tmp.237 %tmp.238;
+        %tmp.240 = 0x0F;
+        %tmp.241 = bitand %tmp.239 %tmp.240;
+        %tmp.242 = 256;
+        %tmp.243 = mul %tmp.241 %tmp.242;
+        %tmp.244 = add %tmp.236 %tmp.243;
+        symbol [ instPower ? 197 20 29 ];
+        putv self :instPower %tmp.244;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 198 20 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_199_16_203_25_switchCase:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_199_16_203_25_switchCase:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 200 8 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_stmt:
-        %tmp.270 = getv ? :deviceMfg;
-        %tmp.272 = lgetv %payload.1;
-        %tmp.273 = 4;
-        %tmp.274 = agetv %tmp.272 %tmp.273;
-        %tmp.275 = ne %tmp.270 %tmp.274;
-        bf %tmp.275 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_37_202_20_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_stmt:
+        symbol [ deviceMfg %tmp.246 200 12 21 ];
+        %tmp.246 = getv ? :deviceMfg;
+        %tmp.247 = lgetv %payload.1;
+        symbol [ payload %tmp.247 200 25 32 ];
+        %tmp.248 = 4;
+        %tmp.249 = agetv %tmp.247 %tmp.248;
+        %tmp.250 = ne %tmp.246 %tmp.249;
+        bf %tmp.250 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_37_202_20_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 201 15 ]
-        %tmp.277 = lgetv %payload.1;
-        %tmp.278 = 4;
-        %tmp.279 = agetv %tmp.277 %tmp.278;
-        putv self :deviceMfg %tmp.279;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_37_202_20_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_end:
+        %tmp.251 = lgetv %payload.1;
+        symbol [ payload %tmp.251 201 27 34 ];
+        %tmp.252 = 4;
+        %tmp.253 = agetv %tmp.251 %tmp.252;
+        symbol [ deviceMfg ? 201 15 24 ];
+        putv self :deviceMfg %tmp.253;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_37_202_20_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_200_8_202_20_if_end:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 203 20 ]
-        goto break @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_defaultCodeBegin:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd:
+        goto break @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_defaultCodeBegin:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_192_12_204_12_switchStmtEnd:
         pop;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 206 12 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_16_206_68_begin:
-        %tmp.281 = getv ? :sendTargPwr;
-        bf %tmp.281 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_32_206_67_begin:
-        %tmp.283 = getv ? :unConfirmed;
-        %tmp.284 = 0;
-        %tmp.285 = eq %tmp.283 %tmp.284;
-        bt %tmp.285 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_true;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_false:
-        %tmp.287 = getv ? :unConfirmed;
-        %tmp.288 = 1;
-        %tmp.289 = eq %tmp.287 %tmp.288;
-        push %tmp.289;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_end:
-        %tmp.290 = phi [%tmp.285 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_32_206_67_begin] [%tmp.289 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_false] [%tmp.290 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_end];
-        push %tmp.290;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_end:
-        %tmp.291 = phi [%tmp.281 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_16_206_68_begin] [%tmp.290 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_true] [%tmp.291 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_end];
-        bf %tmp.291 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_71_218_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_16_206_68_begin:
+        symbol [ sendTargPwr %tmp.255 206 16 27 ];
+        %tmp.255 = getv ? :sendTargPwr;
+        bf %tmp.255 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_32_206_67_begin:
+        symbol [ unConfirmed %tmp.257 206 32 43 ];
+        %tmp.257 = getv ? :unConfirmed;
+        %tmp.258 = 0;
+        %tmp.259 = eq %tmp.257 %tmp.258;
+        bt %tmp.259 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_true;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_false:
+        symbol [ unConfirmed %tmp.261 206 52 63 ];
+        %tmp.261 = getv ? :unConfirmed;
+        %tmp.262 = 1;
+        %tmp.263 = eq %tmp.261 %tmp.262;
+        push %tmp.263;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_end:
+        %tmp.264 = phi [%tmp.259 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_32_206_67_begin] [%tmp.263 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_false] [%tmp.264 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_52_206_67_end];
+        push %tmp.264;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_end:
+        %tmp.265 = phi [%tmp.255 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_16_206_68_begin] [%tmp.264 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_true] [%tmp.265 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_31_206_68_end];
+        bf %tmp.265 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_71_218_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 207 16 ]
-        %tmp.292 = lgetv %ackload.4;
-        %tmp.293 = 0x31;
-        %tmp.294 = 0;
-        aputv %tmp.292 %tmp.294 %tmp.293;
+        %tmp.266 = lgetv %ackload.4;
+        symbol [ ackload %tmp.266 207 16 23 ];
+        %tmp.267 = 0x31;
+        %tmp.268 = 0;
+        aputv %tmp.266 %tmp.268 %tmp.267;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 208 16 ]
-        %tmp.295 = lgetv %ackload.4;
-        %tmp.296 = 0xFF;
-        %tmp.297 = 1;
-        aputv %tmp.295 %tmp.297 %tmp.296;
+        %tmp.269 = lgetv %ackload.4;
+        symbol [ ackload %tmp.269 208 16 23 ];
+        %tmp.270 = 0xFF;
+        %tmp.271 = 1;
+        aputv %tmp.269 %tmp.271 %tmp.270;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 209 16 ]
-        %tmp.298 = lgetv %ackload.4;
-        %tmp.299 = 0xFF;
-        %tmp.300 = 2;
-        aputv %tmp.298 %tmp.300 %tmp.299;
+        %tmp.272 = lgetv %ackload.4;
+        symbol [ ackload %tmp.272 209 16 23 ];
+        %tmp.273 = 0xFF;
+        %tmp.274 = 2;
+        aputv %tmp.272 %tmp.274 %tmp.273;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 210 16 ]
-        %tmp.301 = lgetv %ackload.4;
-        %tmp.302 = 0xFF;
-        %tmp.303 = 3;
-        aputv %tmp.301 %tmp.303 %tmp.302;
+        %tmp.275 = lgetv %ackload.4;
+        symbol [ ackload %tmp.275 210 16 23 ];
+        %tmp.276 = 0xFF;
+        %tmp.277 = 3;
+        aputv %tmp.275 %tmp.277 %tmp.276;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 211 16 ]
-        %tmp.304 = lgetv %ackload.4;
-        %tmp.305 = 0xFF;
-        %tmp.306 = 4;
-        aputv %tmp.304 %tmp.306 %tmp.305;
+        %tmp.278 = lgetv %ackload.4;
+        symbol [ ackload %tmp.278 211 16 23 ];
+        %tmp.279 = 0xFF;
+        %tmp.280 = 4;
+        aputv %tmp.278 %tmp.280 %tmp.279;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 212 16 ]
-        %tmp.307 = lgetv %ackload.4;
-        %tmp.308 = 0xFF;
-        %tmp.309 = 5;
-        aputv %tmp.307 %tmp.309 %tmp.308;
+        %tmp.281 = lgetv %ackload.4;
+        symbol [ ackload %tmp.281 212 16 23 ];
+        %tmp.282 = 0xFF;
+        %tmp.283 = 5;
+        aputv %tmp.281 %tmp.283 %tmp.282;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 213 16 ]
-        %tmp.310 = lgetv %ackload.4;
-        %tmp.312 = getv ? :targPower;
-        %tmp.313 = 4;
-        %tmp.314 = mul %tmp.312 %tmp.313;
-        %tmp.315 = 256;
-        %tmp.316 = mod %tmp.314 %tmp.315;
-        %tmp.317 = 6;
-        aputv %tmp.310 %tmp.317 %tmp.316;
+        %tmp.284 = lgetv %ackload.4;
+        symbol [ ackload %tmp.284 213 16 23 ];
+        symbol [ targPower %tmp.286 213 30 39 ];
+        %tmp.286 = getv ? :targPower;
+        %tmp.287 = 4;
+        %tmp.288 = mul %tmp.286 %tmp.287;
+        %tmp.289 = 256;
+        %tmp.290 = mod %tmp.288 %tmp.289;
+        %tmp.291 = 6;
+        aputv %tmp.284 %tmp.291 %tmp.290;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 214 16 ]
-        %tmp.318 = lgetv %ackload.4;
-        %tmp.320 = getv ? :targPower;
-        %tmp.321 = 4;
-        %tmp.322 = mul %tmp.320 %tmp.321;
-        %tmp.323 = 256;
-        %tmp.324 = div %tmp.322 %tmp.323;
-        %tmp.325 = 7;
-        aputv %tmp.318 %tmp.325 %tmp.324;
+        %tmp.292 = lgetv %ackload.4;
+        symbol [ ackload %tmp.292 214 16 23 ];
+        symbol [ targPower %tmp.294 214 30 39 ];
+        %tmp.294 = getv ? :targPower;
+        %tmp.295 = 4;
+        %tmp.296 = mul %tmp.294 %tmp.295;
+        %tmp.297 = 256;
+        %tmp.298 = div %tmp.296 %tmp.297;
+        %tmp.299 = 7;
+        aputv %tmp.292 %tmp.299 %tmp.298;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 215 16 ]
-        %tmp.326 = lgetv %message.5;
-        %tmp.327 = getv function %tmp.326 :setPayload;
-        %tmp.329 = lgetv %ackload.4;
-        invoke %tmp.326 %tmp.327(%tmp.329);
+        %tmp.300 = lgetv %message.5;
+        symbol [ message %tmp.300 215 16 23 ];
+        symbol [ setPayload %tmp.301 215 24 34 ];
+        %tmp.301 = getv function %tmp.300 :setPayload;
+        %tmp.302 = lgetv %ackload.4;
+        symbol [ ackload %tmp.302 215 35 42 ];
+        invoke %tmp.300 %tmp.301(%tmp.302);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 216 16 ]
-        %tmp.331 = getv ? :GenericChannel;
-        %tmp.332 = getv function %tmp.331 :sendAcknowledge;
-        %tmp.334 = lgetv %message.5;
-        invoke %tmp.331 %tmp.332(%tmp.334);
+        symbol [ GenericChannel %tmp.304 216 16 30 ];
+        %tmp.304 = getv ? :GenericChannel;
+        symbol [ sendAcknowledge %tmp.305 216 31 46 ];
+        %tmp.305 = getv function %tmp.304 :sendAcknowledge;
+        %tmp.306 = lgetv %message.5;
+        symbol [ message %tmp.306 216 47 54 ];
+        invoke %tmp.304 %tmp.305(%tmp.306);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 217 16 ]
-        %tmp.335 = 1;
-        putv self :unConfirmed %tmp.335;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_71_218_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_false:
+        %tmp.307 = 1;
+        symbol [ unConfirmed ? 217 16 27 ];
+        putv self :unConfirmed %tmp.307;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_71_218_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 219 17 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_21_219_72_begin:
-        %tmp.337 = getv ? :sendBasRst;
-        bf %tmp.337 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_36_219_71_begin:
-        %tmp.339 = getv ? :unConfirmed;
-        %tmp.340 = 0;
-        %tmp.341 = eq %tmp.339 %tmp.340;
-        bt %tmp.341 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_true;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_false:
-        %tmp.343 = getv ? :unConfirmed;
-        %tmp.344 = 2;
-        %tmp.345 = eq %tmp.343 %tmp.344;
-        push %tmp.345;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_end:
-        %tmp.346 = phi [%tmp.341 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_36_219_71_begin] [%tmp.345 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_false] [%tmp.346 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_end];
-        push %tmp.346;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_end:
-        %tmp.347 = phi [%tmp.337 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_21_219_72_begin] [%tmp.346 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_true] [%tmp.347 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_end];
-        bf %tmp.347 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_75_231_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_21_219_72_begin:
+        symbol [ sendBasRst %tmp.309 219 21 31 ];
+        %tmp.309 = getv ? :sendBasRst;
+        bf %tmp.309 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_36_219_71_begin:
+        symbol [ unConfirmed %tmp.311 219 36 47 ];
+        %tmp.311 = getv ? :unConfirmed;
+        %tmp.312 = 0;
+        %tmp.313 = eq %tmp.311 %tmp.312;
+        bt %tmp.313 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_true;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_false:
+        symbol [ unConfirmed %tmp.315 219 56 67 ];
+        %tmp.315 = getv ? :unConfirmed;
+        %tmp.316 = 2;
+        %tmp.317 = eq %tmp.315 %tmp.316;
+        push %tmp.317;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_end:
+        %tmp.318 = phi [%tmp.313 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_36_219_71_begin] [%tmp.317 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_false] [%tmp.318 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_56_219_71_end];
+        push %tmp.318;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_end:
+        %tmp.319 = phi [%tmp.309 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_21_219_72_begin] [%tmp.318 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_true] [%tmp.319 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_35_219_72_end];
+        bf %tmp.319 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_75_231_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 220 16 ]
-        %tmp.348 = lgetv %ackload.4;
-        %tmp.349 = 0x30;
-        %tmp.350 = 0;
-        aputv %tmp.348 %tmp.350 %tmp.349;
+        %tmp.320 = lgetv %ackload.4;
+        symbol [ ackload %tmp.320 220 16 23 ];
+        %tmp.321 = 0x30;
+        %tmp.322 = 0;
+        aputv %tmp.320 %tmp.322 %tmp.321;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 221 16 ]
-        %tmp.351 = lgetv %ackload.4;
-        %tmp.352 = 0xFF;
-        %tmp.353 = 1;
-        aputv %tmp.351 %tmp.353 %tmp.352;
+        %tmp.323 = lgetv %ackload.4;
+        symbol [ ackload %tmp.323 221 16 23 ];
+        %tmp.324 = 0xFF;
+        %tmp.325 = 1;
+        aputv %tmp.323 %tmp.325 %tmp.324;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 222 16 ]
-        %tmp.354 = lgetv %ackload.4;
-        %tmp.355 = 0xFF;
-        %tmp.356 = 2;
-        aputv %tmp.354 %tmp.356 %tmp.355;
+        %tmp.326 = lgetv %ackload.4;
+        symbol [ ackload %tmp.326 222 16 23 ];
+        %tmp.327 = 0xFF;
+        %tmp.328 = 2;
+        aputv %tmp.326 %tmp.328 %tmp.327;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 223 16 ]
-        %tmp.357 = lgetv %ackload.4;
-        %tmp.358 = 0xFF;
-        %tmp.359 = 3;
-        aputv %tmp.357 %tmp.359 %tmp.358;
+        %tmp.329 = lgetv %ackload.4;
+        symbol [ ackload %tmp.329 223 16 23 ];
+        %tmp.330 = 0xFF;
+        %tmp.331 = 3;
+        aputv %tmp.329 %tmp.331 %tmp.330;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 224 16 ]
-        %tmp.360 = lgetv %ackload.4;
-        %tmp.361 = 0xFF;
-        %tmp.362 = 4;
-        aputv %tmp.360 %tmp.362 %tmp.361;
+        %tmp.332 = lgetv %ackload.4;
+        symbol [ ackload %tmp.332 224 16 23 ];
+        %tmp.333 = 0xFF;
+        %tmp.334 = 4;
+        aputv %tmp.332 %tmp.334 %tmp.333;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 225 16 ]
-        %tmp.363 = lgetv %ackload.4;
-        %tmp.364 = 0xFF;
-        %tmp.365 = 5;
-        aputv %tmp.363 %tmp.365 %tmp.364;
+        %tmp.335 = lgetv %ackload.4;
+        symbol [ ackload %tmp.335 225 16 23 ];
+        %tmp.336 = 0xFF;
+        %tmp.337 = 5;
+        aputv %tmp.335 %tmp.337 %tmp.336;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 226 16 ]
-        %tmp.366 = lgetv %ackload.4;
-        %tmp.367 = 0xFF;
-        %tmp.368 = 6;
-        aputv %tmp.366 %tmp.368 %tmp.367;
+        %tmp.338 = lgetv %ackload.4;
+        symbol [ ackload %tmp.338 226 16 23 ];
+        %tmp.339 = 0xFF;
+        %tmp.340 = 6;
+        aputv %tmp.338 %tmp.340 %tmp.339;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 227 16 ]
-        %tmp.369 = lgetv %ackload.4;
-        %tmp.371 = getv ? :basicResist;
-        %tmp.372 = 2;
-        %tmp.373 = mul %tmp.371 %tmp.372;
-        %tmp.374 = 7;
-        aputv %tmp.369 %tmp.374 %tmp.373;
+        %tmp.341 = lgetv %ackload.4;
+        symbol [ ackload %tmp.341 227 16 23 ];
+        symbol [ basicResist %tmp.343 227 29 40 ];
+        %tmp.343 = getv ? :basicResist;
+        %tmp.344 = 2;
+        %tmp.345 = mul %tmp.343 %tmp.344;
+        %tmp.346 = 7;
+        aputv %tmp.341 %tmp.346 %tmp.345;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 228 16 ]
-        %tmp.375 = lgetv %message.5;
-        %tmp.376 = getv function %tmp.375 :setPayload;
-        %tmp.378 = lgetv %ackload.4;
-        invoke %tmp.375 %tmp.376(%tmp.378);
+        %tmp.347 = lgetv %message.5;
+        symbol [ message %tmp.347 228 16 23 ];
+        symbol [ setPayload %tmp.348 228 24 34 ];
+        %tmp.348 = getv function %tmp.347 :setPayload;
+        %tmp.349 = lgetv %ackload.4;
+        symbol [ ackload %tmp.349 228 35 42 ];
+        invoke %tmp.347 %tmp.348(%tmp.349);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 229 16 ]
-        %tmp.380 = getv ? :GenericChannel;
-        %tmp.381 = getv function %tmp.380 :sendAcknowledge;
-        %tmp.383 = lgetv %message.5;
-        invoke %tmp.380 %tmp.381(%tmp.383);
+        symbol [ GenericChannel %tmp.351 229 16 30 ];
+        %tmp.351 = getv ? :GenericChannel;
+        symbol [ sendAcknowledge %tmp.352 229 31 46 ];
+        %tmp.352 = getv function %tmp.351 :sendAcknowledge;
+        %tmp.353 = lgetv %message.5;
+        symbol [ message %tmp.353 229 47 54 ];
+        invoke %tmp.351 %tmp.352(%tmp.353);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 230 16 ]
-        %tmp.384 = 2;
-        putv self :unConfirmed %tmp.384;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_75_231_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_false:
+        %tmp.354 = 2;
+        symbol [ unConfirmed ? 230 16 27 ];
+        putv self :unConfirmed %tmp.354;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_75_231_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 232 17 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_21_232_70_begin:
-        %tmp.386 = getv ? :sendUser;
-        bf %tmp.386 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_34_232_69_begin:
-        %tmp.388 = getv ? :unConfirmed;
-        %tmp.389 = 0;
-        %tmp.390 = eq %tmp.388 %tmp.389;
-        bt %tmp.390 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_true;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_false:
-        %tmp.392 = getv ? :unConfirmed;
-        %tmp.393 = 3;
-        %tmp.394 = eq %tmp.392 %tmp.393;
-        push %tmp.394;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_end:
-        %tmp.395 = phi [%tmp.390 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_34_232_69_begin] [%tmp.394 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_false] [%tmp.395 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_end];
-        push %tmp.395;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_end:
-        %tmp.396 = phi [%tmp.386 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_21_232_70_begin] [%tmp.395 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_true] [%tmp.396 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_end];
-        bf %tmp.396 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_73_244_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_21_232_70_begin:
+        symbol [ sendUser %tmp.356 232 21 29 ];
+        %tmp.356 = getv ? :sendUser;
+        bf %tmp.356 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_34_232_69_begin:
+        symbol [ unConfirmed %tmp.358 232 34 45 ];
+        %tmp.358 = getv ? :unConfirmed;
+        %tmp.359 = 0;
+        %tmp.360 = eq %tmp.358 %tmp.359;
+        bt %tmp.360 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_true;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_false:
+        symbol [ unConfirmed %tmp.362 232 54 65 ];
+        %tmp.362 = getv ? :unConfirmed;
+        %tmp.363 = 3;
+        %tmp.364 = eq %tmp.362 %tmp.363;
+        push %tmp.364;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_end:
+        %tmp.365 = phi [%tmp.360 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_34_232_69_begin] [%tmp.364 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_false] [%tmp.365 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_54_232_69_end];
+        push %tmp.365;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_end:
+        %tmp.366 = phi [%tmp.356 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_21_232_70_begin] [%tmp.365 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_true] [%tmp.366 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_33_232_70_end];
+        bf %tmp.366 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_73_244_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 233 16 ]
-        %tmp.397 = lgetv %ackload.4;
-        %tmp.398 = 0x37;
-        %tmp.399 = 0;
-        aputv %tmp.397 %tmp.399 %tmp.398;
+        %tmp.367 = lgetv %ackload.4;
+        symbol [ ackload %tmp.367 233 16 23 ];
+        %tmp.368 = 0x37;
+        %tmp.369 = 0;
+        aputv %tmp.367 %tmp.369 %tmp.368;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 234 16 ]
-        %tmp.400 = lgetv %ackload.4;
-        %tmp.401 = 100;
-        %tmp.403 = getv ? :userWt;
-        %tmp.404 = mul %tmp.401 %tmp.403;
-        %tmp.405 = getv function %tmp.404 :toNumber;
-        %tmp.406 = invoke %tmp.404 %tmp.405();
-        %tmp.407 = 0xFF;
-        %tmp.408 = bitand %tmp.406 %tmp.407;
-        %tmp.409 = 1;
-        aputv %tmp.400 %tmp.409 %tmp.408;
+        %tmp.370 = lgetv %ackload.4;
+        symbol [ ackload %tmp.370 234 16 23 ];
+        %tmp.371 = 100;
+        symbol [ userWt %tmp.373 234 36 42 ];
+        %tmp.373 = getv ? :userWt;
+        %tmp.374 = mul %tmp.371 %tmp.373;
+        symbol [ toNumber %tmp.375 234 44 52 ];
+        %tmp.375 = getv function %tmp.374 :toNumber;
+        %tmp.376 = invoke %tmp.374 %tmp.375();
+        %tmp.377 = 0xFF;
+        %tmp.378 = bitand %tmp.376 %tmp.377;
+        %tmp.379 = 1;
+        aputv %tmp.370 %tmp.379 %tmp.378;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 235 16 ]
-        %tmp.410 = lgetv %ackload.4;
-        %tmp.411 = 100;
-        %tmp.413 = getv ? :userWt;
-        %tmp.414 = mul %tmp.411 %tmp.413;
-        %tmp.415 = getv function %tmp.414 :toNumber;
-        %tmp.416 = invoke %tmp.414 %tmp.415();
-        %tmp.417 = 256;
-        %tmp.418 = div %tmp.416 %tmp.417;
-        %tmp.419 = 0xFF;
-        %tmp.420 = bitand %tmp.418 %tmp.419;
-        %tmp.421 = 2;
-        aputv %tmp.410 %tmp.421 %tmp.420;
+        %tmp.380 = lgetv %ackload.4;
+        symbol [ ackload %tmp.380 235 16 23 ];
+        %tmp.381 = 100;
+        symbol [ userWt %tmp.383 235 37 43 ];
+        %tmp.383 = getv ? :userWt;
+        %tmp.384 = mul %tmp.381 %tmp.383;
+        symbol [ toNumber %tmp.385 235 45 53 ];
+        %tmp.385 = getv function %tmp.384 :toNumber;
+        %tmp.386 = invoke %tmp.384 %tmp.385();
+        %tmp.387 = 256;
+        %tmp.388 = div %tmp.386 %tmp.387;
+        %tmp.389 = 0xFF;
+        %tmp.390 = bitand %tmp.388 %tmp.389;
+        %tmp.391 = 2;
+        aputv %tmp.380 %tmp.391 %tmp.390;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 236 16 ]
-        %tmp.422 = lgetv %ackload.4;
-        %tmp.423 = 0xFF;
-        %tmp.424 = 3;
-        aputv %tmp.422 %tmp.424 %tmp.423;
+        %tmp.392 = lgetv %ackload.4;
+        symbol [ ackload %tmp.392 236 16 23 ];
+        %tmp.393 = 0xFF;
+        %tmp.394 = 3;
+        aputv %tmp.392 %tmp.394 %tmp.393;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 237 16 ]
-        %tmp.425 = lgetv %ackload.4;
-        %tmp.427 = getv ? :bikeWt;
-        %tmp.428 = 20;
-        %tmp.429 = mul %tmp.427 %tmp.428;
-        %tmp.430 = getv function %tmp.429 :toNumber;
-        %tmp.431 = invoke %tmp.429 %tmp.430();
-        %tmp.432 = 0x0F;
-        %tmp.433 = bitand %tmp.431 %tmp.432;
-        %tmp.434 = 16;
-        %tmp.435 = mul %tmp.433 %tmp.434;
-        %tmp.436 = 4;
-        aputv %tmp.425 %tmp.436 %tmp.435;
+        %tmp.395 = lgetv %ackload.4;
+        symbol [ ackload %tmp.395 237 16 23 ];
+        symbol [ bikeWt %tmp.397 237 31 37 ];
+        %tmp.397 = getv ? :bikeWt;
+        %tmp.398 = 20;
+        %tmp.399 = mul %tmp.397 %tmp.398;
+        symbol [ toNumber %tmp.400 237 44 52 ];
+        %tmp.400 = getv function %tmp.399 :toNumber;
+        %tmp.401 = invoke %tmp.399 %tmp.400();
+        %tmp.402 = 0x0F;
+        %tmp.403 = bitand %tmp.401 %tmp.402;
+        %tmp.404 = 16;
+        %tmp.405 = mul %tmp.403 %tmp.404;
+        %tmp.406 = 4;
+        aputv %tmp.395 %tmp.406 %tmp.405;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 238 16 ]
-        %tmp.437 = lgetv %ackload.4;
-        %tmp.439 = getv ? :bikeWt;
-        %tmp.440 = 20;
-        %tmp.441 = mul %tmp.439 %tmp.440;
-        %tmp.442 = getv function %tmp.441 :toNumber;
-        %tmp.443 = invoke %tmp.441 %tmp.442();
-        %tmp.444 = 16;
-        %tmp.445 = div %tmp.443 %tmp.444;
-        %tmp.446 = 0xFF;
-        %tmp.447 = bitand %tmp.445 %tmp.446;
-        %tmp.448 = 5;
-        aputv %tmp.437 %tmp.448 %tmp.447;
+        %tmp.407 = lgetv %ackload.4;
+        symbol [ ackload %tmp.407 238 16 23 ];
+        symbol [ bikeWt %tmp.409 238 31 37 ];
+        %tmp.409 = getv ? :bikeWt;
+        %tmp.410 = 20;
+        %tmp.411 = mul %tmp.409 %tmp.410;
+        symbol [ toNumber %tmp.412 238 44 52 ];
+        %tmp.412 = getv function %tmp.411 :toNumber;
+        %tmp.413 = invoke %tmp.411 %tmp.412();
+        %tmp.414 = 16;
+        %tmp.415 = div %tmp.413 %tmp.414;
+        %tmp.416 = 0xFF;
+        %tmp.417 = bitand %tmp.415 %tmp.416;
+        %tmp.418 = 5;
+        aputv %tmp.407 %tmp.418 %tmp.417;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 239 16 ]
-        %tmp.449 = lgetv %ackload.4;
-        %tmp.450 = 0x46;
-        %tmp.451 = 6;
-        aputv %tmp.449 %tmp.451 %tmp.450;
+        %tmp.419 = lgetv %ackload.4;
+        symbol [ ackload %tmp.419 239 16 23 ];
+        %tmp.420 = 0x46;
+        %tmp.421 = 6;
+        aputv %tmp.419 %tmp.421 %tmp.420;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 240 16 ]
-        %tmp.452 = lgetv %ackload.4;
-        %tmp.453 = 0x00;
-        %tmp.454 = 7;
-        aputv %tmp.452 %tmp.454 %tmp.453;
+        %tmp.422 = lgetv %ackload.4;
+        symbol [ ackload %tmp.422 240 16 23 ];
+        %tmp.423 = 0x00;
+        %tmp.424 = 7;
+        aputv %tmp.422 %tmp.424 %tmp.423;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 241 16 ]
-        %tmp.455 = lgetv %message.5;
-        %tmp.456 = getv function %tmp.455 :setPayload;
-        %tmp.458 = lgetv %ackload.4;
-        invoke %tmp.455 %tmp.456(%tmp.458);
+        %tmp.425 = lgetv %message.5;
+        symbol [ message %tmp.425 241 16 23 ];
+        symbol [ setPayload %tmp.426 241 24 34 ];
+        %tmp.426 = getv function %tmp.425 :setPayload;
+        %tmp.427 = lgetv %ackload.4;
+        symbol [ ackload %tmp.427 241 35 42 ];
+        invoke %tmp.425 %tmp.426(%tmp.427);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 242 16 ]
-        %tmp.460 = getv ? :GenericChannel;
-        %tmp.461 = getv function %tmp.460 :sendAcknowledge;
-        %tmp.463 = lgetv %message.5;
-        invoke %tmp.460 %tmp.461(%tmp.463);
+        symbol [ GenericChannel %tmp.429 242 16 30 ];
+        %tmp.429 = getv ? :GenericChannel;
+        symbol [ sendAcknowledge %tmp.430 242 31 46 ];
+        %tmp.430 = getv function %tmp.429 :sendAcknowledge;
+        %tmp.431 = lgetv %message.5;
+        symbol [ message %tmp.431 242 47 54 ];
+        invoke %tmp.429 %tmp.430(%tmp.431);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 243 16 ]
-        %tmp.464 = 3;
-        putv self :unConfirmed %tmp.464;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_73_244_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_false:
+        %tmp.432 = 3;
+        symbol [ unConfirmed ? 243 16 27 ];
+        putv self :unConfirmed %tmp.432;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_73_244_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 245 17 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_21_245_70_begin:
-        %tmp.466 = getv ? :sendWind;
-        bf %tmp.466 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_34_245_69_begin:
-        %tmp.468 = getv ? :unConfirmed;
-        %tmp.469 = 0;
-        %tmp.470 = eq %tmp.468 %tmp.469;
-        bt %tmp.470 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_true;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_false:
-        %tmp.472 = getv ? :unConfirmed;
-        %tmp.473 = 4;
-        %tmp.474 = eq %tmp.472 %tmp.473;
-        push %tmp.474;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_end:
-        %tmp.475 = phi [%tmp.470 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_34_245_69_begin] [%tmp.474 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_false] [%tmp.475 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_end];
-        push %tmp.475;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_end:
-        %tmp.476 = phi [%tmp.466 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_21_245_70_begin] [%tmp.475 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_true] [%tmp.476 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_end];
-        bf %tmp.476 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_false;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_73_257_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_21_245_70_begin:
+        symbol [ sendWind %tmp.434 245 21 29 ];
+        %tmp.434 = getv ? :sendWind;
+        bf %tmp.434 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_34_245_69_begin:
+        symbol [ unConfirmed %tmp.436 245 34 45 ];
+        %tmp.436 = getv ? :unConfirmed;
+        %tmp.437 = 0;
+        %tmp.438 = eq %tmp.436 %tmp.437;
+        bt %tmp.438 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_true;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_false:
+        symbol [ unConfirmed %tmp.440 245 54 65 ];
+        %tmp.440 = getv ? :unConfirmed;
+        %tmp.441 = 4;
+        %tmp.442 = eq %tmp.440 %tmp.441;
+        push %tmp.442;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_end:
+        %tmp.443 = phi [%tmp.438 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_34_245_69_begin] [%tmp.442 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_false] [%tmp.443 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_54_245_69_end];
+        push %tmp.443;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_end:
+        %tmp.444 = phi [%tmp.434 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_21_245_70_begin] [%tmp.443 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_true] [%tmp.444 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_33_245_70_end];
+        bf %tmp.444 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_false;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_73_257_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 246 16 ]
-        %tmp.477 = lgetv %ackload.4;
-        %tmp.478 = 0x32;
-        %tmp.479 = 0;
-        aputv %tmp.477 %tmp.479 %tmp.478;
+        %tmp.445 = lgetv %ackload.4;
+        symbol [ ackload %tmp.445 246 16 23 ];
+        %tmp.446 = 0x32;
+        %tmp.447 = 0;
+        aputv %tmp.445 %tmp.447 %tmp.446;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 247 16 ]
-        %tmp.480 = lgetv %ackload.4;
-        %tmp.481 = 0xFF;
-        %tmp.482 = 1;
-        aputv %tmp.480 %tmp.482 %tmp.481;
+        %tmp.448 = lgetv %ackload.4;
+        symbol [ ackload %tmp.448 247 16 23 ];
+        %tmp.449 = 0xFF;
+        %tmp.450 = 1;
+        aputv %tmp.448 %tmp.450 %tmp.449;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 248 16 ]
-        %tmp.483 = lgetv %ackload.4;
-        %tmp.484 = 0xFF;
-        %tmp.485 = 2;
-        aputv %tmp.483 %tmp.485 %tmp.484;
+        %tmp.451 = lgetv %ackload.4;
+        symbol [ ackload %tmp.451 248 16 23 ];
+        %tmp.452 = 0xFF;
+        %tmp.453 = 2;
+        aputv %tmp.451 %tmp.453 %tmp.452;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 249 16 ]
-        %tmp.486 = lgetv %ackload.4;
-        %tmp.487 = 0xFF;
-        %tmp.488 = 3;
-        aputv %tmp.486 %tmp.488 %tmp.487;
+        %tmp.454 = lgetv %ackload.4;
+        symbol [ ackload %tmp.454 249 16 23 ];
+        %tmp.455 = 0xFF;
+        %tmp.456 = 3;
+        aputv %tmp.454 %tmp.456 %tmp.455;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 250 16 ]
-        %tmp.489 = lgetv %ackload.4;
-        %tmp.490 = 0xFF;
-        %tmp.491 = 4;
-        aputv %tmp.489 %tmp.491 %tmp.490;
+        %tmp.457 = lgetv %ackload.4;
+        symbol [ ackload %tmp.457 250 16 23 ];
+        %tmp.458 = 0xFF;
+        %tmp.459 = 4;
+        aputv %tmp.457 %tmp.459 %tmp.458;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 251 16 ]
-        %tmp.492 = lgetv %ackload.4;
-        %tmp.494 = getv ? :windCoeff;
-        %tmp.495 = 100;
-        %tmp.496 = mul %tmp.494 %tmp.495;
-        %tmp.497 = getv function %tmp.496 :toNumber;
-        %tmp.498 = invoke %tmp.496 %tmp.497();
-        %tmp.499 = 0xFF;
-        %tmp.500 = bitand %tmp.498 %tmp.499;
-        %tmp.501 = 5;
-        aputv %tmp.492 %tmp.501 %tmp.500;
+        %tmp.460 = lgetv %ackload.4;
+        symbol [ ackload %tmp.460 251 16 23 ];
+        symbol [ windCoeff %tmp.462 251 30 39 ];
+        %tmp.462 = getv ? :windCoeff;
+        %tmp.463 = 100;
+        %tmp.464 = mul %tmp.462 %tmp.463;
+        symbol [ toNumber %tmp.465 251 47 55 ];
+        %tmp.465 = getv function %tmp.464 :toNumber;
+        %tmp.466 = invoke %tmp.464 %tmp.465();
+        %tmp.467 = 0xFF;
+        %tmp.468 = bitand %tmp.466 %tmp.467;
+        %tmp.469 = 5;
+        aputv %tmp.460 %tmp.469 %tmp.468;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 252 16 ]
-        %tmp.502 = lgetv %ackload.4;
-        %tmp.504 = getv ? :windSpeed;
-        %tmp.505 = 127;
-        %tmp.506 = add %tmp.504 %tmp.505;
-        %tmp.507 = getv function %tmp.506 :toNumber;
-        %tmp.508 = invoke %tmp.506 %tmp.507();
-        %tmp.509 = 0xFF;
-        %tmp.510 = bitand %tmp.508 %tmp.509;
-        %tmp.511 = 6;
-        aputv %tmp.502 %tmp.511 %tmp.510;
+        %tmp.470 = lgetv %ackload.4;
+        symbol [ ackload %tmp.470 252 16 23 ];
+        symbol [ windSpeed %tmp.472 252 30 39 ];
+        %tmp.472 = getv ? :windSpeed;
+        %tmp.473 = 127;
+        %tmp.474 = add %tmp.472 %tmp.473;
+        symbol [ toNumber %tmp.475 252 47 55 ];
+        %tmp.475 = getv function %tmp.474 :toNumber;
+        %tmp.476 = invoke %tmp.474 %tmp.475();
+        %tmp.477 = 0xFF;
+        %tmp.478 = bitand %tmp.476 %tmp.477;
+        %tmp.479 = 6;
+        aputv %tmp.470 %tmp.479 %tmp.478;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 253 16 ]
-        %tmp.512 = lgetv %ackload.4;
-        %tmp.514 = getv ? :draftFact;
-        %tmp.515 = 100;
-        %tmp.516 = mul %tmp.514 %tmp.515;
-        %tmp.517 = getv function %tmp.516 :toNumber;
-        %tmp.518 = invoke %tmp.516 %tmp.517();
-        %tmp.519 = 0xFF;
-        %tmp.520 = bitand %tmp.518 %tmp.519;
-        %tmp.521 = 7;
-        aputv %tmp.512 %tmp.521 %tmp.520;
+        %tmp.480 = lgetv %ackload.4;
+        symbol [ ackload %tmp.480 253 16 23 ];
+        symbol [ draftFact %tmp.482 253 30 39 ];
+        %tmp.482 = getv ? :draftFact;
+        %tmp.483 = 100;
+        %tmp.484 = mul %tmp.482 %tmp.483;
+        symbol [ toNumber %tmp.485 253 47 55 ];
+        %tmp.485 = getv function %tmp.484 :toNumber;
+        %tmp.486 = invoke %tmp.484 %tmp.485();
+        %tmp.487 = 0xFF;
+        %tmp.488 = bitand %tmp.486 %tmp.487;
+        %tmp.489 = 7;
+        aputv %tmp.480 %tmp.489 %tmp.488;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 254 16 ]
-        %tmp.522 = lgetv %message.5;
-        %tmp.523 = getv function %tmp.522 :setPayload;
-        %tmp.525 = lgetv %ackload.4;
-        invoke %tmp.522 %tmp.523(%tmp.525);
+        %tmp.490 = lgetv %message.5;
+        symbol [ message %tmp.490 254 16 23 ];
+        symbol [ setPayload %tmp.491 254 24 34 ];
+        %tmp.491 = getv function %tmp.490 :setPayload;
+        %tmp.492 = lgetv %ackload.4;
+        symbol [ ackload %tmp.492 254 35 42 ];
+        invoke %tmp.490 %tmp.491(%tmp.492);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 255 16 ]
-        %tmp.527 = getv ? :GenericChannel;
-        %tmp.528 = getv function %tmp.527 :sendAcknowledge;
-        %tmp.530 = lgetv %message.5;
-        invoke %tmp.527 %tmp.528(%tmp.530);
+        symbol [ GenericChannel %tmp.494 255 16 30 ];
+        %tmp.494 = getv ? :GenericChannel;
+        symbol [ sendAcknowledge %tmp.495 255 31 46 ];
+        %tmp.495 = getv function %tmp.494 :sendAcknowledge;
+        %tmp.496 = lgetv %message.5;
+        symbol [ message %tmp.496 255 47 54 ];
+        invoke %tmp.494 %tmp.495(%tmp.496);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 256 16 ]
-        %tmp.531 = 4;
-        putv self :unConfirmed %tmp.531;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_73_257_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_false:
+        %tmp.497 = 4;
+        symbol [ unConfirmed ? 256 16 27 ];
+        putv self :unConfirmed %tmp.497;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_73_257_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_false:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 258 17 ]
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_stmt:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_21_258_71_begin:
-        %tmp.533 = getv ? :sendTrack;
-        bf %tmp.533 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_35_258_70_begin:
-        %tmp.535 = getv ? :unConfirmed;
-        %tmp.536 = 0;
-        %tmp.537 = eq %tmp.535 %tmp.536;
-        bt %tmp.537 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_true;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_false:
-        %tmp.539 = getv ? :unConfirmed;
-        %tmp.540 = 5;
-        %tmp.541 = eq %tmp.539 %tmp.540;
-        push %tmp.541;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_end:
-        %tmp.542 = phi [%tmp.537 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_35_258_70_begin] [%tmp.541 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_false] [%tmp.542 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_end];
-        push %tmp.542;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_end:
-        %tmp.543 = phi [%tmp.533 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_21_258_71_begin] [%tmp.542 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_true] [%tmp.543 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_end];
-        bf %tmp.543 @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_true:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_74_270_12_start:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_stmt:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_21_258_71_begin:
+        symbol [ sendTrack %tmp.499 258 21 30 ];
+        %tmp.499 = getv ? :sendTrack;
+        bf %tmp.499 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_35_258_70_begin:
+        symbol [ unConfirmed %tmp.501 258 35 46 ];
+        %tmp.501 = getv ? :unConfirmed;
+        %tmp.502 = 0;
+        %tmp.503 = eq %tmp.501 %tmp.502;
+        bt %tmp.503 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_true;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_false:
+        symbol [ unConfirmed %tmp.505 258 55 66 ];
+        %tmp.505 = getv ? :unConfirmed;
+        %tmp.506 = 5;
+        %tmp.507 = eq %tmp.505 %tmp.506;
+        push %tmp.507;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_end:
+        %tmp.508 = phi [%tmp.503 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_35_258_70_begin] [%tmp.507 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_false] [%tmp.508 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_55_258_70_end];
+        push %tmp.508;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_end:
+        %tmp.509 = phi [%tmp.499 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_21_258_71_begin] [%tmp.508 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_true] [%tmp.509 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_34_258_71_end];
+        bf %tmp.509 @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_true:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_74_270_12_start:
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 259 16 ]
-        %tmp.544 = lgetv %ackload.4;
-        %tmp.545 = 0x33;
-        %tmp.546 = 0;
-        aputv %tmp.544 %tmp.546 %tmp.545;
+        %tmp.510 = lgetv %ackload.4;
+        symbol [ ackload %tmp.510 259 16 23 ];
+        %tmp.511 = 0x33;
+        %tmp.512 = 0;
+        aputv %tmp.510 %tmp.512 %tmp.511;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 260 16 ]
-        %tmp.547 = lgetv %ackload.4;
-        %tmp.548 = 0xFF;
-        %tmp.549 = 1;
-        aputv %tmp.547 %tmp.549 %tmp.548;
+        %tmp.513 = lgetv %ackload.4;
+        symbol [ ackload %tmp.513 260 16 23 ];
+        %tmp.514 = 0xFF;
+        %tmp.515 = 1;
+        aputv %tmp.513 %tmp.515 %tmp.514;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 261 16 ]
-        %tmp.550 = lgetv %ackload.4;
-        %tmp.551 = 0xFF;
-        %tmp.552 = 2;
-        aputv %tmp.550 %tmp.552 %tmp.551;
+        %tmp.516 = lgetv %ackload.4;
+        symbol [ ackload %tmp.516 261 16 23 ];
+        %tmp.517 = 0xFF;
+        %tmp.518 = 2;
+        aputv %tmp.516 %tmp.518 %tmp.517;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 262 16 ]
-        %tmp.553 = lgetv %ackload.4;
-        %tmp.554 = 0xFF;
-        %tmp.555 = 3;
-        aputv %tmp.553 %tmp.555 %tmp.554;
+        %tmp.519 = lgetv %ackload.4;
+        symbol [ ackload %tmp.519 262 16 23 ];
+        %tmp.520 = 0xFF;
+        %tmp.521 = 3;
+        aputv %tmp.519 %tmp.521 %tmp.520;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 263 16 ]
-        %tmp.556 = lgetv %ackload.4;
-        %tmp.557 = 0xFF;
-        %tmp.558 = 4;
-        aputv %tmp.556 %tmp.558 %tmp.557;
+        %tmp.522 = lgetv %ackload.4;
+        symbol [ ackload %tmp.522 263 16 23 ];
+        %tmp.523 = 0xFF;
+        %tmp.524 = 4;
+        aputv %tmp.522 %tmp.524 %tmp.523;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 264 16 ]
-        %tmp.559 = lgetv %ackload.4;
-        %tmp.561 = getv ? :slope;
-        %tmp.562 = 200;
-        %tmp.563 = add %tmp.561 %tmp.562;
-        %tmp.564 = 100;
-        %tmp.565 = mul %tmp.563 %tmp.564;
-        %tmp.566 = getv function %tmp.565 :toNumber;
-        %tmp.567 = invoke %tmp.565 %tmp.566();
-        %tmp.568 = 0xFF;
-        %tmp.569 = bitand %tmp.567 %tmp.568;
-        %tmp.570 = 5;
-        aputv %tmp.559 %tmp.570 %tmp.569;
+        %tmp.525 = lgetv %ackload.4;
+        symbol [ ackload %tmp.525 264 16 23 ];
+        symbol [ slope %tmp.527 264 31 36 ];
+        %tmp.527 = getv ? :slope;
+        %tmp.528 = 200;
+        %tmp.529 = add %tmp.527 %tmp.528;
+        %tmp.530 = 100;
+        %tmp.531 = mul %tmp.529 %tmp.530;
+        symbol [ toNumber %tmp.532 264 51 59 ];
+        %tmp.532 = getv function %tmp.531 :toNumber;
+        %tmp.533 = invoke %tmp.531 %tmp.532();
+        %tmp.534 = 0xFF;
+        %tmp.535 = bitand %tmp.533 %tmp.534;
+        %tmp.536 = 5;
+        aputv %tmp.525 %tmp.536 %tmp.535;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 265 16 ]
-        %tmp.571 = lgetv %ackload.4;
-        %tmp.573 = getv ? :slope;
-        %tmp.574 = 200;
-        %tmp.575 = add %tmp.573 %tmp.574;
-        %tmp.576 = 100;
-        %tmp.577 = mul %tmp.575 %tmp.576;
-        %tmp.578 = getv function %tmp.577 :toNumber;
-        %tmp.579 = invoke %tmp.577 %tmp.578();
-        %tmp.580 = 256;
-        %tmp.581 = div %tmp.579 %tmp.580;
-        %tmp.582 = 0xFF;
-        %tmp.583 = bitand %tmp.581 %tmp.582;
-        %tmp.584 = 6;
-        aputv %tmp.571 %tmp.584 %tmp.583;
+        %tmp.537 = lgetv %ackload.4;
+        symbol [ ackload %tmp.537 265 16 23 ];
+        symbol [ slope %tmp.539 265 32 37 ];
+        %tmp.539 = getv ? :slope;
+        %tmp.540 = 200;
+        %tmp.541 = add %tmp.539 %tmp.540;
+        %tmp.542 = 100;
+        %tmp.543 = mul %tmp.541 %tmp.542;
+        symbol [ toNumber %tmp.544 265 52 60 ];
+        %tmp.544 = getv function %tmp.543 :toNumber;
+        %tmp.545 = invoke %tmp.543 %tmp.544();
+        %tmp.546 = 256;
+        %tmp.547 = div %tmp.545 %tmp.546;
+        %tmp.548 = 0xFF;
+        %tmp.549 = bitand %tmp.547 %tmp.548;
+        %tmp.550 = 6;
+        aputv %tmp.537 %tmp.550 %tmp.549;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 266 16 ]
-        %tmp.585 = lgetv %ackload.4;
-        %tmp.586 = 20000;
-        %tmp.588 = getv ? :surface;
-        %tmp.589 = mul %tmp.586 %tmp.588;
-        %tmp.590 = getv function %tmp.589 :toNumber;
-        %tmp.591 = invoke %tmp.589 %tmp.590();
-        %tmp.592 = 7;
-        aputv %tmp.585 %tmp.592 %tmp.591;
+        %tmp.551 = lgetv %ackload.4;
+        symbol [ ackload %tmp.551 266 16 23 ];
+        %tmp.552 = 20000;
+        symbol [ surface %tmp.554 266 38 45 ];
+        %tmp.554 = getv ? :surface;
+        %tmp.555 = mul %tmp.552 %tmp.554;
+        symbol [ toNumber %tmp.556 266 47 55 ];
+        %tmp.556 = getv function %tmp.555 :toNumber;
+        %tmp.557 = invoke %tmp.555 %tmp.556();
+        %tmp.558 = 7;
+        aputv %tmp.551 %tmp.558 %tmp.557;
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 267 16 ]
-        %tmp.593 = lgetv %message.5;
-        %tmp.594 = getv function %tmp.593 :setPayload;
-        %tmp.596 = lgetv %ackload.4;
-        invoke %tmp.593 %tmp.594(%tmp.596);
+        %tmp.559 = lgetv %message.5;
+        symbol [ message %tmp.559 267 16 23 ];
+        symbol [ setPayload %tmp.560 267 24 34 ];
+        %tmp.560 = getv function %tmp.559 :setPayload;
+        %tmp.561 = lgetv %ackload.4;
+        symbol [ ackload %tmp.561 267 35 42 ];
+        invoke %tmp.559 %tmp.560(%tmp.561);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 268 16 ]
-        %tmp.598 = getv ? :GenericChannel;
-        %tmp.599 = getv function %tmp.598 :sendAcknowledge;
-        %tmp.601 = lgetv %message.5;
-        invoke %tmp.598 %tmp.599(%tmp.601);
+        symbol [ GenericChannel %tmp.563 268 16 30 ];
+        %tmp.563 = getv ? :GenericChannel;
+        symbol [ sendAcknowledge %tmp.564 268 31 46 ];
+        %tmp.564 = getv function %tmp.563 :sendAcknowledge;
+        %tmp.565 = lgetv %message.5;
+        symbol [ message %tmp.565 268 47 54 ];
+        invoke %tmp.563 %tmp.564(%tmp.565);
 [ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc" 269 16 ]
-        %tmp.602 = 5;
-        putv self :unConfirmed %tmp.602;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_74_270_12_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop:
-        goto @C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_end;
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_end:
-C_Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_stop:
+        %tmp.566 = 5;
+        symbol [ unConfirmed ? 269 16 27 ];
+        putv self :unConfirmed %tmp.566;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_74_270_12_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_258_17_270_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_245_17_270_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_232_17_270_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_219_17_270_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_206_12_270_12_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_61_271_8_stop:
+        goto @C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_end;
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_175_13_271_8_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_129_8_271_8_if_end:
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_FECTrainerCIQ_mc_127_47_272_4_stop:
     }
 }
 [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source\FECTrainerCIQ.mc"; @line = 1; ]

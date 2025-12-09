@@ -1,0 +1,368 @@
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,7,13]; @symbol_usingdef<1> = [Graphics,1,14,22]; @symbol_usingAlias = [Gfx,1,26,29]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 3; @symbol_moduledef = [View0DeviceVars,3,7,22]; ]
+module View0DeviceVars {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 3; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 17 8 ]
+        symbol [ Gfx %tmp.1 17 19 22 ];
+        %tmp.1 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.2 17 23 41 ];
+        %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_RIGHT;
+        putv self :VersionJ %tmp.2;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 18 8 ]
+        symbol [ Gfx %tmp.3 18 20 23 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.4 18 24 34 ];
+        %tmp.4 = getv %tmp.3 :FONT_LARGE;
+        putv self :TitleFont %tmp.4;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 19 8 ]
+        symbol [ Gfx %tmp.5 19 20 23 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.6 19 24 34 ];
+        %tmp.6 = getv %tmp.5 :FONT_SMALL;
+        putv self :LabelFont %tmp.6;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 20 8 ]
+        symbol [ Gfx %tmp.7 20 22 25 ];
+        %tmp.7 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.8 20 26 36 ];
+        %tmp.8 = getv %tmp.7 :FONT_SMALL;
+        putv self :VersionFont %tmp.8;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 5; @position = 5; @symbol_vardef = [TitleX,5,5,11]; ]
+    var TitleX = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 6; @position = 8; @symbol_vardef = [TitleY,6,8,14]; ]
+    var TitleY = 50;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 7; @position = 8; @symbol_vardef = [LineY,7,8,13]; ]
+    var LineY = 255;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 8; @position = 8; @symbol_vardef = [LineH,8,8,13]; ]
+    var LineH = 3;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 9; @position = 8; @symbol_vardef = [LabelY,9,8,14]; ]
+    var LabelY = 280;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 10; @position = 8; @symbol_vardef = [IndicatorY,10,8,18]; ]
+    var IndicatorY = 330;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 11; @position = 8; @symbol_vardef = [MO2X,11,8,12]; ]
+    var MO2X = 82;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 12; @position = 8; @symbol_vardef = [HRX,12,8,11]; ]
+    var HRX = 164;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 13; @position = 8; @symbol_vardef = [FECX,13,8,12]; ]
+    var FECX = 246;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 14; @position = 8; @symbol_vardef = [PowerX,14,8,14]; ]
+    var PowerX = 328;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 15; @position = 8; @symbol_vardef = [VersionX,15,8,16]; ]
+    var VersionX = 340;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 16; @position = 8; @symbol_vardef = [VersionY,16,8,16]; ]
+    var VersionY = 460;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 17; @position = 8; @symbol_vardef = [VersionJ,17,8,16]; ]
+    var VersionJ;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 18; @position = 8; @symbol_vardef = [TitleFont,18,8,17]; ]
+    var TitleFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 19; @position = 8; @symbol_vardef = [LabelFont,19,8,17]; ]
+    var LabelFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 20; @position = 8; @symbol_vardef = [VersionFont,20,8,19]; ]
+    var VersionFont;
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 23; @symbol_moduledef = [View1DeviceVars,23,7,22]; ]
+module View1DeviceVars {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 23; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 49 5 ]
+        symbol [ Gfx %tmp.9 49 13 16 ];
+        %tmp.9 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.10 49 17 26 ];
+        %tmp.10 = getv %tmp.9 :FONT_TINY;
+        putv self :LFont %tmp.10;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 50 5 ]
+        symbol [ Gfx %tmp.11 50 13 16 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.12 50 17 32 ];
+        %tmp.12 = getv %tmp.11 :FONT_NUMBER_HOT;
+        putv self :VFont %tmp.12;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 51 5 ]
+        symbol [ Gfx %tmp.13 51 13 16 ];
+        %tmp.13 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.14 51 17 36 ];
+        %tmp.14 = getv %tmp.13 :TEXT_JUSTIFY_CENTER;
+        putv self :LJust %tmp.14;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 52 5 ]
+        symbol [ Gfx %tmp.15 52 13 16 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.16 52 17 36 ];
+        %tmp.16 = getv %tmp.15 :TEXT_JUSTIFY_CENTER;
+        putv self :VJust %tmp.16;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 25; @symbol_functiondef = [drawGrid,25,10,18]; @symbol_param<0> = [dc,25,19,21]; ]
+    function drawGrid(dc) {
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_25_23_31_1_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 26 2 ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_25_23_31_1_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_25_23_31_1_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 26 6 11 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 26 14 16 ];
+        symbol [ getWidth %tmp.2 26 17 25 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 26 6 11 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 27 2 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 27 2 4 ];
+        symbol [ setColor %tmp.5 27 5 13 ];
+        %tmp.5 = getv function %tmp.4 :setColor;
+        symbol [ Gfx %tmp.6 27 14 17 ];
+        %tmp.6 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.7 27 18 29 ];
+        %tmp.7 = getv %tmp.6 :COLOR_GREEN;
+        symbol [ Gfx %tmp.8 27 31 34 ];
+        %tmp.8 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.9 27 35 46 ];
+        %tmp.9 = getv %tmp.8 :COLOR_GREEN;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 28 2 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 28 2 4 ];
+        symbol [ fillRectangle %tmp.11 28 5 18 ];
+        %tmp.11 = getv function %tmp.10 :fillRectangle;
+        %tmp.12 = 0;
+        %tmp.13 = 127;
+        %tmp.14 = lgetv %width.1;
+        symbol [ width %tmp.14 28 27 32 ];
+        %tmp.15 = 2;
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.14, %tmp.15);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 29 2 ]
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 29 2 4 ];
+        symbol [ fillRectangle %tmp.17 29 5 18 ];
+        %tmp.17 = getv function %tmp.16 :fillRectangle;
+        %tmp.18 = 0;
+        %tmp.19 = 255;
+        %tmp.20 = lgetv %width.1;
+        symbol [ width %tmp.20 29 27 32 ];
+        %tmp.21 = 2;
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19, %tmp.20, %tmp.21);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 30 2 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 30 2 4 ];
+        symbol [ fillRectangle %tmp.23 30 5 18 ];
+        %tmp.23 = getv function %tmp.22 :fillRectangle;
+        %tmp.24 = 0;
+        %tmp.25 = 383;
+        %tmp.26 = lgetv %width.1;
+        symbol [ width %tmp.26 30 27 32 ];
+        %tmp.27 = 2;
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26, %tmp.27);
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_25_23_31_1_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 33; @position = 5; @symbol_vardef = [L1X,33,5,8]; ]
+    var L1X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 34; @position = 5; @symbol_vardef = [L2X,34,5,8]; ]
+    var L2X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 35; @position = 5; @symbol_vardef = [L3X,35,5,8]; ]
+    var L3X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 36; @position = 5; @symbol_vardef = [L4X,36,5,8]; ]
+    var L4X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 37; @position = 5; @symbol_vardef = [L1Y,37,5,8]; ]
+    var L1Y = 7;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 38; @position = 5; @symbol_vardef = [L2Y,38,5,8]; ]
+    var L2Y = 134;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 39; @position = 5; @symbol_vardef = [L3Y,39,5,8]; ]
+    var L3Y = 262;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 40; @position = 5; @symbol_vardef = [L4Y,40,5,8]; ]
+    var L4Y = 390;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 41; @position = 5; @symbol_vardef = [V1X,41,5,8]; ]
+    var V1X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 42; @position = 5; @symbol_vardef = [V2X,42,5,8]; ]
+    var V2X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 43; @position = 5; @symbol_vardef = [V3X,43,5,8]; ]
+    var V3X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 44; @position = 5; @symbol_vardef = [V4X,44,5,8]; ]
+    var V4X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 45; @position = 5; @symbol_vardef = [V1Y,45,5,8]; ]
+    var V1Y = 27;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 46; @position = 5; @symbol_vardef = [V2Y,46,5,8]; ]
+    var V2Y = 154;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 47; @position = 5; @symbol_vardef = [V3Y,47,5,8]; ]
+    var V3Y = 282;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 48; @position = 5; @symbol_vardef = [V4Y,48,5,8]; ]
+    var V4Y = 410;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 49; @position = 5; @symbol_vardef = [LFont,49,5,10]; ]
+    var LFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 50; @position = 5; @symbol_vardef = [VFont,50,5,10]; ]
+    var VFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 51; @position = 5; @symbol_vardef = [LJust,51,5,10]; ]
+    var LJust;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 52; @position = 5; @symbol_vardef = [VJust,52,5,10]; ]
+    var VJust;
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 56; @symbol_moduledef = [View2DeviceVars,56,7,22]; ]
+module View2DeviceVars {
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 56; ]
+    <init> {
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 93 5 ]
+        symbol [ Gfx %tmp.28 93 13 16 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.29 93 17 26 ];
+        %tmp.29 = getv %tmp.28 :FONT_TINY;
+        putv self :LFont %tmp.29;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 94 5 ]
+        symbol [ Gfx %tmp.30 94 16 19 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.31 94 20 35 ];
+        %tmp.31 = getv %tmp.30 :FONT_NUMBER_HOT;
+        putv self :VNumFont %tmp.31;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 95 5 ]
+        symbol [ Gfx %tmp.32 95 16 19 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.33 95 20 30 ];
+        %tmp.33 = getv %tmp.32 :FONT_LARGE;
+        putv self :VTxtFont %tmp.33;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 96 5 ]
+        symbol [ Gfx %tmp.34 96 16 19 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.35 96 20 31 ];
+        %tmp.35 = getv %tmp.34 :FONT_MEDIUM;
+        putv self :TargFont %tmp.35;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 97 5 ]
+        symbol [ Gfx %tmp.36 97 13 16 ];
+        %tmp.36 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.37 97 17 36 ];
+        %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_CENTER;
+        putv self :LJust %tmp.37;
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 98 5 ]
+        symbol [ Gfx %tmp.38 98 13 16 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.39 98 17 36 ];
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_CENTER;
+        putv self :VJust %tmp.39;
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 58; @symbol_functiondef = [drawGrid,58,10,18]; @symbol_param<0> = [dc,58,19,21]; ]
+    function drawGrid(dc) {
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_58_23_64_1_start:
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 59 2 ]
+        [ "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_58_23_64_1_start" "C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_58_23_64_1_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 59 6 11 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 59 14 16 ];
+        symbol [ getWidth %tmp.2 59 17 25 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 59 6 11 ];
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 60 2 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 60 2 4 ];
+        symbol [ setColor %tmp.5 60 5 13 ];
+        %tmp.5 = getv function %tmp.4 :setColor;
+        symbol [ Gfx %tmp.6 60 14 17 ];
+        %tmp.6 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.7 60 18 29 ];
+        %tmp.7 = getv %tmp.6 :COLOR_GREEN;
+        symbol [ Gfx %tmp.8 60 31 34 ];
+        %tmp.8 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.9 60 35 46 ];
+        %tmp.9 = getv %tmp.8 :COLOR_GREEN;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 61 2 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 61 2 4 ];
+        symbol [ fillRectangle %tmp.11 61 5 18 ];
+        %tmp.11 = getv function %tmp.10 :fillRectangle;
+        %tmp.12 = 209;
+        %tmp.13 = 383;
+        %tmp.14 = 2;
+        %tmp.15 = 129;
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.14, %tmp.15);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 62 2 ]
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 62 2 4 ];
+        symbol [ fillRectangle %tmp.17 62 5 18 ];
+        %tmp.17 = getv function %tmp.16 :fillRectangle;
+        %tmp.18 = 0;
+        %tmp.19 = 255;
+        %tmp.20 = lgetv %width.1;
+        symbol [ width %tmp.20 62 27 32 ];
+        %tmp.21 = 2;
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19, %tmp.20, %tmp.21);
+[ "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc" 63 2 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 63 2 4 ];
+        symbol [ fillRectangle %tmp.23 63 5 18 ];
+        %tmp.23 = getv function %tmp.22 :fillRectangle;
+        %tmp.24 = 0;
+        %tmp.25 = 383;
+        %tmp.26 = lgetv %width.1;
+        symbol [ width %tmp.26 63 27 32 ];
+        %tmp.27 = 2;
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26, %tmp.27);
+C__Users_rschm_OneDrive_Documents_GitHub_MoxyCycWarmUp_source_rectangle_420x600_DeviceVars_mc_58_23_64_1_stop:
+    }
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 66; @position = 5; @symbol_vardef = [L1X,66,5,8]; ]
+    var L1X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 67; @position = 5; @symbol_vardef = [L1Y,67,5,8]; ]
+    var L1Y = 262;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 68; @position = 5; @symbol_vardef = [V1X,68,5,8]; ]
+    var V1X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 69; @position = 5; @symbol_vardef = [V1Y,69,5,8]; ]
+    var V1Y = 282;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 71; @position = 5; @symbol_vardef = [L2X,71,5,8]; ]
+    var L2X = 105;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 72; @position = 5; @symbol_vardef = [L2Y,72,5,8]; ]
+    var L2Y = 390;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 73; @position = 5; @symbol_vardef = [V2X,73,5,8]; ]
+    var V2X = 105;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 74; @position = 5; @symbol_vardef = [V2Y,74,5,8]; ]
+    var V2Y = 410;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 76; @position = 5; @symbol_vardef = [L3X,76,5,8]; ]
+    var L3X = 315;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 77; @position = 5; @symbol_vardef = [L3Y,77,5,8]; ]
+    var L3Y = 390;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 78; @position = 5; @symbol_vardef = [V3X,78,5,8]; ]
+    var V3X = 315;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 79; @position = 5; @symbol_vardef = [V3Y,79,5,8]; ]
+    var V3Y = 410;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 81; @position = 5; @symbol_vardef = [L4X,81,5,8]; ]
+    var L4X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 82; @position = 5; @symbol_vardef = [L4Y,82,5,8]; ]
+    var L4Y = 104;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 83; @position = 5; @symbol_vardef = [V4X,83,5,8]; ]
+    var V4X = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 84; @position = 5; @symbol_vardef = [V4Y,84,5,8]; ]
+    var V4Y = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 86; @position = 5; @symbol_vardef = [Targ1X,86,5,11]; ]
+    var Targ1X = 75;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 87; @position = 5; @symbol_vardef = [Targ2X,87,5,11]; ]
+    var Targ2X = 345;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 88; @position = 5; @symbol_vardef = [Targ1Y,88,5,11]; ]
+    var Targ1Y = 34;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 89; @position = 5; @symbol_vardef = [Targ2Y,89,5,11]; ]
+    var Targ2Y = 34;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 90; @position = 5; @symbol_vardef = [TargAng1,90,5,13]; ]
+    var TargAng1 = 50;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 91; @position = 5; @symbol_vardef = [TargAng2,91,5,13]; ]
+    var TargAng2 = 130;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 93; @position = 5; @symbol_vardef = [LFont,93,5,10]; ]
+    var LFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 94; @position = 5; @symbol_vardef = [VNumFont,94,5,13]; ]
+    var VNumFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 95; @position = 5; @symbol_vardef = [VTxtFont,95,5,13]; ]
+    var VTxtFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 96; @position = 5; @symbol_vardef = [TargFont,96,5,13]; ]
+    var TargFont;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 97; @position = 5; @symbol_vardef = [LJust,97,5,10]; ]
+    var LJust;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 98; @position = 5; @symbol_vardef = [VJust,98,5,10]; ]
+    var VJust;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 100; @position = 5; @symbol_vardef = [meterX,100,5,11]; ]
+    var meterX = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 101; @position = 5; @symbol_vardef = [meterY,101,5,11]; ]
+    var meterY = 210;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 102; @position = 5; @symbol_vardef = [meterR,102,5,11]; ]
+    var meterR = 185;
+    [ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 103; @position = 5; @symbol_vardef = [meterT,103,5,11]; ]
+    var meterT = 40;
+}
+[ @file = "C:\Users\rschm\OneDrive\Documents\GitHub\MoxyCycWarmUp\source-rectangle-420x600\DeviceVars.mc"; @line = 1; ]
+<init> {
+}
